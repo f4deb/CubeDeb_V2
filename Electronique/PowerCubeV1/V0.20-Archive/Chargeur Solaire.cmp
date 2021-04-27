@@ -1,0 +1,291 @@
+Cmp-Mod V01 Created by PcbNew   date = sam. 25 mars 2017 17:57:54 CET
+
+BeginCmp
+TimeStamp = 58D6A2F1
+Path = /583DBB2A
+Reference = C1001;
+ValeurCmp = 1u/16V;
+IdModule  = Capacitors_Tantalum_SMD:Tantalum_Case-A_EIA-3216-18_Hand;
+EndCmp
+
+BeginCmp
+TimeStamp = 58D6A2F7
+Path = /583DC1BC
+Reference = C1002;
+ValeurCmp = 47u/16V;
+IdModule  = Capacitors_Tantalum_SMD:Tantalum_Case-B_EIA-3528-21_Hand;
+EndCmp
+
+BeginCmp
+TimeStamp = 58D6A2FD
+Path = /583E0E7D
+Reference = C1003;
+ValeurCmp = 100n;
+IdModule  = Capacitors_SMD:C_0603;
+EndCmp
+
+BeginCmp
+TimeStamp = 58D6A303
+Path = /583DE109
+Reference = C1004;
+ValeurCmp = 22u/16V;
+IdModule  = Capacitors_Tantalum_SMD:Tantalum_Case-B_EIA-3528-21_Hand;
+EndCmp
+
+BeginCmp
+TimeStamp = 58D6A309
+Path = /583DC00F
+Reference = D1001;
+ValeurCmp = 1N4002;
+IdModule  = Diodes_SMD:SMC_Handsoldering;
+EndCmp
+
+BeginCmp
+TimeStamp = 58D6A30F
+Path = /583DCE4B
+Reference = D1002;
+ValeurCmp = LL4148;
+IdModule  = Diodes_SMD:MiniMELF_Standard;
+EndCmp
+
+BeginCmp
+TimeStamp = 58D6A315
+Path = /583DCA19
+Reference = D1003;
+ValeurCmp = LED;
+IdModule  = LEDs:LED_0603;
+EndCmp
+
+BeginCmp
+TimeStamp = 58D6A31B
+Path = /583DD333
+Reference = D1004;
+ValeurCmp = LED;
+IdModule  = LEDs:LED_0603;
+EndCmp
+
+BeginCmp
+TimeStamp = 58D6A321
+Path = /583DF00A
+Reference = D1005;
+ValeurCmp = LED;
+IdModule  = LEDs:LED_0603;
+EndCmp
+
+BeginCmp
+TimeStamp = 58D6A327
+Path = /583DD7A3
+Reference = D1006;
+ValeurCmp = LL4148;
+IdModule  = Diodes_SMD:MiniMELF_Standard;
+EndCmp
+
+BeginCmp
+TimeStamp = 58D6A32D
+Path = /583DE625
+Reference = D1007;
+ValeurCmp = RS3K;
+IdModule  = Diodes_SMD:SMC_Standard;
+EndCmp
+
+BeginCmp
+TimeStamp = 58D6A335
+Path = /583DBC03
+Reference = K1001;
+ValeurCmp = CONN_2;
+IdModule  = Connectors_Phoenix:PhoenixContact_MC-GF_02x3.50mm_Angled_ThreadedFlange_MountHole;
+EndCmp
+
+BeginCmp
+TimeStamp = 58D6A33D
+Path = /583DBD92
+Reference = K1002;
+ValeurCmp = CONN_2;
+IdModule  = Connectors_Phoenix:PhoenixContact_MC-GF_02x3.50mm_Angled_ThreadedFlange_MountHole;
+EndCmp
+
+BeginCmp
+TimeStamp = 58D6A345
+Path = /583E28CE
+Reference = K1003;
+ValeurCmp = CONN_2;
+IdModule  = Connectors_Phoenix:PhoenixContact_MC-GF_02x3.50mm_Angled_ThreadedFlange_MountHole;
+EndCmp
+
+BeginCmp
+TimeStamp = 58D6A34C
+Path = /583DF928
+Reference = Q1001;
+ValeurCmp = BC557;
+IdModule  = TO_SOT_Packages_SMD:SOT-23;
+EndCmp
+
+BeginCmp
+TimeStamp = 58D6A353
+Path = /583DFA41
+Reference = Q1002;
+ValeurCmp = BUZ11;
+IdModule  = Diodes_SMD:D-Pak_TO252AA;
+EndCmp
+
+BeginCmp
+TimeStamp = 58D6A359
+Path = /583DB811
+Reference = R1001;
+ValeurCmp = 22k;
+IdModule  = Resistors_SMD:R_0603;
+EndCmp
+
+BeginCmp
+TimeStamp = 58D6A35F
+Path = /583DB876
+Reference = R1002;
+ValeurCmp = 12k;
+IdModule  = Resistors_SMD:R_0603;
+EndCmp
+
+BeginCmp
+TimeStamp = 58D6A365
+Path = /583DC409
+Reference = R1003;
+ValeurCmp = 100k;
+IdModule  = Resistors_SMD:R_0603;
+EndCmp
+
+BeginCmp
+TimeStamp = 58D6A36B
+Path = /583DB93C
+Reference = R1004;
+ValeurCmp = 330k;
+IdModule  = Resistors_SMD:R_0603;
+EndCmp
+
+BeginCmp
+TimeStamp = 58D6A371
+Path = /583DC9AC
+Reference = R1005;
+ValeurCmp = 4.7k;
+IdModule  = Resistors_SMD:R_0603;
+EndCmp
+
+BeginCmp
+TimeStamp = 58D6A377
+Path = /583DCEDB
+Reference = R1006;
+ValeurCmp = 8.2k;
+IdModule  = Resistors_SMD:R_0603;
+EndCmp
+
+BeginCmp
+TimeStamp = 58D6A37D
+Path = /583DD3BF
+Reference = R1007;
+ValeurCmp = 4.7k;
+IdModule  = Resistors_SMD:R_0603;
+EndCmp
+
+BeginCmp
+TimeStamp = 58D6A383
+Path = /583DF111
+Reference = R1008;
+ValeurCmp = 4.7k;
+IdModule  = Resistors_SMD:R_0603;
+EndCmp
+
+BeginCmp
+TimeStamp = 58D6A389
+Path = /583DFE16
+Reference = R1009;
+ValeurCmp = 1k;
+IdModule  = Resistors_SMD:R_0603;
+EndCmp
+
+BeginCmp
+TimeStamp = 58D6A38F
+Path = /583DD806
+Reference = R1010;
+ValeurCmp = 8.2k;
+IdModule  = Resistors_SMD:R_0603;
+EndCmp
+
+BeginCmp
+TimeStamp = 58D6A395
+Path = /583DF36C
+Reference = R1011;
+ValeurCmp = 10k;
+IdModule  = Resistors_SMD:R_0603;
+EndCmp
+
+BeginCmp
+TimeStamp = 58D6A39B
+Path = /583DDED7
+Reference = R1012;
+ValeurCmp = 1M;
+IdModule  = Resistors_SMD:R_0603;
+EndCmp
+
+BeginCmp
+TimeStamp = 58D6A3A1
+Path = /583DDFF4
+Reference = R1013;
+ValeurCmp = 100k;
+IdModule  = Resistors_SMD:R_0603;
+EndCmp
+
+BeginCmp
+TimeStamp = 58D6A3A7
+Path = /583DED64
+Reference = R1014;
+ValeurCmp = 100k;
+IdModule  = Resistors_SMD:R_0603;
+EndCmp
+
+BeginCmp
+TimeStamp = 58D6A3AD
+Path = /583DE51F
+Reference = R1015;
+ValeurCmp = 100k;
+IdModule  = Resistors_SMD:R_0603;
+EndCmp
+
+BeginCmp
+TimeStamp = 58D6A3B3
+Path = /583DE5BC
+Reference = R1016;
+ValeurCmp = 1M;
+IdModule  = Resistors_SMD:R_0603;
+EndCmp
+
+BeginCmp
+TimeStamp = 58D6A3B9
+Path = /583DEA8E
+Reference = R1017;
+ValeurCmp = 220k;
+IdModule  = Resistors_SMD:R_0603;
+EndCmp
+
+BeginCmp
+TimeStamp = 58D6A3C0
+Path = /583DB6FE
+Reference = RVAR1001;
+ValeurCmp = 10k multi;
+IdModule  = Potentiometers:Potentiometer_Trimmer-Suntan-TSR-3386C;
+EndCmp
+
+BeginCmp
+TimeStamp = 58D6A3C7
+Path = /583DC07C
+Reference = U1001;
+ValeurCmp = 7805;
+IdModule  = TO_SOT_Packages_SMD:TO-252-2Lead;
+EndCmp
+
+BeginCmp
+TimeStamp = 58D6A3D3
+Path = /583DB5CB
+Reference = U1002;
+ValeurCmp = TL072;
+IdModule  = SMD_Packages:SOIC-8-N;
+EndCmp
+
+EndListe

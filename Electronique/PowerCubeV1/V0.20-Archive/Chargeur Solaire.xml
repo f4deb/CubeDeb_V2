@@ -1,0 +1,1630 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<export version="D">
+  <design>
+    <source>/media/f4deb/travail/electronique/git-f4deb/CubeDeb/Chargeur Solaire/V0.10/Chargeur Solaire.sch</source>
+    <date>mar. 20 juin 2017 21:05:34 CEST</date>
+    <tool>Eeschema 4.0.5+dfsg1-4</tool>
+    <sheet number="1" name="/" tstamps="/">
+      <title_block>
+        <title>POWER</title>
+        <company/>
+        <rev>V2-00</rev>
+        <date/>
+        <source>Chargeur Solaire.sch</source>
+        <comment number="1" value=""/>
+        <comment number="2" value=""/>
+        <comment number="3" value=""/>
+        <comment number="4" value=""/>
+      </title_block>
+    </sheet>
+    <sheet number="2" name="/Sheet58DB046C/" tstamps="/58DB046D/">
+      <title_block>
+        <title>POWER</title>
+        <company>F4DEB</company>
+        <rev>V2-00</rev>
+        <date>2016-07-22</date>
+        <source>Regulation.sch</source>
+        <comment number="1" value=""/>
+        <comment number="2" value=""/>
+        <comment number="3" value=""/>
+        <comment number="4" value=""/>
+      </title_block>
+    </sheet>
+  </design>
+  <components>
+    <comp ref="U1002">
+      <value>TL072</value>
+      <footprint>SMD_Packages:SOIC-8-N</footprint>
+      <libsource lib="Chargeur Solaire-cache" part="TL072-RESCUE-Chargeur_Solaire"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>583DB5CB</tstamp>
+    </comp>
+    <comp ref="RVAR1001">
+      <value>10k multi</value>
+      <footprint>Potentiometers:Potentiometer_Trimmer-Suntan-TSR-3386C</footprint>
+      <libsource lib="CEN-SCHEMA" part="RVAR"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>583DB6FE</tstamp>
+    </comp>
+    <comp ref="R1001">
+      <value>22k</value>
+      <footprint>Resistors_SMD:R_0603</footprint>
+      <libsource lib="CEN-SCHEMA" part="R"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>583DB811</tstamp>
+    </comp>
+    <comp ref="R1002">
+      <value>12k</value>
+      <footprint>Resistors_SMD:R_0603</footprint>
+      <libsource lib="CEN-SCHEMA" part="R"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>583DB876</tstamp>
+    </comp>
+    <comp ref="R1004">
+      <value>330k</value>
+      <footprint>Resistors_SMD:R_0603</footprint>
+      <libsource lib="CEN-SCHEMA" part="R"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>583DB93C</tstamp>
+    </comp>
+    <comp ref="C1001">
+      <value>1u/16V</value>
+      <footprint>Capacitors_Tantalum_SMD:Tantalum_Case-A_EIA-3216-18_Hand</footprint>
+      <libsource lib="CEN-SCHEMA" part="CP"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>583DBB2A</tstamp>
+    </comp>
+    <comp ref="K1001">
+      <value>CONN_2</value>
+      <footprint>Connectors_Phoenix:PhoenixContact_MC-GF_02x3.50mm_Angled_ThreadedFlange_MountHole</footprint>
+      <libsource lib="CEN-SCHEMA" part="CONN_2"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>583DBC03</tstamp>
+    </comp>
+    <comp ref="K1002">
+      <value>CONN_2</value>
+      <footprint>Connectors_Phoenix:PhoenixContact_MC-GF_02x3.50mm_Angled_ThreadedFlange_MountHole</footprint>
+      <libsource lib="CEN-SCHEMA" part="CONN_2"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>583DBD92</tstamp>
+    </comp>
+    <comp ref="D1001">
+      <value>1N4002</value>
+      <footprint>Diodes_SMD:SMC_Handsoldering</footprint>
+      <libsource lib="device" part="D_Small"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>583DC00F</tstamp>
+    </comp>
+    <comp ref="C1002">
+      <value>47u/16V</value>
+      <footprint>Capacitors_Tantalum_SMD:Tantalum_Case-B_EIA-3528-21_Hand</footprint>
+      <libsource lib="CEN-SCHEMA" part="CP"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>583DC1BC</tstamp>
+    </comp>
+    <comp ref="R1003">
+      <value>100k</value>
+      <footprint>Resistors_SMD:R_0603</footprint>
+      <libsource lib="CEN-SCHEMA" part="R"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>583DC409</tstamp>
+    </comp>
+    <comp ref="R1005">
+      <value>4.7k</value>
+      <footprint>Resistors_SMD:R_0603</footprint>
+      <libsource lib="CEN-SCHEMA" part="R"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>583DC9AC</tstamp>
+    </comp>
+    <comp ref="D1003">
+      <value>LED</value>
+      <footprint>LEDs:LED_0603</footprint>
+      <libsource lib="CEN-SCHEMA" part="LED"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>583DCA19</tstamp>
+    </comp>
+    <comp ref="D1002">
+      <value>LL4148</value>
+      <footprint>Diodes_SMD:MiniMELF_Standard</footprint>
+      <libsource lib="device" part="D_Small"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>583DCE4B</tstamp>
+    </comp>
+    <comp ref="R1006">
+      <value>8.2k</value>
+      <footprint>Resistors_SMD:R_0603</footprint>
+      <libsource lib="CEN-SCHEMA" part="R"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>583DCEDB</tstamp>
+    </comp>
+    <comp ref="D1004">
+      <value>LED</value>
+      <footprint>LEDs:LED_0603</footprint>
+      <libsource lib="CEN-SCHEMA" part="LED"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>583DD333</tstamp>
+    </comp>
+    <comp ref="R1007">
+      <value>4.7k</value>
+      <footprint>Resistors_SMD:R_0603</footprint>
+      <libsource lib="CEN-SCHEMA" part="R"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>583DD3BF</tstamp>
+    </comp>
+    <comp ref="D1006">
+      <value>LL4148</value>
+      <footprint>Diodes_SMD:MiniMELF_Standard</footprint>
+      <libsource lib="device" part="D_Small"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>583DD7A3</tstamp>
+    </comp>
+    <comp ref="R1010">
+      <value>8.2k</value>
+      <footprint>Resistors_SMD:R_0603</footprint>
+      <libsource lib="CEN-SCHEMA" part="R"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>583DD806</tstamp>
+    </comp>
+    <comp ref="R1012">
+      <value>1M</value>
+      <footprint>Resistors_SMD:R_0603</footprint>
+      <libsource lib="CEN-SCHEMA" part="R"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>583DDED7</tstamp>
+    </comp>
+    <comp ref="R1013">
+      <value>100k</value>
+      <footprint>Resistors_SMD:R_0603</footprint>
+      <libsource lib="CEN-SCHEMA" part="R"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>583DDFF4</tstamp>
+    </comp>
+    <comp ref="C1004">
+      <value>22u/16V</value>
+      <footprint>Capacitors_Tantalum_SMD:Tantalum_Case-B_EIA-3528-21_Hand</footprint>
+      <libsource lib="CEN-SCHEMA" part="CP"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>583DE109</tstamp>
+    </comp>
+    <comp ref="R1015">
+      <value>100k</value>
+      <footprint>Resistors_SMD:R_0603</footprint>
+      <libsource lib="CEN-SCHEMA" part="R"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>583DE51F</tstamp>
+    </comp>
+    <comp ref="R1016">
+      <value>1M</value>
+      <footprint>Resistors_SMD:R_0603</footprint>
+      <libsource lib="CEN-SCHEMA" part="R"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>583DE5BC</tstamp>
+    </comp>
+    <comp ref="D1007">
+      <value>RS3K</value>
+      <footprint>Diodes_SMD:SMC_Standard</footprint>
+      <libsource lib="device" part="D_Small"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>583DE625</tstamp>
+    </comp>
+    <comp ref="R1017">
+      <value>220k</value>
+      <footprint>Resistors_SMD:R_0603</footprint>
+      <libsource lib="CEN-SCHEMA" part="R"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>583DEA8E</tstamp>
+    </comp>
+    <comp ref="R1014">
+      <value>100k</value>
+      <footprint>Resistors_SMD:R_0603</footprint>
+      <libsource lib="CEN-SCHEMA" part="R"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>583DED64</tstamp>
+    </comp>
+    <comp ref="D1005">
+      <value>LED</value>
+      <footprint>LEDs:LED_0603</footprint>
+      <libsource lib="CEN-SCHEMA" part="LED"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>583DF00A</tstamp>
+    </comp>
+    <comp ref="R1008">
+      <value>4.7k</value>
+      <footprint>Resistors_SMD:R_0603</footprint>
+      <libsource lib="CEN-SCHEMA" part="R"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>583DF111</tstamp>
+    </comp>
+    <comp ref="R1011">
+      <value>10k</value>
+      <footprint>Resistors_SMD:R_0603</footprint>
+      <libsource lib="CEN-SCHEMA" part="R"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>583DF36C</tstamp>
+    </comp>
+    <comp ref="Q1001">
+      <value>BC557</value>
+      <footprint>TO_SOT_Packages_SMD:SOT-23</footprint>
+      <libsource lib="transistors" part="BC557"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>583DF928</tstamp>
+    </comp>
+    <comp ref="R1009">
+      <value>1k</value>
+      <footprint>Resistors_SMD:R_0603</footprint>
+      <libsource lib="CEN-SCHEMA" part="R"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>583DFE16</tstamp>
+    </comp>
+    <comp ref="C1003">
+      <value>100n</value>
+      <footprint>Capacitors_SMD:C_0603</footprint>
+      <libsource lib="CEN-SCHEMA" part="C"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>583E0E7D</tstamp>
+    </comp>
+    <comp ref="K1003">
+      <value>CONN_2</value>
+      <footprint>Connectors_Phoenix:PhoenixContact_MC-GF_02x3.50mm_Angled_ThreadedFlange_MountHole</footprint>
+      <libsource lib="CEN-SCHEMA" part="CONN_2"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>583E28CE</tstamp>
+    </comp>
+    <comp ref="U1001">
+      <value>7805-</value>
+      <footprint>TO_SOT_Packages_SMD:TO-252-2Lead</footprint>
+      <libsource lib="CEN-SCHEMA" part="7805-"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>58D6BE32</tstamp>
+    </comp>
+    <comp ref="Q1002">
+      <value>34N06L</value>
+      <footprint>TO_SOT_Packages_SMD:TO-263-3Lead</footprint>
+      <libsource lib="CEN-SCHEMA" part="34N06L"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>58D6EB95</tstamp>
+    </comp>
+    <comp ref="P1001">
+      <value>CONN_01X06</value>
+      <footprint>f4deb-mod-library:KK-6-H</footprint>
+      <libsource lib="conn" part="CONN_01X06"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>58DEB24F</tstamp>
+    </comp>
+    <comp ref="R2019">
+      <value>1k</value>
+      <footprint>Resistors_SMD:R_0603</footprint>
+      <libsource lib="CEN-SCHEMA" part="R"/>
+      <sheetpath names="/Sheet58DB046C/" tstamps="/58DB046D/"/>
+      <tstamp>578FC3C1</tstamp>
+    </comp>
+    <comp ref="R2018">
+      <value>3.3k</value>
+      <footprint>Resistors_SMD:R_0603</footprint>
+      <libsource lib="CEN-SCHEMA" part="R"/>
+      <sheetpath names="/Sheet58DB046C/" tstamps="/58DB046D/"/>
+      <tstamp>578FC3C2</tstamp>
+    </comp>
+    <comp ref="R2020">
+      <value>1k</value>
+      <footprint>Resistors_SMD:R_0603</footprint>
+      <libsource lib="CEN-SCHEMA" part="R"/>
+      <sheetpath names="/Sheet58DB046C/" tstamps="/58DB046D/"/>
+      <tstamp>578FC3C4</tstamp>
+    </comp>
+    <comp ref="R2021">
+      <value>470</value>
+      <footprint>Resistors_SMD:R_0603</footprint>
+      <libsource lib="CEN-SCHEMA" part="R"/>
+      <sheetpath names="/Sheet58DB046C/" tstamps="/58DB046D/"/>
+      <tstamp>578FC3C5</tstamp>
+    </comp>
+    <comp ref="D2012">
+      <value>LED</value>
+      <footprint>LEDs:LED_0603</footprint>
+      <libsource lib="CEN-SCHEMA" part="LED"/>
+      <sheetpath names="/Sheet58DB046C/" tstamps="/58DB046D/"/>
+      <tstamp>578FC3C6</tstamp>
+    </comp>
+    <comp ref="D2013">
+      <value>LED</value>
+      <footprint>LEDs:LED_0603</footprint>
+      <libsource lib="CEN-SCHEMA" part="LED"/>
+      <sheetpath names="/Sheet58DB046C/" tstamps="/58DB046D/"/>
+      <tstamp>578FC3C7</tstamp>
+    </comp>
+    <comp ref="D2014">
+      <value>LED</value>
+      <footprint>LEDs:LED_0603</footprint>
+      <libsource lib="CEN-SCHEMA" part="LED"/>
+      <sheetpath names="/Sheet58DB046C/" tstamps="/58DB046D/"/>
+      <tstamp>578FC3C9</tstamp>
+    </comp>
+    <comp ref="D2015">
+      <value>LED</value>
+      <footprint>LEDs:LED_0603</footprint>
+      <libsource lib="CEN-SCHEMA" part="LED"/>
+      <sheetpath names="/Sheet58DB046C/" tstamps="/58DB046D/"/>
+      <tstamp>578FC3CA</tstamp>
+    </comp>
+    <comp ref="R2017">
+      <value>3.3k</value>
+      <footprint>Resistors_SMD:R_0603</footprint>
+      <libsource lib="CEN-SCHEMA" part="R"/>
+      <sheetpath names="/Sheet58DB046C/" tstamps="/58DB046D/"/>
+      <tstamp>578FC3D6</tstamp>
+    </comp>
+    <comp ref="D2011">
+      <value>LED</value>
+      <footprint>LEDs:LED_0603</footprint>
+      <libsource lib="CEN-SCHEMA" part="LED"/>
+      <sheetpath names="/Sheet58DB046C/" tstamps="/58DB046D/"/>
+      <tstamp>578FC3D7</tstamp>
+    </comp>
+    <comp ref="U2001">
+      <value>L5973D</value>
+      <footprint>Housings_SOIC:SOIC-8_3.9x4.9mm_Pitch1.27mm</footprint>
+      <libsource lib="CEN-SCHEMA" part="L5973D"/>
+      <sheetpath names="/Sheet58DB046C/" tstamps="/58DB046D/"/>
+      <tstamp>57912CFB</tstamp>
+    </comp>
+    <comp ref="C2002">
+      <value>10µ/35V</value>
+      <footprint>Capacitors_Tantalum_SMD:Tantalum_Case-D_EIA-7343-31_Reflow</footprint>
+      <libsource lib="CEN-SCHEMA" part="CP"/>
+      <sheetpath names="/Sheet58DB046C/" tstamps="/58DB046D/"/>
+      <tstamp>57912E23</tstamp>
+    </comp>
+    <comp ref="C2005">
+      <value>22n</value>
+      <footprint>Capacitors_SMD:C_0603</footprint>
+      <libsource lib="CEN-SCHEMA" part="C"/>
+      <sheetpath names="/Sheet58DB046C/" tstamps="/58DB046D/"/>
+      <tstamp>57912FEA</tstamp>
+    </comp>
+    <comp ref="R2004">
+      <value>4k7</value>
+      <footprint>Resistors_SMD:R_0603</footprint>
+      <libsource lib="CEN-SCHEMA" part="R"/>
+      <sheetpath names="/Sheet58DB046C/" tstamps="/58DB046D/"/>
+      <tstamp>57913069</tstamp>
+    </comp>
+    <comp ref="C2004">
+      <value>220p</value>
+      <footprint>Capacitors_SMD:C_0603</footprint>
+      <libsource lib="CEN-SCHEMA" part="C"/>
+      <sheetpath names="/Sheet58DB046C/" tstamps="/58DB046D/"/>
+      <tstamp>57913808</tstamp>
+    </comp>
+    <comp ref="L2002">
+      <value>22µH/3.3A</value>
+      <footprint>f4deb-mod-library:Self_30_BiTech</footprint>
+      <libsource lib="CEN-SCHEMA" part="INDUCTOR"/>
+      <sheetpath names="/Sheet58DB046C/" tstamps="/58DB046D/"/>
+      <tstamp>57914997</tstamp>
+    </comp>
+    <comp ref="D2001">
+      <value>MBRS130LT3G</value>
+      <footprint>Diodes_SMD:SMC_Standard</footprint>
+      <libsource lib="device" part="D_Schottky"/>
+      <sheetpath names="/Sheet58DB046C/" tstamps="/58DB046D/"/>
+      <tstamp>57914C58</tstamp>
+    </comp>
+    <comp ref="D2003">
+      <value>MBRS130LT3G</value>
+      <footprint>Diodes_SMD:DO-214AB</footprint>
+      <libsource lib="device" part="D_Schottky"/>
+      <sheetpath names="/Sheet58DB046C/" tstamps="/58DB046D/"/>
+      <tstamp>57914E52</tstamp>
+    </comp>
+    <comp ref="Q2001">
+      <value>IRLL3303</value>
+      <footprint>TO_SOT_Packages_SMD:SOT-223</footprint>
+      <libsource lib="device" part="Q_NMOS_GDS"/>
+      <sheetpath names="/Sheet58DB046C/" tstamps="/58DB046D/"/>
+      <tstamp>579268F7</tstamp>
+    </comp>
+    <comp ref="C2006">
+      <value>CP</value>
+      <footprint>Capacitors_Tantalum_SMD:Tantalum_Case-D_EIA-7343-31_Reflow</footprint>
+      <libsource lib="CEN-SCHEMA" part="CP"/>
+      <sheetpath names="/Sheet58DB046C/" tstamps="/58DB046D/"/>
+      <tstamp>57926FD9</tstamp>
+    </comp>
+    <comp ref="R2001">
+      <value>5k6</value>
+      <footprint>Resistors_SMD:R_0603</footprint>
+      <libsource lib="CEN-SCHEMA" part="R"/>
+      <sheetpath names="/Sheet58DB046C/" tstamps="/58DB046D/"/>
+      <tstamp>579270C8</tstamp>
+    </comp>
+    <comp ref="R2002">
+      <value>0</value>
+      <footprint>Resistors_SMD:R_0603</footprint>
+      <libsource lib="CEN-SCHEMA" part="R"/>
+      <sheetpath names="/Sheet58DB046C/" tstamps="/58DB046D/"/>
+      <tstamp>5792719D</tstamp>
+    </comp>
+    <comp ref="R2003">
+      <value>3k3</value>
+      <footprint>Resistors_SMD:R_0603</footprint>
+      <libsource lib="CEN-SCHEMA" part="R"/>
+      <sheetpath names="/Sheet58DB046C/" tstamps="/58DB046D/"/>
+      <tstamp>579277FE</tstamp>
+    </comp>
+    <comp ref="C2007">
+      <value>100µ</value>
+      <footprint>Capacitors_Tantalum_SMD:Tantalum_Case-A_EIA-3216-18_Reflow</footprint>
+      <libsource lib="CEN-SCHEMA" part="CP"/>
+      <sheetpath names="/Sheet58DB046C/" tstamps="/58DB046D/"/>
+      <tstamp>57927BDE</tstamp>
+    </comp>
+    <comp ref="C2008">
+      <value>100µ</value>
+      <footprint>Capacitors_Tantalum_SMD:Tantalum_Case-A_EIA-3216-18_Reflow</footprint>
+      <libsource lib="CEN-SCHEMA" part="CP"/>
+      <sheetpath names="/Sheet58DB046C/" tstamps="/58DB046D/"/>
+      <tstamp>57927C63</tstamp>
+    </comp>
+    <comp ref="C2009">
+      <value>100µ</value>
+      <footprint>Capacitors_Tantalum_SMD:Tantalum_Case-A_EIA-3216-18_Reflow</footprint>
+      <libsource lib="CEN-SCHEMA" part="CP"/>
+      <sheetpath names="/Sheet58DB046C/" tstamps="/58DB046D/"/>
+      <tstamp>57927CDC</tstamp>
+    </comp>
+    <comp ref="C2010">
+      <value>100n</value>
+      <footprint>Capacitors_SMD:C_0603</footprint>
+      <libsource lib="CEN-SCHEMA" part="C"/>
+      <sheetpath names="/Sheet58DB046C/" tstamps="/58DB046D/"/>
+      <tstamp>5792AB55</tstamp>
+    </comp>
+    <comp ref="C2011">
+      <value>100n</value>
+      <footprint>Capacitors_SMD:C_0603</footprint>
+      <libsource lib="CEN-SCHEMA" part="C"/>
+      <sheetpath names="/Sheet58DB046C/" tstamps="/58DB046D/"/>
+      <tstamp>5792ABD2</tstamp>
+    </comp>
+    <comp ref="L2001">
+      <value>10µH/4.7A</value>
+      <footprint>f4deb-mod-library:Self_30_BiTech</footprint>
+      <libsource lib="CEN-SCHEMA" part="INDUCTOR"/>
+      <sheetpath names="/Sheet58DB046C/" tstamps="/58DB046D/"/>
+      <tstamp>5792C56D</tstamp>
+    </comp>
+    <comp ref="C2003">
+      <value>47n</value>
+      <footprint>Capacitors_SMD:C_0603</footprint>
+      <libsource lib="CEN-SCHEMA" part="C"/>
+      <sheetpath names="/Sheet58DB046C/" tstamps="/58DB046D/"/>
+      <tstamp>5792C9D3</tstamp>
+    </comp>
+    <comp ref="D2002">
+      <value>SMAJ36A</value>
+      <footprint>Diodes_SMD:SMC_Standard</footprint>
+      <libsource lib="CEN-SCHEMA" part="DIODE_TRANSIL"/>
+      <sheetpath names="/Sheet58DB046C/" tstamps="/58DB046D/"/>
+      <tstamp>5792E053</tstamp>
+    </comp>
+    <comp ref="U2002">
+      <value>L5973D</value>
+      <footprint>Housings_SOIC:SOIC-8_3.9x4.9mm_Pitch1.27mm</footprint>
+      <libsource lib="CEN-SCHEMA" part="L5973D"/>
+      <sheetpath names="/Sheet58DB046C/" tstamps="/58DB046D/"/>
+      <tstamp>5792FCA8</tstamp>
+    </comp>
+    <comp ref="C2012">
+      <value>10µ/35V</value>
+      <footprint>Capacitors_Tantalum_SMD:Tantalum_Case-D_EIA-7343-31_Reflow</footprint>
+      <libsource lib="CEN-SCHEMA" part="CP"/>
+      <sheetpath names="/Sheet58DB046C/" tstamps="/58DB046D/"/>
+      <tstamp>5792FCAE</tstamp>
+    </comp>
+    <comp ref="C2015">
+      <value>22n</value>
+      <footprint>Capacitors_SMD:C_0603</footprint>
+      <libsource lib="CEN-SCHEMA" part="C"/>
+      <sheetpath names="/Sheet58DB046C/" tstamps="/58DB046D/"/>
+      <tstamp>5792FCB4</tstamp>
+    </comp>
+    <comp ref="R2008">
+      <value>4k7</value>
+      <footprint>Resistors_SMD:R_0603</footprint>
+      <libsource lib="CEN-SCHEMA" part="R"/>
+      <sheetpath names="/Sheet58DB046C/" tstamps="/58DB046D/"/>
+      <tstamp>5792FCBA</tstamp>
+    </comp>
+    <comp ref="C2014">
+      <value>220p</value>
+      <footprint>Capacitors_SMD:C_0603</footprint>
+      <libsource lib="CEN-SCHEMA" part="C"/>
+      <sheetpath names="/Sheet58DB046C/" tstamps="/58DB046D/"/>
+      <tstamp>5792FCCC</tstamp>
+    </comp>
+    <comp ref="L2003">
+      <value>22µH/3.3A</value>
+      <footprint>f4deb-mod-library:Self_30_BiTech</footprint>
+      <libsource lib="CEN-SCHEMA" part="INDUCTOR"/>
+      <sheetpath names="/Sheet58DB046C/" tstamps="/58DB046D/"/>
+      <tstamp>5792FCE0</tstamp>
+    </comp>
+    <comp ref="D2004">
+      <value>MBRS130LT3G</value>
+      <footprint>Diodes_SMD:SMC_Standard</footprint>
+      <libsource lib="device" part="D_Schottky"/>
+      <sheetpath names="/Sheet58DB046C/" tstamps="/58DB046D/"/>
+      <tstamp>5792FCE6</tstamp>
+    </comp>
+    <comp ref="D2005">
+      <value>MBRS130LT3G</value>
+      <footprint>Diodes_SMD:SMC_Standard</footprint>
+      <libsource lib="device" part="D_Schottky"/>
+      <sheetpath names="/Sheet58DB046C/" tstamps="/58DB046D/"/>
+      <tstamp>5792FCEC</tstamp>
+    </comp>
+    <comp ref="Q2002">
+      <value>IRLL3303</value>
+      <footprint>TO_SOT_Packages_SMD:SOT-223</footprint>
+      <libsource lib="device" part="Q_NMOS_GDS"/>
+      <sheetpath names="/Sheet58DB046C/" tstamps="/58DB046D/"/>
+      <tstamp>5792FCF2</tstamp>
+    </comp>
+    <comp ref="C2016">
+      <value>CP</value>
+      <footprint>Capacitors_Tantalum_SMD:Tantalum_Case-D_EIA-7343-31_Reflow</footprint>
+      <libsource lib="CEN-SCHEMA" part="CP"/>
+      <sheetpath names="/Sheet58DB046C/" tstamps="/58DB046D/"/>
+      <tstamp>5792FCF8</tstamp>
+    </comp>
+    <comp ref="R2005">
+      <value>10k</value>
+      <footprint>Resistors_SMD:R_0603</footprint>
+      <libsource lib="CEN-SCHEMA" part="R"/>
+      <sheetpath names="/Sheet58DB046C/" tstamps="/58DB046D/"/>
+      <tstamp>5792FCFE</tstamp>
+    </comp>
+    <comp ref="R2006">
+      <value>1k</value>
+      <footprint>Resistors_SMD:R_0603</footprint>
+      <libsource lib="CEN-SCHEMA" part="R"/>
+      <sheetpath names="/Sheet58DB046C/" tstamps="/58DB046D/"/>
+      <tstamp>5792FD04</tstamp>
+    </comp>
+    <comp ref="R2007">
+      <value>3k3</value>
+      <footprint>Resistors_SMD:R_0603</footprint>
+      <libsource lib="CEN-SCHEMA" part="R"/>
+      <sheetpath names="/Sheet58DB046C/" tstamps="/58DB046D/"/>
+      <tstamp>5792FD0A</tstamp>
+    </comp>
+    <comp ref="C2013">
+      <value>47n</value>
+      <footprint>Capacitors_SMD:C_0603</footprint>
+      <libsource lib="CEN-SCHEMA" part="C"/>
+      <sheetpath names="/Sheet58DB046C/" tstamps="/58DB046D/"/>
+      <tstamp>5792FDBD</tstamp>
+    </comp>
+    <comp ref="C2017">
+      <value>100µ</value>
+      <footprint>Capacitors_Tantalum_SMD:Tantalum_Case-A_EIA-3216-18_Reflow</footprint>
+      <libsource lib="CEN-SCHEMA" part="CP"/>
+      <sheetpath names="/Sheet58DB046C/" tstamps="/58DB046D/"/>
+      <tstamp>57933988</tstamp>
+    </comp>
+    <comp ref="C2018">
+      <value>100µ</value>
+      <footprint>Capacitors_Tantalum_SMD:Tantalum_Case-A_EIA-3216-18_Reflow</footprint>
+      <libsource lib="CEN-SCHEMA" part="CP"/>
+      <sheetpath names="/Sheet58DB046C/" tstamps="/58DB046D/"/>
+      <tstamp>5793398E</tstamp>
+    </comp>
+    <comp ref="C2019">
+      <value>100µ</value>
+      <footprint>Capacitors_Tantalum_SMD:Tantalum_Case-A_EIA-3216-18_Reflow</footprint>
+      <libsource lib="CEN-SCHEMA" part="CP"/>
+      <sheetpath names="/Sheet58DB046C/" tstamps="/58DB046D/"/>
+      <tstamp>57933994</tstamp>
+    </comp>
+    <comp ref="C2020">
+      <value>100n</value>
+      <footprint>Capacitors_SMD:C_0603</footprint>
+      <libsource lib="CEN-SCHEMA" part="C"/>
+      <sheetpath names="/Sheet58DB046C/" tstamps="/58DB046D/"/>
+      <tstamp>579339AF</tstamp>
+    </comp>
+    <comp ref="C2021">
+      <value>100n</value>
+      <footprint>Capacitors_SMD:C_0603</footprint>
+      <libsource lib="CEN-SCHEMA" part="C"/>
+      <sheetpath names="/Sheet58DB046C/" tstamps="/58DB046D/"/>
+      <tstamp>579339B5</tstamp>
+    </comp>
+    <comp ref="U2004">
+      <value>L5973D</value>
+      <footprint>Housings_SOIC:SOIC-8_3.9x4.9mm_Pitch1.27mm</footprint>
+      <libsource lib="CEN-SCHEMA" part="L5973D"/>
+      <sheetpath names="/Sheet58DB046C/" tstamps="/58DB046D/"/>
+      <tstamp>57936F26</tstamp>
+    </comp>
+    <comp ref="C2033">
+      <value>10µ/25V</value>
+      <footprint>Capacitors_Tantalum_SMD:Tantalum_Case-D_EIA-7343-31_Reflow</footprint>
+      <libsource lib="CEN-SCHEMA" part="CP"/>
+      <sheetpath names="/Sheet58DB046C/" tstamps="/58DB046D/"/>
+      <tstamp>57936F2C</tstamp>
+    </comp>
+    <comp ref="C2036">
+      <value>22n</value>
+      <footprint>Capacitors_SMD:C_0603</footprint>
+      <libsource lib="CEN-SCHEMA" part="C"/>
+      <sheetpath names="/Sheet58DB046C/" tstamps="/58DB046D/"/>
+      <tstamp>57936F32</tstamp>
+    </comp>
+    <comp ref="R2016">
+      <value>4k7</value>
+      <footprint>Resistors_SMD:R_0603</footprint>
+      <libsource lib="CEN-SCHEMA" part="R"/>
+      <sheetpath names="/Sheet58DB046C/" tstamps="/58DB046D/"/>
+      <tstamp>57936F38</tstamp>
+    </comp>
+    <comp ref="C2035">
+      <value>220p</value>
+      <footprint>Capacitors_SMD:C_0603</footprint>
+      <libsource lib="CEN-SCHEMA" part="C"/>
+      <sheetpath names="/Sheet58DB046C/" tstamps="/58DB046D/"/>
+      <tstamp>57936F4A</tstamp>
+    </comp>
+    <comp ref="L2006">
+      <value>22µH/3.3A</value>
+      <footprint>f4deb-mod-library:Self_30_BiTech</footprint>
+      <libsource lib="CEN-SCHEMA" part="INDUCTOR"/>
+      <sheetpath names="/Sheet58DB046C/" tstamps="/58DB046D/"/>
+      <tstamp>57936F5E</tstamp>
+    </comp>
+    <comp ref="D2009">
+      <value>MBRS130LT3G</value>
+      <footprint>Diodes_SMD:SMC_Standard</footprint>
+      <libsource lib="device" part="D_Schottky"/>
+      <sheetpath names="/Sheet58DB046C/" tstamps="/58DB046D/"/>
+      <tstamp>57936F64</tstamp>
+    </comp>
+    <comp ref="D2010">
+      <value>MBRS130LT3G</value>
+      <footprint>Diodes_SMD:SMC_Standard</footprint>
+      <libsource lib="device" part="D_Schottky"/>
+      <sheetpath names="/Sheet58DB046C/" tstamps="/58DB046D/"/>
+      <tstamp>57936F6A</tstamp>
+    </comp>
+    <comp ref="C2037">
+      <value>CP</value>
+      <footprint>Capacitors_Tantalum_SMD:Tantalum_Case-D_EIA-7343-31_Reflow</footprint>
+      <libsource lib="CEN-SCHEMA" part="CP"/>
+      <sheetpath names="/Sheet58DB046C/" tstamps="/58DB046D/"/>
+      <tstamp>57936F76</tstamp>
+    </comp>
+    <comp ref="R2013">
+      <value>22k</value>
+      <footprint>Resistors_SMD:R_0603</footprint>
+      <libsource lib="CEN-SCHEMA" part="R"/>
+      <sheetpath names="/Sheet58DB046C/" tstamps="/58DB046D/"/>
+      <tstamp>57936F7C</tstamp>
+    </comp>
+    <comp ref="R2014">
+      <value>2.2k</value>
+      <footprint>Resistors_SMD:R_0603</footprint>
+      <libsource lib="CEN-SCHEMA" part="R"/>
+      <sheetpath names="/Sheet58DB046C/" tstamps="/58DB046D/"/>
+      <tstamp>57936F82</tstamp>
+    </comp>
+    <comp ref="R2015">
+      <value>2k7</value>
+      <footprint>Resistors_SMD:R_0603</footprint>
+      <libsource lib="CEN-SCHEMA" part="R"/>
+      <sheetpath names="/Sheet58DB046C/" tstamps="/58DB046D/"/>
+      <tstamp>57936F88</tstamp>
+    </comp>
+    <comp ref="C2034">
+      <value>47n</value>
+      <footprint>Capacitors_SMD:C_0603</footprint>
+      <libsource lib="CEN-SCHEMA" part="C"/>
+      <sheetpath names="/Sheet58DB046C/" tstamps="/58DB046D/"/>
+      <tstamp>57936FE9</tstamp>
+    </comp>
+    <comp ref="C2038">
+      <value>100µ</value>
+      <footprint>Capacitors_Tantalum_SMD:Tantalum_Case-A_EIA-3216-18_Reflow</footprint>
+      <libsource lib="CEN-SCHEMA" part="CP"/>
+      <sheetpath names="/Sheet58DB046C/" tstamps="/58DB046D/"/>
+      <tstamp>57937008</tstamp>
+    </comp>
+    <comp ref="C2039">
+      <value>100µ</value>
+      <footprint>Capacitors_Tantalum_SMD:Tantalum_Case-A_EIA-3216-18_Reflow</footprint>
+      <libsource lib="CEN-SCHEMA" part="CP"/>
+      <sheetpath names="/Sheet58DB046C/" tstamps="/58DB046D/"/>
+      <tstamp>5793700E</tstamp>
+    </comp>
+    <comp ref="C2040">
+      <value>100µ</value>
+      <footprint>Capacitors_Tantalum_SMD:Tantalum_Case-A_EIA-3216-18_Reflow</footprint>
+      <libsource lib="CEN-SCHEMA" part="CP"/>
+      <sheetpath names="/Sheet58DB046C/" tstamps="/58DB046D/"/>
+      <tstamp>57937014</tstamp>
+    </comp>
+    <comp ref="C2041">
+      <value>100n</value>
+      <footprint>Capacitors_SMD:C_0603</footprint>
+      <libsource lib="CEN-SCHEMA" part="C"/>
+      <sheetpath names="/Sheet58DB046C/" tstamps="/58DB046D/"/>
+      <tstamp>5793702F</tstamp>
+    </comp>
+    <comp ref="C2042">
+      <value>100n</value>
+      <footprint>Capacitors_SMD:C_0603</footprint>
+      <libsource lib="CEN-SCHEMA" part="C"/>
+      <sheetpath names="/Sheet58DB046C/" tstamps="/58DB046D/"/>
+      <tstamp>57937035</tstamp>
+    </comp>
+    <comp ref="Q2004">
+      <value>Q_NMOS_GDSD</value>
+      <footprint>TO_SOT_Packages_SMD:SOT-223</footprint>
+      <libsource lib="device" part="Q_NMOS_GDSD"/>
+      <sheetpath names="/Sheet58DB046C/" tstamps="/58DB046D/"/>
+      <tstamp>5793BCE5</tstamp>
+    </comp>
+    <comp ref="U2003">
+      <value>L5973D</value>
+      <footprint>Housings_SOIC:SOIC-8_3.9x4.9mm_Pitch1.27mm</footprint>
+      <libsource lib="CEN-SCHEMA" part="L5973D"/>
+      <sheetpath names="/Sheet58DB046C/" tstamps="/58DB046D/"/>
+      <tstamp>57940B87</tstamp>
+    </comp>
+    <comp ref="C2023">
+      <value>10µ/25V</value>
+      <footprint>Capacitors_Tantalum_SMD:Tantalum_Case-D_EIA-7343-31_Reflow</footprint>
+      <libsource lib="CEN-SCHEMA" part="CP"/>
+      <sheetpath names="/Sheet58DB046C/" tstamps="/58DB046D/"/>
+      <tstamp>57940B8D</tstamp>
+    </comp>
+    <comp ref="C2026">
+      <value>22n</value>
+      <footprint>Capacitors_SMD:C_0603</footprint>
+      <libsource lib="CEN-SCHEMA" part="C"/>
+      <sheetpath names="/Sheet58DB046C/" tstamps="/58DB046D/"/>
+      <tstamp>57940B93</tstamp>
+    </comp>
+    <comp ref="R2012">
+      <value>4k7</value>
+      <footprint>Resistors_SMD:R_0603</footprint>
+      <libsource lib="CEN-SCHEMA" part="R"/>
+      <sheetpath names="/Sheet58DB046C/" tstamps="/58DB046D/"/>
+      <tstamp>57940B99</tstamp>
+    </comp>
+    <comp ref="C2025">
+      <value>220p</value>
+      <footprint>Capacitors_SMD:C_0603</footprint>
+      <libsource lib="CEN-SCHEMA" part="C"/>
+      <sheetpath names="/Sheet58DB046C/" tstamps="/58DB046D/"/>
+      <tstamp>57940BAB</tstamp>
+    </comp>
+    <comp ref="L2005">
+      <value>22µH/3.3A</value>
+      <footprint>f4deb-mod-library:Self_30_BiTech</footprint>
+      <libsource lib="CEN-SCHEMA" part="INDUCTOR"/>
+      <sheetpath names="/Sheet58DB046C/" tstamps="/58DB046D/"/>
+      <tstamp>57940BBF</tstamp>
+    </comp>
+    <comp ref="D2006">
+      <value>MBRS130LT3G</value>
+      <footprint>Diodes_SMD:SMC_Standard</footprint>
+      <libsource lib="device" part="D_Schottky"/>
+      <sheetpath names="/Sheet58DB046C/" tstamps="/58DB046D/"/>
+      <tstamp>57940BC5</tstamp>
+    </comp>
+    <comp ref="D2008">
+      <value>MBRS130LT3G</value>
+      <footprint>Diodes_SMD:SMC_Standard</footprint>
+      <libsource lib="device" part="D_Schottky"/>
+      <sheetpath names="/Sheet58DB046C/" tstamps="/58DB046D/"/>
+      <tstamp>57940BCB</tstamp>
+    </comp>
+    <comp ref="Q2003">
+      <value>IRLL3303</value>
+      <footprint>TO_SOT_Packages_SMD:SOT-223</footprint>
+      <libsource lib="device" part="Q_NMOS_GDS"/>
+      <sheetpath names="/Sheet58DB046C/" tstamps="/58DB046D/"/>
+      <tstamp>57940BD1</tstamp>
+    </comp>
+    <comp ref="C2027">
+      <value>CP</value>
+      <footprint>Capacitors_Tantalum_SMD:Tantalum_Case-D_EIA-7343-31_Reflow</footprint>
+      <libsource lib="CEN-SCHEMA" part="CP"/>
+      <sheetpath names="/Sheet58DB046C/" tstamps="/58DB046D/"/>
+      <tstamp>57940BD7</tstamp>
+    </comp>
+    <comp ref="R2009">
+      <value>10k</value>
+      <footprint>Resistors_SMD:R_0603</footprint>
+      <libsource lib="CEN-SCHEMA" part="R"/>
+      <sheetpath names="/Sheet58DB046C/" tstamps="/58DB046D/"/>
+      <tstamp>57940BDD</tstamp>
+    </comp>
+    <comp ref="R2010">
+      <value>1k</value>
+      <footprint>Resistors_SMD:R_0603</footprint>
+      <libsource lib="CEN-SCHEMA" part="R"/>
+      <sheetpath names="/Sheet58DB046C/" tstamps="/58DB046D/"/>
+      <tstamp>57940BE3</tstamp>
+    </comp>
+    <comp ref="R2011">
+      <value>3k3</value>
+      <footprint>Resistors_SMD:R_0603</footprint>
+      <libsource lib="CEN-SCHEMA" part="R"/>
+      <sheetpath names="/Sheet58DB046C/" tstamps="/58DB046D/"/>
+      <tstamp>57940BE9</tstamp>
+    </comp>
+    <comp ref="L2004">
+      <value>10µH/4.7A</value>
+      <footprint>f4deb-mod-library:Self_30_BiTech</footprint>
+      <libsource lib="CEN-SCHEMA" part="INDUCTOR"/>
+      <sheetpath names="/Sheet58DB046C/" tstamps="/58DB046D/"/>
+      <tstamp>57940C43</tstamp>
+    </comp>
+    <comp ref="C2024">
+      <value>47n</value>
+      <footprint>Capacitors_SMD:C_0603</footprint>
+      <libsource lib="CEN-SCHEMA" part="C"/>
+      <sheetpath names="/Sheet58DB046C/" tstamps="/58DB046D/"/>
+      <tstamp>57940C4A</tstamp>
+    </comp>
+    <comp ref="C2022">
+      <value>47n</value>
+      <footprint>Capacitors_SMD:C_0603</footprint>
+      <libsource lib="CEN-SCHEMA" part="C"/>
+      <sheetpath names="/Sheet58DB046C/" tstamps="/58DB046D/"/>
+      <tstamp>57940C59</tstamp>
+    </comp>
+    <comp ref="C2028">
+      <value>100µ</value>
+      <footprint>Capacitors_Tantalum_SMD:Tantalum_Case-A_EIA-3216-18_Reflow</footprint>
+      <libsource lib="CEN-SCHEMA" part="CP"/>
+      <sheetpath names="/Sheet58DB046C/" tstamps="/58DB046D/"/>
+      <tstamp>57940C69</tstamp>
+    </comp>
+    <comp ref="C2029">
+      <value>100µ</value>
+      <footprint>Capacitors_Tantalum_SMD:Tantalum_Case-A_EIA-3216-18_Reflow</footprint>
+      <libsource lib="CEN-SCHEMA" part="CP"/>
+      <sheetpath names="/Sheet58DB046C/" tstamps="/58DB046D/"/>
+      <tstamp>57940C6F</tstamp>
+    </comp>
+    <comp ref="C2030">
+      <value>100µ</value>
+      <footprint>Capacitors_Tantalum_SMD:Tantalum_Case-A_EIA-3216-18_Reflow</footprint>
+      <libsource lib="CEN-SCHEMA" part="CP"/>
+      <sheetpath names="/Sheet58DB046C/" tstamps="/58DB046D/"/>
+      <tstamp>57940C75</tstamp>
+    </comp>
+    <comp ref="C2031">
+      <value>100n</value>
+      <footprint>Capacitors_SMD:C_0603</footprint>
+      <libsource lib="CEN-SCHEMA" part="C"/>
+      <sheetpath names="/Sheet58DB046C/" tstamps="/58DB046D/"/>
+      <tstamp>57940C90</tstamp>
+    </comp>
+    <comp ref="C2032">
+      <value>100n</value>
+      <footprint>Capacitors_SMD:C_0603</footprint>
+      <libsource lib="CEN-SCHEMA" part="C"/>
+      <sheetpath names="/Sheet58DB046C/" tstamps="/58DB046D/"/>
+      <tstamp>57940C96</tstamp>
+    </comp>
+    <comp ref="C2001">
+      <value>47n</value>
+      <footprint>Capacitors_SMD:C_0603</footprint>
+      <libsource lib="CEN-SCHEMA" part="C"/>
+      <sheetpath names="/Sheet58DB046C/" tstamps="/58DB046D/"/>
+      <tstamp>5792E847</tstamp>
+    </comp>
+  </components>
+  <libparts>
+    <libpart lib="CEN-SCHEMA" part="34N06L">
+      <fields>
+        <field name="Reference">Q</field>
+        <field name="Value">34N06L</field>
+        <field name="Footprint">TO_SOT_Packages_SMD:TO-263-3Lead</field>
+      </fields>
+      <pins>
+        <pin num="1" name="G" type="passive"/>
+        <pin num="2" name="D" type="passive"/>
+        <pin num="3" name="S" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="CEN-SCHEMA" part="7805-">
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">7805-</field>
+      </fields>
+      <pins>
+        <pin num="1" name="VI" type="input"/>
+        <pin num="2" name="GND" type="input"/>
+        <pin num="3" name="VO" type="power_out"/>
+      </pins>
+    </libpart>
+    <libpart lib="transistors" part="BC557">
+      <aliases>
+        <alias>BC556</alias>
+        <alias>BC558</alias>
+        <alias>BC559</alias>
+        <alias>BC560</alias>
+      </aliases>
+      <description>45V Vce, 0.1A Ic, PNP Small Signal Transistor, TO-92</description>
+      <docs>http://www.fairchildsemi.com/ds/BC/BC557.pdf</docs>
+      <footprints>
+        <fp>TO-92*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">Q</field>
+        <field name="Value">BC557</field>
+        <field name="Footprint">TO-92</field>
+      </fields>
+      <pins>
+        <pin num="1" name="C" type="passive"/>
+        <pin num="2" name="B" type="input"/>
+        <pin num="3" name="E" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="CEN-SCHEMA" part="C">
+      <fields>
+        <field name="Reference">C</field>
+        <field name="Value">C</field>
+      </fields>
+      <pins>
+        <pin num="1" name="~" type="passive"/>
+        <pin num="2" name="~" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="conn" part="CONN_01X06">
+      <description>Connector, single row, 01x06</description>
+      <footprints>
+        <fp>Pin_Header_Straight_1X06</fp>
+        <fp>Pin_Header_Angled_1X06</fp>
+        <fp>Socket_Strip_Straight_1X06</fp>
+        <fp>Socket_Strip_Angled_1X06</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">P</field>
+        <field name="Value">CONN_01X06</field>
+      </fields>
+      <pins>
+        <pin num="1" name="P1" type="passive"/>
+        <pin num="2" name="P2" type="passive"/>
+        <pin num="3" name="P3" type="passive"/>
+        <pin num="4" name="P4" type="passive"/>
+        <pin num="5" name="P5" type="passive"/>
+        <pin num="6" name="P6" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="CEN-SCHEMA" part="CONN_2">
+      <fields>
+        <field name="Reference">K</field>
+        <field name="Value">CONN_2</field>
+      </fields>
+      <pins>
+        <pin num="1" name="P1" type="passive"/>
+        <pin num="2" name="PM" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="CEN-SCHEMA" part="CP">
+      <aliases>
+        <alias>CAPAPOL</alias>
+      </aliases>
+      <fields>
+        <field name="Reference">C</field>
+        <field name="Value">CP</field>
+      </fields>
+      <pins>
+        <pin num="1" name="~" type="passive"/>
+        <pin num="2" name="~" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="CEN-SCHEMA" part="DIODE_TRANSIL">
+      <fields>
+        <field name="Reference">D</field>
+        <field name="Value">DIODE_TRANSIL</field>
+      </fields>
+      <pins>
+        <pin num="1" name="A" type="passive"/>
+        <pin num="2" name="K" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="device" part="D_Schottky">
+      <description>Schottky diode</description>
+      <footprints>
+        <fp>Diode_*</fp>
+        <fp>D-*</fp>
+        <fp>*SingleDiode</fp>
+        <fp>*_Diode_*</fp>
+        <fp>*SingleDiode*</fp>
+        <fp>D_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">D</field>
+        <field name="Value">D_Schottky</field>
+      </fields>
+      <pins>
+        <pin num="1" name="K" type="passive"/>
+        <pin num="2" name="A" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="device" part="D_Small">
+      <description>Diode, small symbol</description>
+      <footprints>
+        <fp>Diode_*</fp>
+        <fp>D-Pak_TO252AA</fp>
+        <fp>*SingleDiode</fp>
+        <fp>*SingleDiode*</fp>
+        <fp>*_Diode_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">D</field>
+        <field name="Value">D_Small</field>
+      </fields>
+      <pins>
+        <pin num="1" name="K" type="passive"/>
+        <pin num="2" name="A" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="CEN-SCHEMA" part="INDUCTOR">
+      <fields>
+        <field name="Reference">L</field>
+        <field name="Value">INDUCTOR</field>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="CEN-SCHEMA" part="L5973D">
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">L5973D</field>
+      </fields>
+      <pins>
+        <pin num="1" name="OUT" type="input"/>
+        <pin num="2" name="SYNC" type="input"/>
+        <pin num="3" name="INH" type="input"/>
+        <pin num="4" name="COMP" type="input"/>
+        <pin num="5" name="FB" type="input"/>
+        <pin num="6" name="VREF" type="input"/>
+        <pin num="7" name="GND" type="input"/>
+        <pin num="8" name="VCC" type="input"/>
+      </pins>
+    </libpart>
+    <libpart lib="CEN-SCHEMA" part="LED">
+      <fields>
+        <field name="Reference">D</field>
+        <field name="Value">LED</field>
+      </fields>
+      <pins>
+        <pin num="1" name="A" type="passive"/>
+        <pin num="2" name="K" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="device" part="Q_NMOS_GDS">
+      <description>Transistor N-MOSFET with substrate diode (general)</description>
+      <fields>
+        <field name="Reference">Q</field>
+        <field name="Value">Q_NMOS_GDS</field>
+      </fields>
+      <pins>
+        <pin num="1" name="G" type="input"/>
+        <pin num="2" name="D" type="passive"/>
+        <pin num="3" name="S" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="device" part="Q_NMOS_GDSD">
+      <description>Transistor N-MOSFETwith substrate diode, drain connected to mounting plane (general)</description>
+      <fields>
+        <field name="Reference">Q</field>
+        <field name="Value">Q_NMOS_GDSD</field>
+      </fields>
+      <pins>
+        <pin num="1" name="G" type="input"/>
+        <pin num="2" name="D" type="passive"/>
+        <pin num="3" name="S" type="passive"/>
+        <pin num="4" name="D" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="CEN-SCHEMA" part="R">
+      <fields>
+        <field name="Reference">R</field>
+        <field name="Value">R</field>
+      </fields>
+      <pins>
+        <pin num="1" name="~" type="passive"/>
+        <pin num="2" name="~" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="CEN-SCHEMA" part="RVAR">
+      <fields>
+        <field name="Reference">RVAR</field>
+        <field name="Value">RVAR</field>
+      </fields>
+      <pins>
+        <pin num="1" name="~" type="passive"/>
+        <pin num="2" name="~" type="input"/>
+        <pin num="3" name="~" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Chargeur Solaire-cache" part="TL072-RESCUE-Chargeur_Solaire">
+      <footprints>
+        <fp>SOIC*</fp>
+        <fp>DIP*</fp>
+        <fp>TSSOP*</fp>
+        <fp>TO-99*</fp>
+        <fp>DSBGA*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">TL072-RESCUE-Chargeur_Solaire</field>
+      </fields>
+      <pins>
+        <pin num="1" name="~" type="output"/>
+        <pin num="2" name="-" type="input"/>
+        <pin num="3" name="+" type="input"/>
+        <pin num="4" name="V-" type="power_in"/>
+        <pin num="5" name="+" type="input"/>
+        <pin num="6" name="-" type="input"/>
+        <pin num="7" name="~" type="output"/>
+        <pin num="8" name="V+" type="power_in"/>
+      </pins>
+    </libpart>
+  </libparts>
+  <libraries>
+    <library logical="CEN-SCHEMA">
+      <uri>/media/f4deb/travail/electronique/git-f4deb/CubeDeb/Chargeur Solaire/V0.10/../../../git-f4deb-cen-electronic-library/CEN-SCHEMA.lib</uri>
+    </library>
+    <library logical="transistors">
+      <uri>/usr/share/kicad/library/transistors.lib</uri>
+    </library>
+    <library logical="device">
+      <uri>/usr/share/kicad/library/device.lib</uri>
+    </library>
+    <library logical="conn">
+      <uri>/usr/share/kicad/library/conn.lib</uri>
+    </library>
+    <library logical="Chargeur Solaire-cache">
+      <uri>/media/f4deb/travail/electronique/git-f4deb/CubeDeb/Chargeur Solaire/V0.10/Chargeur Solaire-cache.lib</uri>
+    </library>
+  </libraries>
+  <nets>
+    <net code="1" name="Net-(R1012-Pad1)">
+      <node ref="U1002" pin="5"/>
+      <node ref="R1013" pin="2"/>
+      <node ref="R1012" pin="1"/>
+    </net>
+    <net code="2" name="Net-(R1015-Pad1)">
+      <node ref="R1015" pin="1"/>
+      <node ref="U1002" pin="6"/>
+    </net>
+    <net code="3" name="Net-(D1007-Pad2)">
+      <node ref="K1003" pin="2"/>
+      <node ref="R1016" pin="2"/>
+      <node ref="D1007" pin="2"/>
+      <node ref="R1017" pin="1"/>
+      <node ref="R1015" pin="2"/>
+    </net>
+    <net code="4" name="Net-(K1003-Pad1)">
+      <node ref="Q1002" pin="3"/>
+      <node ref="R1017" pin="2"/>
+      <node ref="R1014" pin="1"/>
+      <node ref="K1003" pin="1"/>
+    </net>
+    <net code="5" name="Net-(D1005-Pad1)">
+      <node ref="D1005" pin="1"/>
+      <node ref="R1008" pin="2"/>
+    </net>
+    <net code="6" name="Net-(C1003-Pad1)">
+      <node ref="U1001" pin="3"/>
+      <node ref="U1002" pin="2"/>
+      <node ref="R1003" pin="1"/>
+      <node ref="C1003" pin="1"/>
+    </net>
+    <net code="7" name="Net-(D1003-Pad1)">
+      <node ref="R1005" pin="2"/>
+      <node ref="D1003" pin="1"/>
+    </net>
+    <net code="8" name="Net-(D1004-Pad1)">
+      <node ref="R1007" pin="2"/>
+      <node ref="D1004" pin="1"/>
+    </net>
+    <net code="9" name="Net-(D1002-Pad1)">
+      <node ref="R1006" pin="1"/>
+      <node ref="D1002" pin="1"/>
+      <node ref="R1010" pin="2"/>
+      <node ref="D1006" pin="1"/>
+    </net>
+    <net code="10" name="+3V3">
+      <node ref="C2006" pin="1"/>
+      <node ref="D2001" pin="1"/>
+      <node ref="P1001" pin="2"/>
+      <node ref="R2002" pin="1"/>
+      <node ref="C2010" pin="1"/>
+      <node ref="C2007" pin="1"/>
+      <node ref="C2011" pin="1"/>
+      <node ref="C2008" pin="1"/>
+      <node ref="C2009" pin="1"/>
+      <node ref="D2015" pin="1"/>
+    </net>
+    <net code="11" name="GND">
+      <node ref="C2007" pin="2"/>
+      <node ref="D2002" pin="1"/>
+      <node ref="C2003" pin="2"/>
+      <node ref="R2003" pin="2"/>
+      <node ref="C2008" pin="2"/>
+      <node ref="C2009" pin="2"/>
+      <node ref="C2030" pin="2"/>
+      <node ref="C2010" pin="2"/>
+      <node ref="C2011" pin="2"/>
+      <node ref="C2032" pin="2"/>
+      <node ref="C2031" pin="2"/>
+      <node ref="C2027" pin="2"/>
+      <node ref="R2016" pin="2"/>
+      <node ref="R2011" pin="2"/>
+      <node ref="Q2003" pin="3"/>
+      <node ref="C2001" pin="2"/>
+      <node ref="U2003" pin="7"/>
+      <node ref="R2012" pin="2"/>
+      <node ref="D2008" pin="2"/>
+      <node ref="Q2004" pin="3"/>
+      <node ref="U2003" pin="3"/>
+      <node ref="C2025" pin="2"/>
+      <node ref="C2023" pin="2"/>
+      <node ref="C2017" pin="2"/>
+      <node ref="C2018" pin="2"/>
+      <node ref="C2019" pin="2"/>
+      <node ref="C2034" pin="2"/>
+      <node ref="R2015" pin="2"/>
+      <node ref="C2013" pin="2"/>
+      <node ref="C2038" pin="2"/>
+      <node ref="C2035" pin="2"/>
+      <node ref="D2010" pin="2"/>
+      <node ref="C2037" pin="2"/>
+      <node ref="U2004" pin="3"/>
+      <node ref="U2004" pin="7"/>
+      <node ref="C2033" pin="2"/>
+      <node ref="C2016" pin="2"/>
+      <node ref="C2020" pin="2"/>
+      <node ref="C2021" pin="2"/>
+      <node ref="R2007" pin="2"/>
+      <node ref="U2002" pin="3"/>
+      <node ref="C2012" pin="2"/>
+      <node ref="R2008" pin="2"/>
+      <node ref="U2002" pin="7"/>
+      <node ref="R2017" pin="2"/>
+      <node ref="R2019" pin="2"/>
+      <node ref="R2018" pin="2"/>
+      <node ref="C2014" pin="2"/>
+      <node ref="D2005" pin="2"/>
+      <node ref="Q2002" pin="3"/>
+      <node ref="C2039" pin="2"/>
+      <node ref="C2040" pin="2"/>
+      <node ref="C2041" pin="2"/>
+      <node ref="C2042" pin="2"/>
+      <node ref="C2004" pin="2"/>
+      <node ref="R2020" pin="2"/>
+      <node ref="R2021" pin="2"/>
+      <node ref="D2003" pin="2"/>
+      <node ref="Q2001" pin="3"/>
+      <node ref="C2006" pin="2"/>
+      <node ref="U2001" pin="3"/>
+      <node ref="U2001" pin="7"/>
+      <node ref="C2002" pin="2"/>
+      <node ref="R2004" pin="2"/>
+      <node ref="R1002" pin="2"/>
+      <node ref="K1002" pin="1"/>
+      <node ref="K1001" pin="1"/>
+      <node ref="C1001" pin="2"/>
+      <node ref="D1004" pin="2"/>
+      <node ref="R1006" pin="2"/>
+      <node ref="D1003" pin="2"/>
+      <node ref="R1003" pin="2"/>
+      <node ref="D1005" pin="2"/>
+      <node ref="C2029" pin="2"/>
+      <node ref="C1004" pin="2"/>
+      <node ref="Q1002" pin="2"/>
+      <node ref="P1001" pin="1"/>
+      <node ref="C2028" pin="2"/>
+      <node ref="C2024" pin="2"/>
+      <node ref="U1002" pin="4"/>
+      <node ref="C1003" pin="2"/>
+      <node ref="U1001" pin="2"/>
+      <node ref="C2022" pin="2"/>
+      <node ref="C1002" pin="2"/>
+    </net>
+    <net code="12" name="+5VD">
+      <node ref="C2016" pin="1"/>
+      <node ref="R2006" pin="1"/>
+      <node ref="D2014" pin="1"/>
+      <node ref="D2004" pin="1"/>
+      <node ref="C2017" pin="1"/>
+      <node ref="C2018" pin="1"/>
+      <node ref="C2019" pin="1"/>
+      <node ref="P1001" pin="3"/>
+      <node ref="C2020" pin="1"/>
+      <node ref="C2021" pin="1"/>
+    </net>
+    <net code="13" name="+5VA">
+      <node ref="C2030" pin="1"/>
+      <node ref="D2013" pin="1"/>
+      <node ref="P1001" pin="4"/>
+      <node ref="D2006" pin="1"/>
+      <node ref="C2031" pin="1"/>
+      <node ref="C2032" pin="1"/>
+      <node ref="R2010" pin="1"/>
+      <node ref="C2027" pin="1"/>
+      <node ref="C2029" pin="1"/>
+      <node ref="C2028" pin="1"/>
+    </net>
+    <net code="14" name="+12VA">
+      <node ref="C2039" pin="1"/>
+      <node ref="C2042" pin="1"/>
+      <node ref="C2040" pin="1"/>
+      <node ref="C2041" pin="1"/>
+      <node ref="D2012" pin="1"/>
+      <node ref="C2037" pin="1"/>
+      <node ref="D2009" pin="1"/>
+      <node ref="P1001" pin="5"/>
+      <node ref="C2038" pin="1"/>
+      <node ref="R2014" pin="1"/>
+    </net>
+    <net code="15" name="Net-(Q1002-Pad1)">
+      <node ref="R1011" pin="1"/>
+      <node ref="R1014" pin="2"/>
+      <node ref="Q1002" pin="1"/>
+    </net>
+    <net code="16" name="Net-(Q1001-Pad1)">
+      <node ref="R1011" pin="2"/>
+      <node ref="Q1001" pin="1"/>
+      <node ref="R1008" pin="1"/>
+    </net>
+    <net code="17" name="Net-(D1006-Pad2)">
+      <node ref="U1002" pin="7"/>
+      <node ref="R1007" pin="1"/>
+      <node ref="D1006" pin="2"/>
+      <node ref="R1012" pin="2"/>
+    </net>
+    <net code="18" name="Net-(Q1001-Pad2)">
+      <node ref="R1010" pin="1"/>
+      <node ref="R1009" pin="1"/>
+      <node ref="Q1001" pin="2"/>
+    </net>
+    <net code="19" name="Net-(C1002-Pad1)">
+      <node ref="C1002" pin="1"/>
+      <node ref="R1009" pin="2"/>
+      <node ref="Q1001" pin="3"/>
+      <node ref="D1001" pin="1"/>
+      <node ref="U1001" pin="1"/>
+      <node ref="U1002" pin="8"/>
+    </net>
+    <net code="22" name="Net-(R1001-Pad2)">
+      <node ref="RVAR1001" pin="3"/>
+      <node ref="R1001" pin="2"/>
+    </net>
+    <net code="23" name="Net-(R1002-Pad1)">
+      <node ref="RVAR1001" pin="1"/>
+      <node ref="R1002" pin="1"/>
+    </net>
+    <net code="24" name="Net-(D1002-Pad2)">
+      <node ref="U1002" pin="1"/>
+      <node ref="R1004" pin="1"/>
+      <node ref="D1002" pin="2"/>
+      <node ref="R1005" pin="1"/>
+    </net>
+    <net code="25" name="Net-(C1001-Pad1)">
+      <node ref="RVAR1001" pin="2"/>
+      <node ref="U1002" pin="3"/>
+      <node ref="C1001" pin="1"/>
+      <node ref="R1004" pin="2"/>
+    </net>
+    <net code="26" name="+BATT">
+      <node ref="R1016" pin="1"/>
+      <node ref="D1001" pin="2"/>
+      <node ref="K1002" pin="2"/>
+      <node ref="D2011" pin="1"/>
+      <node ref="L2004" pin="1"/>
+      <node ref="C2022" pin="1"/>
+      <node ref="C2001" pin="1"/>
+      <node ref="P1001" pin="6"/>
+      <node ref="C1004" pin="1"/>
+      <node ref="D1007" pin="1"/>
+      <node ref="R1013" pin="1"/>
+      <node ref="K1001" pin="2"/>
+      <node ref="R1001" pin="1"/>
+      <node ref="L2001" pin="1"/>
+      <node ref="D2002" pin="2"/>
+    </net>
+    <net code="27" name="Net-(R2001-Pad1)">
+      <node ref="R2002" pin="2"/>
+      <node ref="R2001" pin="1"/>
+    </net>
+    <net code="28" name="Net-(D2001-Pad2)">
+      <node ref="Q2001" pin="2"/>
+      <node ref="L2002" pin="2"/>
+      <node ref="D2001" pin="2"/>
+    </net>
+    <net code="29" name="Net-(D2003-Pad1)">
+      <node ref="Q2001" pin="1"/>
+      <node ref="D2003" pin="1"/>
+      <node ref="U2001" pin="1"/>
+      <node ref="L2002" pin="1"/>
+    </net>
+    <net code="30" name="Net-(R2001-Pad2)">
+      <node ref="U2001" pin="5"/>
+      <node ref="R2003" pin="1"/>
+      <node ref="R2001" pin="2"/>
+    </net>
+    <net code="31" name="Net-(D2005-Pad1)">
+      <node ref="L2003" pin="1"/>
+      <node ref="Q2002" pin="1"/>
+      <node ref="D2005" pin="1"/>
+      <node ref="U2002" pin="1"/>
+    </net>
+    <net code="32" name="Net-(D2004-Pad2)">
+      <node ref="D2004" pin="2"/>
+      <node ref="Q2002" pin="2"/>
+      <node ref="L2003" pin="2"/>
+    </net>
+    <net code="33" name="Net-(R2005-Pad2)">
+      <node ref="R2005" pin="2"/>
+      <node ref="R2007" pin="1"/>
+      <node ref="U2002" pin="5"/>
+    </net>
+    <net code="34" name="Net-(C2014-Pad1)">
+      <node ref="C2014" pin="1"/>
+      <node ref="U2002" pin="4"/>
+      <node ref="C2015" pin="1"/>
+    </net>
+    <net code="35" name="Net-(C2015-Pad2)">
+      <node ref="C2015" pin="2"/>
+      <node ref="R2008" pin="1"/>
+    </net>
+    <net code="36" name="Net-(R2009-Pad1)">
+      <node ref="R2009" pin="1"/>
+      <node ref="R2010" pin="2"/>
+    </net>
+    <net code="37" name="Net-(R2009-Pad2)">
+      <node ref="R2009" pin="2"/>
+      <node ref="U2003" pin="5"/>
+      <node ref="R2011" pin="1"/>
+    </net>
+    <net code="38" name="Net-(C2004-Pad1)">
+      <node ref="C2004" pin="1"/>
+      <node ref="U2001" pin="4"/>
+      <node ref="C2005" pin="1"/>
+    </net>
+    <net code="39" name="Net-(D2011-Pad2)">
+      <node ref="R2017" pin="1"/>
+      <node ref="D2011" pin="2"/>
+    </net>
+    <net code="40" name="Net-(C2005-Pad2)">
+      <node ref="R2004" pin="1"/>
+      <node ref="C2005" pin="2"/>
+    </net>
+    <net code="41" name="Net-(D2012-Pad2)">
+      <node ref="R2018" pin="1"/>
+      <node ref="D2012" pin="2"/>
+    </net>
+    <net code="42" name="Net-(D2013-Pad2)">
+      <node ref="R2019" pin="1"/>
+      <node ref="D2013" pin="2"/>
+    </net>
+    <net code="43" name="Net-(D2014-Pad2)">
+      <node ref="R2020" pin="1"/>
+      <node ref="D2014" pin="2"/>
+    </net>
+    <net code="44" name="Net-(D2015-Pad2)">
+      <node ref="R2021" pin="1"/>
+      <node ref="D2015" pin="2"/>
+    </net>
+    <net code="45" name="Net-(D2008-Pad1)">
+      <node ref="L2005" pin="1"/>
+      <node ref="U2003" pin="1"/>
+      <node ref="Q2003" pin="1"/>
+      <node ref="D2008" pin="1"/>
+    </net>
+    <net code="46" name="Net-(D2006-Pad2)">
+      <node ref="L2005" pin="2"/>
+      <node ref="D2006" pin="2"/>
+      <node ref="Q2003" pin="2"/>
+    </net>
+    <net code="47" name="Net-(D2009-Pad2)">
+      <node ref="Q2004" pin="2"/>
+      <node ref="Q2004" pin="4"/>
+      <node ref="D2009" pin="2"/>
+      <node ref="L2006" pin="2"/>
+    </net>
+    <net code="48" name="Net-(C2025-Pad1)">
+      <node ref="C2026" pin="1"/>
+      <node ref="U2003" pin="4"/>
+      <node ref="C2025" pin="1"/>
+    </net>
+    <net code="49" name="Net-(C2026-Pad2)">
+      <node ref="C2026" pin="2"/>
+      <node ref="R2012" pin="1"/>
+    </net>
+    <net code="50" name="Net-(C2002-Pad1)">
+      <node ref="C2003" pin="1"/>
+      <node ref="C2002" pin="1"/>
+      <node ref="U2001" pin="8"/>
+      <node ref="C2012" pin="1"/>
+      <node ref="U2002" pin="8"/>
+      <node ref="C2013" pin="1"/>
+      <node ref="L2001" pin="2"/>
+    </net>
+    <net code="51" name="Net-(C2023-Pad1)">
+      <node ref="L2004" pin="2"/>
+      <node ref="C2033" pin="1"/>
+      <node ref="U2004" pin="8"/>
+      <node ref="U2003" pin="8"/>
+      <node ref="C2023" pin="1"/>
+      <node ref="C2034" pin="1"/>
+      <node ref="C2024" pin="1"/>
+    </net>
+    <net code="52" name="Net-(C2035-Pad1)">
+      <node ref="U2004" pin="4"/>
+      <node ref="C2035" pin="1"/>
+      <node ref="C2036" pin="1"/>
+    </net>
+    <net code="53" name="Net-(C2036-Pad2)">
+      <node ref="R2016" pin="1"/>
+      <node ref="C2036" pin="2"/>
+    </net>
+    <net code="54" name="Net-(R2005-Pad1)">
+      <node ref="R2006" pin="2"/>
+      <node ref="R2005" pin="1"/>
+    </net>
+    <net code="55" name="Net-(R2013-Pad1)">
+      <node ref="R2013" pin="1"/>
+      <node ref="R2014" pin="2"/>
+    </net>
+    <net code="56" name="Net-(D2010-Pad1)">
+      <node ref="L2006" pin="1"/>
+      <node ref="U2004" pin="1"/>
+      <node ref="Q2004" pin="1"/>
+      <node ref="D2010" pin="1"/>
+    </net>
+    <net code="57" name="Net-(R2013-Pad2)">
+      <node ref="U2004" pin="5"/>
+      <node ref="R2013" pin="2"/>
+      <node ref="R2015" pin="1"/>
+    </net>
+    <net code="58" name="Net-(U2002-Pad2)">
+      <node ref="U2002" pin="2"/>
+    </net>
+    <net code="59" name="Net-(U2002-Pad6)">
+      <node ref="U2002" pin="6"/>
+    </net>
+    <net code="60" name="Net-(U2001-Pad2)">
+      <node ref="U2001" pin="2"/>
+    </net>
+    <net code="61" name="Net-(U2001-Pad6)">
+      <node ref="U2001" pin="6"/>
+    </net>
+    <net code="62" name="Net-(U2003-Pad6)">
+      <node ref="U2003" pin="6"/>
+    </net>
+    <net code="63" name="Net-(U2003-Pad2)">
+      <node ref="U2003" pin="2"/>
+    </net>
+    <net code="64" name="Net-(U2004-Pad2)">
+      <node ref="U2004" pin="2"/>
+    </net>
+    <net code="65" name="Net-(U2004-Pad6)">
+      <node ref="U2004" pin="6"/>
+    </net>
+  </nets>
+</export>
