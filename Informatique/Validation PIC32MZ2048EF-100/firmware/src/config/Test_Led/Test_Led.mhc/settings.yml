@@ -1,0 +1,14 @@
+configName: Test_Led
+folderName: LED1-2
+format_version: v1.0
+frameworkPath: ../../../../../../../home/f4deb/MPLABXProjects/harmony
+processor: PIC32MZ1024EFM100
+projectName: LED1-2
+settings:
+  PackageFilter: core;core_apps_pic32mx;bsp;x2c;bootloader_apps_usb;motor_control;csp_apps_pic32mz_ef;gfx;usb;csp_apps_pic32mx;gfx_apps_pic32mz_ef;usb_apps_device;mc_apps_pic32cm_mc;quick_docs;core_apps_pic32mz_ef;net;csp;bootloader;bootloader_apps_uart;crypto
+  FORCE_OPTIMIZATION: 'false'
+  GENERATE_BACKUP: 'true'
+  TRUSTZONE: 'false'
+  CMSISPath: ./dev_packs/arm/CMSIS/5.7.0
+  MERGE_STRATEGY: USER_ALL
+  DFPPath: ./dev_packs/Microchip/PIC32MZ-EF_DFP/1.3.58/atdf/PIC32MZ1024EFM100.atdf

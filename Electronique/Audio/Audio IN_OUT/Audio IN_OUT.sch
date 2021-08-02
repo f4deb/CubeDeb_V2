@@ -640,6 +640,14 @@ S 3550 1250 1300 1475
 U 60B0058A
 F0 "Audio-out" 50
 F1 "Audio-out.sch" 50
+F2 "FOSC" I L 3550 1400 50 
+F3 "BFR" I L 3550 1875 50 
+F4 "HP" I L 3550 1950 50 
+F5 "DEMOD" I L 3550 1700 50 
+F6 "CMD-TX" I L 3550 2325 50 
+F7 "BFE" I R 4850 1650 50 
+F8 "micro" I R 4850 1525 50 
+F9 "CMD-RX" I L 3550 2425 50 
 $EndSheet
 $Comp
 L Connector:RJ12 J1003
@@ -663,4 +671,70 @@ F 3 "~" V 3575 7100 50  0001 C CNN
 	1    3575 7075
 	0    -1   -1   0   
 $EndComp
+Wire Wire Line
+	2225 6700 2225 6525
+Text HLabel 2225 6525 1    50   Input ~ 0
+HP
+Text HLabel 2125 6525 1    50   Input ~ 0
+MICRO
+$Comp
+L power:GND #PWR?
+U 1 1 60F98169
+P 2025 6525
+F 0 "#PWR?" H 2025 6275 50  0001 C CNN
+F 1 "GND" H 2030 6352 50  0000 C CNN
+F 2 "" H 2025 6525 50  0001 C CNN
+F 3 "" H 2025 6525 50  0001 C CNN
+	1    2025 6525
+	-1   0    0    1   
+$EndComp
+Text HLabel 1925 6525 1    50   Input ~ 0
+PTT
+Text HLabel 1825 6525 1    50   Input ~ 0
+BP1
+Text HLabel 1725 6525 1    50   Input ~ 0
+BP2
+Wire Wire Line
+	1725 6525 1725 6700
+Wire Wire Line
+	1825 6525 1825 6700
+Wire Wire Line
+	1925 6525 1925 6700
+Wire Wire Line
+	2025 6525 2025 6700
+Wire Wire Line
+	2125 6525 2125 6700
+Wire Wire Line
+	3775 6675 3775 6500
+Text HLabel 3775 6500 1    50   Input ~ 0
+BFR
+Text HLabel 3675 6500 1    50   Input ~ 0
+BFE
+$Comp
+L power:GND #PWR?
+U 1 1 60FAA332
+P 3575 6500
+F 0 "#PWR?" H 3575 6250 50  0001 C CNN
+F 1 "GND" H 3580 6327 50  0000 C CNN
+F 2 "" H 3575 6500 50  0001 C CNN
+F 3 "" H 3575 6500 50  0001 C CNN
+	1    3575 6500
+	-1   0    0    1   
+$EndComp
+Text HLabel 3475 6500 1    50   Input ~ 0
+PTT
+Text HLabel 3375 6500 1    50   Input ~ 0
+BP1
+Text HLabel 3275 6500 1    50   Input ~ 0
+BP2
+Wire Wire Line
+	3275 6500 3275 6675
+Wire Wire Line
+	3375 6500 3375 6675
+Wire Wire Line
+	3475 6500 3475 6675
+Wire Wire Line
+	3575 6500 3575 6675
+Wire Wire Line
+	3675 6500 3675 6675
 $EndSCHEMATC
