@@ -1,0 +1,14 @@
+
+#ifndef _I2CCONFIG_H
+#define _I2CCONFIG_H
+
+//LM75 I2C ADDRESS
+#define LM75_ADDRESS 0x48
+
+//SAA1064T I2C ADDRESS
+#define SAA1064_ADDR 0x38
+
+
+
+#endif /* _EXAMPLE_FILE_NAME_H */
+
