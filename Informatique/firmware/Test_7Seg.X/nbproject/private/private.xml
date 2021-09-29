@@ -3,14 +3,7 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/media/f4deb/ROBOT/ELECTRONIQUE/CubDebV2/Informatique/firmware/src/common/7seg/7segments.c</file>
-            <file>file:/media/f4deb/ROBOT/ELECTRONIQUE/CubDebV2/Informatique/firmware/src/drivers/SAA1064T/SAA1064T.c</file>
-            <file>file:/media/f4deb/ROBOT/ELECTRONIQUE/CubDebV2/Informatique/firmware/src/cube/mainCubeMeteo.c</file>
-            <file>file:/media/f4deb/ROBOT/ELECTRONIQUE/CubDebV2/Informatique/firmware/src/drivers/segSAA1064T/segSAA1064T.c</file>
-            <file>file:/media/f4deb/ROBOT/ELECTRONIQUE/CubDebV2/Informatique/firmware/src/common/7seg/7segmentsOutputStream.h</file>
-            <file>file:/media/f4deb/ROBOT/ELECTRONIQUE/CubDebV2/Informatique/firmware/src/common/IO/printWriter/printWriter.c</file>
-            <file>file:/media/f4deb/ROBOT/ELECTRONIQUE/CubDebV2/Informatique/firmware/src/common/7seg/7segmentsOutputStream.c</file>
-            <file>file:/media/f4deb/ROBOT/ELECTRONIQUE/CubDebV2/Informatique/firmware/src/common/IO/outputStream/outputStream.h</file>
+            <file>file:/media/f4deb/ROBOT/ELECTRONIQUE/CubeDeb_V2/Informatique/firmware/src/cube/mainCubeMeteo.c</file>
         </group>
     </open-files>
 </project-private>
