@@ -3,6 +3,8 @@
  */
 #include <stdlib.h>
 #include <string.h>
+#include <definitions.h>
+
 
 #include "7segmentsOutputStream.h"
 
@@ -10,6 +12,8 @@
 
 #include "../../common/IO/outputStream/outputStream.h"
 #include "../../common/I2C/I2CConfig.h"
+
+static int dot7Seg = 0;
 
 /**
  *@private
@@ -40,7 +44,7 @@ void _write7SegStreamChar(OutputStream* outputStream, unsigned char c) {
  *@private
  */
 void _write7SegStreamString(OutputStream* outputStream, const char* string) {
-    print7Seg(string,0x00,outputStream->address);
+    print7Seg(string,outputStream->object,outputStream->address);
 }
 
 /**
@@ -57,5 +61,7 @@ void init7SegOutputStream(OutputStream* outputStream,uint8_t address) {
     outputStream->writeChar = _write7SegStreamChar;
     outputStream->writeString = _write7SegStreamString;
     outputStream->flush = _flush7Seg;
+    outputStream->object = dot7Seg;
+    
     _openOutputStream7Seg(outputStream, 0);
 }

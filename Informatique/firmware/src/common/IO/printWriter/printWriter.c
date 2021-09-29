@@ -32,10 +32,9 @@ unsigned int appendString(OutputStream* outputStream, const char* s) {
         return -1;
     }
     outputStream->writeString(outputStream, s);
-    return result;
-    
-    
-    
+    return result;    
+}
 
-    
+void appendDot(OutputStream* outputStream, unsigned int dot) {
+    outputStream->object = dot;
 }

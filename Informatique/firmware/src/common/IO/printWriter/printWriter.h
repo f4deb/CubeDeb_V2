@@ -28,4 +28,7 @@ unsigned int appendString(OutputStream* outputStream, const char* s);
 
 unsigned int appendStringLN(OutputStream* outputStream, const char* s);
 
+void appendDot(OutputStream* outputStream, unsigned int dot);
+
+
 #endif

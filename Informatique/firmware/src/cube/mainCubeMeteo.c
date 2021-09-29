@@ -9,7 +9,7 @@
 #include "definitions.h"                // SYS function prototypes
 
 
-#include "cubeCommon7Seg.h"
+#include "../../cube/cubeCommon7Seg.h"
 
 #include "../common/IO/buffer/buffer.h"
 #include "../common/IO/outputStream/outputStream.h"
@@ -139,9 +139,6 @@ void mainCube (void){
 
             int i;
             int j;
-            /*for (i = 0;i<65000;i++){ 
-                j = j*7;
-            }*/
             if (!I2C1_Write( 0x48 , datatx, 1 )){
 
             }
@@ -170,7 +167,9 @@ void mainCube (void){
 
             str[3] = '}';  
 
-            print7Seg(str,0x04,SAA1064_ADDR);
+            appendDot(get7SegOutpuStream(),4);
+            appendString(get7SegOutpuStream(),str);
+            //print7Seg(str,0x04,SAA1064_ADDR);
 
         }
         else {
@@ -180,7 +179,8 @@ void mainCube (void){
 //            print7Seg("Temp}",0x04,SAA1064_ADDR);
             //write7SegStreamChar(get7SegOutpuStream(),'a');
 
-            if (appendString(get7SegOutpuStream(),"virg}"));
+            appendDot(get7SegOutpuStream(),0);
+            appendString(get7SegOutpuStream(),"temp}");
 
 
         }
