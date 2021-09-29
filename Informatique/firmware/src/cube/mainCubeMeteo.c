@@ -180,7 +180,7 @@ void mainCube (void){
 //            print7Seg("Temp}",0x04,SAA1064_ADDR);
             //write7SegStreamChar(get7SegOutpuStream(),'a');
 
-            if (appendString(get7SegOutpuStream(),"nzsx}"));
+            if (appendString(get7SegOutpuStream(),"virg}"));
 
 
         }
