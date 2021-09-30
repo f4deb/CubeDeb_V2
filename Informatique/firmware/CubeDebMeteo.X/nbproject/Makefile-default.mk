@@ -57,17 +57,17 @@ OBJECTDIR=build/${CND_CONF}/${IMAGE_TYPE}
 DISTDIR=dist/${CND_CONF}/${IMAGE_TYPE}
 
 # Source Files Quoted if spaced
-SOURCEFILES_QUOTED_IF_SPACED=../src/common/7seg/7segments.c ../src/common/7seg/7segmentsOutputStream.c ../src/common/delay/delay.c ../src/common/error/error.c ../src/common/IO/buffer/buffer.c ../src/common/IO/outputStream/outputStream.c ../src/common/IO/printWriter/printWriter.c ../src/common/led/led.c ../src/common/system/system.c ../src/common/timer1/timer1.c ../src/common/uart5/uart5.c ../src/config/default/peripheral/cache/plib_cache.c ../src/config/default/peripheral/cache/plib_cache_pic32mz.S ../src/config/default/peripheral/clk/plib_clk.c ../src/config/default/peripheral/coretimer/plib_coretimer.c ../src/config/default/peripheral/evic/plib_evic.c ../src/config/default/peripheral/gpio/plib_gpio.c ../src/config/default/peripheral/i2c/master/plib_i2c1_master.c ../src/config/default/peripheral/tmr/plib_tmr2.c ../src/config/default/peripheral/tmr1/plib_tmr1.c ../src/config/default/peripheral/uart/plib_uart2.c ../src/config/default/peripheral/uart/plib_uart5.c ../src/config/default/stdio/xc32_monitor.c ../src/config/default/initialization.c ../src/config/default/interrupts.c ../src/config/default/exceptions.c ../src/cube/cubeCommon7Seg.c ../src/cube/mainCubeMeteo.c ../src/drivers/SAA1064T/SAA1064T.c ../src/mainCube.c
+SOURCEFILES_QUOTED_IF_SPACED=../src/common/7seg/7segments.c ../src/common/delay/delay.c ../src/common/error/error.c ../src/common/IO/buffer/buffer.c ../src/common/IO/outputStream/outputStream.c ../src/common/IO/printWriter/printWriter.c ../src/common/led/led.c ../src/common/system/system.c ../src/common/timer1/timer1.c ../src/common/uart5/uart5.c ../src/config/default/peripheral/cache/plib_cache.c ../src/config/default/peripheral/cache/plib_cache_pic32mz.S ../src/config/default/peripheral/clk/plib_clk.c ../src/config/default/peripheral/coretimer/plib_coretimer.c ../src/config/default/peripheral/evic/plib_evic.c ../src/config/default/peripheral/gpio/plib_gpio.c ../src/config/default/peripheral/i2c/master/plib_i2c1_master.c ../src/config/default/peripheral/tmr/plib_tmr2.c ../src/config/default/peripheral/tmr1/plib_tmr1.c ../src/config/default/peripheral/uart/plib_uart2.c ../src/config/default/peripheral/uart/plib_uart5.c ../src/config/default/stdio/xc32_monitor.c ../src/config/default/initialization.c ../src/config/default/interrupts.c ../src/config/default/exceptions.c ../src/cube/mainCubeMeteo.c ../src/drivers/SAA1064T/SAA1064T.c ../src/mainCube.c ../src/drivers/LM75A/LM75A.c ../src/common/sensor/temperature/temperature.c ../src/common/7seg/7segmentsOutputStream.c ../src/cube/cubeCommon.c
 
 # Object Files Quoted if spaced
-OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/_ext/1571292264/7segments.o ${OBJECTDIR}/_ext/1571292264/7segmentsOutputStream.o ${OBJECTDIR}/_ext/1506567961/delay.o ${OBJECTDIR}/_ext/1507884958/error.o ${OBJECTDIR}/_ext/383772639/buffer.o ${OBJECTDIR}/_ext/242462784/outputStream.o ${OBJECTDIR}/_ext/1038083393/printWriter.o ${OBJECTDIR}/_ext/919093983/led.o ${OBJECTDIR}/_ext/92899495/system.o ${OBJECTDIR}/_ext/79239498/timer1.o ${OBJECTDIR}/_ext/1522154941/uart5.o ${OBJECTDIR}/_ext/1984157808/plib_cache.o ${OBJECTDIR}/_ext/1984157808/plib_cache_pic32mz.o ${OBJECTDIR}/_ext/60165520/plib_clk.o ${OBJECTDIR}/_ext/1249264884/plib_coretimer.o ${OBJECTDIR}/_ext/1865200349/plib_evic.o ${OBJECTDIR}/_ext/1865254177/plib_gpio.o ${OBJECTDIR}/_ext/513455433/plib_i2c1_master.o ${OBJECTDIR}/_ext/60181895/plib_tmr2.o ${OBJECTDIR}/_ext/1865638794/plib_tmr1.o ${OBJECTDIR}/_ext/1865657120/plib_uart2.o ${OBJECTDIR}/_ext/1865657120/plib_uart5.o ${OBJECTDIR}/_ext/163028504/xc32_monitor.o ${OBJECTDIR}/_ext/1171490990/initialization.o ${OBJECTDIR}/_ext/1171490990/interrupts.o ${OBJECTDIR}/_ext/1171490990/exceptions.o ${OBJECTDIR}/_ext/1019397905/cubeCommon7Seg.o ${OBJECTDIR}/_ext/1019397905/mainCubeMeteo.o ${OBJECTDIR}/_ext/672751358/SAA1064T.o ${OBJECTDIR}/_ext/1360937237/mainCube.o
-POSSIBLE_DEPFILES=${OBJECTDIR}/_ext/1571292264/7segments.o.d ${OBJECTDIR}/_ext/1571292264/7segmentsOutputStream.o.d ${OBJECTDIR}/_ext/1506567961/delay.o.d ${OBJECTDIR}/_ext/1507884958/error.o.d ${OBJECTDIR}/_ext/383772639/buffer.o.d ${OBJECTDIR}/_ext/242462784/outputStream.o.d ${OBJECTDIR}/_ext/1038083393/printWriter.o.d ${OBJECTDIR}/_ext/919093983/led.o.d ${OBJECTDIR}/_ext/92899495/system.o.d ${OBJECTDIR}/_ext/79239498/timer1.o.d ${OBJECTDIR}/_ext/1522154941/uart5.o.d ${OBJECTDIR}/_ext/1984157808/plib_cache.o.d ${OBJECTDIR}/_ext/1984157808/plib_cache_pic32mz.o.d ${OBJECTDIR}/_ext/60165520/plib_clk.o.d ${OBJECTDIR}/_ext/1249264884/plib_coretimer.o.d ${OBJECTDIR}/_ext/1865200349/plib_evic.o.d ${OBJECTDIR}/_ext/1865254177/plib_gpio.o.d ${OBJECTDIR}/_ext/513455433/plib_i2c1_master.o.d ${OBJECTDIR}/_ext/60181895/plib_tmr2.o.d ${OBJECTDIR}/_ext/1865638794/plib_tmr1.o.d ${OBJECTDIR}/_ext/1865657120/plib_uart2.o.d ${OBJECTDIR}/_ext/1865657120/plib_uart5.o.d ${OBJECTDIR}/_ext/163028504/xc32_monitor.o.d ${OBJECTDIR}/_ext/1171490990/initialization.o.d ${OBJECTDIR}/_ext/1171490990/interrupts.o.d ${OBJECTDIR}/_ext/1171490990/exceptions.o.d ${OBJECTDIR}/_ext/1019397905/cubeCommon7Seg.o.d ${OBJECTDIR}/_ext/1019397905/mainCubeMeteo.o.d ${OBJECTDIR}/_ext/672751358/SAA1064T.o.d ${OBJECTDIR}/_ext/1360937237/mainCube.o.d
+OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/_ext/1571292264/7segments.o ${OBJECTDIR}/_ext/1506567961/delay.o ${OBJECTDIR}/_ext/1507884958/error.o ${OBJECTDIR}/_ext/383772639/buffer.o ${OBJECTDIR}/_ext/242462784/outputStream.o ${OBJECTDIR}/_ext/1038083393/printWriter.o ${OBJECTDIR}/_ext/919093983/led.o ${OBJECTDIR}/_ext/92899495/system.o ${OBJECTDIR}/_ext/79239498/timer1.o ${OBJECTDIR}/_ext/1522154941/uart5.o ${OBJECTDIR}/_ext/1984157808/plib_cache.o ${OBJECTDIR}/_ext/1984157808/plib_cache_pic32mz.o ${OBJECTDIR}/_ext/60165520/plib_clk.o ${OBJECTDIR}/_ext/1249264884/plib_coretimer.o ${OBJECTDIR}/_ext/1865200349/plib_evic.o ${OBJECTDIR}/_ext/1865254177/plib_gpio.o ${OBJECTDIR}/_ext/513455433/plib_i2c1_master.o ${OBJECTDIR}/_ext/60181895/plib_tmr2.o ${OBJECTDIR}/_ext/1865638794/plib_tmr1.o ${OBJECTDIR}/_ext/1865657120/plib_uart2.o ${OBJECTDIR}/_ext/1865657120/plib_uart5.o ${OBJECTDIR}/_ext/163028504/xc32_monitor.o ${OBJECTDIR}/_ext/1171490990/initialization.o ${OBJECTDIR}/_ext/1171490990/interrupts.o ${OBJECTDIR}/_ext/1171490990/exceptions.o ${OBJECTDIR}/_ext/1019397905/mainCubeMeteo.o ${OBJECTDIR}/_ext/672751358/SAA1064T.o ${OBJECTDIR}/_ext/1360937237/mainCube.o ${OBJECTDIR}/_ext/1367680316/LM75A.o ${OBJECTDIR}/_ext/1240316727/temperature.o ${OBJECTDIR}/_ext/1571292264/7segmentsOutputStream.o ${OBJECTDIR}/_ext/1019397905/cubeCommon.o
+POSSIBLE_DEPFILES=${OBJECTDIR}/_ext/1571292264/7segments.o.d ${OBJECTDIR}/_ext/1506567961/delay.o.d ${OBJECTDIR}/_ext/1507884958/error.o.d ${OBJECTDIR}/_ext/383772639/buffer.o.d ${OBJECTDIR}/_ext/242462784/outputStream.o.d ${OBJECTDIR}/_ext/1038083393/printWriter.o.d ${OBJECTDIR}/_ext/919093983/led.o.d ${OBJECTDIR}/_ext/92899495/system.o.d ${OBJECTDIR}/_ext/79239498/timer1.o.d ${OBJECTDIR}/_ext/1522154941/uart5.o.d ${OBJECTDIR}/_ext/1984157808/plib_cache.o.d ${OBJECTDIR}/_ext/1984157808/plib_cache_pic32mz.o.d ${OBJECTDIR}/_ext/60165520/plib_clk.o.d ${OBJECTDIR}/_ext/1249264884/plib_coretimer.o.d ${OBJECTDIR}/_ext/1865200349/plib_evic.o.d ${OBJECTDIR}/_ext/1865254177/plib_gpio.o.d ${OBJECTDIR}/_ext/513455433/plib_i2c1_master.o.d ${OBJECTDIR}/_ext/60181895/plib_tmr2.o.d ${OBJECTDIR}/_ext/1865638794/plib_tmr1.o.d ${OBJECTDIR}/_ext/1865657120/plib_uart2.o.d ${OBJECTDIR}/_ext/1865657120/plib_uart5.o.d ${OBJECTDIR}/_ext/163028504/xc32_monitor.o.d ${OBJECTDIR}/_ext/1171490990/initialization.o.d ${OBJECTDIR}/_ext/1171490990/interrupts.o.d ${OBJECTDIR}/_ext/1171490990/exceptions.o.d ${OBJECTDIR}/_ext/1019397905/mainCubeMeteo.o.d ${OBJECTDIR}/_ext/672751358/SAA1064T.o.d ${OBJECTDIR}/_ext/1360937237/mainCube.o.d ${OBJECTDIR}/_ext/1367680316/LM75A.o.d ${OBJECTDIR}/_ext/1240316727/temperature.o.d ${OBJECTDIR}/_ext/1571292264/7segmentsOutputStream.o.d ${OBJECTDIR}/_ext/1019397905/cubeCommon.o.d
 
 # Object Files
-OBJECTFILES=${OBJECTDIR}/_ext/1571292264/7segments.o ${OBJECTDIR}/_ext/1571292264/7segmentsOutputStream.o ${OBJECTDIR}/_ext/1506567961/delay.o ${OBJECTDIR}/_ext/1507884958/error.o ${OBJECTDIR}/_ext/383772639/buffer.o ${OBJECTDIR}/_ext/242462784/outputStream.o ${OBJECTDIR}/_ext/1038083393/printWriter.o ${OBJECTDIR}/_ext/919093983/led.o ${OBJECTDIR}/_ext/92899495/system.o ${OBJECTDIR}/_ext/79239498/timer1.o ${OBJECTDIR}/_ext/1522154941/uart5.o ${OBJECTDIR}/_ext/1984157808/plib_cache.o ${OBJECTDIR}/_ext/1984157808/plib_cache_pic32mz.o ${OBJECTDIR}/_ext/60165520/plib_clk.o ${OBJECTDIR}/_ext/1249264884/plib_coretimer.o ${OBJECTDIR}/_ext/1865200349/plib_evic.o ${OBJECTDIR}/_ext/1865254177/plib_gpio.o ${OBJECTDIR}/_ext/513455433/plib_i2c1_master.o ${OBJECTDIR}/_ext/60181895/plib_tmr2.o ${OBJECTDIR}/_ext/1865638794/plib_tmr1.o ${OBJECTDIR}/_ext/1865657120/plib_uart2.o ${OBJECTDIR}/_ext/1865657120/plib_uart5.o ${OBJECTDIR}/_ext/163028504/xc32_monitor.o ${OBJECTDIR}/_ext/1171490990/initialization.o ${OBJECTDIR}/_ext/1171490990/interrupts.o ${OBJECTDIR}/_ext/1171490990/exceptions.o ${OBJECTDIR}/_ext/1019397905/cubeCommon7Seg.o ${OBJECTDIR}/_ext/1019397905/mainCubeMeteo.o ${OBJECTDIR}/_ext/672751358/SAA1064T.o ${OBJECTDIR}/_ext/1360937237/mainCube.o
+OBJECTFILES=${OBJECTDIR}/_ext/1571292264/7segments.o ${OBJECTDIR}/_ext/1506567961/delay.o ${OBJECTDIR}/_ext/1507884958/error.o ${OBJECTDIR}/_ext/383772639/buffer.o ${OBJECTDIR}/_ext/242462784/outputStream.o ${OBJECTDIR}/_ext/1038083393/printWriter.o ${OBJECTDIR}/_ext/919093983/led.o ${OBJECTDIR}/_ext/92899495/system.o ${OBJECTDIR}/_ext/79239498/timer1.o ${OBJECTDIR}/_ext/1522154941/uart5.o ${OBJECTDIR}/_ext/1984157808/plib_cache.o ${OBJECTDIR}/_ext/1984157808/plib_cache_pic32mz.o ${OBJECTDIR}/_ext/60165520/plib_clk.o ${OBJECTDIR}/_ext/1249264884/plib_coretimer.o ${OBJECTDIR}/_ext/1865200349/plib_evic.o ${OBJECTDIR}/_ext/1865254177/plib_gpio.o ${OBJECTDIR}/_ext/513455433/plib_i2c1_master.o ${OBJECTDIR}/_ext/60181895/plib_tmr2.o ${OBJECTDIR}/_ext/1865638794/plib_tmr1.o ${OBJECTDIR}/_ext/1865657120/plib_uart2.o ${OBJECTDIR}/_ext/1865657120/plib_uart5.o ${OBJECTDIR}/_ext/163028504/xc32_monitor.o ${OBJECTDIR}/_ext/1171490990/initialization.o ${OBJECTDIR}/_ext/1171490990/interrupts.o ${OBJECTDIR}/_ext/1171490990/exceptions.o ${OBJECTDIR}/_ext/1019397905/mainCubeMeteo.o ${OBJECTDIR}/_ext/672751358/SAA1064T.o ${OBJECTDIR}/_ext/1360937237/mainCube.o ${OBJECTDIR}/_ext/1367680316/LM75A.o ${OBJECTDIR}/_ext/1240316727/temperature.o ${OBJECTDIR}/_ext/1571292264/7segmentsOutputStream.o ${OBJECTDIR}/_ext/1019397905/cubeCommon.o
 
 # Source Files
-SOURCEFILES=../src/common/7seg/7segments.c ../src/common/7seg/7segmentsOutputStream.c ../src/common/delay/delay.c ../src/common/error/error.c ../src/common/IO/buffer/buffer.c ../src/common/IO/outputStream/outputStream.c ../src/common/IO/printWriter/printWriter.c ../src/common/led/led.c ../src/common/system/system.c ../src/common/timer1/timer1.c ../src/common/uart5/uart5.c ../src/config/default/peripheral/cache/plib_cache.c ../src/config/default/peripheral/cache/plib_cache_pic32mz.S ../src/config/default/peripheral/clk/plib_clk.c ../src/config/default/peripheral/coretimer/plib_coretimer.c ../src/config/default/peripheral/evic/plib_evic.c ../src/config/default/peripheral/gpio/plib_gpio.c ../src/config/default/peripheral/i2c/master/plib_i2c1_master.c ../src/config/default/peripheral/tmr/plib_tmr2.c ../src/config/default/peripheral/tmr1/plib_tmr1.c ../src/config/default/peripheral/uart/plib_uart2.c ../src/config/default/peripheral/uart/plib_uart5.c ../src/config/default/stdio/xc32_monitor.c ../src/config/default/initialization.c ../src/config/default/interrupts.c ../src/config/default/exceptions.c ../src/cube/cubeCommon7Seg.c ../src/cube/mainCubeMeteo.c ../src/drivers/SAA1064T/SAA1064T.c ../src/mainCube.c
+SOURCEFILES=../src/common/7seg/7segments.c ../src/common/delay/delay.c ../src/common/error/error.c ../src/common/IO/buffer/buffer.c ../src/common/IO/outputStream/outputStream.c ../src/common/IO/printWriter/printWriter.c ../src/common/led/led.c ../src/common/system/system.c ../src/common/timer1/timer1.c ../src/common/uart5/uart5.c ../src/config/default/peripheral/cache/plib_cache.c ../src/config/default/peripheral/cache/plib_cache_pic32mz.S ../src/config/default/peripheral/clk/plib_clk.c ../src/config/default/peripheral/coretimer/plib_coretimer.c ../src/config/default/peripheral/evic/plib_evic.c ../src/config/default/peripheral/gpio/plib_gpio.c ../src/config/default/peripheral/i2c/master/plib_i2c1_master.c ../src/config/default/peripheral/tmr/plib_tmr2.c ../src/config/default/peripheral/tmr1/plib_tmr1.c ../src/config/default/peripheral/uart/plib_uart2.c ../src/config/default/peripheral/uart/plib_uart5.c ../src/config/default/stdio/xc32_monitor.c ../src/config/default/initialization.c ../src/config/default/interrupts.c ../src/config/default/exceptions.c ../src/cube/mainCubeMeteo.c ../src/drivers/SAA1064T/SAA1064T.c ../src/mainCube.c ../src/drivers/LM75A/LM75A.c ../src/common/sensor/temperature/temperature.c ../src/common/7seg/7segmentsOutputStream.c ../src/cube/cubeCommon.c
 
 
 
@@ -101,7 +101,7 @@ endif
 # ------------------------------------------------------------------------------------
 # Rules for buildStep: assembleWithPreprocess
 ifeq ($(TYPE_IMAGE), DEBUG_RUN)
-${OBJECTDIR}/_ext/1984157808/plib_cache_pic32mz.o: ../src/config/default/peripheral/cache/plib_cache_pic32mz.S  .generated_files/4afbac9073e9227f3a6e0631548177ac47986b39.flag .generated_files/f1ca444b8d15f85172eef40e82dcd04fec010b72.flag
+${OBJECTDIR}/_ext/1984157808/plib_cache_pic32mz.o: ../src/config/default/peripheral/cache/plib_cache_pic32mz.S  .generated_files/589db70b0be0d6d188378387900e08023d6ec588.flag .generated_files/f1ca444b8d15f85172eef40e82dcd04fec010b72.flag
 	@${MKDIR} "${OBJECTDIR}/_ext/1984157808" 
 	@${RM} ${OBJECTDIR}/_ext/1984157808/plib_cache_pic32mz.o.d 
 	@${RM} ${OBJECTDIR}/_ext/1984157808/plib_cache_pic32mz.o 
@@ -110,7 +110,7 @@ ${OBJECTDIR}/_ext/1984157808/plib_cache_pic32mz.o: ../src/config/default/periphe
 	@${FIXDEPS} "${OBJECTDIR}/_ext/1984157808/plib_cache_pic32mz.o.d" "${OBJECTDIR}/_ext/1984157808/plib_cache_pic32mz.o.asm.d" -t $(SILENT) -rsi ${MP_CC_DIR}../ 
 	
 else
-${OBJECTDIR}/_ext/1984157808/plib_cache_pic32mz.o: ../src/config/default/peripheral/cache/plib_cache_pic32mz.S  .generated_files/ed9349b1df9f051a5cb0c9a484259d1f1096e9de.flag .generated_files/f1ca444b8d15f85172eef40e82dcd04fec010b72.flag
+${OBJECTDIR}/_ext/1984157808/plib_cache_pic32mz.o: ../src/config/default/peripheral/cache/plib_cache_pic32mz.S  .generated_files/9693866a0ba21b3fdf64beb4f7f63f869c5eb52c.flag .generated_files/f1ca444b8d15f85172eef40e82dcd04fec010b72.flag
 	@${MKDIR} "${OBJECTDIR}/_ext/1984157808" 
 	@${RM} ${OBJECTDIR}/_ext/1984157808/plib_cache_pic32mz.o.d 
 	@${RM} ${OBJECTDIR}/_ext/1984157808/plib_cache_pic32mz.o 
@@ -123,354 +123,378 @@ endif
 # ------------------------------------------------------------------------------------
 # Rules for buildStep: compile
 ifeq ($(TYPE_IMAGE), DEBUG_RUN)
-${OBJECTDIR}/_ext/1571292264/7segments.o: ../src/common/7seg/7segments.c  .generated_files/8bee98c3e889af55605ef8467e4e7e9c62c87b56.flag .generated_files/f1ca444b8d15f85172eef40e82dcd04fec010b72.flag
+${OBJECTDIR}/_ext/1571292264/7segments.o: ../src/common/7seg/7segments.c  .generated_files/cef0037a84d96bddef1ae661d05b33afb03ba2bb.flag .generated_files/f1ca444b8d15f85172eef40e82dcd04fec010b72.flag
 	@${MKDIR} "${OBJECTDIR}/_ext/1571292264" 
 	@${RM} ${OBJECTDIR}/_ext/1571292264/7segments.o.d 
 	@${RM} ${OBJECTDIR}/_ext/1571292264/7segments.o 
 	${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_ICD3=1  -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -ffunction-sections -O1 -I"../src" -I"../src/config/default" -I"../src/packs/PIC32MZ2048EFM100_DFP" -Wall -MP -MMD -MF "${OBJECTDIR}/_ext/1571292264/7segments.o.d" -o ${OBJECTDIR}/_ext/1571292264/7segments.o ../src/common/7seg/7segments.c    -DXPRJ_default=$(CND_CONF)  -no-legacy-libc  $(COMPARISON_BUILD)  -mdfp="${DFP_DIR}"  
 	
-${OBJECTDIR}/_ext/1571292264/7segmentsOutputStream.o: ../src/common/7seg/7segmentsOutputStream.c  .generated_files/bb90f40579552dfa81e27cb5dadef5deed1aea86.flag .generated_files/f1ca444b8d15f85172eef40e82dcd04fec010b72.flag
-	@${MKDIR} "${OBJECTDIR}/_ext/1571292264" 
-	@${RM} ${OBJECTDIR}/_ext/1571292264/7segmentsOutputStream.o.d 
-	@${RM} ${OBJECTDIR}/_ext/1571292264/7segmentsOutputStream.o 
-	${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_ICD3=1  -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -ffunction-sections -O1 -I"../src" -I"../src/config/default" -I"../src/packs/PIC32MZ2048EFM100_DFP" -Wall -MP -MMD -MF "${OBJECTDIR}/_ext/1571292264/7segmentsOutputStream.o.d" -o ${OBJECTDIR}/_ext/1571292264/7segmentsOutputStream.o ../src/common/7seg/7segmentsOutputStream.c    -DXPRJ_default=$(CND_CONF)  -no-legacy-libc  $(COMPARISON_BUILD)  -mdfp="${DFP_DIR}"  
-	
-${OBJECTDIR}/_ext/1506567961/delay.o: ../src/common/delay/delay.c  .generated_files/7df884f5992b2f80f8c4de28a4ebfba5aad84726.flag .generated_files/f1ca444b8d15f85172eef40e82dcd04fec010b72.flag
+${OBJECTDIR}/_ext/1506567961/delay.o: ../src/common/delay/delay.c  .generated_files/2afcfefa8d465c22246d2799944f9b2db26d9446.flag .generated_files/f1ca444b8d15f85172eef40e82dcd04fec010b72.flag
 	@${MKDIR} "${OBJECTDIR}/_ext/1506567961" 
 	@${RM} ${OBJECTDIR}/_ext/1506567961/delay.o.d 
 	@${RM} ${OBJECTDIR}/_ext/1506567961/delay.o 
 	${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_ICD3=1  -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -ffunction-sections -O1 -I"../src" -I"../src/config/default" -I"../src/packs/PIC32MZ2048EFM100_DFP" -Wall -MP -MMD -MF "${OBJECTDIR}/_ext/1506567961/delay.o.d" -o ${OBJECTDIR}/_ext/1506567961/delay.o ../src/common/delay/delay.c    -DXPRJ_default=$(CND_CONF)  -no-legacy-libc  $(COMPARISON_BUILD)  -mdfp="${DFP_DIR}"  
 	
-${OBJECTDIR}/_ext/1507884958/error.o: ../src/common/error/error.c  .generated_files/8315e6c7d4998fe96b1f1d9cb6541a1213a520f3.flag .generated_files/f1ca444b8d15f85172eef40e82dcd04fec010b72.flag
+${OBJECTDIR}/_ext/1507884958/error.o: ../src/common/error/error.c  .generated_files/f500fb16db322de7ffbf4cc5f9f5647b6dedd4e7.flag .generated_files/f1ca444b8d15f85172eef40e82dcd04fec010b72.flag
 	@${MKDIR} "${OBJECTDIR}/_ext/1507884958" 
 	@${RM} ${OBJECTDIR}/_ext/1507884958/error.o.d 
 	@${RM} ${OBJECTDIR}/_ext/1507884958/error.o 
 	${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_ICD3=1  -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -ffunction-sections -O1 -I"../src" -I"../src/config/default" -I"../src/packs/PIC32MZ2048EFM100_DFP" -Wall -MP -MMD -MF "${OBJECTDIR}/_ext/1507884958/error.o.d" -o ${OBJECTDIR}/_ext/1507884958/error.o ../src/common/error/error.c    -DXPRJ_default=$(CND_CONF)  -no-legacy-libc  $(COMPARISON_BUILD)  -mdfp="${DFP_DIR}"  
 	
-${OBJECTDIR}/_ext/383772639/buffer.o: ../src/common/IO/buffer/buffer.c  .generated_files/e9c26f4de1250b3d5cd5fc892345d45c6edb3e00.flag .generated_files/f1ca444b8d15f85172eef40e82dcd04fec010b72.flag
+${OBJECTDIR}/_ext/383772639/buffer.o: ../src/common/IO/buffer/buffer.c  .generated_files/3ed48c91ff1308361106f2561a79b9484d04fabe.flag .generated_files/f1ca444b8d15f85172eef40e82dcd04fec010b72.flag
 	@${MKDIR} "${OBJECTDIR}/_ext/383772639" 
 	@${RM} ${OBJECTDIR}/_ext/383772639/buffer.o.d 
 	@${RM} ${OBJECTDIR}/_ext/383772639/buffer.o 
 	${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_ICD3=1  -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -ffunction-sections -O1 -I"../src" -I"../src/config/default" -I"../src/packs/PIC32MZ2048EFM100_DFP" -Wall -MP -MMD -MF "${OBJECTDIR}/_ext/383772639/buffer.o.d" -o ${OBJECTDIR}/_ext/383772639/buffer.o ../src/common/IO/buffer/buffer.c    -DXPRJ_default=$(CND_CONF)  -no-legacy-libc  $(COMPARISON_BUILD)  -mdfp="${DFP_DIR}"  
 	
-${OBJECTDIR}/_ext/242462784/outputStream.o: ../src/common/IO/outputStream/outputStream.c  .generated_files/8814cb4fb10e7a0b4ee92d8db9aee82962e1e02c.flag .generated_files/f1ca444b8d15f85172eef40e82dcd04fec010b72.flag
+${OBJECTDIR}/_ext/242462784/outputStream.o: ../src/common/IO/outputStream/outputStream.c  .generated_files/965266cc1b6b8d6e04d71ef4139e5f0f51d4fc6e.flag .generated_files/f1ca444b8d15f85172eef40e82dcd04fec010b72.flag
 	@${MKDIR} "${OBJECTDIR}/_ext/242462784" 
 	@${RM} ${OBJECTDIR}/_ext/242462784/outputStream.o.d 
 	@${RM} ${OBJECTDIR}/_ext/242462784/outputStream.o 
 	${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_ICD3=1  -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -ffunction-sections -O1 -I"../src" -I"../src/config/default" -I"../src/packs/PIC32MZ2048EFM100_DFP" -Wall -MP -MMD -MF "${OBJECTDIR}/_ext/242462784/outputStream.o.d" -o ${OBJECTDIR}/_ext/242462784/outputStream.o ../src/common/IO/outputStream/outputStream.c    -DXPRJ_default=$(CND_CONF)  -no-legacy-libc  $(COMPARISON_BUILD)  -mdfp="${DFP_DIR}"  
 	
-${OBJECTDIR}/_ext/1038083393/printWriter.o: ../src/common/IO/printWriter/printWriter.c  .generated_files/8c3499d63df728894d3e43aa0928e61309ea69b1.flag .generated_files/f1ca444b8d15f85172eef40e82dcd04fec010b72.flag
+${OBJECTDIR}/_ext/1038083393/printWriter.o: ../src/common/IO/printWriter/printWriter.c  .generated_files/6f0aa25264171222e247ab8416334c46c04a4128.flag .generated_files/f1ca444b8d15f85172eef40e82dcd04fec010b72.flag
 	@${MKDIR} "${OBJECTDIR}/_ext/1038083393" 
 	@${RM} ${OBJECTDIR}/_ext/1038083393/printWriter.o.d 
 	@${RM} ${OBJECTDIR}/_ext/1038083393/printWriter.o 
 	${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_ICD3=1  -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -ffunction-sections -O1 -I"../src" -I"../src/config/default" -I"../src/packs/PIC32MZ2048EFM100_DFP" -Wall -MP -MMD -MF "${OBJECTDIR}/_ext/1038083393/printWriter.o.d" -o ${OBJECTDIR}/_ext/1038083393/printWriter.o ../src/common/IO/printWriter/printWriter.c    -DXPRJ_default=$(CND_CONF)  -no-legacy-libc  $(COMPARISON_BUILD)  -mdfp="${DFP_DIR}"  
 	
-${OBJECTDIR}/_ext/919093983/led.o: ../src/common/led/led.c  .generated_files/e25793027786662cab27460926cc2dc828b42282.flag .generated_files/f1ca444b8d15f85172eef40e82dcd04fec010b72.flag
+${OBJECTDIR}/_ext/919093983/led.o: ../src/common/led/led.c  .generated_files/e59faf587d56d81aad0bd3bdff5608d7832b71ab.flag .generated_files/f1ca444b8d15f85172eef40e82dcd04fec010b72.flag
 	@${MKDIR} "${OBJECTDIR}/_ext/919093983" 
 	@${RM} ${OBJECTDIR}/_ext/919093983/led.o.d 
 	@${RM} ${OBJECTDIR}/_ext/919093983/led.o 
 	${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_ICD3=1  -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -ffunction-sections -O1 -I"../src" -I"../src/config/default" -I"../src/packs/PIC32MZ2048EFM100_DFP" -Wall -MP -MMD -MF "${OBJECTDIR}/_ext/919093983/led.o.d" -o ${OBJECTDIR}/_ext/919093983/led.o ../src/common/led/led.c    -DXPRJ_default=$(CND_CONF)  -no-legacy-libc  $(COMPARISON_BUILD)  -mdfp="${DFP_DIR}"  
 	
-${OBJECTDIR}/_ext/92899495/system.o: ../src/common/system/system.c  .generated_files/66554c1aac03106f964d5205d5a26e3e980320c6.flag .generated_files/f1ca444b8d15f85172eef40e82dcd04fec010b72.flag
+${OBJECTDIR}/_ext/92899495/system.o: ../src/common/system/system.c  .generated_files/cb6c4279f9a1cf63d749e7a75753da42a7fe8102.flag .generated_files/f1ca444b8d15f85172eef40e82dcd04fec010b72.flag
 	@${MKDIR} "${OBJECTDIR}/_ext/92899495" 
 	@${RM} ${OBJECTDIR}/_ext/92899495/system.o.d 
 	@${RM} ${OBJECTDIR}/_ext/92899495/system.o 
 	${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_ICD3=1  -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -ffunction-sections -O1 -I"../src" -I"../src/config/default" -I"../src/packs/PIC32MZ2048EFM100_DFP" -Wall -MP -MMD -MF "${OBJECTDIR}/_ext/92899495/system.o.d" -o ${OBJECTDIR}/_ext/92899495/system.o ../src/common/system/system.c    -DXPRJ_default=$(CND_CONF)  -no-legacy-libc  $(COMPARISON_BUILD)  -mdfp="${DFP_DIR}"  
 	
-${OBJECTDIR}/_ext/79239498/timer1.o: ../src/common/timer1/timer1.c  .generated_files/d956d3beeb42dae8d85fee8fb65dc10bdbc0e0a3.flag .generated_files/f1ca444b8d15f85172eef40e82dcd04fec010b72.flag
+${OBJECTDIR}/_ext/79239498/timer1.o: ../src/common/timer1/timer1.c  .generated_files/f1d99760d4a3ddb8e046c2dfd0ecf6a17724a569.flag .generated_files/f1ca444b8d15f85172eef40e82dcd04fec010b72.flag
 	@${MKDIR} "${OBJECTDIR}/_ext/79239498" 
 	@${RM} ${OBJECTDIR}/_ext/79239498/timer1.o.d 
 	@${RM} ${OBJECTDIR}/_ext/79239498/timer1.o 
 	${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_ICD3=1  -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -ffunction-sections -O1 -I"../src" -I"../src/config/default" -I"../src/packs/PIC32MZ2048EFM100_DFP" -Wall -MP -MMD -MF "${OBJECTDIR}/_ext/79239498/timer1.o.d" -o ${OBJECTDIR}/_ext/79239498/timer1.o ../src/common/timer1/timer1.c    -DXPRJ_default=$(CND_CONF)  -no-legacy-libc  $(COMPARISON_BUILD)  -mdfp="${DFP_DIR}"  
 	
-${OBJECTDIR}/_ext/1522154941/uart5.o: ../src/common/uart5/uart5.c  .generated_files/1107cff1d247865a9d2ee4c6d40ff56ee57109ad.flag .generated_files/f1ca444b8d15f85172eef40e82dcd04fec010b72.flag
+${OBJECTDIR}/_ext/1522154941/uart5.o: ../src/common/uart5/uart5.c  .generated_files/f364f2357d32bdfed5a4a907e4438493977fe3f1.flag .generated_files/f1ca444b8d15f85172eef40e82dcd04fec010b72.flag
 	@${MKDIR} "${OBJECTDIR}/_ext/1522154941" 
 	@${RM} ${OBJECTDIR}/_ext/1522154941/uart5.o.d 
 	@${RM} ${OBJECTDIR}/_ext/1522154941/uart5.o 
 	${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_ICD3=1  -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -ffunction-sections -O1 -I"../src" -I"../src/config/default" -I"../src/packs/PIC32MZ2048EFM100_DFP" -Wall -MP -MMD -MF "${OBJECTDIR}/_ext/1522154941/uart5.o.d" -o ${OBJECTDIR}/_ext/1522154941/uart5.o ../src/common/uart5/uart5.c    -DXPRJ_default=$(CND_CONF)  -no-legacy-libc  $(COMPARISON_BUILD)  -mdfp="${DFP_DIR}"  
 	
-${OBJECTDIR}/_ext/1984157808/plib_cache.o: ../src/config/default/peripheral/cache/plib_cache.c  .generated_files/f524a560edef61257fb7ab89d2da3475171bafad.flag .generated_files/f1ca444b8d15f85172eef40e82dcd04fec010b72.flag
+${OBJECTDIR}/_ext/1984157808/plib_cache.o: ../src/config/default/peripheral/cache/plib_cache.c  .generated_files/b2584920b013d0172fd6afeff234686639201b11.flag .generated_files/f1ca444b8d15f85172eef40e82dcd04fec010b72.flag
 	@${MKDIR} "${OBJECTDIR}/_ext/1984157808" 
 	@${RM} ${OBJECTDIR}/_ext/1984157808/plib_cache.o.d 
 	@${RM} ${OBJECTDIR}/_ext/1984157808/plib_cache.o 
 	${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_ICD3=1  -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -ffunction-sections -O1 -I"../src" -I"../src/config/default" -I"../src/packs/PIC32MZ2048EFM100_DFP" -Wall -MP -MMD -MF "${OBJECTDIR}/_ext/1984157808/plib_cache.o.d" -o ${OBJECTDIR}/_ext/1984157808/plib_cache.o ../src/config/default/peripheral/cache/plib_cache.c    -DXPRJ_default=$(CND_CONF)  -no-legacy-libc  $(COMPARISON_BUILD)  -mdfp="${DFP_DIR}"  
 	
-${OBJECTDIR}/_ext/60165520/plib_clk.o: ../src/config/default/peripheral/clk/plib_clk.c  .generated_files/661f3ae69b373128e90f53b21516b91b5a0535cc.flag .generated_files/f1ca444b8d15f85172eef40e82dcd04fec010b72.flag
+${OBJECTDIR}/_ext/60165520/plib_clk.o: ../src/config/default/peripheral/clk/plib_clk.c  .generated_files/edc2dba593434011532886c99264d4132b28127.flag .generated_files/f1ca444b8d15f85172eef40e82dcd04fec010b72.flag
 	@${MKDIR} "${OBJECTDIR}/_ext/60165520" 
 	@${RM} ${OBJECTDIR}/_ext/60165520/plib_clk.o.d 
 	@${RM} ${OBJECTDIR}/_ext/60165520/plib_clk.o 
 	${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_ICD3=1  -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -ffunction-sections -O1 -I"../src" -I"../src/config/default" -I"../src/packs/PIC32MZ2048EFM100_DFP" -Wall -MP -MMD -MF "${OBJECTDIR}/_ext/60165520/plib_clk.o.d" -o ${OBJECTDIR}/_ext/60165520/plib_clk.o ../src/config/default/peripheral/clk/plib_clk.c    -DXPRJ_default=$(CND_CONF)  -no-legacy-libc  $(COMPARISON_BUILD)  -mdfp="${DFP_DIR}"  
 	
-${OBJECTDIR}/_ext/1249264884/plib_coretimer.o: ../src/config/default/peripheral/coretimer/plib_coretimer.c  .generated_files/5690f261943ae76afab44fc88ec63e5358de4345.flag .generated_files/f1ca444b8d15f85172eef40e82dcd04fec010b72.flag
+${OBJECTDIR}/_ext/1249264884/plib_coretimer.o: ../src/config/default/peripheral/coretimer/plib_coretimer.c  .generated_files/96bea6f56f7f2fc711da313a0e78f7ec4156ba76.flag .generated_files/f1ca444b8d15f85172eef40e82dcd04fec010b72.flag
 	@${MKDIR} "${OBJECTDIR}/_ext/1249264884" 
 	@${RM} ${OBJECTDIR}/_ext/1249264884/plib_coretimer.o.d 
 	@${RM} ${OBJECTDIR}/_ext/1249264884/plib_coretimer.o 
 	${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_ICD3=1  -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -ffunction-sections -O1 -I"../src" -I"../src/config/default" -I"../src/packs/PIC32MZ2048EFM100_DFP" -Wall -MP -MMD -MF "${OBJECTDIR}/_ext/1249264884/plib_coretimer.o.d" -o ${OBJECTDIR}/_ext/1249264884/plib_coretimer.o ../src/config/default/peripheral/coretimer/plib_coretimer.c    -DXPRJ_default=$(CND_CONF)  -no-legacy-libc  $(COMPARISON_BUILD)  -mdfp="${DFP_DIR}"  
 	
-${OBJECTDIR}/_ext/1865200349/plib_evic.o: ../src/config/default/peripheral/evic/plib_evic.c  .generated_files/a1569a1970bae010314af955ca125cac00942d56.flag .generated_files/f1ca444b8d15f85172eef40e82dcd04fec010b72.flag
+${OBJECTDIR}/_ext/1865200349/plib_evic.o: ../src/config/default/peripheral/evic/plib_evic.c  .generated_files/303c6e945ea98785f04fd8cb72bafc5415e6acf3.flag .generated_files/f1ca444b8d15f85172eef40e82dcd04fec010b72.flag
 	@${MKDIR} "${OBJECTDIR}/_ext/1865200349" 
 	@${RM} ${OBJECTDIR}/_ext/1865200349/plib_evic.o.d 
 	@${RM} ${OBJECTDIR}/_ext/1865200349/plib_evic.o 
 	${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_ICD3=1  -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -ffunction-sections -O1 -I"../src" -I"../src/config/default" -I"../src/packs/PIC32MZ2048EFM100_DFP" -Wall -MP -MMD -MF "${OBJECTDIR}/_ext/1865200349/plib_evic.o.d" -o ${OBJECTDIR}/_ext/1865200349/plib_evic.o ../src/config/default/peripheral/evic/plib_evic.c    -DXPRJ_default=$(CND_CONF)  -no-legacy-libc  $(COMPARISON_BUILD)  -mdfp="${DFP_DIR}"  
 	
-${OBJECTDIR}/_ext/1865254177/plib_gpio.o: ../src/config/default/peripheral/gpio/plib_gpio.c  .generated_files/68ed1f137a6a93e33a1062f583db3662f060b881.flag .generated_files/f1ca444b8d15f85172eef40e82dcd04fec010b72.flag
+${OBJECTDIR}/_ext/1865254177/plib_gpio.o: ../src/config/default/peripheral/gpio/plib_gpio.c  .generated_files/ac60e7a5fd815b0e3b03e2a601fcc1677b9035fa.flag .generated_files/f1ca444b8d15f85172eef40e82dcd04fec010b72.flag
 	@${MKDIR} "${OBJECTDIR}/_ext/1865254177" 
 	@${RM} ${OBJECTDIR}/_ext/1865254177/plib_gpio.o.d 
 	@${RM} ${OBJECTDIR}/_ext/1865254177/plib_gpio.o 
 	${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_ICD3=1  -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -ffunction-sections -O1 -I"../src" -I"../src/config/default" -I"../src/packs/PIC32MZ2048EFM100_DFP" -Wall -MP -MMD -MF "${OBJECTDIR}/_ext/1865254177/plib_gpio.o.d" -o ${OBJECTDIR}/_ext/1865254177/plib_gpio.o ../src/config/default/peripheral/gpio/plib_gpio.c    -DXPRJ_default=$(CND_CONF)  -no-legacy-libc  $(COMPARISON_BUILD)  -mdfp="${DFP_DIR}"  
 	
-${OBJECTDIR}/_ext/513455433/plib_i2c1_master.o: ../src/config/default/peripheral/i2c/master/plib_i2c1_master.c  .generated_files/fdc3dcc2043f3ec773a18c95082bd399d49c9d3e.flag .generated_files/f1ca444b8d15f85172eef40e82dcd04fec010b72.flag
+${OBJECTDIR}/_ext/513455433/plib_i2c1_master.o: ../src/config/default/peripheral/i2c/master/plib_i2c1_master.c  .generated_files/16e5ab6037c4c985b6cbb81d59fc56be2ef6ac15.flag .generated_files/f1ca444b8d15f85172eef40e82dcd04fec010b72.flag
 	@${MKDIR} "${OBJECTDIR}/_ext/513455433" 
 	@${RM} ${OBJECTDIR}/_ext/513455433/plib_i2c1_master.o.d 
 	@${RM} ${OBJECTDIR}/_ext/513455433/plib_i2c1_master.o 
 	${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_ICD3=1  -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -ffunction-sections -O1 -I"../src" -I"../src/config/default" -I"../src/packs/PIC32MZ2048EFM100_DFP" -Wall -MP -MMD -MF "${OBJECTDIR}/_ext/513455433/plib_i2c1_master.o.d" -o ${OBJECTDIR}/_ext/513455433/plib_i2c1_master.o ../src/config/default/peripheral/i2c/master/plib_i2c1_master.c    -DXPRJ_default=$(CND_CONF)  -no-legacy-libc  $(COMPARISON_BUILD)  -mdfp="${DFP_DIR}"  
 	
-${OBJECTDIR}/_ext/60181895/plib_tmr2.o: ../src/config/default/peripheral/tmr/plib_tmr2.c  .generated_files/fe97bdaa8e3fa2742cecc167f07b6f75c24cc954.flag .generated_files/f1ca444b8d15f85172eef40e82dcd04fec010b72.flag
+${OBJECTDIR}/_ext/60181895/plib_tmr2.o: ../src/config/default/peripheral/tmr/plib_tmr2.c  .generated_files/d26c39d3257c818f236757abf0dfcb0b3082b9dc.flag .generated_files/f1ca444b8d15f85172eef40e82dcd04fec010b72.flag
 	@${MKDIR} "${OBJECTDIR}/_ext/60181895" 
 	@${RM} ${OBJECTDIR}/_ext/60181895/plib_tmr2.o.d 
 	@${RM} ${OBJECTDIR}/_ext/60181895/plib_tmr2.o 
 	${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_ICD3=1  -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -ffunction-sections -O1 -I"../src" -I"../src/config/default" -I"../src/packs/PIC32MZ2048EFM100_DFP" -Wall -MP -MMD -MF "${OBJECTDIR}/_ext/60181895/plib_tmr2.o.d" -o ${OBJECTDIR}/_ext/60181895/plib_tmr2.o ../src/config/default/peripheral/tmr/plib_tmr2.c    -DXPRJ_default=$(CND_CONF)  -no-legacy-libc  $(COMPARISON_BUILD)  -mdfp="${DFP_DIR}"  
 	
-${OBJECTDIR}/_ext/1865638794/plib_tmr1.o: ../src/config/default/peripheral/tmr1/plib_tmr1.c  .generated_files/1599f379b6a198e5a5e1e84394aff742b0a364c9.flag .generated_files/f1ca444b8d15f85172eef40e82dcd04fec010b72.flag
+${OBJECTDIR}/_ext/1865638794/plib_tmr1.o: ../src/config/default/peripheral/tmr1/plib_tmr1.c  .generated_files/63ce0f4816ffea6f38b0f9216207bf91f117452.flag .generated_files/f1ca444b8d15f85172eef40e82dcd04fec010b72.flag
 	@${MKDIR} "${OBJECTDIR}/_ext/1865638794" 
 	@${RM} ${OBJECTDIR}/_ext/1865638794/plib_tmr1.o.d 
 	@${RM} ${OBJECTDIR}/_ext/1865638794/plib_tmr1.o 
 	${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_ICD3=1  -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -ffunction-sections -O1 -I"../src" -I"../src/config/default" -I"../src/packs/PIC32MZ2048EFM100_DFP" -Wall -MP -MMD -MF "${OBJECTDIR}/_ext/1865638794/plib_tmr1.o.d" -o ${OBJECTDIR}/_ext/1865638794/plib_tmr1.o ../src/config/default/peripheral/tmr1/plib_tmr1.c    -DXPRJ_default=$(CND_CONF)  -no-legacy-libc  $(COMPARISON_BUILD)  -mdfp="${DFP_DIR}"  
 	
-${OBJECTDIR}/_ext/1865657120/plib_uart2.o: ../src/config/default/peripheral/uart/plib_uart2.c  .generated_files/9e676db814742f8881250e76523ef49c8582fe15.flag .generated_files/f1ca444b8d15f85172eef40e82dcd04fec010b72.flag
+${OBJECTDIR}/_ext/1865657120/plib_uart2.o: ../src/config/default/peripheral/uart/plib_uart2.c  .generated_files/c7823cafa9a40871401e97336dd1bc3fb6d7780a.flag .generated_files/f1ca444b8d15f85172eef40e82dcd04fec010b72.flag
 	@${MKDIR} "${OBJECTDIR}/_ext/1865657120" 
 	@${RM} ${OBJECTDIR}/_ext/1865657120/plib_uart2.o.d 
 	@${RM} ${OBJECTDIR}/_ext/1865657120/plib_uart2.o 
 	${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_ICD3=1  -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -ffunction-sections -O1 -I"../src" -I"../src/config/default" -I"../src/packs/PIC32MZ2048EFM100_DFP" -Wall -MP -MMD -MF "${OBJECTDIR}/_ext/1865657120/plib_uart2.o.d" -o ${OBJECTDIR}/_ext/1865657120/plib_uart2.o ../src/config/default/peripheral/uart/plib_uart2.c    -DXPRJ_default=$(CND_CONF)  -no-legacy-libc  $(COMPARISON_BUILD)  -mdfp="${DFP_DIR}"  
 	
-${OBJECTDIR}/_ext/1865657120/plib_uart5.o: ../src/config/default/peripheral/uart/plib_uart5.c  .generated_files/54345bb194df29c1dd329186316e2d22305ec417.flag .generated_files/f1ca444b8d15f85172eef40e82dcd04fec010b72.flag
+${OBJECTDIR}/_ext/1865657120/plib_uart5.o: ../src/config/default/peripheral/uart/plib_uart5.c  .generated_files/efccec14dd0611dca5d2d526d43d38af9e1c9cd7.flag .generated_files/f1ca444b8d15f85172eef40e82dcd04fec010b72.flag
 	@${MKDIR} "${OBJECTDIR}/_ext/1865657120" 
 	@${RM} ${OBJECTDIR}/_ext/1865657120/plib_uart5.o.d 
 	@${RM} ${OBJECTDIR}/_ext/1865657120/plib_uart5.o 
 	${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_ICD3=1  -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -ffunction-sections -O1 -I"../src" -I"../src/config/default" -I"../src/packs/PIC32MZ2048EFM100_DFP" -Wall -MP -MMD -MF "${OBJECTDIR}/_ext/1865657120/plib_uart5.o.d" -o ${OBJECTDIR}/_ext/1865657120/plib_uart5.o ../src/config/default/peripheral/uart/plib_uart5.c    -DXPRJ_default=$(CND_CONF)  -no-legacy-libc  $(COMPARISON_BUILD)  -mdfp="${DFP_DIR}"  
 	
-${OBJECTDIR}/_ext/163028504/xc32_monitor.o: ../src/config/default/stdio/xc32_monitor.c  .generated_files/5c40d986a4e484840c4ed98acc7036c6eec45bb6.flag .generated_files/f1ca444b8d15f85172eef40e82dcd04fec010b72.flag
+${OBJECTDIR}/_ext/163028504/xc32_monitor.o: ../src/config/default/stdio/xc32_monitor.c  .generated_files/53486dbf04af8d0c268ba6e7a8cd7cb7d2a10d09.flag .generated_files/f1ca444b8d15f85172eef40e82dcd04fec010b72.flag
 	@${MKDIR} "${OBJECTDIR}/_ext/163028504" 
 	@${RM} ${OBJECTDIR}/_ext/163028504/xc32_monitor.o.d 
 	@${RM} ${OBJECTDIR}/_ext/163028504/xc32_monitor.o 
 	${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_ICD3=1  -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -ffunction-sections -O1 -I"../src" -I"../src/config/default" -I"../src/packs/PIC32MZ2048EFM100_DFP" -Wall -MP -MMD -MF "${OBJECTDIR}/_ext/163028504/xc32_monitor.o.d" -o ${OBJECTDIR}/_ext/163028504/xc32_monitor.o ../src/config/default/stdio/xc32_monitor.c    -DXPRJ_default=$(CND_CONF)  -no-legacy-libc  $(COMPARISON_BUILD)  -mdfp="${DFP_DIR}"  
 	
-${OBJECTDIR}/_ext/1171490990/initialization.o: ../src/config/default/initialization.c  .generated_files/c3f59aa6bec5225c6485b274c1a829547838319e.flag .generated_files/f1ca444b8d15f85172eef40e82dcd04fec010b72.flag
+${OBJECTDIR}/_ext/1171490990/initialization.o: ../src/config/default/initialization.c  .generated_files/f91996ae9328bf04f87d0e7bb20eb0efa1816514.flag .generated_files/f1ca444b8d15f85172eef40e82dcd04fec010b72.flag
 	@${MKDIR} "${OBJECTDIR}/_ext/1171490990" 
 	@${RM} ${OBJECTDIR}/_ext/1171490990/initialization.o.d 
 	@${RM} ${OBJECTDIR}/_ext/1171490990/initialization.o 
 	${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_ICD3=1  -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -ffunction-sections -O1 -I"../src" -I"../src/config/default" -I"../src/packs/PIC32MZ2048EFM100_DFP" -Wall -MP -MMD -MF "${OBJECTDIR}/_ext/1171490990/initialization.o.d" -o ${OBJECTDIR}/_ext/1171490990/initialization.o ../src/config/default/initialization.c    -DXPRJ_default=$(CND_CONF)  -no-legacy-libc  $(COMPARISON_BUILD)  -mdfp="${DFP_DIR}"  
 	
-${OBJECTDIR}/_ext/1171490990/interrupts.o: ../src/config/default/interrupts.c  .generated_files/4ece3f61d0cbffcabc8d1324913575deedee6e00.flag .generated_files/f1ca444b8d15f85172eef40e82dcd04fec010b72.flag
+${OBJECTDIR}/_ext/1171490990/interrupts.o: ../src/config/default/interrupts.c  .generated_files/c6d9fa87b3d658bea5486233f446e866fcb36742.flag .generated_files/f1ca444b8d15f85172eef40e82dcd04fec010b72.flag
 	@${MKDIR} "${OBJECTDIR}/_ext/1171490990" 
 	@${RM} ${OBJECTDIR}/_ext/1171490990/interrupts.o.d 
 	@${RM} ${OBJECTDIR}/_ext/1171490990/interrupts.o 
 	${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_ICD3=1  -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -ffunction-sections -O1 -I"../src" -I"../src/config/default" -I"../src/packs/PIC32MZ2048EFM100_DFP" -Wall -MP -MMD -MF "${OBJECTDIR}/_ext/1171490990/interrupts.o.d" -o ${OBJECTDIR}/_ext/1171490990/interrupts.o ../src/config/default/interrupts.c    -DXPRJ_default=$(CND_CONF)  -no-legacy-libc  $(COMPARISON_BUILD)  -mdfp="${DFP_DIR}"  
 	
-${OBJECTDIR}/_ext/1171490990/exceptions.o: ../src/config/default/exceptions.c  .generated_files/60ea77f5239440bc8de858eb54109033a4a23482.flag .generated_files/f1ca444b8d15f85172eef40e82dcd04fec010b72.flag
+${OBJECTDIR}/_ext/1171490990/exceptions.o: ../src/config/default/exceptions.c  .generated_files/32c40cd6060601456a84bcc19b18df841cd3e7bc.flag .generated_files/f1ca444b8d15f85172eef40e82dcd04fec010b72.flag
 	@${MKDIR} "${OBJECTDIR}/_ext/1171490990" 
 	@${RM} ${OBJECTDIR}/_ext/1171490990/exceptions.o.d 
 	@${RM} ${OBJECTDIR}/_ext/1171490990/exceptions.o 
 	${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_ICD3=1  -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -ffunction-sections -O1 -I"../src" -I"../src/config/default" -I"../src/packs/PIC32MZ2048EFM100_DFP" -Wall -MP -MMD -MF "${OBJECTDIR}/_ext/1171490990/exceptions.o.d" -o ${OBJECTDIR}/_ext/1171490990/exceptions.o ../src/config/default/exceptions.c    -DXPRJ_default=$(CND_CONF)  -no-legacy-libc  $(COMPARISON_BUILD)  -mdfp="${DFP_DIR}"  
 	
-${OBJECTDIR}/_ext/1019397905/cubeCommon7Seg.o: ../src/cube/cubeCommon7Seg.c  .generated_files/69225e89d87a325e8e70de1ae8351c8dd8b0855b.flag .generated_files/f1ca444b8d15f85172eef40e82dcd04fec010b72.flag
-	@${MKDIR} "${OBJECTDIR}/_ext/1019397905" 
-	@${RM} ${OBJECTDIR}/_ext/1019397905/cubeCommon7Seg.o.d 
-	@${RM} ${OBJECTDIR}/_ext/1019397905/cubeCommon7Seg.o 
-	${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_ICD3=1  -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -ffunction-sections -O1 -I"../src" -I"../src/config/default" -I"../src/packs/PIC32MZ2048EFM100_DFP" -Wall -MP -MMD -MF "${OBJECTDIR}/_ext/1019397905/cubeCommon7Seg.o.d" -o ${OBJECTDIR}/_ext/1019397905/cubeCommon7Seg.o ../src/cube/cubeCommon7Seg.c    -DXPRJ_default=$(CND_CONF)  -no-legacy-libc  $(COMPARISON_BUILD)  -mdfp="${DFP_DIR}"  
-	
-${OBJECTDIR}/_ext/1019397905/mainCubeMeteo.o: ../src/cube/mainCubeMeteo.c  .generated_files/96e7b34b6872f142453fe4cdd21bd9663fde3e26.flag .generated_files/f1ca444b8d15f85172eef40e82dcd04fec010b72.flag
+${OBJECTDIR}/_ext/1019397905/mainCubeMeteo.o: ../src/cube/mainCubeMeteo.c  .generated_files/5591dd435961518ec0d18aa81e1d575b60a1fa4e.flag .generated_files/f1ca444b8d15f85172eef40e82dcd04fec010b72.flag
 	@${MKDIR} "${OBJECTDIR}/_ext/1019397905" 
 	@${RM} ${OBJECTDIR}/_ext/1019397905/mainCubeMeteo.o.d 
 	@${RM} ${OBJECTDIR}/_ext/1019397905/mainCubeMeteo.o 
 	${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_ICD3=1  -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -ffunction-sections -O1 -I"../src" -I"../src/config/default" -I"../src/packs/PIC32MZ2048EFM100_DFP" -Wall -MP -MMD -MF "${OBJECTDIR}/_ext/1019397905/mainCubeMeteo.o.d" -o ${OBJECTDIR}/_ext/1019397905/mainCubeMeteo.o ../src/cube/mainCubeMeteo.c    -DXPRJ_default=$(CND_CONF)  -no-legacy-libc  $(COMPARISON_BUILD)  -mdfp="${DFP_DIR}"  
 	
-${OBJECTDIR}/_ext/672751358/SAA1064T.o: ../src/drivers/SAA1064T/SAA1064T.c  .generated_files/3827e39f340cf909b1977b47f42699cfc318ab3d.flag .generated_files/f1ca444b8d15f85172eef40e82dcd04fec010b72.flag
+${OBJECTDIR}/_ext/672751358/SAA1064T.o: ../src/drivers/SAA1064T/SAA1064T.c  .generated_files/2c528ae730c39ad33a57411ceea87d03fdf4500a.flag .generated_files/f1ca444b8d15f85172eef40e82dcd04fec010b72.flag
 	@${MKDIR} "${OBJECTDIR}/_ext/672751358" 
 	@${RM} ${OBJECTDIR}/_ext/672751358/SAA1064T.o.d 
 	@${RM} ${OBJECTDIR}/_ext/672751358/SAA1064T.o 
 	${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_ICD3=1  -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -ffunction-sections -O1 -I"../src" -I"../src/config/default" -I"../src/packs/PIC32MZ2048EFM100_DFP" -Wall -MP -MMD -MF "${OBJECTDIR}/_ext/672751358/SAA1064T.o.d" -o ${OBJECTDIR}/_ext/672751358/SAA1064T.o ../src/drivers/SAA1064T/SAA1064T.c    -DXPRJ_default=$(CND_CONF)  -no-legacy-libc  $(COMPARISON_BUILD)  -mdfp="${DFP_DIR}"  
 	
-${OBJECTDIR}/_ext/1360937237/mainCube.o: ../src/mainCube.c  .generated_files/b5f625b44dae9528ff25b1ebcf6ab7a9b7594afb.flag .generated_files/f1ca444b8d15f85172eef40e82dcd04fec010b72.flag
+${OBJECTDIR}/_ext/1360937237/mainCube.o: ../src/mainCube.c  .generated_files/ac1a3c284f114e206a329d70e0917c1ad8fe6ec9.flag .generated_files/f1ca444b8d15f85172eef40e82dcd04fec010b72.flag
 	@${MKDIR} "${OBJECTDIR}/_ext/1360937237" 
 	@${RM} ${OBJECTDIR}/_ext/1360937237/mainCube.o.d 
 	@${RM} ${OBJECTDIR}/_ext/1360937237/mainCube.o 
 	${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_ICD3=1  -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -ffunction-sections -O1 -I"../src" -I"../src/config/default" -I"../src/packs/PIC32MZ2048EFM100_DFP" -Wall -MP -MMD -MF "${OBJECTDIR}/_ext/1360937237/mainCube.o.d" -o ${OBJECTDIR}/_ext/1360937237/mainCube.o ../src/mainCube.c    -DXPRJ_default=$(CND_CONF)  -no-legacy-libc  $(COMPARISON_BUILD)  -mdfp="${DFP_DIR}"  
 	
+${OBJECTDIR}/_ext/1367680316/LM75A.o: ../src/drivers/LM75A/LM75A.c  .generated_files/65bf78d57697867b64c1756550d247337738eab.flag .generated_files/f1ca444b8d15f85172eef40e82dcd04fec010b72.flag
+	@${MKDIR} "${OBJECTDIR}/_ext/1367680316" 
+	@${RM} ${OBJECTDIR}/_ext/1367680316/LM75A.o.d 
+	@${RM} ${OBJECTDIR}/_ext/1367680316/LM75A.o 
+	${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_ICD3=1  -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -ffunction-sections -O1 -I"../src" -I"../src/config/default" -I"../src/packs/PIC32MZ2048EFM100_DFP" -Wall -MP -MMD -MF "${OBJECTDIR}/_ext/1367680316/LM75A.o.d" -o ${OBJECTDIR}/_ext/1367680316/LM75A.o ../src/drivers/LM75A/LM75A.c    -DXPRJ_default=$(CND_CONF)  -no-legacy-libc  $(COMPARISON_BUILD)  -mdfp="${DFP_DIR}"  
+	
+${OBJECTDIR}/_ext/1240316727/temperature.o: ../src/common/sensor/temperature/temperature.c  .generated_files/1a58c19bcbb7aa8e2be435a1d2f12918595f5b39.flag .generated_files/f1ca444b8d15f85172eef40e82dcd04fec010b72.flag
+	@${MKDIR} "${OBJECTDIR}/_ext/1240316727" 
+	@${RM} ${OBJECTDIR}/_ext/1240316727/temperature.o.d 
+	@${RM} ${OBJECTDIR}/_ext/1240316727/temperature.o 
+	${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_ICD3=1  -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -ffunction-sections -O1 -I"../src" -I"../src/config/default" -I"../src/packs/PIC32MZ2048EFM100_DFP" -Wall -MP -MMD -MF "${OBJECTDIR}/_ext/1240316727/temperature.o.d" -o ${OBJECTDIR}/_ext/1240316727/temperature.o ../src/common/sensor/temperature/temperature.c    -DXPRJ_default=$(CND_CONF)  -no-legacy-libc  $(COMPARISON_BUILD)  -mdfp="${DFP_DIR}"  
+	
+${OBJECTDIR}/_ext/1571292264/7segmentsOutputStream.o: ../src/common/7seg/7segmentsOutputStream.c  .generated_files/b161cfe6673426171d5d75b761515b9ad8c3cd7b.flag .generated_files/f1ca444b8d15f85172eef40e82dcd04fec010b72.flag
+	@${MKDIR} "${OBJECTDIR}/_ext/1571292264" 
+	@${RM} ${OBJECTDIR}/_ext/1571292264/7segmentsOutputStream.o.d 
+	@${RM} ${OBJECTDIR}/_ext/1571292264/7segmentsOutputStream.o 
+	${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_ICD3=1  -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -ffunction-sections -O1 -I"../src" -I"../src/config/default" -I"../src/packs/PIC32MZ2048EFM100_DFP" -Wall -MP -MMD -MF "${OBJECTDIR}/_ext/1571292264/7segmentsOutputStream.o.d" -o ${OBJECTDIR}/_ext/1571292264/7segmentsOutputStream.o ../src/common/7seg/7segmentsOutputStream.c    -DXPRJ_default=$(CND_CONF)  -no-legacy-libc  $(COMPARISON_BUILD)  -mdfp="${DFP_DIR}"  
+	
+${OBJECTDIR}/_ext/1019397905/cubeCommon.o: ../src/cube/cubeCommon.c  .generated_files/bb093ecfa23d132ec2c7466d41cb40a62a713af6.flag .generated_files/f1ca444b8d15f85172eef40e82dcd04fec010b72.flag
+	@${MKDIR} "${OBJECTDIR}/_ext/1019397905" 
+	@${RM} ${OBJECTDIR}/_ext/1019397905/cubeCommon.o.d 
+	@${RM} ${OBJECTDIR}/_ext/1019397905/cubeCommon.o 
+	${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_ICD3=1  -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -ffunction-sections -O1 -I"../src" -I"../src/config/default" -I"../src/packs/PIC32MZ2048EFM100_DFP" -Wall -MP -MMD -MF "${OBJECTDIR}/_ext/1019397905/cubeCommon.o.d" -o ${OBJECTDIR}/_ext/1019397905/cubeCommon.o ../src/cube/cubeCommon.c    -DXPRJ_default=$(CND_CONF)  -no-legacy-libc  $(COMPARISON_BUILD)  -mdfp="${DFP_DIR}"  
+	
 else
-${OBJECTDIR}/_ext/1571292264/7segments.o: ../src/common/7seg/7segments.c  .generated_files/e4704357d14013e5193c2d4ea67c98eeb5d1915c.flag .generated_files/f1ca444b8d15f85172eef40e82dcd04fec010b72.flag
+${OBJECTDIR}/_ext/1571292264/7segments.o: ../src/common/7seg/7segments.c  .generated_files/65d84bc9683c0fb042de3ea188dd8776a2ef1458.flag .generated_files/f1ca444b8d15f85172eef40e82dcd04fec010b72.flag
 	@${MKDIR} "${OBJECTDIR}/_ext/1571292264" 
 	@${RM} ${OBJECTDIR}/_ext/1571292264/7segments.o.d 
 	@${RM} ${OBJECTDIR}/_ext/1571292264/7segments.o 
 	${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -ffunction-sections -O1 -I"../src" -I"../src/config/default" -I"../src/packs/PIC32MZ2048EFM100_DFP" -Wall -MP -MMD -MF "${OBJECTDIR}/_ext/1571292264/7segments.o.d" -o ${OBJECTDIR}/_ext/1571292264/7segments.o ../src/common/7seg/7segments.c    -DXPRJ_default=$(CND_CONF)  -no-legacy-libc  $(COMPARISON_BUILD)  -mdfp="${DFP_DIR}"  
 	
-${OBJECTDIR}/_ext/1571292264/7segmentsOutputStream.o: ../src/common/7seg/7segmentsOutputStream.c  .generated_files/328d55c68247886b7dc8b56a8fd61f4d7de3a3c5.flag .generated_files/f1ca444b8d15f85172eef40e82dcd04fec010b72.flag
-	@${MKDIR} "${OBJECTDIR}/_ext/1571292264" 
-	@${RM} ${OBJECTDIR}/_ext/1571292264/7segmentsOutputStream.o.d 
-	@${RM} ${OBJECTDIR}/_ext/1571292264/7segmentsOutputStream.o 
-	${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -ffunction-sections -O1 -I"../src" -I"../src/config/default" -I"../src/packs/PIC32MZ2048EFM100_DFP" -Wall -MP -MMD -MF "${OBJECTDIR}/_ext/1571292264/7segmentsOutputStream.o.d" -o ${OBJECTDIR}/_ext/1571292264/7segmentsOutputStream.o ../src/common/7seg/7segmentsOutputStream.c    -DXPRJ_default=$(CND_CONF)  -no-legacy-libc  $(COMPARISON_BUILD)  -mdfp="${DFP_DIR}"  
-	
-${OBJECTDIR}/_ext/1506567961/delay.o: ../src/common/delay/delay.c  .generated_files/272f9f7df0f41cf7de7ad0db538523e7d8f969ea.flag .generated_files/f1ca444b8d15f85172eef40e82dcd04fec010b72.flag
+${OBJECTDIR}/_ext/1506567961/delay.o: ../src/common/delay/delay.c  .generated_files/715bf58798245a60f8821faf60c6d8f04a12172f.flag .generated_files/f1ca444b8d15f85172eef40e82dcd04fec010b72.flag
 	@${MKDIR} "${OBJECTDIR}/_ext/1506567961" 
 	@${RM} ${OBJECTDIR}/_ext/1506567961/delay.o.d 
 	@${RM} ${OBJECTDIR}/_ext/1506567961/delay.o 
 	${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -ffunction-sections -O1 -I"../src" -I"../src/config/default" -I"../src/packs/PIC32MZ2048EFM100_DFP" -Wall -MP -MMD -MF "${OBJECTDIR}/_ext/1506567961/delay.o.d" -o ${OBJECTDIR}/_ext/1506567961/delay.o ../src/common/delay/delay.c    -DXPRJ_default=$(CND_CONF)  -no-legacy-libc  $(COMPARISON_BUILD)  -mdfp="${DFP_DIR}"  
 	
-${OBJECTDIR}/_ext/1507884958/error.o: ../src/common/error/error.c  .generated_files/39adc4d67bd4e8e81879f80722f9df1679b69528.flag .generated_files/f1ca444b8d15f85172eef40e82dcd04fec010b72.flag
+${OBJECTDIR}/_ext/1507884958/error.o: ../src/common/error/error.c  .generated_files/fb1a050373542a7acd90b435c50c7c5821f1bf2b.flag .generated_files/f1ca444b8d15f85172eef40e82dcd04fec010b72.flag
 	@${MKDIR} "${OBJECTDIR}/_ext/1507884958" 
 	@${RM} ${OBJECTDIR}/_ext/1507884958/error.o.d 
 	@${RM} ${OBJECTDIR}/_ext/1507884958/error.o 
 	${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -ffunction-sections -O1 -I"../src" -I"../src/config/default" -I"../src/packs/PIC32MZ2048EFM100_DFP" -Wall -MP -MMD -MF "${OBJECTDIR}/_ext/1507884958/error.o.d" -o ${OBJECTDIR}/_ext/1507884958/error.o ../src/common/error/error.c    -DXPRJ_default=$(CND_CONF)  -no-legacy-libc  $(COMPARISON_BUILD)  -mdfp="${DFP_DIR}"  
 	
-${OBJECTDIR}/_ext/383772639/buffer.o: ../src/common/IO/buffer/buffer.c  .generated_files/3a65adc9bc4e2398731c9bd3473b72752cc07236.flag .generated_files/f1ca444b8d15f85172eef40e82dcd04fec010b72.flag
+${OBJECTDIR}/_ext/383772639/buffer.o: ../src/common/IO/buffer/buffer.c  .generated_files/8291323ebabadcefc90dd4d2f37a9c18e138da15.flag .generated_files/f1ca444b8d15f85172eef40e82dcd04fec010b72.flag
 	@${MKDIR} "${OBJECTDIR}/_ext/383772639" 
 	@${RM} ${OBJECTDIR}/_ext/383772639/buffer.o.d 
 	@${RM} ${OBJECTDIR}/_ext/383772639/buffer.o 
 	${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -ffunction-sections -O1 -I"../src" -I"../src/config/default" -I"../src/packs/PIC32MZ2048EFM100_DFP" -Wall -MP -MMD -MF "${OBJECTDIR}/_ext/383772639/buffer.o.d" -o ${OBJECTDIR}/_ext/383772639/buffer.o ../src/common/IO/buffer/buffer.c    -DXPRJ_default=$(CND_CONF)  -no-legacy-libc  $(COMPARISON_BUILD)  -mdfp="${DFP_DIR}"  
 	
-${OBJECTDIR}/_ext/242462784/outputStream.o: ../src/common/IO/outputStream/outputStream.c  .generated_files/45eb48ea27b8295601e9cdc5204c30761f47fb8b.flag .generated_files/f1ca444b8d15f85172eef40e82dcd04fec010b72.flag
+${OBJECTDIR}/_ext/242462784/outputStream.o: ../src/common/IO/outputStream/outputStream.c  .generated_files/6159362865259981df3dc552c06b125583133d74.flag .generated_files/f1ca444b8d15f85172eef40e82dcd04fec010b72.flag
 	@${MKDIR} "${OBJECTDIR}/_ext/242462784" 
 	@${RM} ${OBJECTDIR}/_ext/242462784/outputStream.o.d 
 	@${RM} ${OBJECTDIR}/_ext/242462784/outputStream.o 
 	${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -ffunction-sections -O1 -I"../src" -I"../src/config/default" -I"../src/packs/PIC32MZ2048EFM100_DFP" -Wall -MP -MMD -MF "${OBJECTDIR}/_ext/242462784/outputStream.o.d" -o ${OBJECTDIR}/_ext/242462784/outputStream.o ../src/common/IO/outputStream/outputStream.c    -DXPRJ_default=$(CND_CONF)  -no-legacy-libc  $(COMPARISON_BUILD)  -mdfp="${DFP_DIR}"  
 	
-${OBJECTDIR}/_ext/1038083393/printWriter.o: ../src/common/IO/printWriter/printWriter.c  .generated_files/ad684bcf20ab2c5d870f2d8146c661fe014cbf7f.flag .generated_files/f1ca444b8d15f85172eef40e82dcd04fec010b72.flag
+${OBJECTDIR}/_ext/1038083393/printWriter.o: ../src/common/IO/printWriter/printWriter.c  .generated_files/665eb6ab561413836ecf8839cc90db579b8268f0.flag .generated_files/f1ca444b8d15f85172eef40e82dcd04fec010b72.flag
 	@${MKDIR} "${OBJECTDIR}/_ext/1038083393" 
 	@${RM} ${OBJECTDIR}/_ext/1038083393/printWriter.o.d 
 	@${RM} ${OBJECTDIR}/_ext/1038083393/printWriter.o 
 	${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -ffunction-sections -O1 -I"../src" -I"../src/config/default" -I"../src/packs/PIC32MZ2048EFM100_DFP" -Wall -MP -MMD -MF "${OBJECTDIR}/_ext/1038083393/printWriter.o.d" -o ${OBJECTDIR}/_ext/1038083393/printWriter.o ../src/common/IO/printWriter/printWriter.c    -DXPRJ_default=$(CND_CONF)  -no-legacy-libc  $(COMPARISON_BUILD)  -mdfp="${DFP_DIR}"  
 	
-${OBJECTDIR}/_ext/919093983/led.o: ../src/common/led/led.c  .generated_files/f7ef83cf944c7ff03f13e9d741d98d6609f7a984.flag .generated_files/f1ca444b8d15f85172eef40e82dcd04fec010b72.flag
+${OBJECTDIR}/_ext/919093983/led.o: ../src/common/led/led.c  .generated_files/91d49ff895298ec02b5ee095fbb895da00203fb0.flag .generated_files/f1ca444b8d15f85172eef40e82dcd04fec010b72.flag
 	@${MKDIR} "${OBJECTDIR}/_ext/919093983" 
 	@${RM} ${OBJECTDIR}/_ext/919093983/led.o.d 
 	@${RM} ${OBJECTDIR}/_ext/919093983/led.o 
 	${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -ffunction-sections -O1 -I"../src" -I"../src/config/default" -I"../src/packs/PIC32MZ2048EFM100_DFP" -Wall -MP -MMD -MF "${OBJECTDIR}/_ext/919093983/led.o.d" -o ${OBJECTDIR}/_ext/919093983/led.o ../src/common/led/led.c    -DXPRJ_default=$(CND_CONF)  -no-legacy-libc  $(COMPARISON_BUILD)  -mdfp="${DFP_DIR}"  
 	
-${OBJECTDIR}/_ext/92899495/system.o: ../src/common/system/system.c  .generated_files/ea440b2e167bfaee59dded6331ed35cb2f8b5578.flag .generated_files/f1ca444b8d15f85172eef40e82dcd04fec010b72.flag
+${OBJECTDIR}/_ext/92899495/system.o: ../src/common/system/system.c  .generated_files/54a5a511825048533f8364cedbb39ead7c55e9c9.flag .generated_files/f1ca444b8d15f85172eef40e82dcd04fec010b72.flag
 	@${MKDIR} "${OBJECTDIR}/_ext/92899495" 
 	@${RM} ${OBJECTDIR}/_ext/92899495/system.o.d 
 	@${RM} ${OBJECTDIR}/_ext/92899495/system.o 
 	${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -ffunction-sections -O1 -I"../src" -I"../src/config/default" -I"../src/packs/PIC32MZ2048EFM100_DFP" -Wall -MP -MMD -MF "${OBJECTDIR}/_ext/92899495/system.o.d" -o ${OBJECTDIR}/_ext/92899495/system.o ../src/common/system/system.c    -DXPRJ_default=$(CND_CONF)  -no-legacy-libc  $(COMPARISON_BUILD)  -mdfp="${DFP_DIR}"  
 	
-${OBJECTDIR}/_ext/79239498/timer1.o: ../src/common/timer1/timer1.c  .generated_files/4cc773a5ee604e6dfa084051a712e049f24c3c5b.flag .generated_files/f1ca444b8d15f85172eef40e82dcd04fec010b72.flag
+${OBJECTDIR}/_ext/79239498/timer1.o: ../src/common/timer1/timer1.c  .generated_files/53eb36d510c3817cdc0b574ada07b35ab9ce963.flag .generated_files/f1ca444b8d15f85172eef40e82dcd04fec010b72.flag
 	@${MKDIR} "${OBJECTDIR}/_ext/79239498" 
 	@${RM} ${OBJECTDIR}/_ext/79239498/timer1.o.d 
 	@${RM} ${OBJECTDIR}/_ext/79239498/timer1.o 
 	${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -ffunction-sections -O1 -I"../src" -I"../src/config/default" -I"../src/packs/PIC32MZ2048EFM100_DFP" -Wall -MP -MMD -MF "${OBJECTDIR}/_ext/79239498/timer1.o.d" -o ${OBJECTDIR}/_ext/79239498/timer1.o ../src/common/timer1/timer1.c    -DXPRJ_default=$(CND_CONF)  -no-legacy-libc  $(COMPARISON_BUILD)  -mdfp="${DFP_DIR}"  
 	
-${OBJECTDIR}/_ext/1522154941/uart5.o: ../src/common/uart5/uart5.c  .generated_files/f3765faae9dc49e999f9806b931dbbc7ea080359.flag .generated_files/f1ca444b8d15f85172eef40e82dcd04fec010b72.flag
+${OBJECTDIR}/_ext/1522154941/uart5.o: ../src/common/uart5/uart5.c  .generated_files/871bdfc198eef29b5dad3db1d22d71aa79044257.flag .generated_files/f1ca444b8d15f85172eef40e82dcd04fec010b72.flag
 	@${MKDIR} "${OBJECTDIR}/_ext/1522154941" 
 	@${RM} ${OBJECTDIR}/_ext/1522154941/uart5.o.d 
 	@${RM} ${OBJECTDIR}/_ext/1522154941/uart5.o 
 	${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -ffunction-sections -O1 -I"../src" -I"../src/config/default" -I"../src/packs/PIC32MZ2048EFM100_DFP" -Wall -MP -MMD -MF "${OBJECTDIR}/_ext/1522154941/uart5.o.d" -o ${OBJECTDIR}/_ext/1522154941/uart5.o ../src/common/uart5/uart5.c    -DXPRJ_default=$(CND_CONF)  -no-legacy-libc  $(COMPARISON_BUILD)  -mdfp="${DFP_DIR}"  
 	
-${OBJECTDIR}/_ext/1984157808/plib_cache.o: ../src/config/default/peripheral/cache/plib_cache.c  .generated_files/bb65dc1d44eaf08ef672493c39d9df32d9806332.flag .generated_files/f1ca444b8d15f85172eef40e82dcd04fec010b72.flag
+${OBJECTDIR}/_ext/1984157808/plib_cache.o: ../src/config/default/peripheral/cache/plib_cache.c  .generated_files/cc073b525c02543d7ff5a632c44fe6c8a39ab249.flag .generated_files/f1ca444b8d15f85172eef40e82dcd04fec010b72.flag
 	@${MKDIR} "${OBJECTDIR}/_ext/1984157808" 
 	@${RM} ${OBJECTDIR}/_ext/1984157808/plib_cache.o.d 
 	@${RM} ${OBJECTDIR}/_ext/1984157808/plib_cache.o 
 	${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -ffunction-sections -O1 -I"../src" -I"../src/config/default" -I"../src/packs/PIC32MZ2048EFM100_DFP" -Wall -MP -MMD -MF "${OBJECTDIR}/_ext/1984157808/plib_cache.o.d" -o ${OBJECTDIR}/_ext/1984157808/plib_cache.o ../src/config/default/peripheral/cache/plib_cache.c    -DXPRJ_default=$(CND_CONF)  -no-legacy-libc  $(COMPARISON_BUILD)  -mdfp="${DFP_DIR}"  
 	
-${OBJECTDIR}/_ext/60165520/plib_clk.o: ../src/config/default/peripheral/clk/plib_clk.c  .generated_files/30c673ea7d9a4f4558158ae9725929b96cc11cb0.flag .generated_files/f1ca444b8d15f85172eef40e82dcd04fec010b72.flag
+${OBJECTDIR}/_ext/60165520/plib_clk.o: ../src/config/default/peripheral/clk/plib_clk.c  .generated_files/a9065a9651083ac7cd71e832352f455c3d73c029.flag .generated_files/f1ca444b8d15f85172eef40e82dcd04fec010b72.flag
 	@${MKDIR} "${OBJECTDIR}/_ext/60165520" 
 	@${RM} ${OBJECTDIR}/_ext/60165520/plib_clk.o.d 
 	@${RM} ${OBJECTDIR}/_ext/60165520/plib_clk.o 
 	${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -ffunction-sections -O1 -I"../src" -I"../src/config/default" -I"../src/packs/PIC32MZ2048EFM100_DFP" -Wall -MP -MMD -MF "${OBJECTDIR}/_ext/60165520/plib_clk.o.d" -o ${OBJECTDIR}/_ext/60165520/plib_clk.o ../src/config/default/peripheral/clk/plib_clk.c    -DXPRJ_default=$(CND_CONF)  -no-legacy-libc  $(COMPARISON_BUILD)  -mdfp="${DFP_DIR}"  
 	
-${OBJECTDIR}/_ext/1249264884/plib_coretimer.o: ../src/config/default/peripheral/coretimer/plib_coretimer.c  .generated_files/f41ffeedc86419de342b013f0f9de4d6d04c2352.flag .generated_files/f1ca444b8d15f85172eef40e82dcd04fec010b72.flag
+${OBJECTDIR}/_ext/1249264884/plib_coretimer.o: ../src/config/default/peripheral/coretimer/plib_coretimer.c  .generated_files/18dba5ee7f7d8a6e040a9ace7558df51fc6a6759.flag .generated_files/f1ca444b8d15f85172eef40e82dcd04fec010b72.flag
 	@${MKDIR} "${OBJECTDIR}/_ext/1249264884" 
 	@${RM} ${OBJECTDIR}/_ext/1249264884/plib_coretimer.o.d 
 	@${RM} ${OBJECTDIR}/_ext/1249264884/plib_coretimer.o 
 	${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -ffunction-sections -O1 -I"../src" -I"../src/config/default" -I"../src/packs/PIC32MZ2048EFM100_DFP" -Wall -MP -MMD -MF "${OBJECTDIR}/_ext/1249264884/plib_coretimer.o.d" -o ${OBJECTDIR}/_ext/1249264884/plib_coretimer.o ../src/config/default/peripheral/coretimer/plib_coretimer.c    -DXPRJ_default=$(CND_CONF)  -no-legacy-libc  $(COMPARISON_BUILD)  -mdfp="${DFP_DIR}"  
 	
-${OBJECTDIR}/_ext/1865200349/plib_evic.o: ../src/config/default/peripheral/evic/plib_evic.c  .generated_files/fab8d0563ccaf5f18654077d6b51873fc532e422.flag .generated_files/f1ca444b8d15f85172eef40e82dcd04fec010b72.flag
+${OBJECTDIR}/_ext/1865200349/plib_evic.o: ../src/config/default/peripheral/evic/plib_evic.c  .generated_files/d97fb8895b364986c47aa43b8d0ef7720701caf6.flag .generated_files/f1ca444b8d15f85172eef40e82dcd04fec010b72.flag
 	@${MKDIR} "${OBJECTDIR}/_ext/1865200349" 
 	@${RM} ${OBJECTDIR}/_ext/1865200349/plib_evic.o.d 
 	@${RM} ${OBJECTDIR}/_ext/1865200349/plib_evic.o 
 	${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -ffunction-sections -O1 -I"../src" -I"../src/config/default" -I"../src/packs/PIC32MZ2048EFM100_DFP" -Wall -MP -MMD -MF "${OBJECTDIR}/_ext/1865200349/plib_evic.o.d" -o ${OBJECTDIR}/_ext/1865200349/plib_evic.o ../src/config/default/peripheral/evic/plib_evic.c    -DXPRJ_default=$(CND_CONF)  -no-legacy-libc  $(COMPARISON_BUILD)  -mdfp="${DFP_DIR}"  
 	
-${OBJECTDIR}/_ext/1865254177/plib_gpio.o: ../src/config/default/peripheral/gpio/plib_gpio.c  .generated_files/8095f68e440958a3e984edd99154d57f5f5e3d3a.flag .generated_files/f1ca444b8d15f85172eef40e82dcd04fec010b72.flag
+${OBJECTDIR}/_ext/1865254177/plib_gpio.o: ../src/config/default/peripheral/gpio/plib_gpio.c  .generated_files/f33a93281403a01b0176a1085e7a1600e5d830a1.flag .generated_files/f1ca444b8d15f85172eef40e82dcd04fec010b72.flag
 	@${MKDIR} "${OBJECTDIR}/_ext/1865254177" 
 	@${RM} ${OBJECTDIR}/_ext/1865254177/plib_gpio.o.d 
 	@${RM} ${OBJECTDIR}/_ext/1865254177/plib_gpio.o 
 	${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -ffunction-sections -O1 -I"../src" -I"../src/config/default" -I"../src/packs/PIC32MZ2048EFM100_DFP" -Wall -MP -MMD -MF "${OBJECTDIR}/_ext/1865254177/plib_gpio.o.d" -o ${OBJECTDIR}/_ext/1865254177/plib_gpio.o ../src/config/default/peripheral/gpio/plib_gpio.c    -DXPRJ_default=$(CND_CONF)  -no-legacy-libc  $(COMPARISON_BUILD)  -mdfp="${DFP_DIR}"  
 	
-${OBJECTDIR}/_ext/513455433/plib_i2c1_master.o: ../src/config/default/peripheral/i2c/master/plib_i2c1_master.c  .generated_files/a514ed55054a428740a0367a09d84dba4b8c242c.flag .generated_files/f1ca444b8d15f85172eef40e82dcd04fec010b72.flag
+${OBJECTDIR}/_ext/513455433/plib_i2c1_master.o: ../src/config/default/peripheral/i2c/master/plib_i2c1_master.c  .generated_files/f0579e295c0a41bbc33137088fea4b087c074e2.flag .generated_files/f1ca444b8d15f85172eef40e82dcd04fec010b72.flag
 	@${MKDIR} "${OBJECTDIR}/_ext/513455433" 
 	@${RM} ${OBJECTDIR}/_ext/513455433/plib_i2c1_master.o.d 
 	@${RM} ${OBJECTDIR}/_ext/513455433/plib_i2c1_master.o 
 	${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -ffunction-sections -O1 -I"../src" -I"../src/config/default" -I"../src/packs/PIC32MZ2048EFM100_DFP" -Wall -MP -MMD -MF "${OBJECTDIR}/_ext/513455433/plib_i2c1_master.o.d" -o ${OBJECTDIR}/_ext/513455433/plib_i2c1_master.o ../src/config/default/peripheral/i2c/master/plib_i2c1_master.c    -DXPRJ_default=$(CND_CONF)  -no-legacy-libc  $(COMPARISON_BUILD)  -mdfp="${DFP_DIR}"  
 	
-${OBJECTDIR}/_ext/60181895/plib_tmr2.o: ../src/config/default/peripheral/tmr/plib_tmr2.c  .generated_files/f3da2f7c848c27da44bcef2a2e193bd5cd1cbd6a.flag .generated_files/f1ca444b8d15f85172eef40e82dcd04fec010b72.flag
+${OBJECTDIR}/_ext/60181895/plib_tmr2.o: ../src/config/default/peripheral/tmr/plib_tmr2.c  .generated_files/3609730564c0d56d92111b47583c7c108c021eca.flag .generated_files/f1ca444b8d15f85172eef40e82dcd04fec010b72.flag
 	@${MKDIR} "${OBJECTDIR}/_ext/60181895" 
 	@${RM} ${OBJECTDIR}/_ext/60181895/plib_tmr2.o.d 
 	@${RM} ${OBJECTDIR}/_ext/60181895/plib_tmr2.o 
 	${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -ffunction-sections -O1 -I"../src" -I"../src/config/default" -I"../src/packs/PIC32MZ2048EFM100_DFP" -Wall -MP -MMD -MF "${OBJECTDIR}/_ext/60181895/plib_tmr2.o.d" -o ${OBJECTDIR}/_ext/60181895/plib_tmr2.o ../src/config/default/peripheral/tmr/plib_tmr2.c    -DXPRJ_default=$(CND_CONF)  -no-legacy-libc  $(COMPARISON_BUILD)  -mdfp="${DFP_DIR}"  
 	
-${OBJECTDIR}/_ext/1865638794/plib_tmr1.o: ../src/config/default/peripheral/tmr1/plib_tmr1.c  .generated_files/581743079c97b56f179199ec15b0c927a8a9f32c.flag .generated_files/f1ca444b8d15f85172eef40e82dcd04fec010b72.flag
+${OBJECTDIR}/_ext/1865638794/plib_tmr1.o: ../src/config/default/peripheral/tmr1/plib_tmr1.c  .generated_files/22fa24584fcce8dd93a9c8bc12fca51ee135916.flag .generated_files/f1ca444b8d15f85172eef40e82dcd04fec010b72.flag
 	@${MKDIR} "${OBJECTDIR}/_ext/1865638794" 
 	@${RM} ${OBJECTDIR}/_ext/1865638794/plib_tmr1.o.d 
 	@${RM} ${OBJECTDIR}/_ext/1865638794/plib_tmr1.o 
 	${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -ffunction-sections -O1 -I"../src" -I"../src/config/default" -I"../src/packs/PIC32MZ2048EFM100_DFP" -Wall -MP -MMD -MF "${OBJECTDIR}/_ext/1865638794/plib_tmr1.o.d" -o ${OBJECTDIR}/_ext/1865638794/plib_tmr1.o ../src/config/default/peripheral/tmr1/plib_tmr1.c    -DXPRJ_default=$(CND_CONF)  -no-legacy-libc  $(COMPARISON_BUILD)  -mdfp="${DFP_DIR}"  
 	
-${OBJECTDIR}/_ext/1865657120/plib_uart2.o: ../src/config/default/peripheral/uart/plib_uart2.c  .generated_files/a26a858cb7c28f3c8864f5688319d1b9fa92429d.flag .generated_files/f1ca444b8d15f85172eef40e82dcd04fec010b72.flag
+${OBJECTDIR}/_ext/1865657120/plib_uart2.o: ../src/config/default/peripheral/uart/plib_uart2.c  .generated_files/1d25c54d454f9a6bd8e8edcd9feb7c2ba81c5bb2.flag .generated_files/f1ca444b8d15f85172eef40e82dcd04fec010b72.flag
 	@${MKDIR} "${OBJECTDIR}/_ext/1865657120" 
 	@${RM} ${OBJECTDIR}/_ext/1865657120/plib_uart2.o.d 
 	@${RM} ${OBJECTDIR}/_ext/1865657120/plib_uart2.o 
 	${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -ffunction-sections -O1 -I"../src" -I"../src/config/default" -I"../src/packs/PIC32MZ2048EFM100_DFP" -Wall -MP -MMD -MF "${OBJECTDIR}/_ext/1865657120/plib_uart2.o.d" -o ${OBJECTDIR}/_ext/1865657120/plib_uart2.o ../src/config/default/peripheral/uart/plib_uart2.c    -DXPRJ_default=$(CND_CONF)  -no-legacy-libc  $(COMPARISON_BUILD)  -mdfp="${DFP_DIR}"  
 	
-${OBJECTDIR}/_ext/1865657120/plib_uart5.o: ../src/config/default/peripheral/uart/plib_uart5.c  .generated_files/eb070517b38c4bdf935990ab782e7d3738adf609.flag .generated_files/f1ca444b8d15f85172eef40e82dcd04fec010b72.flag
+${OBJECTDIR}/_ext/1865657120/plib_uart5.o: ../src/config/default/peripheral/uart/plib_uart5.c  .generated_files/a602f79618eb1275b651c52e22a753f8e361c9b6.flag .generated_files/f1ca444b8d15f85172eef40e82dcd04fec010b72.flag
 	@${MKDIR} "${OBJECTDIR}/_ext/1865657120" 
 	@${RM} ${OBJECTDIR}/_ext/1865657120/plib_uart5.o.d 
 	@${RM} ${OBJECTDIR}/_ext/1865657120/plib_uart5.o 
 	${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -ffunction-sections -O1 -I"../src" -I"../src/config/default" -I"../src/packs/PIC32MZ2048EFM100_DFP" -Wall -MP -MMD -MF "${OBJECTDIR}/_ext/1865657120/plib_uart5.o.d" -o ${OBJECTDIR}/_ext/1865657120/plib_uart5.o ../src/config/default/peripheral/uart/plib_uart5.c    -DXPRJ_default=$(CND_CONF)  -no-legacy-libc  $(COMPARISON_BUILD)  -mdfp="${DFP_DIR}"  
 	
-${OBJECTDIR}/_ext/163028504/xc32_monitor.o: ../src/config/default/stdio/xc32_monitor.c  .generated_files/3b30fb8d03170e1929b9167ae36e0f03c6f9f905.flag .generated_files/f1ca444b8d15f85172eef40e82dcd04fec010b72.flag
+${OBJECTDIR}/_ext/163028504/xc32_monitor.o: ../src/config/default/stdio/xc32_monitor.c  .generated_files/aa5805d2a3df5397294bfa59a6ef283beb0d8dc1.flag .generated_files/f1ca444b8d15f85172eef40e82dcd04fec010b72.flag
 	@${MKDIR} "${OBJECTDIR}/_ext/163028504" 
 	@${RM} ${OBJECTDIR}/_ext/163028504/xc32_monitor.o.d 
 	@${RM} ${OBJECTDIR}/_ext/163028504/xc32_monitor.o 
 	${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -ffunction-sections -O1 -I"../src" -I"../src/config/default" -I"../src/packs/PIC32MZ2048EFM100_DFP" -Wall -MP -MMD -MF "${OBJECTDIR}/_ext/163028504/xc32_monitor.o.d" -o ${OBJECTDIR}/_ext/163028504/xc32_monitor.o ../src/config/default/stdio/xc32_monitor.c    -DXPRJ_default=$(CND_CONF)  -no-legacy-libc  $(COMPARISON_BUILD)  -mdfp="${DFP_DIR}"  
 	
-${OBJECTDIR}/_ext/1171490990/initialization.o: ../src/config/default/initialization.c  .generated_files/596859e6339b150004fb02280425d391805e309b.flag .generated_files/f1ca444b8d15f85172eef40e82dcd04fec010b72.flag
+${OBJECTDIR}/_ext/1171490990/initialization.o: ../src/config/default/initialization.c  .generated_files/7650e6147e4e9cda86dc6987ba7b0db863b7e3c4.flag .generated_files/f1ca444b8d15f85172eef40e82dcd04fec010b72.flag
 	@${MKDIR} "${OBJECTDIR}/_ext/1171490990" 
 	@${RM} ${OBJECTDIR}/_ext/1171490990/initialization.o.d 
 	@${RM} ${OBJECTDIR}/_ext/1171490990/initialization.o 
 	${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -ffunction-sections -O1 -I"../src" -I"../src/config/default" -I"../src/packs/PIC32MZ2048EFM100_DFP" -Wall -MP -MMD -MF "${OBJECTDIR}/_ext/1171490990/initialization.o.d" -o ${OBJECTDIR}/_ext/1171490990/initialization.o ../src/config/default/initialization.c    -DXPRJ_default=$(CND_CONF)  -no-legacy-libc  $(COMPARISON_BUILD)  -mdfp="${DFP_DIR}"  
 	
-${OBJECTDIR}/_ext/1171490990/interrupts.o: ../src/config/default/interrupts.c  .generated_files/cc9df7704e981a0698f6842d1f15798c0c3fb428.flag .generated_files/f1ca444b8d15f85172eef40e82dcd04fec010b72.flag
+${OBJECTDIR}/_ext/1171490990/interrupts.o: ../src/config/default/interrupts.c  .generated_files/9130e8fcaace4b1956da825b78a5040a1751ca50.flag .generated_files/f1ca444b8d15f85172eef40e82dcd04fec010b72.flag
 	@${MKDIR} "${OBJECTDIR}/_ext/1171490990" 
 	@${RM} ${OBJECTDIR}/_ext/1171490990/interrupts.o.d 
 	@${RM} ${OBJECTDIR}/_ext/1171490990/interrupts.o 
 	${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -ffunction-sections -O1 -I"../src" -I"../src/config/default" -I"../src/packs/PIC32MZ2048EFM100_DFP" -Wall -MP -MMD -MF "${OBJECTDIR}/_ext/1171490990/interrupts.o.d" -o ${OBJECTDIR}/_ext/1171490990/interrupts.o ../src/config/default/interrupts.c    -DXPRJ_default=$(CND_CONF)  -no-legacy-libc  $(COMPARISON_BUILD)  -mdfp="${DFP_DIR}"  
 	
-${OBJECTDIR}/_ext/1171490990/exceptions.o: ../src/config/default/exceptions.c  .generated_files/9b34bc1291bb2b2be4d2d81be49cde28a2d6ac6e.flag .generated_files/f1ca444b8d15f85172eef40e82dcd04fec010b72.flag
+${OBJECTDIR}/_ext/1171490990/exceptions.o: ../src/config/default/exceptions.c  .generated_files/29e3af39fe04667b0c0222910374181e4fd4bd50.flag .generated_files/f1ca444b8d15f85172eef40e82dcd04fec010b72.flag
 	@${MKDIR} "${OBJECTDIR}/_ext/1171490990" 
 	@${RM} ${OBJECTDIR}/_ext/1171490990/exceptions.o.d 
 	@${RM} ${OBJECTDIR}/_ext/1171490990/exceptions.o 
 	${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -ffunction-sections -O1 -I"../src" -I"../src/config/default" -I"../src/packs/PIC32MZ2048EFM100_DFP" -Wall -MP -MMD -MF "${OBJECTDIR}/_ext/1171490990/exceptions.o.d" -o ${OBJECTDIR}/_ext/1171490990/exceptions.o ../src/config/default/exceptions.c    -DXPRJ_default=$(CND_CONF)  -no-legacy-libc  $(COMPARISON_BUILD)  -mdfp="${DFP_DIR}"  
 	
-${OBJECTDIR}/_ext/1019397905/cubeCommon7Seg.o: ../src/cube/cubeCommon7Seg.c  .generated_files/e4fd8386b42d7d9a60668af7ecfe3c6b99b4803d.flag .generated_files/f1ca444b8d15f85172eef40e82dcd04fec010b72.flag
-	@${MKDIR} "${OBJECTDIR}/_ext/1019397905" 
-	@${RM} ${OBJECTDIR}/_ext/1019397905/cubeCommon7Seg.o.d 
-	@${RM} ${OBJECTDIR}/_ext/1019397905/cubeCommon7Seg.o 
-	${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -ffunction-sections -O1 -I"../src" -I"../src/config/default" -I"../src/packs/PIC32MZ2048EFM100_DFP" -Wall -MP -MMD -MF "${OBJECTDIR}/_ext/1019397905/cubeCommon7Seg.o.d" -o ${OBJECTDIR}/_ext/1019397905/cubeCommon7Seg.o ../src/cube/cubeCommon7Seg.c    -DXPRJ_default=$(CND_CONF)  -no-legacy-libc  $(COMPARISON_BUILD)  -mdfp="${DFP_DIR}"  
-	
-${OBJECTDIR}/_ext/1019397905/mainCubeMeteo.o: ../src/cube/mainCubeMeteo.c  .generated_files/acd8636fd65e205017aa710571d050ec562053b0.flag .generated_files/f1ca444b8d15f85172eef40e82dcd04fec010b72.flag
+${OBJECTDIR}/_ext/1019397905/mainCubeMeteo.o: ../src/cube/mainCubeMeteo.c  .generated_files/1a080556ba71ced4b72b0629b2d9e31209def5db.flag .generated_files/f1ca444b8d15f85172eef40e82dcd04fec010b72.flag
 	@${MKDIR} "${OBJECTDIR}/_ext/1019397905" 
 	@${RM} ${OBJECTDIR}/_ext/1019397905/mainCubeMeteo.o.d 
 	@${RM} ${OBJECTDIR}/_ext/1019397905/mainCubeMeteo.o 
 	${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -ffunction-sections -O1 -I"../src" -I"../src/config/default" -I"../src/packs/PIC32MZ2048EFM100_DFP" -Wall -MP -MMD -MF "${OBJECTDIR}/_ext/1019397905/mainCubeMeteo.o.d" -o ${OBJECTDIR}/_ext/1019397905/mainCubeMeteo.o ../src/cube/mainCubeMeteo.c    -DXPRJ_default=$(CND_CONF)  -no-legacy-libc  $(COMPARISON_BUILD)  -mdfp="${DFP_DIR}"  
 	
-${OBJECTDIR}/_ext/672751358/SAA1064T.o: ../src/drivers/SAA1064T/SAA1064T.c  .generated_files/7f81c74aaa6aa7b1bca2643f864f2645fb714e3e.flag .generated_files/f1ca444b8d15f85172eef40e82dcd04fec010b72.flag
+${OBJECTDIR}/_ext/672751358/SAA1064T.o: ../src/drivers/SAA1064T/SAA1064T.c  .generated_files/525c1b56abfbd4c6c95e11f753f621741184e671.flag .generated_files/f1ca444b8d15f85172eef40e82dcd04fec010b72.flag
 	@${MKDIR} "${OBJECTDIR}/_ext/672751358" 
 	@${RM} ${OBJECTDIR}/_ext/672751358/SAA1064T.o.d 
 	@${RM} ${OBJECTDIR}/_ext/672751358/SAA1064T.o 
 	${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -ffunction-sections -O1 -I"../src" -I"../src/config/default" -I"../src/packs/PIC32MZ2048EFM100_DFP" -Wall -MP -MMD -MF "${OBJECTDIR}/_ext/672751358/SAA1064T.o.d" -o ${OBJECTDIR}/_ext/672751358/SAA1064T.o ../src/drivers/SAA1064T/SAA1064T.c    -DXPRJ_default=$(CND_CONF)  -no-legacy-libc  $(COMPARISON_BUILD)  -mdfp="${DFP_DIR}"  
 	
-${OBJECTDIR}/_ext/1360937237/mainCube.o: ../src/mainCube.c  .generated_files/188890975f107903084692768ae704856deea45d.flag .generated_files/f1ca444b8d15f85172eef40e82dcd04fec010b72.flag
+${OBJECTDIR}/_ext/1360937237/mainCube.o: ../src/mainCube.c  .generated_files/68a27ed338fcad462a8200ab16692f55810f62ad.flag .generated_files/f1ca444b8d15f85172eef40e82dcd04fec010b72.flag
 	@${MKDIR} "${OBJECTDIR}/_ext/1360937237" 
 	@${RM} ${OBJECTDIR}/_ext/1360937237/mainCube.o.d 
 	@${RM} ${OBJECTDIR}/_ext/1360937237/mainCube.o 
 	${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -ffunction-sections -O1 -I"../src" -I"../src/config/default" -I"../src/packs/PIC32MZ2048EFM100_DFP" -Wall -MP -MMD -MF "${OBJECTDIR}/_ext/1360937237/mainCube.o.d" -o ${OBJECTDIR}/_ext/1360937237/mainCube.o ../src/mainCube.c    -DXPRJ_default=$(CND_CONF)  -no-legacy-libc  $(COMPARISON_BUILD)  -mdfp="${DFP_DIR}"  
+	
+${OBJECTDIR}/_ext/1367680316/LM75A.o: ../src/drivers/LM75A/LM75A.c  .generated_files/cf314c482c151c2591d3090a0693e52cf83f1e21.flag .generated_files/f1ca444b8d15f85172eef40e82dcd04fec010b72.flag
+	@${MKDIR} "${OBJECTDIR}/_ext/1367680316" 
+	@${RM} ${OBJECTDIR}/_ext/1367680316/LM75A.o.d 
+	@${RM} ${OBJECTDIR}/_ext/1367680316/LM75A.o 
+	${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -ffunction-sections -O1 -I"../src" -I"../src/config/default" -I"../src/packs/PIC32MZ2048EFM100_DFP" -Wall -MP -MMD -MF "${OBJECTDIR}/_ext/1367680316/LM75A.o.d" -o ${OBJECTDIR}/_ext/1367680316/LM75A.o ../src/drivers/LM75A/LM75A.c    -DXPRJ_default=$(CND_CONF)  -no-legacy-libc  $(COMPARISON_BUILD)  -mdfp="${DFP_DIR}"  
+	
+${OBJECTDIR}/_ext/1240316727/temperature.o: ../src/common/sensor/temperature/temperature.c  .generated_files/f6d10aae920b0805493c7e7bcfa9d24662e27625.flag .generated_files/f1ca444b8d15f85172eef40e82dcd04fec010b72.flag
+	@${MKDIR} "${OBJECTDIR}/_ext/1240316727" 
+	@${RM} ${OBJECTDIR}/_ext/1240316727/temperature.o.d 
+	@${RM} ${OBJECTDIR}/_ext/1240316727/temperature.o 
+	${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -ffunction-sections -O1 -I"../src" -I"../src/config/default" -I"../src/packs/PIC32MZ2048EFM100_DFP" -Wall -MP -MMD -MF "${OBJECTDIR}/_ext/1240316727/temperature.o.d" -o ${OBJECTDIR}/_ext/1240316727/temperature.o ../src/common/sensor/temperature/temperature.c    -DXPRJ_default=$(CND_CONF)  -no-legacy-libc  $(COMPARISON_BUILD)  -mdfp="${DFP_DIR}"  
+	
+${OBJECTDIR}/_ext/1571292264/7segmentsOutputStream.o: ../src/common/7seg/7segmentsOutputStream.c  .generated_files/4c1351f3bc5822d0cddb79db442a08adfd09524f.flag .generated_files/f1ca444b8d15f85172eef40e82dcd04fec010b72.flag
+	@${MKDIR} "${OBJECTDIR}/_ext/1571292264" 
+	@${RM} ${OBJECTDIR}/_ext/1571292264/7segmentsOutputStream.o.d 
+	@${RM} ${OBJECTDIR}/_ext/1571292264/7segmentsOutputStream.o 
+	${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -ffunction-sections -O1 -I"../src" -I"../src/config/default" -I"../src/packs/PIC32MZ2048EFM100_DFP" -Wall -MP -MMD -MF "${OBJECTDIR}/_ext/1571292264/7segmentsOutputStream.o.d" -o ${OBJECTDIR}/_ext/1571292264/7segmentsOutputStream.o ../src/common/7seg/7segmentsOutputStream.c    -DXPRJ_default=$(CND_CONF)  -no-legacy-libc  $(COMPARISON_BUILD)  -mdfp="${DFP_DIR}"  
+	
+${OBJECTDIR}/_ext/1019397905/cubeCommon.o: ../src/cube/cubeCommon.c  .generated_files/d7c035ce7a1cf3b8ef91c154f0622d82f1ae3a9.flag .generated_files/f1ca444b8d15f85172eef40e82dcd04fec010b72.flag
+	@${MKDIR} "${OBJECTDIR}/_ext/1019397905" 
+	@${RM} ${OBJECTDIR}/_ext/1019397905/cubeCommon.o.d 
+	@${RM} ${OBJECTDIR}/_ext/1019397905/cubeCommon.o 
+	${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -ffunction-sections -O1 -I"../src" -I"../src/config/default" -I"../src/packs/PIC32MZ2048EFM100_DFP" -Wall -MP -MMD -MF "${OBJECTDIR}/_ext/1019397905/cubeCommon.o.d" -o ${OBJECTDIR}/_ext/1019397905/cubeCommon.o ../src/cube/cubeCommon.c    -DXPRJ_default=$(CND_CONF)  -no-legacy-libc  $(COMPARISON_BUILD)  -mdfp="${DFP_DIR}"  
 	
 endif
 

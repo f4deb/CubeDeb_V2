@@ -27,8 +27,7 @@ build/default/production/_ext/1019397905/mainCubeMeteo.o: \
  ../src/cube/../common/system/system.h \
  ../src/cube/../common/timer1/timer1.h \
  ../src/cube/../common/uart5/uart5.h ../src/common/7seg/7segments.h \
- ../src/common/7seg/../ascii/7seg.h \
- ../src/cube/../drivers/SAA1064T/SAA1064T.h
+ ../src/common/7seg/../ascii/7seg.h
 
 ../src/cube/mainCubeMeteo.h:
 
@@ -91,5 +90,3 @@ build/default/production/_ext/1019397905/mainCubeMeteo.o: \
 ../src/common/7seg/7segments.h:
 
 ../src/common/7seg/../ascii/7seg.h:
-
-../src/cube/../drivers/SAA1064T/SAA1064T.h:

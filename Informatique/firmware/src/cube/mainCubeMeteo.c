@@ -25,7 +25,7 @@
 #include "common/7seg/7segments.h"
 
 
-#include "../drivers/SAA1064T/SAA1064T.h"
+
 
 
 //LED Gestion        
@@ -68,7 +68,7 @@ void initMainCube (void) {
     initDebugOutputStream(DEBUG_OUTPUTSTREAM);    
     
     
-    initCubeCommon7Seg();
+    initCubeCommon();
 
     
     
