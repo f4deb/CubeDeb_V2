@@ -20,7 +20,7 @@ static int dot7Seg = 0;
  */
 void _openOutputStream7Seg(OutputStream* outputStream, int param1) {
 //    init7Seg();
-    print7Seg("    }",0x00,SAA1064_ADDR);
+    print7Seg("    }",0x00,outputStream->address);
 
 }
 
@@ -29,7 +29,7 @@ void _openOutputStream7Seg(OutputStream* outputStream, int param1) {
  */
 void _closeOutputStream7Seg(OutputStream* outputStream) {
     //clearScreen();
-    print7Seg("    }",0x00,SAA1064_ADDR);
+    print7Seg("    }",0x00,outputStream->address);
 }
 
 /**

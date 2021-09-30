@@ -54,7 +54,28 @@ children:
       - type: Dynamic
         attributes: {id: i2c1, value: '100000'}
   - type: Boolean
+    attributes: {id: I2C_DISSLW}
+    children:
+    - type: Values
+      children:
+      - type: User
+        attributes: {value: 'false'}
+  - type: Boolean
     attributes: {id: I2C_INCLUDE_FORCED_WRITE_API}
+    children:
+    - type: Values
+      children:
+      - type: User
+        attributes: {value: 'false'}
+  - type: Boolean
+    attributes: {id: I2C_SIDL}
+    children:
+    - type: Values
+      children:
+      - type: User
+        attributes: {value: 'false'}
+  - type: Boolean
+    attributes: {id: I2C_SMEN}
     children:
     - type: Values
       children:

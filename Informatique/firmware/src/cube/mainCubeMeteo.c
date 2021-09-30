@@ -137,23 +137,13 @@ void mainCube (void){
 
             led2 = false; 
 
-            int i;
-            int j;
-            if (!I2C1_Write( 0x48 , datatx, 1 )){
 
-            }
-            // error handling
 
-            for (i = 0;i<65000;i++){ 
-                j = j*7;
-             }
-
-            if (!I2C1_Read( 0x48 , datarx,2 )){
-            } 
-
-            for (i = 0;i<65000;i++){ 
-                j = j*7;
-            }
+            if (I2C1_WriteRead(LM75_ADDRESS, &datatx[0], 1,  &datarx[0], 2)){
+                // error handling
+            };
+            while ( I2C1_IsBusy());
+            
             data32bits = datarx[0]<<8;
             data32bits = data32bits + datarx[1];
 
@@ -168,6 +158,7 @@ void mainCube (void){
             str[3] = '}';  
 
             appendDot(get7SegOutpuStream(),4);
+
             appendString(get7SegOutpuStream(),str);
             //print7Seg(str,0x04,SAA1064_ADDR);
 

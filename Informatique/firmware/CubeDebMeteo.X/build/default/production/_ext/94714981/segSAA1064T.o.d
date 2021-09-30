@@ -2,9 +2,9 @@ build/default/production/_ext/94714981/segSAA1064T.o: \
  ../src/drivers/segSAA1064T/segSAA1064T.c \
  ../src/drivers/segSAA1064T/segSAA1064T.h \
  ../src/config/default/definitions.h \
+ ../src/config/default/peripheral/coretimer/plib_coretimer.h \
  ../src/config/default/peripheral/i2c/master/plib_i2c1_master.h \
  ../src/config/default/peripheral/i2c/master/plib_i2c_master_common.h \
- ../src/config/default/peripheral/coretimer/plib_coretimer.h \
  ../src/config/default/peripheral/uart/plib_uart2.h \
  ../src/config/default/device.h \
  ../src/config/default/toolchain_specifics.h \
@@ -24,11 +24,11 @@ build/default/production/_ext/94714981/segSAA1064T.o: \
 
 ../src/config/default/definitions.h:
 
+../src/config/default/peripheral/coretimer/plib_coretimer.h:
+
 ../src/config/default/peripheral/i2c/master/plib_i2c1_master.h:
 
 ../src/config/default/peripheral/i2c/master/plib_i2c_master_common.h:
-
-../src/config/default/peripheral/coretimer/plib_coretimer.h:
 
 ../src/config/default/peripheral/uart/plib_uart2.h:
 

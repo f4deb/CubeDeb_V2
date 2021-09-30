@@ -1,9 +1,9 @@
 build/default/production/_ext/1506567961/delay.o: \
  ../src/common/delay/delay.c ../src/common/delay/delay.h \
  ../src/config/default/definitions.h \
+ ../src/config/default/peripheral/coretimer/plib_coretimer.h \
  ../src/config/default/peripheral/i2c/master/plib_i2c1_master.h \
  ../src/config/default/peripheral/i2c/master/plib_i2c_master_common.h \
- ../src/config/default/peripheral/coretimer/plib_coretimer.h \
  ../src/config/default/peripheral/uart/plib_uart2.h \
  ../src/config/default/device.h \
  ../src/config/default/toolchain_specifics.h \
@@ -22,11 +22,11 @@ build/default/production/_ext/1506567961/delay.o: \
 
 ../src/config/default/definitions.h:
 
+../src/config/default/peripheral/coretimer/plib_coretimer.h:
+
 ../src/config/default/peripheral/i2c/master/plib_i2c1_master.h:
 
 ../src/config/default/peripheral/i2c/master/plib_i2c_master_common.h:
-
-../src/config/default/peripheral/coretimer/plib_coretimer.h:
 
 ../src/config/default/peripheral/uart/plib_uart2.h:
 
