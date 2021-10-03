@@ -117,15 +117,8 @@ void mainCube (void){
     }
         
     char *str = "Err0";
-    uint8_t datarx[6];
-    uint8_t datatx[6];
-    datatx[0] = 0x00;
-    datatx[1] = 0x00;
+
     
-    datarx[0] = 0x10;
-    datarx[1] = 0x21;
-    
-    int data32bits = 0; 
        
     if (getIsTmr1Expired() == true) {
 
@@ -137,30 +130,8 @@ void mainCube (void){
 
             led2 = false; 
 
-
-
-            if (I2C1_WriteRead(LM75_ADDRESS, &datatx[0], 1,  &datarx[0], 2)){
-                // error handling
-            };
-            while ( I2C1_IsBusy());
-            
-            data32bits = datarx[0]<<8;
-            data32bits = data32bits + datarx[1];
-
-
-            int temp = data32bits;
-
-            temp = temp >> 5;
-
-
-            sprintf(str, "%d", temp);  
-
-            str[3] = '}';  
-
             appendDot(get7SegOutpuStream(),4);
-
-            appendString(get7SegOutpuStream(),str);
-            //print7Seg(str,0x04,SAA1064_ADDR);
+            appendString(get7SegOutpuStream(), readSensorValueAsString());
 
         }
         else {

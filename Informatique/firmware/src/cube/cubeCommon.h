@@ -3,7 +3,6 @@
 
 #include "../common/IO/outputStream/outputStream.h"
 
-OutputStream* get7SegOutpuStream(void);
 
 void initCubeCommon(void);
 

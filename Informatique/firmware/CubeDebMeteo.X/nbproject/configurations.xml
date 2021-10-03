@@ -37,6 +37,7 @@
         </logicalFolder>
         <logicalFolder name="f10" displayName="sensor" projectFiles="true">
           <logicalFolder name="f1" displayName="temperature" projectFiles="true">
+            <itemPath>../src/common/sensor/temperature/temperatureStream.h</itemPath>
             <itemPath>../src/common/sensor/temperature/temperature.h</itemPath>
           </logicalFolder>
         </logicalFolder>
@@ -154,6 +155,7 @@
         </logicalFolder>
         <logicalFolder name="f10" displayName="sensor" projectFiles="true">
           <logicalFolder name="f1" displayName="temperature" projectFiles="true">
+            <itemPath>../src/common/sensor/temperature/temperatureStream.c</itemPath>
             <itemPath>../src/common/sensor/temperature/temperature.c</itemPath>
           </logicalFolder>
         </logicalFolder>

@@ -1,23 +1,11 @@
 #include "temperature.h"
+#include <definitions.h>
 
-#include <stdlib.h>
+char* readSensorValueAsString (void){
+    char *str = "Err0";
+    uint32_t data32bits = readSensorValue(getTemperatureStream());
 
-static Temperature temperature;
-
-Temperature* getTemperature(void){
-    return &temperature;
-}
-
-
-void initTemperature(Temperature* temperature,
-        TemperatureReadSensorValueFunction* readSensorValue,
-        TemperatureWriteAlertLimitFunction* writeAlertLimit,
-        void* object) {
-    if (temperature == NULL) {
-        // if error
-        return;
-    }
-    temperature->readSensorValue = readSensorValue;
-    temperature->writeAlertLimit = writeAlertLimit;
-    temperature->object = object;
+    sprintf(str, "%d", data32bits);  
+    str[3] = '°';  
+    return str;
 }
