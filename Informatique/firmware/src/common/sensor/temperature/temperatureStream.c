@@ -1,23 +1,27 @@
 #include "temperatureStream.h"
 
 #include <stdlib.h>
+#include <definitions.h>
 
-static Temperature temperature;
 
-Temperature* getTemperatureStream(void){
-    return &temperature;
+//#include "../../../common/error/error.h"
+
+
+static int temperatureLM75;
+
+int* getTemperatureStream(void){
+    return &temperatureLM75;
 }
 
-uint32_t readSensorValue(Temperature* temperature){
-    return LM75AReadSensorValue(temperature->address);
-}
-
-void writeAlertLimit(Temperature* temperature, int temperatureSensorAlert){
-    LM75AWriteAlertLimit(temperature->address, temperatureSensorAlert);
-}
-
-void initTemperatureStream(Temperature* temperature,uint8_t address){
-    temperature->address = address;
+void initTemperatureStream(Temperature* temperature,
+        TemperatureReadSensorValueFunction* readSensorValue,
+        TemperatureWriteAlertLimitFunction* writeAlertLimit,
+        uint16_t I2C_ADDRESS) {
+    if (temperature == NULL) {
+        //writeError(TEMPERATURE_NULL);
+        return;
+    }
     temperature->readSensorValue = readSensorValue;
-    temperature->writeAlertLimit = writeAlertLimit;    
+    temperature->writeAlertLimit = writeAlertLimit;
+    temperature->address = I2C_ADDRESS;
 }

@@ -25,9 +25,7 @@ OutputStream* get7SegOutpuStream(void){
  *@private
  */
 void _openOutputStream7Seg(OutputStream* outputStream, int param1) {
-//    init7Seg();
     print7Seg("    }",0x00,outputStream->address);
-
 }
 
 /**
@@ -67,7 +65,7 @@ void init7SegOutputStream(OutputStream* outputStream,uint8_t address) {
     outputStream->writeChar = _write7SegStreamChar;
     outputStream->writeString = _write7SegStreamString;
     outputStream->flush = _flush7Seg;
-    outputStream->object = dot7Seg;
+    outputStream->object = &dot7Seg;
     
     _openOutputStream7Seg(outputStream, 0);
 }

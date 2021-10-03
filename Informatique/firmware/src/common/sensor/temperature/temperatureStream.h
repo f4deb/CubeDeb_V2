@@ -7,14 +7,14 @@
 struct Temperature;
 typedef struct Temperature Temperature;
 
-Temperature* getTemperatureStream(void);
+int* getTemperatureStream(void);
 
 
 /**
  * Get the value from the temperature sensor
  * @return temperature  the value from the temperature sensor
  */
-typedef uint32_t* TemperatureReadSensorValueFunction(Temperature* temperature);
+typedef uint32_t TemperatureReadSensorValueFunction(Temperature* temperature);
 
 /** 
  * Set the temperature to know if we are above the value.
@@ -26,14 +26,13 @@ typedef void TemperatureWriteAlertLimitFunction(Temperature* temperature, int te
  * Temperature sensor wrapping.
  */
 struct Temperature {
-    /** The address for I2C Bus */
-    int address;    
     /** The function which must be used to read the value of the temperature (in celcius degree). */
     TemperatureReadSensorValueFunction* readSensorValue;
     /** The function which must be used to write the alert limit of the temperature sensor (in celcius degree). */
     TemperatureWriteAlertLimitFunction* writeAlertLimit;
-    /** A pointer on generic object (for example to store I2cBus ...). */
-    void* object;
+    /** The address of I2C */
+    int address;
+
 };
 
 /**
@@ -42,6 +41,8 @@ struct Temperature {
  * @param readSensorValue the pointer on the callback function to read the value of the temperature (in celcius degree).
  * @param writeAlertLimit the pointer on the callback function to write the alert limit of the temperature sensor (in celcius degree).
  */
-void initTemperatureStream(Temperature* temperature, uint8_t address);
-
+void initTemperatureStream(Temperature* temperature,
+    TemperatureReadSensorValueFunction* readSensorValue,
+    TemperatureWriteAlertLimitFunction* writeAlertLimit,
+    uint16_t I2C_ADDRESS);
 #endif

@@ -4,10 +4,12 @@
 
 #include "../../common/sensor/temperature/temperatureStream.h"
 
-uint32_t LM75AReadSensorValue(uint16_t I2C_ADDRESS);
+#include <definitions.h>
 
-void LM75AWriteAlertLimit(uint16_t I2C_ADDRESS, uint8_t *data);
+uint32_t _LM75A_readSensorValue(uint16_t I2C_ADDRESS);
 
+
+void initTemperatureLM75A(Temperature* temperature, uint16_t I2C_ADDRESS);
 
 
 

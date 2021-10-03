@@ -1,15 +1,29 @@
 #include "LM75A.h"
+#include <definitions.h>
 
 #include "../../common/sensor/temperature/temperatureStream.h"
 
 static uint8_t datarx[6];
 static uint8_t datatx[6];
 
+/**
+ * Get the internal I2cBusConnection.
+ * @param temperature the temperature structure (to simulate POO Programming).
+ * @private
+ */
+/*I2cBusConnection* _LM75A_getI2cBusConnection(Temperature* temperature) {
+    I2cBusConnection* result = (I2cBusConnection*) temperature->object;
+
+    return result;
+}*/
+
+
+
 uint8_t getDatatx (void){
     return datatx;
 }
 
-uint32_t LM75AReadSensorValue(uint16_t I2C_ADDRESS){
+uint32_t _LM75A_readSensorValue(uint16_t I2C_ADDRESS){
     datatx[0] = 0x00;
     datatx[1] = 0x00;
     
@@ -25,9 +39,13 @@ uint32_t LM75AReadSensorValue(uint16_t I2C_ADDRESS){
     return data32bits;
 }
 
-void LM75AWriteAlertLimit(uint16_t I2C_ADDRESS, uint8_t *data) {
+void _LM75A_writeAlertLimit(uint16_t I2C_ADDRESS, uint8_t *data) {
     while(I2C1_Write( I2C_ADDRESS , data, 6 )){
                 // error handling
     }    
     while ( I2C1_IsBusy());
+}
+
+void initTemperatureLM75A(Temperature* temperature, uint16_t I2C_ADDRESS) {
+    initTemperatureStream(temperature, _LM75A_readSensorValue, _LM75A_writeAlertLimit, I2C_ADDRESS);
 }

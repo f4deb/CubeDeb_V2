@@ -6,10 +6,12 @@
 #include "../common/7seg/7segmentsOutputStream.h"
 #include "../common/sensor/temperature/temperatureStream.h"
 
+#include "../drivers/LM75A/LM75A.h"
+
+
 
 
 void initCubeCommon(void) {
     init7SegOutputStream(get7SegOutpuStream(), SAA1064_ADDR);
-    initTemperatureStream(getTemperatureStream(), LM75_ADDRESS);
+    initTemperatureLM75A(getTemperatureStream(), LM75_ADDRESS);
 }
-

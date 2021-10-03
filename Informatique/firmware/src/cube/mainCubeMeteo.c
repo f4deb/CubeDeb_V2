@@ -17,6 +17,7 @@
 #include "../common/led/led.h"
 #include "../common/I2C/I2CConfig.h"
 #include "../common/led/led.h"
+#include "../common/sensor/temperature/temperatureStream.h"
 #include "../common/system/system.h"
 #include "../common/timer1/timer1.h"
 #include "../common/uart5/uart5.h"
@@ -131,7 +132,7 @@ void mainCube (void){
             led2 = false; 
 
             appendDot(get7SegOutpuStream(),4);
-            appendString(get7SegOutpuStream(), readSensorValueAsString());
+            appendString(get7SegOutpuStream(), readSensorValueAsString(getTemperatureStream(),LM75_ADDRESS));
 
         }
         else {

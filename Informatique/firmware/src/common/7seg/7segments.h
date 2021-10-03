@@ -3,8 +3,6 @@
 
 #include "../ascii/7seg.h"
 
-
-
     
 void MyI2CCallback(uintptr_t context);    
 
