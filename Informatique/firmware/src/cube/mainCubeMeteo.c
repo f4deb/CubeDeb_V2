@@ -10,6 +10,7 @@
 
 
 #include "../../cube/cubeCommon7Seg.h"
+#include "../common/common.h"
 
 #include "../common/IO/buffer/buffer.h"
 #include "../common/IO/outputStream/outputStream.h"
@@ -132,18 +133,16 @@ void mainCube (void){
             led2 = false; 
 
             appendDot(get7SegOutpuStream(),4);
-            appendString(get7SegOutpuStream(), readSensorValueAsString(getTemperatureStream(),LM75_ADDRESS));
+            appendString(get7SegOutpuStream(), readSensorValueAsString(getTemperatureStream(TEMP_SENSOR_CPU)));
 
         }
         else {
             led2GreenOn();
             led1RedOff();
             led2 = true;
-//            print7Seg("Temp}",0x04,SAA1064_ADDR);
-            //write7SegStreamChar(get7SegOutpuStream(),'a');
 
-            appendDot(get7SegOutpuStream(),0);
-            appendString(get7SegOutpuStream(),"temp}");
+            appendDot(get7SegOutpuStream(),4);
+            appendString(get7SegOutpuStream(), readSensorValueAsString(getTemperatureStream(TEMP_SENSOR_EXT1)));
 
 
         }

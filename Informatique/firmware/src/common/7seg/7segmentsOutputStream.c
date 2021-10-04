@@ -59,7 +59,7 @@ void _flush7Seg(OutputStream* outputStream) {
 }
 
 void init7SegOutputStream(OutputStream* outputStream,uint8_t address) {
-    outputStream->address = address;
+    outputStream->address =  ;
     outputStream->openOutputStream = _openOutputStream7Seg;
     outputStream->closeOutputStream = _closeOutputStream7Seg;
     outputStream->writeChar = _write7SegStreamChar;

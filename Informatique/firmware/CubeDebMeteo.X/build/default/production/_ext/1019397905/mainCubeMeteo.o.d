@@ -19,7 +19,7 @@ build/default/production/_ext/1019397905/mainCubeMeteo.o: \
  ../src/config/default/peripheral/uart/plib_uart5.h \
  ../src/config/default/../../cube/cubeCommon7Seg.h \
  ../src/config/default/../../cube/../common/IO/outputStream/outputStream.h \
- ../src/cube/../common/IO/buffer/buffer.h \
+ ../src/cube/../common/common.h ../src/cube/../common/IO/buffer/buffer.h \
  ../src/cube/../common/IO/outputStream/outputStream.h \
  ../src/cube/../common/IO/printWriter/printWriter.h \
  ../src/config/default/../../common/IO/outputStream/outputStream.h \
@@ -69,6 +69,8 @@ build/default/production/_ext/1019397905/mainCubeMeteo.o: \
 ../src/config/default/../../cube/cubeCommon7Seg.h:
 
 ../src/config/default/../../cube/../common/IO/outputStream/outputStream.h:
+
+../src/cube/../common/common.h:
 
 ../src/cube/../common/IO/buffer/buffer.h:
 

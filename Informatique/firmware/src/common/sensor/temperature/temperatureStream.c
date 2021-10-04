@@ -7,10 +7,10 @@
 //#include "../../../common/error/error.h"
 
 
-static int temperatureLM75;
+static int temperatureSensor[24];
 
-int* getTemperatureStream(void){
-    return &temperatureLM75;
+int* getTemperatureStream(int index){
+    return &temperatureSensor[index];
 }
 
 void initTemperatureStream(Temperature* temperature,

@@ -9,6 +9,6 @@
 
 
 
-char* readSensorValueAsString (Temperature* temperature,uint16_t I2C_ADDRESS);
+char* readSensorValueAsString (Temperature* temperature);
 
 #endif

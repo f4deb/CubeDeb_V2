@@ -1,5 +1,7 @@
 #include "cubeCommon.h"
 
+#include "../common/common.h"
+
 #include "../common/IO/outputStream/outputStream.h"
 #include "../common/I2C/I2CConfig.h"
 
@@ -13,5 +15,7 @@
 
 void initCubeCommon(void) {
     init7SegOutputStream(get7SegOutpuStream(), SAA1064_ADDR);
-    initTemperatureLM75A(getTemperatureStream(), LM75_ADDRESS);
+    initTemperatureLM75A(getTemperatureStream(TEMP_SENSOR_CPU), LM75_ADDRESS_0);
+    initTemperatureLM75A(getTemperatureStream(TEMP_SENSOR_EXT1), LM75_ADDRESS_1);
+
 }
