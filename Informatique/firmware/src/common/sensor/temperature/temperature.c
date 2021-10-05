@@ -1,5 +1,6 @@
 #include "temperature.h"
 #include <definitions.h>
+#include <stdio.h>
 
 #include "../../drivers/LM75A/LM75A.h"
 char* readSensorValueAsString (Temperature* temperature){

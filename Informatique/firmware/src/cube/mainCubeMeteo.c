@@ -25,6 +25,8 @@
 #include "../common/timer1/timer1.h"
 #include "../common/uart5/uart5.h"
 
+#include "cubeCommon.h"
+
 
 
 //static int SCREEN_7SEG_CPU;

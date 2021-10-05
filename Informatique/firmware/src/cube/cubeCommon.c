@@ -9,13 +9,14 @@
 #include "../common/sensor/temperature/temperatureStream.h"
 
 #include "../drivers/LM75A/LM75A.h"
+#include "../drivers/SAA1064T/SAA1064T.h"
 
 
-int getScreen_7Seg_CPU (void){
+OutputStream* getScreen_7Seg_CPU (void){
     return get7SegOutpuStream(SAA1064_PRINT_7SEG_CPU);
 }
 
-int getScreen_7Seg_EXT (void){
+OutputStream* getScreen_7Seg_EXT (void){
     return get7SegOutpuStream(SAA1064_PRINT_7SEG_EXT);
 }
 

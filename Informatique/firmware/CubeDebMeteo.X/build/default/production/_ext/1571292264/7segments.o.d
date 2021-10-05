@@ -17,7 +17,8 @@ build/default/production/_ext/1571292264/7segments.o: \
  ../src/config/default/peripheral/tmr1/plib_tmr1.h \
  ../src/config/default/peripheral/tmr1/plib_tmr1_common.h \
  ../src/config/default/peripheral/uart/plib_uart5.h \
- ../src/drivers/SAA1064T/SAA1064T.h
+ ../src/drivers/SAA1064T/SAA1064T.h \
+ ../src/drivers/SAA1064T/../../common/IO/outputStream/outputStream.h
 
 ../src/common/7seg/7segments.h:
 
@@ -58,3 +59,5 @@ build/default/production/_ext/1571292264/7segments.o: \
 ../src/config/default/peripheral/uart/plib_uart5.h:
 
 ../src/drivers/SAA1064T/SAA1064T.h:
+
+../src/drivers/SAA1064T/../../common/IO/outputStream/outputStream.h:

@@ -18,7 +18,7 @@
 struct Temperature;
 typedef struct Temperature Temperature;
 
-int* getTemperatureStream(int index);
+Temperature* getTemperatureStream(int index);
 
 
 /**

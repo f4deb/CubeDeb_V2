@@ -19,7 +19,7 @@ static uint8_t datatx[6];
 
 
 
-uint8_t getDatatx (void){
+uint8_t* getDatatx (void){
     return datatx;
 }
 

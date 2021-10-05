@@ -23,7 +23,9 @@ build/default/production/_ext/1019397905/cubeCommon.o: \
  ../src/cube/../common/7seg/7segmentsOutputStream.h \
  ../src/cube/../common/7seg/../../common/IO/outputStream/outputStream.h \
  ../src/cube/../drivers/LM75A/LM75A.h \
- ../src/cube/../drivers/LM75A/../../common/sensor/temperature/temperatureStream.h
+ ../src/cube/../drivers/LM75A/../../common/sensor/temperature/temperatureStream.h \
+ ../src/cube/../drivers/SAA1064T/SAA1064T.h \
+ ../src/cube/../drivers/SAA1064T/../../common/IO/outputStream/outputStream.h
 
 ../src/cube/cubeCommon.h:
 
@@ -76,3 +78,7 @@ build/default/production/_ext/1019397905/cubeCommon.o: \
 ../src/cube/../drivers/LM75A/LM75A.h:
 
 ../src/cube/../drivers/LM75A/../../common/sensor/temperature/temperatureStream.h:
+
+../src/cube/../drivers/SAA1064T/SAA1064T.h:
+
+../src/cube/../drivers/SAA1064T/../../common/IO/outputStream/outputStream.h:

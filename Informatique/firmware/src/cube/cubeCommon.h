@@ -5,9 +5,15 @@
 
 #include "../common/sensor/temperature/temperatureStream.h"
 
-int getScreen_7Seg_CPU (void);
 
-int getScreen_7Seg_EXT (void);
+#define SCREEN_7SEG_CPU getScreen_7Seg_CPU()
+#define SCREEN_7SEG_EXT getScreen_7Seg_EXT()
+
+
+
+OutputStream* getScreen_7Seg_CPU (void);
+
+OutputStream* getScreen_7Seg_EXT (void);
 
 void initCubeCommon(void);
 

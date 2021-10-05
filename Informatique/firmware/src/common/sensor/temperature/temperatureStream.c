@@ -9,7 +9,7 @@
 
 static int temperatureSensor[24];
 
-int* getTemperatureStream(int index){
+Temperature* getTemperatureStream(int index){
     return &temperatureSensor[index];
 }
 

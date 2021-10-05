@@ -29,7 +29,7 @@ build/default/production/_ext/1019397905/mainCubeMeteo.o: \
  ../src/cube/../common/sensor/temperature/temperatureStream.h \
  ../src/cube/../common/system/system.h \
  ../src/cube/../common/timer1/timer1.h \
- ../src/cube/../common/uart5/uart5.h
+ ../src/cube/../common/uart5/uart5.h ../src/cube/cubeCommon.h
 
 ../src/cube/mainCubeMeteo.h:
 
@@ -96,3 +96,5 @@ build/default/production/_ext/1019397905/mainCubeMeteo.o: \
 ../src/cube/../common/timer1/timer1.h:
 
 ../src/cube/../common/uart5/uart5.h:
+
+../src/cube/cubeCommon.h:

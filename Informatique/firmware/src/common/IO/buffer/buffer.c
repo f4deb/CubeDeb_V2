@@ -4,7 +4,7 @@
 #include <string.h>
 
 static int writeIndex = 0;
-static int readIndex = 0;
+//static int readIndex = 0;
 
 
 void initBuffer(void){
