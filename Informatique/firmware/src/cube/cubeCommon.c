@@ -11,11 +11,21 @@
 #include "../drivers/LM75A/LM75A.h"
 
 
+int getScreen_7Seg_CPU (void){
+    return get7SegOutpuStream(SAA1064_PRINT_7SEG_CPU);
+}
 
+int getScreen_7Seg_EXT (void){
+    return get7SegOutpuStream(SAA1064_PRINT_7SEG_EXT);
+}
 
 void initCubeCommon(void) {
-    init7SegOutputStream(get7SegOutpuStream(), SAA1064_ADDR);
+
+    // initialise afficheur driver et flux pour afficheur 7 Segments de la carte CPU
+    initSAA1064T(getScreen_7Seg_CPU(), SAA1064_ADDR);  
+    // initialise driver et flux pour le capteur de temperature interne
     initTemperatureLM75A(getTemperatureStream(TEMP_SENSOR_CPU), LM75_ADDRESS_0);
+    // initialise driver et flux pour le capteur de temperature externe 1
     initTemperatureLM75A(getTemperatureStream(TEMP_SENSOR_EXT1), LM75_ADDRESS_1);
 
 }

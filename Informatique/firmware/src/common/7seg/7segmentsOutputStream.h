@@ -1,12 +1,17 @@
-#ifndef _7SEGMENTS_H
-#define _7SEGMENTS_H
+#ifndef _7SEGMENTS_OUTPUT_STREAM_H
+#define _7SEGMENTS_OUTPUT_STREAM_H
 
 #include <stdbool.h>
 #include "definitions.h"                // SYS function prototypes
 
 #include "../../common/IO/outputStream/outputStream.h"
 
-OutputStream* get7SegOutpuStream(void);
+#define SAA1064_PRINT_7SEG_SIZE 7
+#define SAA1064_PRINT_7SEG_CPU 0
+#define SAA1064_PRINT_7SEG_EXT SAA1064_PRINT_7SEG_SIZE
+
+
+OutputStream* get7SegOutpuStream(int index);
 
 
 ///////////////////////////////////////////////////

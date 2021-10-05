@@ -6,6 +6,9 @@
 
 #define BOARD_NAME "Meteo Cube V2\r\n"
 
+
+#define SCREEN_7SEG_CPU getScreen_7Seg_CPU()
+
 void initMainCube (void);
 
 void mainCube (void);

@@ -7,9 +7,11 @@
 #include <stdlib.h>                     // Defines EXIT_FAILURE
 #include <string.h>
 #include "definitions.h"                // SYS function prototypes
+#include "../common/7seg/7segments.h"
 
+#include "../common/7seg/7segmentsOutputStream.h"
 
-#include "../../cube/cubeCommon7Seg.h"
+//#include "../../cube/cubeCommon7Seg.h"
 #include "../common/common.h"
 
 #include "../common/IO/buffer/buffer.h"
@@ -24,10 +26,8 @@
 #include "../common/uart5/uart5.h"
 
 
-#include "common/7seg/7segments.h"
 
-
-
+//static int SCREEN_7SEG_CPU;
 
 
 //LED Gestion        
@@ -71,14 +71,10 @@ void initMainCube (void) {
     
     
     initCubeCommon();
-
-    
-    
 }
 
 void mainCube (void){
     
-
     
     
     //UART debug echo
@@ -120,7 +116,7 @@ void mainCube (void){
         
     char *str = "Err0";
 
-    
+   
        
     if (getIsTmr1Expired() == true) {
 
@@ -132,8 +128,8 @@ void mainCube (void){
 
             led2 = false; 
 
-            appendDot(get7SegOutpuStream(),4);
-            appendString(get7SegOutpuStream(), readSensorValueAsString(getTemperatureStream(TEMP_SENSOR_CPU)));
+            appendDot(SCREEN_7SEG_CPU,4);
+            appendString(SCREEN_7SEG_CPU, readSensorValueAsString(getTemperatureStream(TEMP_SENSOR_CPU)));
 
         }
         else {
@@ -141,8 +137,8 @@ void mainCube (void){
             led1RedOff();
             led2 = true;
 
-            appendDot(get7SegOutpuStream(),4);
-            appendString(get7SegOutpuStream(), readSensorValueAsString(getTemperatureStream(TEMP_SENSOR_EXT1)));
+            appendDot(SCREEN_7SEG_CPU,4);
+            appendString(SCREEN_7SEG_CPU, readSensorValueAsString(getTemperatureStream(TEMP_SENSOR_EXT1)));
 
 
         }

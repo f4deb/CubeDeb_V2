@@ -16,7 +16,8 @@ build/default/production/_ext/672751358/SAA1064T.o: \
  ../src/config/default/peripheral/evic/plib_evic.h \
  ../src/config/default/peripheral/tmr1/plib_tmr1.h \
  ../src/config/default/peripheral/tmr1/plib_tmr1_common.h \
- ../src/config/default/peripheral/uart/plib_uart5.h
+ ../src/config/default/peripheral/uart/plib_uart5.h \
+ ../src/drivers/SAA1064T/../../common/IO/outputStream/outputStream.h
 
 ../src/drivers/SAA1064T/SAA1064T.h:
 
@@ -53,3 +54,5 @@ build/default/production/_ext/672751358/SAA1064T.o: \
 ../src/config/default/peripheral/tmr1/plib_tmr1_common.h:
 
 ../src/config/default/peripheral/uart/plib_uart5.h:
+
+../src/drivers/SAA1064T/../../common/IO/outputStream/outputStream.h:

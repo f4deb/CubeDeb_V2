@@ -15,10 +15,10 @@
 
 static int dot7Seg = 0;
 
-static OutputStream seg7OutputStream;
+static OutputStream seg7OutputStream[1000] ;
 
-OutputStream* get7SegOutpuStream(void){
-    return &seg7OutputStream;
+OutputStream* get7SegOutpuStream(int index){
+    return &seg7OutputStream[index];
 }
 
 /**
