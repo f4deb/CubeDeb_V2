@@ -30,5 +30,8 @@ unsigned int appendStringLN(OutputStream* outputStream, const char* s);
 
 void appendDot(OutputStream* outputStream, unsigned int dot);
 
+unsigned int appendStringLN(OutputStream* outputStream, const char* s);
+
+
 
 #endif

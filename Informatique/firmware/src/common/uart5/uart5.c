@@ -70,5 +70,10 @@ void initUart5 (char* messageStart, int size){
 }
 
 void writeUart5 (char* message, int size){ 
-    UART5_Write(message, size);
+
+            
+                UART5_Write(message, size);
+            
+delayMilliSecs(2);
+
 }

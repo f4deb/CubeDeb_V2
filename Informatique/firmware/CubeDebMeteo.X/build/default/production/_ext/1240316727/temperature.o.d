@@ -22,6 +22,7 @@ build/default/production/_ext/1240316727/temperature.o: \
  ../src/config/default/../../cube/cubeCommon.h \
  ../src/config/default/../../cube/../common/IO/outputStream/outputStream.h \
  ../src/config/default/../../cube/../common/sensor/temperature/temperatureStream.h \
+ ../src/config/default/../../cube/../common/serial/serial.h \
  ../src/config/default/../../drivers/LM75A/LM75A.h \
  ../src/config/default/../../drivers/LM75A/../../common/sensor/temperature/temperatureStream.h
 
@@ -68,6 +69,8 @@ build/default/production/_ext/1240316727/temperature.o: \
 ../src/config/default/../../cube/../common/IO/outputStream/outputStream.h:
 
 ../src/config/default/../../cube/../common/sensor/temperature/temperatureStream.h:
+
+../src/config/default/../../cube/../common/serial/serial.h:
 
 ../src/config/default/../../drivers/LM75A/LM75A.h:
 

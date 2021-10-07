@@ -41,6 +41,10 @@
             <itemPath>../src/common/sensor/temperature/temperature.h</itemPath>
           </logicalFolder>
         </logicalFolder>
+        <logicalFolder name="f12" displayName="serial" projectFiles="true">
+          <itemPath>../src/common/serial/serialoutputStream.h</itemPath>
+          <itemPath>../src/common/serial/serial.h</itemPath>
+        </logicalFolder>
         <logicalFolder name="f6" displayName="system" projectFiles="true">
           <itemPath>../src/common/system/system.h</itemPath>
         </logicalFolder>
@@ -159,6 +163,10 @@
             <itemPath>../src/common/sensor/temperature/temperatureStream.c</itemPath>
             <itemPath>../src/common/sensor/temperature/temperature.c</itemPath>
           </logicalFolder>
+        </logicalFolder>
+        <logicalFolder name="f11" displayName="serial" projectFiles="true">
+          <itemPath>../src/common/serial/serialOutpuStream.c</itemPath>
+          <itemPath>../src/common/serial/serial.c</itemPath>
         </logicalFolder>
         <logicalFolder name="f5" displayName="system" projectFiles="true">
           <itemPath>../src/common/system/system.c</itemPath>
@@ -504,6 +512,7 @@
         <property key="UART5" value="true"/>
         <property key="UART6" value="true"/>
         <property key="debugoptions.useswbreakpoints" value="false"/>
+        <property key="firmware.download.all" value="false"/>
         <property key="hwtoolclock.frcindebug" value="false"/>
         <property key="memories.aux" value="false"/>
         <property key="memories.bootflash" value="false"/>

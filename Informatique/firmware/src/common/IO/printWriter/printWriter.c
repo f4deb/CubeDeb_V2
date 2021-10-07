@@ -38,3 +38,11 @@ unsigned int appendString(OutputStream* outputStream, const char* s) {
 void appendDot(OutputStream* outputStream, unsigned int dot) {
     outputStream->object = dot;
 }
+
+unsigned int appendStringLN(OutputStream* outputStream, const char* s) {
+    unsigned result = appendString(outputStream, s);
+    append(outputStream,13);
+    append(outputStream,10);
+
+   return result;
+}

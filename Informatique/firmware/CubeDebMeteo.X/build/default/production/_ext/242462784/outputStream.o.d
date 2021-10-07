@@ -2,6 +2,8 @@ build/default/production/_ext/242462784/outputStream.o: \
  ../src/common/IO/outputStream/outputStream.c \
  ../src/common/IO/outputStream/outputStream.h \
  ../src/common/IO/outputStream/../buffer/buffer.h \
+ ../src/config/default/../../common/IO/printWriter/printWriter.h \
+ ../src/config/default/../../common/IO/outputStream/outputStream.h \
  ../src/config/default/../../common/system/system.h \
  ../src/config/default/../../common/uart5/uart5.h \
  ../src/config/default/definitions.h \
@@ -25,6 +27,10 @@ build/default/production/_ext/242462784/outputStream.o: \
 ../src/common/IO/outputStream/outputStream.h:
 
 ../src/common/IO/outputStream/../buffer/buffer.h:
+
+../src/config/default/../../common/IO/printWriter/printWriter.h:
+
+../src/config/default/../../common/IO/outputStream/outputStream.h:
 
 ../src/config/default/../../common/system/system.h:
 
