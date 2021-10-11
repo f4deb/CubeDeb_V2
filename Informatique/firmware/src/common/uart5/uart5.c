@@ -1,8 +1,9 @@
 #include "uart5.h"
 
-#include "../IO/buffer/buffer.h"
 
-static char rxBuffer[UART5_BUFFER_SIZE] = {};
+#include "../IO/buffer/buffer.h"
+#include "../delay/delay.h"
+
 static char txBuffer[UART5_BUFFER_SIZE] = {};
 
 static bool errorStatus = false;
@@ -70,10 +71,7 @@ void initUart5 (char* messageStart, int size){
 }
 
 void writeUart5 (char* message, int size){ 
-
-            
-                UART5_Write(message, size);
-            
-delayMilliSecs(2);
-
+    UART5_Write(message, size);
+    //TODO replace delayMilliSecs by control test
+    delayMilliSecs(2);
 }

@@ -42,7 +42,7 @@ struct Temperature {
     /** The function which must be used to write the alert limit of the temperature sensor (in celcius degree). */
     TemperatureWriteAlertLimitFunction* writeAlertLimit;
     /** The address of I2C */
-    int address;
+    uint16_t address;
 
 };
 

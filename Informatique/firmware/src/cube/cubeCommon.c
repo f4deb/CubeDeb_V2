@@ -32,7 +32,7 @@ void initCubeCommon(void) {
     // initialise driver et flux pour le capteur de temperature externe 1
     initTemperatureLM75A(getTemperatureStream(TEMP_SENSOR_EXT1), LM75_ADDRESS_1);
 
-    // initialise UART 
-    initSerialOutputStream(DEBUG_OUTPUTSTREAM,SERIAL_PORT_5);
+
+    //initSerialInputStream
 
 }

@@ -21,16 +21,14 @@
 #include "../common/I2C/I2CConfig.h"
 #include "../common/led/led.h"
 #include "../common/sensor/temperature/temperatureStream.h"
+#include "../common/sensor/temperature/temperature.h"
 #include "../common/system/system.h"
 #include "../common/timer1/timer1.h"
 #include "../common/uart5/uart5.h"
 #include "../common/serial/serial.h"
+#include "../common/serial/serialoutputStream.h"
 
 #include "cubeCommon.h"
-
-
-
-//static int SCREEN_7SEG_CPU;
 
 
 //LED Gestion        
@@ -40,7 +38,6 @@ static bool led2 = true;
 char messageStart[] = "****  UART5 echo demo: Non-blocking Transfer with the interrupt  ****\r\n\
 **** Type 10 characters. The received characters are echoed back, and the LED is toggled ****\r\n";
 
-char messageError[] = "**** UART error occurred ****\r\n";
 
 
 char receiveBuffer[RX_BUFFER_SIZE] = {};
@@ -48,7 +45,7 @@ char echoBuffer[RX_BUFFER_SIZE + 4] = {};
 
 
 
-static OutputStream debugOutputStream;
+static OutputStream* debugOutputStream;
 
 
 void initMainCube (void) {
@@ -70,16 +67,19 @@ void initMainCube (void) {
     I2C1_Initialize();
     I2C1_CallbackRegister(MyI2CCallback, NULL);
     
-// Debug OutputStream init    
-    //initDebugOutputStream(DEBUG_OUTPUTSTREAM);    
+
  
+     
+    
     initCubeCommon();
     
-    //initUart5(getBoardName(), strlen(getBoardName()));
+    // initialise UART 
+    debugOutputStream = initSerialOutputStream(DEBUG_OUTPUTSTREAM,SERIAL_PORT_5);
 
     
-    
-    appendString(DEBUG_OUTPUTSTREAM,getBoardName());
+    initUart5(getBoardName(), strlen(getBoardName()));
+ 
+    appendString(debugOutputStream,getBoardName());
 
 
     
@@ -91,7 +91,7 @@ void mainCube (void){
     if(getErrorStatusUart5() == true){
         /* Send error message to console */
         setErrorStatusUart5(false);
-        writeUart5 (messageError, strlen(messageError));
+//        writeUart5 (messageError, strlen(messageError));
     }
     else if(getReadStatusUart5() == true){
         /* Echo back received buffer and Toggle LED */
@@ -119,7 +119,7 @@ void mainCube (void){
 
     }
         
-    char *str = "Err0";
+    //char *str = "Err0";
 
    
        
@@ -134,10 +134,12 @@ void mainCube (void){
             led2 = false;             
             
             appendDot(SCREEN_7SEG_CPU,4);
-            appendString(SCREEN_7SEG_CPU, readSensorValueAsString(getTemperatureStream(TEMP_SENSOR_CPU)));
-            appendString(DEBUG_OUTPUTSTREAM,"Temperature Interne: "); 
-            appendString(DEBUG_OUTPUTSTREAM, readSensorValueAsString(getTemperatureStream(TEMP_SENSOR_CPU)));
-            appendString(DEBUG_OUTPUTSTREAM, "\n\r\0");      
+            appendString(SCREEN_7SEG_CPU, readSensorValueAsStringFor7Seg(getTemperatureStream(TEMP_SENSOR_CPU)));
+            appendString(debugOutputStream,"Temperature Interne: "); 
+
+            appendString(debugOutputStream, readSensorValueAsString(getTemperatureStream(TEMP_SENSOR_CPU)));
+            appendString(debugOutputStream, "deg");
+            append(debugOutputStream,LF);  
         }
         else {
             led2GreenOn();
@@ -145,10 +147,13 @@ void mainCube (void){
             led2 = true;
             
             appendDot(SCREEN_7SEG_CPU,4);
-            appendString(SCREEN_7SEG_CPU, readSensorValueAsString(getTemperatureStream(TEMP_SENSOR_EXT1)));
-            appendString(DEBUG_OUTPUTSTREAM,"Temperature Externe: ");
-            appendString(DEBUG_OUTPUTSTREAM, readSensorValueAsString(getTemperatureStream(TEMP_SENSOR_EXT1)));            
-            appendString(DEBUG_OUTPUTSTREAM, "\n\r\0");
+            appendString(SCREEN_7SEG_CPU, readSensorValueAsStringFor7Seg(getTemperatureStream(TEMP_SENSOR_EXT1)));
+            appendString(debugOutputStream,"Temperature Externe: ");
+            appendString(debugOutputStream, readSensorValueAsString(getTemperatureStream(TEMP_SENSOR_EXT1)));            
+            appendString(debugOutputStream, "deg");
+            append(debugOutputStream,LF);
+            
+
         }
     }            
 }

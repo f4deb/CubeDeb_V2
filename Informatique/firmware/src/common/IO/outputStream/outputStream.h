@@ -1,9 +1,9 @@
 #ifndef _OUTPUTSTREAM_H
 #define _OUTPUTSTREAM_H
 
-#define DEBUG_OUTPUTSTREAM_NAME_SIZE 10
+//#define DEBUG_OUTPUTSTREAM_NAME_SIZE 10
 
-#define DEBUG_OUTPUTSTREAM   "UART5"
+//#define DEBUG_OUTPUTSTREAM   "UART5"
 
 /**
  * Encapsulates a Stream to output data
@@ -90,19 +90,5 @@ void initOutputStream(OutputStream* outputStream,
         WriteStringFunction* writeString,
         FlushFunction* flush,
         int* object);
-
-
-
-
-
-
-
-char* getDebugOutputStream  (void);
-
-void initDebugOutputStream (char* debug); 
-
-void writeOutputStream (char* outputStream, char* string);
-
-void appendStream(char* outputStream, char* string);
 
 #endif

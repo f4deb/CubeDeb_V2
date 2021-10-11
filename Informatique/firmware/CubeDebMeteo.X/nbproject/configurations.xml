@@ -25,6 +25,9 @@
           <logicalFolder name="f1" displayName="buffer" projectFiles="true">
             <itemPath>../src/common/IO/buffer/buffer.h</itemPath>
           </logicalFolder>
+          <logicalFolder name="f4" displayName="inputStream" projectFiles="true">
+            <itemPath>../src/common/IO/inputStream/inputStream.h</itemPath>
+          </logicalFolder>
           <logicalFolder name="f2" displayName="outputStream" projectFiles="true">
             <itemPath>../src/common/IO/outputStream/outputStream.h</itemPath>
           </logicalFolder>
@@ -147,6 +150,9 @@
         <logicalFolder name="f9" displayName="IO" projectFiles="true">
           <logicalFolder name="f1" displayName="buffer" projectFiles="true">
             <itemPath>../src/common/IO/buffer/buffer.c</itemPath>
+          </logicalFolder>
+          <logicalFolder name="f4" displayName="inputStream" projectFiles="true">
+            <itemPath>../src/common/IO/inputStream/inputStream.c</itemPath>
           </logicalFolder>
           <logicalFolder name="f2" displayName="outputStream" projectFiles="true">
             <itemPath>../src/common/IO/outputStream/outputStream.c</itemPath>
