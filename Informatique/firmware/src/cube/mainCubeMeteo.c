@@ -48,7 +48,7 @@ char echoBuffer[RX_BUFFER_SIZE + 4] = {};
 
 
 
-static OutputStream debugOutputStream;
+static OutputStream* debugOutputStream;
 
 
 void initMainCube (void) {
@@ -75,7 +75,10 @@ void initMainCube (void) {
  
     initCubeCommon();
     
-    //initUart5(getBoardName(), strlen(getBoardName()));
+        // initialise UART 
+    debugOutputStream = initSerialOutputStream(DEBUG_OUTPUTSTREAM,SERIAL_PORT_5);
+    
+    initUart5(getBoardName(), strlen(getBoardName()));
 
     
     
@@ -134,10 +137,11 @@ void mainCube (void){
             led2 = false;             
             
             appendDot(SCREEN_7SEG_CPU,4);
-            appendString(SCREEN_7SEG_CPU, readSensorValueAsString(getTemperatureStream(TEMP_SENSOR_CPU)));
+            appendString(SCREEN_7SEG_CPU, readSensorValueAsStringFor7Seg(getTemperatureStream(TEMP_SENSOR_CPU)));
             appendString(DEBUG_OUTPUTSTREAM,"Temperature Interne: "); 
             appendString(DEBUG_OUTPUTSTREAM, readSensorValueAsString(getTemperatureStream(TEMP_SENSOR_CPU)));
-            appendString(DEBUG_OUTPUTSTREAM, "\n\r\0");      
+            appendString(DEBUG_OUTPUTSTREAM, "deg");
+            append(DEBUG_OUTPUTSTREAM,LF);       
         }
         else {
             led2GreenOn();
@@ -145,10 +149,11 @@ void mainCube (void){
             led2 = true;
             
             appendDot(SCREEN_7SEG_CPU,4);
-            appendString(SCREEN_7SEG_CPU, readSensorValueAsString(getTemperatureStream(TEMP_SENSOR_EXT1)));
+            appendString(SCREEN_7SEG_CPU, readSensorValueAsStringFor7Seg(getTemperatureStream(TEMP_SENSOR_EXT1)));
             appendString(DEBUG_OUTPUTSTREAM,"Temperature Externe: ");
             appendString(DEBUG_OUTPUTSTREAM, readSensorValueAsString(getTemperatureStream(TEMP_SENSOR_EXT1)));            
-            appendString(DEBUG_OUTPUTSTREAM, "\n\r\0");
+            appendString(DEBUG_OUTPUTSTREAM, "deg");
+            append(DEBUG_OUTPUTSTREAM,LF);
         }
     }            
 }

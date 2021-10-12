@@ -9,6 +9,8 @@
 
 
 
+char* readSensorValueAsStringFor7Seg (Temperature* temperature);
+
 char* readSensorValueAsString (Temperature* temperature);
 
 #endif

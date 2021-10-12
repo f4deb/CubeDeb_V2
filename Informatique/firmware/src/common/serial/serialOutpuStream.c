@@ -28,9 +28,9 @@ void closeOutputStreamSerial5(OutputStream* outputStream) {
 }
 
 void writeChar5(OutputStream* outputStream, unsigned char c) {
-    writeUart5(c, 1);
-    
-
+    char* str = "1";
+    str[0] = c;
+    writeUart5(str, 1);
 }
 
 void writeString5(OutputStream* outputStream, unsigned char* str) {
@@ -50,7 +50,7 @@ void initSerialOutputStream5(OutputStream* outputStream) {
 
 // PUBLIC INTERFACE
 
-void initSerialOutputStream(OutputStream* outputStream, enum SerialPort serialPort) {
+OutputStream* initSerialOutputStream(OutputStream* outputStream, enum SerialPort serialPort) {
 /*    if (serialPortIndex == SERIAL_PORT_1) {
         initSerialOutputStream1(outputStream);
     } else if (serialPortIndex == SERIAL_PORT_2) {
@@ -65,5 +65,7 @@ void initSerialOutputStream(OutputStream* outputStream, enum SerialPort serialPo
     if (serialPort == SERIAL_PORT_5) {
         initSerialOutputStream5(outputStream);
     }
+    
+    return getSerialOutputStream(serialPort);
  
 }

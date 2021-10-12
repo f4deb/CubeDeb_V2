@@ -33,6 +33,6 @@ void initCubeCommon(void) {
     initTemperatureLM75A(getTemperatureStream(TEMP_SENSOR_EXT1), LM75_ADDRESS_1);
 
     // initialise UART 
-    initSerialOutputStream(DEBUG_OUTPUTSTREAM,SERIAL_PORT_5);
+    //initSerialOutputStream(DEBUG_OUTPUTSTREAM,SERIAL_PORT_5);
 
 }
