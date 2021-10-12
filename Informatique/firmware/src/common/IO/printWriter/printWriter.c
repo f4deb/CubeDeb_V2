@@ -36,7 +36,7 @@ unsigned int appendString(OutputStream* outputStream, const char* s) {
 }
 
 void appendDot(OutputStream* outputStream, unsigned int dot) {
-    outputStream->object = dot;
+    outputStream->data = dot;
 }
 
 unsigned int appendStringLN(OutputStream* outputStream, const char* s) {

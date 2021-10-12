@@ -69,6 +69,8 @@ struct OutputStream {
     FlushFunction* flush;
     /** pointer on other object (useful for buffer for example) .*/
     int* object;
+    /** one option data */
+    int data;
 };
 
 /**
@@ -87,6 +89,7 @@ void initOutputStream(OutputStream* outputStream,
         WriteCharFunction* writeChar,
         WriteStringFunction* writeString,
         FlushFunction* flush,
-        int* object);
+        int* object,
+        int data);
 
 #endif

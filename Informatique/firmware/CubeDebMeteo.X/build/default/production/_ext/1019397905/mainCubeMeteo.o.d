@@ -26,10 +26,19 @@ build/default/production/_ext/1019397905/mainCubeMeteo.o: \
  ../src/cube/../common/IO/printWriter/printWriter.h \
  ../src/config/default/../../common/IO/outputStream/outputStream.h \
  ../src/cube/../common/led/led.h ../src/cube/../common/I2C/I2CConfig.h \
- ../src/cube/../common/sensor/temperature/temperatureStream.h \
  ../src/cube/../common/system/system.h \
  ../src/cube/../common/timer1/timer1.h \
  ../src/cube/../common/uart5/uart5.h \
+ ../src/cube/../common/sensor/temperature/temperature.h \
+ ../src/cube/../common/sensor/temperature/temperatureStream.h \
+ ../src/config/default/../../cube/cubeCommon.h \
+ ../src/config/default/../../cube/../common/IO/outputStream/outputStream.h \
+ ../src/config/default/../../cube/../common/sensor/temperature/temperatureStream.h \
+ ../src/config/default/../../cube/../common/serial/serial.h \
+ ../src/cube/../common/sensor/temperature/temperatureStream.h \
+ ../src/cube/../common/serial/serial.h \
+ ../src/cube/../common/serial/serialoutputStream.h \
+ ../src/cube/../common/serial/../IO/outputStream/outputStream.h \
  ../src/cube/../common/serial/serial.h ../src/cube/cubeCommon.h
 
 ../src/cube/mainCubeMeteo.h:
@@ -90,13 +99,31 @@ build/default/production/_ext/1019397905/mainCubeMeteo.o: \
 
 ../src/cube/../common/I2C/I2CConfig.h:
 
-../src/cube/../common/sensor/temperature/temperatureStream.h:
-
 ../src/cube/../common/system/system.h:
 
 ../src/cube/../common/timer1/timer1.h:
 
 ../src/cube/../common/uart5/uart5.h:
+
+../src/cube/../common/sensor/temperature/temperature.h:
+
+../src/cube/../common/sensor/temperature/temperatureStream.h:
+
+../src/config/default/../../cube/cubeCommon.h:
+
+../src/config/default/../../cube/../common/IO/outputStream/outputStream.h:
+
+../src/config/default/../../cube/../common/sensor/temperature/temperatureStream.h:
+
+../src/config/default/../../cube/../common/serial/serial.h:
+
+../src/cube/../common/sensor/temperature/temperatureStream.h:
+
+../src/cube/../common/serial/serial.h:
+
+../src/cube/../common/serial/serialoutputStream.h:
+
+../src/cube/../common/serial/../IO/outputStream/outputStream.h:
 
 ../src/cube/../common/serial/serial.h:
 

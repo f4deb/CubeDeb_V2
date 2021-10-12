@@ -20,11 +20,13 @@
 #include "../common/led/led.h"
 #include "../common/I2C/I2CConfig.h"
 #include "../common/led/led.h"
-#include "../common/sensor/temperature/temperatureStream.h"
 #include "../common/system/system.h"
 #include "../common/timer1/timer1.h"
 #include "../common/uart5/uart5.h"
+#include "../common/sensor/temperature/temperature.h"
+#include "../common/sensor/temperature/temperatureStream.h"
 #include "../common/serial/serial.h"
+#include "../common/serial/serialoutputStream.h"
 
 #include "cubeCommon.h"
 
@@ -79,14 +81,7 @@ void initMainCube (void) {
     debugOutputStream = initSerialOutputStream(getSerialOutputStream(SERIAL_PORT_5),SERIAL_PORT_5);
     
     initUart5(getBoardName(), strlen(getBoardName()));
-
-    
-    
     appendString(debugOutputStream,getBoardName());
-
-
-    
-    
     }
 
 void mainCube (void){

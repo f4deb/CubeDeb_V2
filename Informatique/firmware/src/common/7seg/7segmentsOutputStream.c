@@ -13,7 +13,6 @@
 #include "../../common/IO/outputStream/outputStream.h"
 #include "../../common/I2C/I2CConfig.h"
 
-static int dot7Seg = 0;
 
 static OutputStream seg7OutputStream[1000] ;
 
@@ -48,7 +47,7 @@ void _write7SegStreamChar(OutputStream* outputStream, unsigned char c) {
  *@private
  */
 void _write7SegStreamString(OutputStream* outputStream, const char* string) {
-    char dot = outputStream->object;
+    char dot = outputStream->data;
     print7Seg(string,dot,outputStream->address);
 }
 
@@ -66,7 +65,7 @@ void init7SegOutputStream(OutputStream* outputStream,uint8_t address) {
     outputStream->writeChar = _write7SegStreamChar;
     outputStream->writeString = _write7SegStreamString;
     outputStream->flush = _flush7Seg;
-    outputStream->object = &dot7Seg;
+    outputStream->data = 0; //no dot
     
     _openOutputStream7Seg(outputStream, 0);
 }

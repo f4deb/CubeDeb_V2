@@ -15,7 +15,8 @@ void initOutputStream(OutputStream* outputStream,
         WriteCharFunction* writeChar,
         WriteStringFunction* writeString,
         FlushFunction* flush,
-        int* object) {
+        int* object,
+        int data) {
 
     outputStream->openOutputStream = openOutputStream;
     outputStream->closeOutputStream = closeOutputStream;
@@ -23,6 +24,7 @@ void initOutputStream(OutputStream* outputStream,
     outputStream->writeString = writeString;
     outputStream->flush = flush;
     outputStream->object = object;
+    outputStream->data = data;
 }
 
 
