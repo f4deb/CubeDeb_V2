@@ -1,8 +1,8 @@
 #include "uart5.h"
 
 #include "../IO/buffer/buffer.h"
+#include "../../common/delay/delay.h"
 
-static char rxBuffer[UART5_BUFFER_SIZE] = {};
 static char txBuffer[UART5_BUFFER_SIZE] = {};
 
 static bool errorStatus = false;

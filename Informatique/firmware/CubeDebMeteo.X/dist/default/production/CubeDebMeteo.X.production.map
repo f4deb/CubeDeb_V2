@@ -5,25 +5,25 @@ Archive member included because of file (symbol)
 /opt/microchip/xc32/v2.50/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib/fpu64/libpic32.a(strlen.o)
                               build/default/production/_ext/383772639/buffer.o (strlen)
 /opt/microchip/xc32/v2.50/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib/fpu64/libpic32.a(default-on-reset.o)
-                              /tmp/cc4dXv6a.o (_on_reset)
+                              /tmp/ccYKHvAH.o (_on_reset)
 /opt/microchip/xc32/v2.50/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib/fpu64/libpic32.a(default-on-bootstrap.o)
-                              /tmp/cc4dXv6a.o (_on_bootstrap)
+                              /tmp/ccYKHvAH.o (_on_bootstrap)
 /opt/microchip/xc32/v2.50/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib/fpu64/libpic32.a(default-nmi-handler.o)
-                              /tmp/cc4dXv6a.o (_nmi_handler)
+                              /tmp/ccYKHvAH.o (_nmi_handler)
 /opt/microchip/xc32/v2.50/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib/fpu64/libpic32.a(pic32_data_init.o)
-                              /tmp/cc4dXv6a.o (__pic32_data_init)
+                              /tmp/ccYKHvAH.o (__pic32_data_init)
 /opt/microchip/xc32/v2.50/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib/fpu64/libpic32.a(pic32_init_cache.o)
-                              /tmp/cc4dXv6a.o (__pic32_init_cache)
+                              /tmp/ccYKHvAH.o (__pic32_init_cache)
 /opt/microchip/xc32/v2.50/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib/fpu64/libpic32.a(pic32_init_tlb_ebi_sqi.o)
-                              /tmp/cc4dXv6a.o (__pic32_tlb_init_ebi_sqi)
+                              /tmp/ccYKHvAH.o (__pic32_tlb_init_ebi_sqi)
 /opt/microchip/xc32/v2.50/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib/fpu64/libpic32.a(general-exception.o)
-                              /tmp/cc4dXv6a.o (_general_exception_context)
+                              /tmp/ccYKHvAH.o (_general_exception_context)
 /opt/microchip/xc32/v2.50/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib/fpu64/libpic32.a(cache-err-exception.o)
-                              /tmp/cc4dXv6a.o (_cache_err_exception_context)
+                              /tmp/ccYKHvAH.o (_cache_err_exception_context)
 /opt/microchip/xc32/v2.50/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib/fpu64/libpic32.a(simple-tlb-refill-exception.o)
-                              /tmp/cc4dXv6a.o (_simple_tlb_refill_exception_context)
+                              /tmp/ccYKHvAH.o (_simple_tlb_refill_exception_context)
 /opt/microchip/xc32/v2.50/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib/fpu64/libpic32.a(defaultinterrupt.o)
-                              /tmp/ccay8Xnb.o (_DefaultInterrupt)
+                              /tmp/ccd53EjI.o (_DefaultInterrupt)
 /opt/microchip/xc32/v2.50/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib/fpu64/libc.a(sprintf_cdnopuxX.eo)
                               build/default/production/_ext/1240316727/temperature.o (_sprintf_cdnopuxX)
 /opt/microchip/xc32/v2.50/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib/fpu64/libc.a(doprnt_cdnopuxX.eo)
@@ -67,130 +67,130 @@ section                    address  length [bytes]      (dec)  Description
 .dinit                  0x9d000f1c          0x590        1424   
 .text.I2C1_MASTER_Inter 0x9d0014ac          0x4c0        1216   
 .text                   0x9d00196c          0x8bc        2236  App's exec code 
-.text.mainCube          0x9d002228          0x2ec         748   
-.text.TIMER_1_Handler   0x9d002514          0x1a0         416   
-.text.I2C1_BUS_Handler  0x9d0026b4          0x1a0         416   
-.text.I2C1_MASTER_Handl 0x9d002854          0x1a0         416   
-.text.UART2_FAULT_Handl 0x9d0029f4          0x1a0         416   
-.text.UART2_RX_Handler  0x9d002b94          0x1a0         416   
-.text.UART2_TX_Handler  0x9d002d34          0x1a0         416   
-.text.UART5_FAULT_Handl 0x9d002ed4          0x1a0         416   
-.text.UART5_RX_Handler  0x9d003074          0x1a0         416   
-.text.UART5_TX_Handler  0x9d003214          0x1a0         416   
-.text                   0x9d0033b4          0x2d0         720  App's exec code 
-.text.fputc             0x9d003684          0x144         324   
-.text._flsbuf           0x9d0037c8          0x12c         300   
-.rodata                 0x9d0038f4          0x204         516  Read-only const 
-.text.UART2_RX_Interrup 0x9d003af8          0x100         256   
-.text.UART5_RX_Interrup 0x9d003bf8          0x100         256   
-.text.UART2_TX_Interrup 0x9d003cf8           0xfc         252   
-.text.UART5_TX_Interrup 0x9d003df4           0xfc         252   
-.text._cache_err_except 0x9d003ef0           0xd8         216   
-.text.simple_tlb_refill 0x9d003fc8           0xd8         216   
-.rodata                 0x9d0040a0           0xd0         208  Read-only const 
-.text.UART5_Write       0x9d004170           0xcc         204   
-.tlb.__pic32_tlb_init_e 0x9d00423c           0xbc         188   
-.text.initMainCube      0x9d0042f8           0xb8         184   
-.text.GPIO_Initialize   0x9d0043b0           0xa0         160   
-.text.write             0x9d004450           0x9c         156   
-.text.SYS_Initialize    0x9d0044ec           0x98         152   
-.text.print7Seg         0x9d004584           0x94         148   
-.text.CLK_Initialize    0x9d004618           0x94         148   
-.text.initLed           0x9d0046ac           0x88         136   
-.text.I2C1_WriteRead    0x9d004734           0x88         136   
-.text.UART2_Initialize  0x9d0047bc           0x88         136   
-.text.UART5_Initialize  0x9d004844           0x88         136   
-.text.I2C1_Write        0x9d0048cc           0x84         132   
-.text.UART5_Read        0x9d004950           0x84         132   
-.text                   0x9d0049d4           0x84         132  App's exec code 
-.text.UART2_ErrorClear  0x9d004a58           0x78         120   
-.text.UART5_ErrorClear  0x9d004ad0           0x78         120   
-.text.init7SegOutputStr 0x9d004b48           0x64         100   
-.text.readSensorValueAs 0x9d004bac           0x64         100   
-.text.I2C1_Initialize   0x9d004c10           0x64         100   
-.text.UART2_FAULT_Inter 0x9d004c74           0x64         100   
-.text.UART5_FAULT_Inter 0x9d004cd8           0x64         100   
-.text.writeStringToBuff 0x9d004d3c           0x60          96   
-.text.initUart5         0x9d004d9c           0x60          96   
-.text.I2C1_BUS_Interrup 0x9d004dfc           0x5c          92   
-.text._LM75A_readSensor 0x9d004e58           0x54          84   
-.text.main_entry        0x9d004eac           0x54          84   
-.text.I2C1_IsBusy       0x9d004f00           0x50          80   
-.text.initCubeCommon    0x9d004f50           0x50          80   
-.text._LM75A_writeAlert 0x9d004fa0           0x50          80   
-.text.SAA1064Twrite4DIG 0x9d004ff0           0x50          80   
-.text.readSensorValueAs 0x9d005040           0x4c          76   
-.text.CORETIMER_DelayMs 0x9d00508c           0x4c          76   
-.text.initSerialOutputS 0x9d0050d8           0x48          72   
-.text.appendString      0x9d005120           0x44          68   
-.rodata                 0x9d005164           0x44          68  Read-only const 
-.text                   0x9d0051a8           0x44          68  App's exec code 
-.text.initSerialOutputS 0x9d0051ec           0x40          64   
-.text.TMR1_Initialize   0x9d00522c           0x40          64   
-.text.TIMER_1_Interrupt 0x9d00526c           0x40          64   
-.text.CORETIMER_Initial 0x9d0052ac           0x3c          60   
-.text.writeString5      0x9d0052e8           0x34          52   
-.text.APP_ReadCallbackU 0x9d00531c           0x30          48   
-.text.TMR2_Initialize   0x9d00534c           0x30          48   
-.text.append            0x9d00537c           0x2c          44   
-.text.initTmr1          0x9d0053a8           0x2c          44   
-.text.initTemperatureLM 0x9d0053d4           0x2c          44   
-.text._openOutputStream 0x9d005400           0x28          40   
-.text._closeOutputStrea 0x9d005428           0x28          40   
-.text._write7SegStreamC 0x9d005450           0x28          40   
-.text._write7SegStreamS 0x9d005478           0x28          40   
-.text.writeChar5        0x9d0054a0           0x28          40   
-.text.main              0x9d0054c8           0x28          40   
-.text.writeUart5        0x9d0054f0           0x24          36   
-.text._general_exceptio 0x9d005514           0x24          36   
-.text._bootstrap_except 0x9d005538           0x24          36   
-.text._cache_err_except 0x9d00555c           0x24          36   
-.text._simple_tlb_refil 0x9d005580           0x24          36   
-.text.get7SegOutpuStrea 0x9d0055a4           0x1c          28   
-.text.delayMilliSecs    0x9d0055c0           0x1c          28   
-.text.initTemperatureSt 0x9d0055dc           0x1c          28   
-.rodata                 0x9d0055f8           0x1c          28  Read-only const 
-.text.I2C1_CallbackRegi 0x9d005614           0x1c          28   
-.text.getScreen_7Seg_CP 0x9d005630           0x1c          28   
-.text.initSAA1064T      0x9d00564c           0x1c          28   
-.text.writeCharToBuffer 0x9d005668           0x18          24   
-.text.UART5_ErrorGet    0x9d005680           0x18          24   
-.text                   0x9d005698           0x18          24  App's exec code 
-.text.led1RedOff        0x9d0056b0           0x14          20   
-.text.led2GreenOn       0x9d0056c4           0x14          20   
-.text.led2GreenOff      0x9d0056d8           0x14          20   
-.text.getTemperatureStr 0x9d0056ec           0x14          20   
-.text.getSerialOutputSt 0x9d005700           0x14          20   
-.text.TMR1_Start        0x9d005714           0x14          20   
-.text.UART5_ReadCallbac 0x9d005728           0x14          20   
-.text.UART5_WriteCallba 0x9d00573c           0x14          20   
-.rodata                 0x9d005750           0x10          16  Read-only const 
-.text.tmr1EventHandler  0x9d005760           0x10          16   
-.text.getIsTmr1Expired  0x9d005770            0xc          12   
-.text.setIsTmr1Expired  0x9d00577c            0xc          12   
-.text.APP_WriteCallback 0x9d005788            0xc          12   
-.text.getTxBuffer       0x9d005794            0xc          12   
-.text.TMR1_CallbackRegi 0x9d0057a0            0xc          12   
-.text._flush7Seg        0x9d0057ac            0x8           8   
-.text.initBuffer        0x9d0057b4            0x8           8   
-.text.flushBuffer       0x9d0057bc            0x8           8   
-.text.appendDot         0x9d0057c4            0x8           8   
-.text.flushSerial       0x9d0057cc            0x8           8   
-.text.openOutputStreamS 0x9d0057d4            0x8           8   
-.text.closeOutputStream 0x9d0057dc            0x8           8   
-.text.setBoardName      0x9d0057e4            0x8           8   
-.text.getBoardName      0x9d0057ec            0x8           8   
-.text.getErrorStatusUar 0x9d0057f4            0x8           8   
-.text.setErrorStatusUar 0x9d0057fc            0x8           8   
-.text.getWriteStatusUar 0x9d005804            0x8           8   
-.text.setWriteStatusUar 0x9d00580c            0x8           8   
-.text.getReadStatusUart 0x9d005814            0x8           8   
-.text.setReadStatusUart 0x9d00581c            0x8           8   
-.text._mon_putc         0x9d005824            0x8           8   
-.text._on_reset         0x9d00582c            0x8           8   
-.text._on_bootstrap     0x9d005834            0x8           8   
-.rodata                 0x9d00583c            0x4           4  Read-only const 
-      Total kseg0_program_mem used  :      0x5840       22592  1.1% of 0x200000
+.text.mainCube          0x9d002228          0x2a4         676   
+.text.TIMER_1_Handler   0x9d0024cc          0x1a0         416   
+.text.I2C1_BUS_Handler  0x9d00266c          0x1a0         416   
+.text.I2C1_MASTER_Handl 0x9d00280c          0x1a0         416   
+.text.UART2_FAULT_Handl 0x9d0029ac          0x1a0         416   
+.text.UART2_RX_Handler  0x9d002b4c          0x1a0         416   
+.text.UART2_TX_Handler  0x9d002cec          0x1a0         416   
+.text.UART5_FAULT_Handl 0x9d002e8c          0x1a0         416   
+.text.UART5_RX_Handler  0x9d00302c          0x1a0         416   
+.text.UART5_TX_Handler  0x9d0031cc          0x1a0         416   
+.text                   0x9d00336c          0x2d0         720  App's exec code 
+.text.fputc             0x9d00363c          0x144         324   
+.text._flsbuf           0x9d003780          0x12c         300   
+.rodata                 0x9d0038ac          0x204         516  Read-only const 
+.text.UART2_RX_Interrup 0x9d003ab0          0x100         256   
+.text.UART5_RX_Interrup 0x9d003bb0          0x100         256   
+.text.UART2_TX_Interrup 0x9d003cb0           0xfc         252   
+.text.UART5_TX_Interrup 0x9d003dac           0xfc         252   
+.text._cache_err_except 0x9d003ea8           0xd8         216   
+.text.simple_tlb_refill 0x9d003f80           0xd8         216   
+.rodata                 0x9d004058           0xd0         208  Read-only const 
+.text.UART5_Write       0x9d004128           0xcc         204   
+.tlb.__pic32_tlb_init_e 0x9d0041f4           0xbc         188   
+.text.initMainCube      0x9d0042b0           0xb0         176   
+.text.GPIO_Initialize   0x9d004360           0xa0         160   
+.text.write             0x9d004400           0x9c         156   
+.text.SYS_Initialize    0x9d00449c           0x98         152   
+.text.print7Seg         0x9d004534           0x94         148   
+.text.CLK_Initialize    0x9d0045c8           0x94         148   
+.text.initLed           0x9d00465c           0x88         136   
+.text.I2C1_WriteRead    0x9d0046e4           0x88         136   
+.text.UART2_Initialize  0x9d00476c           0x88         136   
+.text.UART5_Initialize  0x9d0047f4           0x88         136   
+.text.I2C1_Write        0x9d00487c           0x84         132   
+.text.UART5_Read        0x9d004900           0x84         132   
+.text                   0x9d004984           0x84         132  App's exec code 
+.text.UART2_ErrorClear  0x9d004a08           0x78         120   
+.text.UART5_ErrorClear  0x9d004a80           0x78         120   
+.text.init7SegOutputStr 0x9d004af8           0x64         100   
+.text.readSensorValueAs 0x9d004b5c           0x64         100   
+.text.I2C1_Initialize   0x9d004bc0           0x64         100   
+.text.UART2_FAULT_Inter 0x9d004c24           0x64         100   
+.text.UART5_FAULT_Inter 0x9d004c88           0x64         100   
+.text.writeStringToBuff 0x9d004cec           0x60          96   
+.text.initUart5         0x9d004d4c           0x60          96   
+.text.I2C1_BUS_Interrup 0x9d004dac           0x5c          92   
+.text._LM75A_readSensor 0x9d004e08           0x54          84   
+.text.main_entry        0x9d004e5c           0x54          84   
+.text.I2C1_IsBusy       0x9d004eb0           0x50          80   
+.text.initCubeCommon    0x9d004f00           0x50          80   
+.text._LM75A_writeAlert 0x9d004f50           0x50          80   
+.text.SAA1064Twrite4DIG 0x9d004fa0           0x50          80   
+.text.readSensorValueAs 0x9d004ff0           0x4c          76   
+.text.CORETIMER_DelayMs 0x9d00503c           0x4c          76   
+.text.initSerialOutputS 0x9d005088           0x48          72   
+.rodata                 0x9d0050d0           0x48          72  Read-only const 
+.text.appendString      0x9d005118           0x44          68   
+.text                   0x9d00515c           0x44          68  App's exec code 
+.text.initSerialOutputS 0x9d0051a0           0x40          64   
+.text.TMR1_Initialize   0x9d0051e0           0x40          64   
+.text.TIMER_1_Interrupt 0x9d005220           0x40          64   
+.text.CORETIMER_Initial 0x9d005260           0x3c          60   
+.text.writeString5      0x9d00529c           0x34          52   
+.text.APP_ReadCallbackU 0x9d0052d0           0x30          48   
+.text.TMR2_Initialize   0x9d005300           0x30          48   
+.text.append            0x9d005330           0x2c          44   
+.text.initTmr1          0x9d00535c           0x2c          44   
+.text.initTemperatureLM 0x9d005388           0x2c          44   
+.text._openOutputStream 0x9d0053b4           0x28          40   
+.text._closeOutputStrea 0x9d0053dc           0x28          40   
+.text._write7SegStreamC 0x9d005404           0x28          40   
+.text._write7SegStreamS 0x9d00542c           0x28          40   
+.text.writeChar5        0x9d005454           0x28          40   
+.text.main              0x9d00547c           0x28          40   
+.text.writeUart5        0x9d0054a4           0x24          36   
+.text._general_exceptio 0x9d0054c8           0x24          36   
+.text._bootstrap_except 0x9d0054ec           0x24          36   
+.text._cache_err_except 0x9d005510           0x24          36   
+.text._simple_tlb_refil 0x9d005534           0x24          36   
+.text.get7SegOutpuStrea 0x9d005558           0x1c          28   
+.text.delayMilliSecs    0x9d005574           0x1c          28   
+.text.getTemperatureStr 0x9d005590           0x1c          28   
+.text.initTemperatureSt 0x9d0055ac           0x1c          28   
+.rodata                 0x9d0055c8           0x1c          28  Read-only const 
+.text.I2C1_CallbackRegi 0x9d0055e4           0x1c          28   
+.text.getScreen_7Seg_CP 0x9d005600           0x1c          28   
+.text.initSAA1064T      0x9d00561c           0x1c          28   
+.text.writeCharToBuffer 0x9d005638           0x18          24   
+.text.UART5_ErrorGet    0x9d005650           0x18          24   
+.text                   0x9d005668           0x18          24  App's exec code 
+.text.led1RedOff        0x9d005680           0x14          20   
+.text.led2GreenOn       0x9d005694           0x14          20   
+.text.led2GreenOff      0x9d0056a8           0x14          20   
+.text.getSerialOutputSt 0x9d0056bc           0x14          20   
+.text.TMR1_Start        0x9d0056d0           0x14          20   
+.text.UART5_ReadCallbac 0x9d0056e4           0x14          20   
+.text.UART5_WriteCallba 0x9d0056f8           0x14          20   
+.rodata                 0x9d00570c           0x10          16  Read-only const 
+.text.tmr1EventHandler  0x9d00571c           0x10          16   
+.text.getIsTmr1Expired  0x9d00572c            0xc          12   
+.text.setIsTmr1Expired  0x9d005738            0xc          12   
+.text.APP_WriteCallback 0x9d005744            0xc          12   
+.text.getTxBuffer       0x9d005750            0xc          12   
+.text.TMR1_CallbackRegi 0x9d00575c            0xc          12   
+.text._flush7Seg        0x9d005768            0x8           8   
+.text.initBuffer        0x9d005770            0x8           8   
+.text.flushBuffer       0x9d005778            0x8           8   
+.text.appendDot         0x9d005780            0x8           8   
+.text.flushSerial       0x9d005788            0x8           8   
+.text.openOutputStreamS 0x9d005790            0x8           8   
+.text.closeOutputStream 0x9d005798            0x8           8   
+.text.setBoardName      0x9d0057a0            0x8           8   
+.text.getBoardName      0x9d0057a8            0x8           8   
+.text.getErrorStatusUar 0x9d0057b0            0x8           8   
+.text.setErrorStatusUar 0x9d0057b8            0x8           8   
+.text.getWriteStatusUar 0x9d0057c0            0x8           8   
+.text.setWriteStatusUar 0x9d0057c8            0x8           8   
+.text.getReadStatusUart 0x9d0057d0            0x8           8   
+.text.setReadStatusUart 0x9d0057d8            0x8           8   
+.text._mon_putc         0x9d0057e0            0x8           8   
+.text._on_reset         0x9d0057e8            0x8           8   
+.text._on_bootstrap     0x9d0057f0            0x8           8   
+.rodata                 0x9d0057f8            0x4           4  Read-only const 
+      Total kseg0_program_mem used  :      0x57fc       22524  1.1% of 0x200000
 
 kseg0 Boot-Memory Usage
 section                    address  length [bytes]      (dec)  Description
@@ -204,7 +204,7 @@ section                    address  length [bytes]      (dec)  Description
 .bev_excpt              0xbfc00380           0x10          16  BEV-Exception 
          Total kseg1_boot_mem used  :       0x1c4         452  39.2% of 0x480
         --------------------------------------------------------------------------
-         Total Program Memory used  :      0x5a04       23044  1.1% of 0x200480
+         Total Program Memory used  :      0x59c0       22976  1.1% of 0x200480
         --------------------------------------------------------------------------
 
 
@@ -215,21 +215,21 @@ section                    address  length [bytes]      (dec)  Description
 .sbss                   0x80000030           0x34          52  Small uninit data 
 .bss                    0x80000064           0x68         104  Uninitialized data 
 .bss                    0x800000cc         0x6ef0       28400  Uninitialized data 
-.data                   0x80006fbc           0xc8         200  Initialized data 
-.bss                    0x80007084           0xa4         164  Uninitialized data 
-.bss                    0x80007128           0x58          88  Uninitialized data 
-.bss                    0x80007180           0x10          16  Uninitialized data 
-         Total kseg0_data_mem used  :      0x7190       29072  5.5% of 0x80000
+.bss                    0x80006fbc          0x120         288  Uninitialized data 
+.data                   0x800070dc           0xc8         200  Initialized data 
+.bss                    0x800071a4           0x78         120  Uninitialized data 
+.bss                    0x8000721c           0x34          52  Uninitialized data 
+         Total kseg0_data_mem used  :      0x7250       29264  5.6% of 0x80000
         --------------------------------------------------------------------------
-            Total Data Memory used  :      0x7190       29072  5.5% of 0x80000
+            Total Data Memory used  :      0x7250       29264  5.6% of 0x80000
         --------------------------------------------------------------------------
 
 
 Dynamic Data-Memory Reservation
 section                    address  length [bytes]      (dec)  Description
 -------                 ----------  -------------------------  -----------
-heap                    0x80007198          0x200         512  Reserved for heap 
-stack                   0x800073b0        0x78c48      494664  Reserved for stack 
+heap                    0x80007258          0x200         512  Reserved for heap 
+stack                   0x80007470        0x78b88      494472  Reserved for stack 
 
         --------------------------------------------------------------------------
 
@@ -585,19 +585,19 @@ Discarded input sections
  .data          0x00000000        0x0 /opt/microchip/xc32/v2.50/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib/./proc/32MZ2048EFM100/vector_offset_init.o
  .bss           0x00000000        0x0 /opt/microchip/xc32/v2.50/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib/./proc/32MZ2048EFM100/vector_offset_init.o
  .reginfo       0x00000000       0x18 /opt/microchip/xc32/v2.50/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib/./proc/32MZ2048EFM100/vector_offset_init.o
- .text          0x00000000        0x0 /tmp/cc4dXv6a.o
- .data          0x00000000        0x0 /tmp/cc4dXv6a.o
- .bss           0x00000000        0x0 /tmp/cc4dXv6a.o
- .reginfo       0x00000000       0x18 /tmp/cc4dXv6a.o
- .text          0x00000000        0x0 /tmp/ccIe2OYb.o
- .data          0x00000000        0x0 /tmp/ccIe2OYb.o
- .bss           0x00000000        0x0 /tmp/ccIe2OYb.o
- .reginfo       0x00000000       0x18 /tmp/ccIe2OYb.o
- .text          0x00000000        0x0 /tmp/ccay8Xnb.o
- .data          0x00000000        0x0 /tmp/ccay8Xnb.o
- .bss           0x00000000        0x0 /tmp/ccay8Xnb.o
- .reginfo       0x00000000       0x18 /tmp/ccay8Xnb.o
- .discard       0x00000000        0x4 /tmp/ccay8Xnb.o
+ .text          0x00000000        0x0 /tmp/ccYKHvAH.o
+ .data          0x00000000        0x0 /tmp/ccYKHvAH.o
+ .bss           0x00000000        0x0 /tmp/ccYKHvAH.o
+ .reginfo       0x00000000       0x18 /tmp/ccYKHvAH.o
+ .text          0x00000000        0x0 /tmp/ccbzU0pF.o
+ .data          0x00000000        0x0 /tmp/ccbzU0pF.o
+ .bss           0x00000000        0x0 /tmp/ccbzU0pF.o
+ .reginfo       0x00000000       0x18 /tmp/ccbzU0pF.o
+ .text          0x00000000        0x0 /tmp/ccd53EjI.o
+ .data          0x00000000        0x0 /tmp/ccd53EjI.o
+ .bss           0x00000000        0x0 /tmp/ccd53EjI.o
+ .reginfo       0x00000000       0x18 /tmp/ccd53EjI.o
+ .discard       0x00000000        0x4 /tmp/ccd53EjI.o
  .text          0x00000000        0x0 /opt/microchip/xc32/v2.50/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib/./proc/32MZ2048EFM100/default_isr_vectors.o
  .data          0x00000000        0x0 /opt/microchip/xc32/v2.50/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib/./proc/32MZ2048EFM100/default_isr_vectors.o
  .bss           0x00000000        0x0 /opt/microchip/xc32/v2.50/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib/./proc/32MZ2048EFM100/default_isr_vectors.o
@@ -1333,16 +1333,16 @@ END GROUP
 
 .reset          0xbfc00000      0x1b4
  *(.reset)
- .reset         0xbfc00000       0x18 /tmp/cc4dXv6a.o
+ .reset         0xbfc00000       0x18 /tmp/ccYKHvAH.o
                 0xbfc00000                _reset
  *(.reset.startup)
  .reset.startup
-                0xbfc00018      0x19c /tmp/cc4dXv6a.o
+                0xbfc00018      0x19c /tmp/ccYKHvAH.o
                 0xbfc00018                _startup
 
 .bev_excpt      0xbfc00380       0x10
  *(.bev_handler)
- .bev_handler   0xbfc00380       0x10 /tmp/cc4dXv6a.o
+ .bev_handler   0xbfc00380       0x10 /tmp/ccYKHvAH.o
 
 .cache_init     0xbfc004b0      0x1c0
  *(.cache_init)
@@ -1357,17 +1357,17 @@ END GROUP
                 0x9d000000       0x10
  *(.simple_tlb_refill_vector)
  .simple_tlb_refill_vector
-                0x9d000000       0x10 /tmp/cc4dXv6a.o
+                0x9d000000       0x10 /tmp/ccYKHvAH.o
 
 .cache_err_excpt
                 0x9d000100       0x10
  *(.cache_err_vector)
  .cache_err_vector
-                0x9d000100       0x10 /tmp/cc4dXv6a.o
+                0x9d000100       0x10 /tmp/ccYKHvAH.o
 
 .app_excpt      0x9d000180       0x10
  *(.gen_handler)
- .gen_handler   0x9d000180       0x10 /tmp/cc4dXv6a.o
+ .gen_handler   0x9d000180       0x10 /tmp/ccYKHvAH.o
 
 .vectors        0x9d000200       0x90
                 0x9d000200                . = ALIGN (0x4)
@@ -2608,99 +2608,99 @@ END GROUP
  *.elf(.debug_pubnames)
  *(.debug_pubnames)
 
-.debug_info     0x00000000     0xd174
+.debug_info     0x00000000     0xd06e
  *.elf(.debug_info .gnu.linkonce.wi.*)
  *(.debug_info .gnu.linkonce.wi.*)
  .debug_info    0x00000000      0x2eb build/default/production/_ext/1571292264/7segments.o
- .debug_info    0x000002eb      0x60e build/default/production/_ext/1571292264/7segmentsOutputStream.o
- .debug_info    0x000008f9      0x25d build/default/production/_ext/1506567961/delay.o
- .debug_info    0x00000b56      0x2f4 build/default/production/_ext/383772639/buffer.o
- .debug_info    0x00000e4a      0x391 build/default/production/_ext/242462784/outputStream.o
- .debug_info    0x000011db      0x4a8 build/default/production/_ext/1038083393/printWriter.o
- .debug_info    0x00001683      0x545 build/default/production/_ext/919093983/led.o
- .debug_info    0x00001bc8      0x358 build/default/production/_ext/1240316727/temperatureStream.o
- .debug_info    0x00001f20      0x3c7 build/default/production/_ext/1240316727/temperature.o
- .debug_info    0x000022e7      0x625 build/default/production/_ext/111410402/serialOutpuStream.o
- .debug_info    0x0000290c      0x12c build/default/production/_ext/92899495/system.o
- .debug_info    0x00002a38      0x32c build/default/production/_ext/79239498/timer1.o
- .debug_info    0x00002d64      0x64f build/default/production/_ext/1522154941/uart5.o
- .debug_info    0x000033b3      0x7f8 build/default/production/_ext/1984157808/plib_cache.o
- .debug_info    0x00003bab      0x224 build/default/production/_ext/60165520/plib_clk.o
- .debug_info    0x00003dcf      0x6a3 build/default/production/_ext/1249264884/plib_coretimer.o
- .debug_info    0x00004472     0x18d1 build/default/production/_ext/1865200349/plib_evic.o
- .debug_info    0x00005d43      0x6d9 build/default/production/_ext/1865254177/plib_gpio.o
- .debug_info    0x0000641c      0x932 build/default/production/_ext/513455433/plib_i2c1_master.o
- .debug_info    0x00006d4e      0x2df build/default/production/_ext/60181895/plib_tmr2.o
- .debug_info    0x0000702d      0x788 build/default/production/_ext/1865638794/plib_tmr1.o
- .debug_info    0x000077b5      0xace build/default/production/_ext/1865657120/plib_uart2.o
- .debug_info    0x00008283      0xace build/default/production/_ext/1865657120/plib_uart5.o
- .debug_info    0x00008d51      0x12b build/default/production/_ext/163028504/xc32_monitor.o
- .debug_info    0x00008e7c      0x4db build/default/production/_ext/1171490990/initialization.o
- .debug_info    0x00009357      0x44f build/default/production/_ext/1171490990/interrupts.o
- .debug_info    0x000097a6      0x32d build/default/production/_ext/1171490990/exceptions.o
- .debug_info    0x00009ad3      0xfde build/default/production/_ext/1019397905/mainCubeMeteo.o
- .debug_info    0x0000aab1      0x5ba build/default/production/_ext/1019397905/cubeCommon.o
- .debug_info    0x0000b06b      0x50e build/default/production/_ext/1367680316/LM75A.o
- .debug_info    0x0000b579      0x490 build/default/production/_ext/672751358/SAA1064T.o
- .debug_info    0x0000ba09      0x21c build/default/production/_ext/1360937237/mainCube.o
- .debug_info    0x0000bc25       0xcd /opt/microchip/xc32/v2.50/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib/fpu64/libpic32.a(default-on-reset.o)
- .debug_info    0x0000bcf2       0xd5 /opt/microchip/xc32/v2.50/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib/fpu64/libpic32.a(default-on-bootstrap.o)
- .debug_info    0x0000bdc7       0xe7 /opt/microchip/xc32/v2.50/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib/fpu64/libpic32.a(defaultinterrupt.o)
- .debug_info    0x0000beae       0xd0 /opt/microchip/xc32/v2.50/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib/fpu64/libc.a(sprintf_cdnopuxX.eo)
- .debug_info    0x0000bf7e       0xd1 /opt/microchip/xc32/v2.50/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib/fpu64/libc.a(doprnt_cdnopuxX.eo)
- .debug_info    0x0000c04f       0xc2 /opt/microchip/xc32/v2.50/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib/fpu64/libc.a(_fputc_simple.o)
- .debug_info    0x0000c111       0xc5 /opt/microchip/xc32/v2.50/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib/fpu64/libc.a(_flsbuf_simple.o)
- .debug_info    0x0000c1d6      0x751 /opt/microchip/xc32/v2.50/bin/bin/../../lib/gcc/pic32mx/4.8.3/fpu64/libgcc.a(_udivdi3.o)
- .debug_info    0x0000c927      0x78e /opt/microchip/xc32/v2.50/bin/bin/../../lib/gcc/pic32mx/4.8.3/fpu64/libgcc.a(_umoddi3.o)
- .debug_info    0x0000d0b5       0xbf /opt/microchip/xc32/v2.50/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib/fpu64/libpic32.a(write.o)
+ .debug_info    0x000002eb      0x61d build/default/production/_ext/1571292264/7segmentsOutputStream.o
+ .debug_info    0x00000908      0x25d build/default/production/_ext/1506567961/delay.o
+ .debug_info    0x00000b65      0x2f4 build/default/production/_ext/383772639/buffer.o
+ .debug_info    0x00000e59      0x391 build/default/production/_ext/242462784/outputStream.o
+ .debug_info    0x000011ea      0x4a8 build/default/production/_ext/1038083393/printWriter.o
+ .debug_info    0x00001692      0x545 build/default/production/_ext/919093983/led.o
+ .debug_info    0x00001bd7      0x358 build/default/production/_ext/1240316727/temperatureStream.o
+ .debug_info    0x00001f2f      0x3c7 build/default/production/_ext/1240316727/temperature.o
+ .debug_info    0x000022f6      0x625 build/default/production/_ext/111410402/serialOutpuStream.o
+ .debug_info    0x0000291b      0x12c build/default/production/_ext/92899495/system.o
+ .debug_info    0x00002a47      0x32c build/default/production/_ext/79239498/timer1.o
+ .debug_info    0x00002d73      0x64a build/default/production/_ext/1522154941/uart5.o
+ .debug_info    0x000033bd      0x7f8 build/default/production/_ext/1984157808/plib_cache.o
+ .debug_info    0x00003bb5      0x224 build/default/production/_ext/60165520/plib_clk.o
+ .debug_info    0x00003dd9      0x6a3 build/default/production/_ext/1249264884/plib_coretimer.o
+ .debug_info    0x0000447c     0x18d1 build/default/production/_ext/1865200349/plib_evic.o
+ .debug_info    0x00005d4d      0x6d9 build/default/production/_ext/1865254177/plib_gpio.o
+ .debug_info    0x00006426      0x932 build/default/production/_ext/513455433/plib_i2c1_master.o
+ .debug_info    0x00006d58      0x2df build/default/production/_ext/60181895/plib_tmr2.o
+ .debug_info    0x00007037      0x788 build/default/production/_ext/1865638794/plib_tmr1.o
+ .debug_info    0x000077bf      0xace build/default/production/_ext/1865657120/plib_uart2.o
+ .debug_info    0x0000828d      0xace build/default/production/_ext/1865657120/plib_uart5.o
+ .debug_info    0x00008d5b      0x12b build/default/production/_ext/163028504/xc32_monitor.o
+ .debug_info    0x00008e86      0x4db build/default/production/_ext/1171490990/initialization.o
+ .debug_info    0x00009361      0x44f build/default/production/_ext/1171490990/interrupts.o
+ .debug_info    0x000097b0      0x32d build/default/production/_ext/1171490990/exceptions.o
+ .debug_info    0x00009add      0xece build/default/production/_ext/1019397905/mainCubeMeteo.o
+ .debug_info    0x0000a9ab      0x5ba build/default/production/_ext/1019397905/cubeCommon.o
+ .debug_info    0x0000af65      0x50e build/default/production/_ext/1367680316/LM75A.o
+ .debug_info    0x0000b473      0x490 build/default/production/_ext/672751358/SAA1064T.o
+ .debug_info    0x0000b903      0x21c build/default/production/_ext/1360937237/mainCube.o
+ .debug_info    0x0000bb1f       0xcd /opt/microchip/xc32/v2.50/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib/fpu64/libpic32.a(default-on-reset.o)
+ .debug_info    0x0000bbec       0xd5 /opt/microchip/xc32/v2.50/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib/fpu64/libpic32.a(default-on-bootstrap.o)
+ .debug_info    0x0000bcc1       0xe7 /opt/microchip/xc32/v2.50/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib/fpu64/libpic32.a(defaultinterrupt.o)
+ .debug_info    0x0000bda8       0xd0 /opt/microchip/xc32/v2.50/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib/fpu64/libc.a(sprintf_cdnopuxX.eo)
+ .debug_info    0x0000be78       0xd1 /opt/microchip/xc32/v2.50/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib/fpu64/libc.a(doprnt_cdnopuxX.eo)
+ .debug_info    0x0000bf49       0xc2 /opt/microchip/xc32/v2.50/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib/fpu64/libc.a(_fputc_simple.o)
+ .debug_info    0x0000c00b       0xc5 /opt/microchip/xc32/v2.50/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib/fpu64/libc.a(_flsbuf_simple.o)
+ .debug_info    0x0000c0d0      0x751 /opt/microchip/xc32/v2.50/bin/bin/../../lib/gcc/pic32mx/4.8.3/fpu64/libgcc.a(_udivdi3.o)
+ .debug_info    0x0000c821      0x78e /opt/microchip/xc32/v2.50/bin/bin/../../lib/gcc/pic32mx/4.8.3/fpu64/libgcc.a(_umoddi3.o)
+ .debug_info    0x0000cfaf       0xbf /opt/microchip/xc32/v2.50/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib/fpu64/libpic32.a(write.o)
 
-.debug_abbrev   0x00000000     0x2836
+.debug_abbrev   0x00000000     0x2820
  *.elf(.debug_abbrev)
  *(.debug_abbrev)
  .debug_abbrev  0x00000000       0xe4 build/default/production/_ext/1571292264/7segments.o
- .debug_abbrev  0x000000e4      0x13b build/default/production/_ext/1571292264/7segmentsOutputStream.o
- .debug_abbrev  0x0000021f       0x99 build/default/production/_ext/1506567961/delay.o
- .debug_abbrev  0x000002b8      0x11a build/default/production/_ext/383772639/buffer.o
- .debug_abbrev  0x000003d2       0xbe build/default/production/_ext/242462784/outputStream.o
- .debug_abbrev  0x00000490      0x150 build/default/production/_ext/1038083393/printWriter.o
- .debug_abbrev  0x000005e0       0xe2 build/default/production/_ext/919093983/led.o
- .debug_abbrev  0x000006c2      0x110 build/default/production/_ext/1240316727/temperatureStream.o
- .debug_abbrev  0x000007d2      0x10b build/default/production/_ext/1240316727/temperature.o
- .debug_abbrev  0x000008dd      0x1c5 build/default/production/_ext/111410402/serialOutpuStream.o
- .debug_abbrev  0x00000aa2       0x7c build/default/production/_ext/92899495/system.o
- .debug_abbrev  0x00000b1e      0x153 build/default/production/_ext/79239498/timer1.o
- .debug_abbrev  0x00000c71      0x19e build/default/production/_ext/1522154941/uart5.o
- .debug_abbrev  0x00000e0f      0x131 build/default/production/_ext/1984157808/plib_cache.o
- .debug_abbrev  0x00000f40       0x5e build/default/production/_ext/60165520/plib_clk.o
- .debug_abbrev  0x00000f9e      0x141 build/default/production/_ext/1249264884/plib_coretimer.o
- .debug_abbrev  0x000010df      0x10b build/default/production/_ext/1865200349/plib_evic.o
- .debug_abbrev  0x000011ea      0x132 build/default/production/_ext/1865254177/plib_gpio.o
- .debug_abbrev  0x0000131c      0x1b2 build/default/production/_ext/513455433/plib_i2c1_master.o
- .debug_abbrev  0x000014ce       0xa1 build/default/production/_ext/60181895/plib_tmr2.o
- .debug_abbrev  0x0000156f      0x1b3 build/default/production/_ext/1865638794/plib_tmr1.o
- .debug_abbrev  0x00001722      0x253 build/default/production/_ext/1865657120/plib_uart2.o
- .debug_abbrev  0x00001975      0x253 build/default/production/_ext/1865657120/plib_uart5.o
- .debug_abbrev  0x00001bc8       0x66 build/default/production/_ext/163028504/xc32_monitor.o
- .debug_abbrev  0x00001c2e      0x11f build/default/production/_ext/1171490990/initialization.o
- .debug_abbrev  0x00001d4d       0x57 build/default/production/_ext/1171490990/interrupts.o
- .debug_abbrev  0x00001da4       0x6b build/default/production/_ext/1171490990/exceptions.o
- .debug_abbrev  0x00001e0f      0x1d6 build/default/production/_ext/1019397905/mainCubeMeteo.o
- .debug_abbrev  0x00001fe5      0x122 build/default/production/_ext/1019397905/cubeCommon.o
- .debug_abbrev  0x00002107      0x198 build/default/production/_ext/1367680316/LM75A.o
- .debug_abbrev  0x0000229f      0x119 build/default/production/_ext/672751358/SAA1064T.o
- .debug_abbrev  0x000023b8       0xbf build/default/production/_ext/1360937237/mainCube.o
- .debug_abbrev  0x00002477       0x28 /opt/microchip/xc32/v2.50/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib/fpu64/libpic32.a(default-on-reset.o)
- .debug_abbrev  0x0000249f       0x28 /opt/microchip/xc32/v2.50/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib/fpu64/libpic32.a(default-on-bootstrap.o)
- .debug_abbrev  0x000024c7       0x28 /opt/microchip/xc32/v2.50/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib/fpu64/libpic32.a(defaultinterrupt.o)
- .debug_abbrev  0x000024ef       0x28 /opt/microchip/xc32/v2.50/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib/fpu64/libc.a(sprintf_cdnopuxX.eo)
- .debug_abbrev  0x00002517       0x28 /opt/microchip/xc32/v2.50/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib/fpu64/libc.a(doprnt_cdnopuxX.eo)
- .debug_abbrev  0x0000253f       0x28 /opt/microchip/xc32/v2.50/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib/fpu64/libc.a(_fputc_simple.o)
- .debug_abbrev  0x00002567       0x28 /opt/microchip/xc32/v2.50/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib/fpu64/libc.a(_flsbuf_simple.o)
- .debug_abbrev  0x0000258f      0x138 /opt/microchip/xc32/v2.50/bin/bin/../../lib/gcc/pic32mx/4.8.3/fpu64/libgcc.a(_udivdi3.o)
- .debug_abbrev  0x000026c7      0x147 /opt/microchip/xc32/v2.50/bin/bin/../../lib/gcc/pic32mx/4.8.3/fpu64/libgcc.a(_umoddi3.o)
- .debug_abbrev  0x0000280e       0x28 /opt/microchip/xc32/v2.50/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib/fpu64/libpic32.a(write.o)
+ .debug_abbrev  0x000000e4      0x14a build/default/production/_ext/1571292264/7segmentsOutputStream.o
+ .debug_abbrev  0x0000022e       0x99 build/default/production/_ext/1506567961/delay.o
+ .debug_abbrev  0x000002c7      0x11a build/default/production/_ext/383772639/buffer.o
+ .debug_abbrev  0x000003e1       0xbe build/default/production/_ext/242462784/outputStream.o
+ .debug_abbrev  0x0000049f      0x150 build/default/production/_ext/1038083393/printWriter.o
+ .debug_abbrev  0x000005ef       0xe2 build/default/production/_ext/919093983/led.o
+ .debug_abbrev  0x000006d1      0x110 build/default/production/_ext/1240316727/temperatureStream.o
+ .debug_abbrev  0x000007e1      0x10b build/default/production/_ext/1240316727/temperature.o
+ .debug_abbrev  0x000008ec      0x1c5 build/default/production/_ext/111410402/serialOutpuStream.o
+ .debug_abbrev  0x00000ab1       0x7c build/default/production/_ext/92899495/system.o
+ .debug_abbrev  0x00000b2d      0x153 build/default/production/_ext/79239498/timer1.o
+ .debug_abbrev  0x00000c80      0x179 build/default/production/_ext/1522154941/uart5.o
+ .debug_abbrev  0x00000df9      0x131 build/default/production/_ext/1984157808/plib_cache.o
+ .debug_abbrev  0x00000f2a       0x5e build/default/production/_ext/60165520/plib_clk.o
+ .debug_abbrev  0x00000f88      0x141 build/default/production/_ext/1249264884/plib_coretimer.o
+ .debug_abbrev  0x000010c9      0x10b build/default/production/_ext/1865200349/plib_evic.o
+ .debug_abbrev  0x000011d4      0x132 build/default/production/_ext/1865254177/plib_gpio.o
+ .debug_abbrev  0x00001306      0x1b2 build/default/production/_ext/513455433/plib_i2c1_master.o
+ .debug_abbrev  0x000014b8       0xa1 build/default/production/_ext/60181895/plib_tmr2.o
+ .debug_abbrev  0x00001559      0x1b3 build/default/production/_ext/1865638794/plib_tmr1.o
+ .debug_abbrev  0x0000170c      0x253 build/default/production/_ext/1865657120/plib_uart2.o
+ .debug_abbrev  0x0000195f      0x253 build/default/production/_ext/1865657120/plib_uart5.o
+ .debug_abbrev  0x00001bb2       0x66 build/default/production/_ext/163028504/xc32_monitor.o
+ .debug_abbrev  0x00001c18      0x11f build/default/production/_ext/1171490990/initialization.o
+ .debug_abbrev  0x00001d37       0x57 build/default/production/_ext/1171490990/interrupts.o
+ .debug_abbrev  0x00001d8e       0x6b build/default/production/_ext/1171490990/exceptions.o
+ .debug_abbrev  0x00001df9      0x1d6 build/default/production/_ext/1019397905/mainCubeMeteo.o
+ .debug_abbrev  0x00001fcf      0x122 build/default/production/_ext/1019397905/cubeCommon.o
+ .debug_abbrev  0x000020f1      0x198 build/default/production/_ext/1367680316/LM75A.o
+ .debug_abbrev  0x00002289      0x119 build/default/production/_ext/672751358/SAA1064T.o
+ .debug_abbrev  0x000023a2       0xbf build/default/production/_ext/1360937237/mainCube.o
+ .debug_abbrev  0x00002461       0x28 /opt/microchip/xc32/v2.50/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib/fpu64/libpic32.a(default-on-reset.o)
+ .debug_abbrev  0x00002489       0x28 /opt/microchip/xc32/v2.50/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib/fpu64/libpic32.a(default-on-bootstrap.o)
+ .debug_abbrev  0x000024b1       0x28 /opt/microchip/xc32/v2.50/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib/fpu64/libpic32.a(defaultinterrupt.o)
+ .debug_abbrev  0x000024d9       0x28 /opt/microchip/xc32/v2.50/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib/fpu64/libc.a(sprintf_cdnopuxX.eo)
+ .debug_abbrev  0x00002501       0x28 /opt/microchip/xc32/v2.50/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib/fpu64/libc.a(doprnt_cdnopuxX.eo)
+ .debug_abbrev  0x00002529       0x28 /opt/microchip/xc32/v2.50/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib/fpu64/libc.a(_fputc_simple.o)
+ .debug_abbrev  0x00002551       0x28 /opt/microchip/xc32/v2.50/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib/fpu64/libc.a(_flsbuf_simple.o)
+ .debug_abbrev  0x00002579      0x138 /opt/microchip/xc32/v2.50/bin/bin/../../lib/gcc/pic32mx/4.8.3/fpu64/libgcc.a(_udivdi3.o)
+ .debug_abbrev  0x000026b1      0x147 /opt/microchip/xc32/v2.50/bin/bin/../../lib/gcc/pic32mx/4.8.3/fpu64/libgcc.a(_umoddi3.o)
+ .debug_abbrev  0x000027f8       0x28 /opt/microchip/xc32/v2.50/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib/fpu64/libpic32.a(write.o)
 
-.debug_line     0x00000000     0x4876
+.debug_line     0x00000000     0x48c8
  *.elf(.debug_line)
  *(.debug_line)
  .debug_line    0x00000000      0x1a1 build/default/production/_ext/1571292264/7segments.o
@@ -2717,38 +2717,38 @@ END GROUP
  .debug_line    0x00000e51        0x0 build/default/production/_ext/111410402/serial.o
  .debug_line    0x00000e51       0x96 build/default/production/_ext/92899495/system.o
  .debug_line    0x00000ee7      0x185 build/default/production/_ext/79239498/timer1.o
- .debug_line    0x0000106c      0x292 build/default/production/_ext/1522154941/uart5.o
- .debug_line    0x000012fe      0x294 build/default/production/_ext/1984157808/plib_cache.o
- .debug_line    0x00001592      0x14c build/default/production/_ext/60165520/plib_clk.o
- .debug_line    0x000016de      0x1f1 build/default/production/_ext/1249264884/plib_coretimer.o
- .debug_line    0x000018cf      0x206 build/default/production/_ext/1865200349/plib_evic.o
- .debug_line    0x00001ad5      0x1ec build/default/production/_ext/1865254177/plib_gpio.o
- .debug_line    0x00001cc1      0x30e build/default/production/_ext/513455433/plib_i2c1_master.o
- .debug_line    0x00001fcf      0x1ad build/default/production/_ext/60181895/plib_tmr2.o
- .debug_line    0x0000217c      0x212 build/default/production/_ext/1865638794/plib_tmr1.o
- .debug_line    0x0000238e      0x368 build/default/production/_ext/1865657120/plib_uart2.o
- .debug_line    0x000026f6      0x368 build/default/production/_ext/1865657120/plib_uart5.o
- .debug_line    0x00002a5e       0xa6 build/default/production/_ext/163028504/xc32_monitor.o
- .debug_line    0x00002b04      0x4f5 build/default/production/_ext/1171490990/initialization.o
- .debug_line    0x00002ff9      0x145 build/default/production/_ext/1171490990/interrupts.o
- .debug_line    0x0000313e       0xc7 build/default/production/_ext/1171490990/exceptions.o
- .debug_line    0x00003205      0x6b7 build/default/production/_ext/1019397905/mainCubeMeteo.o
- .debug_line    0x000038bc      0x2f6 build/default/production/_ext/1019397905/cubeCommon.o
- .debug_line    0x00003bb2      0x22f build/default/production/_ext/1367680316/LM75A.o
- .debug_line    0x00003de1      0x26d build/default/production/_ext/672751358/SAA1064T.o
- .debug_line    0x0000404e      0x1d9 build/default/production/_ext/1360937237/mainCube.o
- .debug_line    0x00004227       0x93 /opt/microchip/xc32/v2.50/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib/fpu64/libpic32.a(default-on-reset.o)
- .debug_line    0x000042ba       0x97 /opt/microchip/xc32/v2.50/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib/fpu64/libpic32.a(default-on-bootstrap.o)
- .debug_line    0x00004351       0xa5 /opt/microchip/xc32/v2.50/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib/fpu64/libpic32.a(defaultinterrupt.o)
- .debug_line    0x000043f6       0x7f /opt/microchip/xc32/v2.50/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib/fpu64/libc.a(sprintf_cdnopuxX.eo)
- .debug_line    0x00004475       0x7e /opt/microchip/xc32/v2.50/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib/fpu64/libc.a(doprnt_cdnopuxX.eo)
- .debug_line    0x000044f3       0x7d /opt/microchip/xc32/v2.50/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib/fpu64/libc.a(_fputc_simple.o)
- .debug_line    0x00004570        0x0 /opt/microchip/xc32/v2.50/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib/fpu64/libc.a(ctype.o)
- .debug_line    0x00004570        0x0 /opt/microchip/xc32/v2.50/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib/fpu64/libc.a(_iob.o)
- .debug_line    0x00004570       0x7e /opt/microchip/xc32/v2.50/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib/fpu64/libc.a(_flsbuf_simple.o)
- .debug_line    0x000045ee       0xf7 /opt/microchip/xc32/v2.50/bin/bin/../../lib/gcc/pic32mx/4.8.3/fpu64/libgcc.a(_udivdi3.o)
- .debug_line    0x000046e5      0x109 /opt/microchip/xc32/v2.50/bin/bin/../../lib/gcc/pic32mx/4.8.3/fpu64/libgcc.a(_umoddi3.o)
- .debug_line    0x000047ee       0x88 /opt/microchip/xc32/v2.50/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib/fpu64/libpic32.a(write.o)
+ .debug_line    0x0000106c      0x2ed build/default/production/_ext/1522154941/uart5.o
+ .debug_line    0x00001359      0x294 build/default/production/_ext/1984157808/plib_cache.o
+ .debug_line    0x000015ed      0x14c build/default/production/_ext/60165520/plib_clk.o
+ .debug_line    0x00001739      0x1f1 build/default/production/_ext/1249264884/plib_coretimer.o
+ .debug_line    0x0000192a      0x206 build/default/production/_ext/1865200349/plib_evic.o
+ .debug_line    0x00001b30      0x1ec build/default/production/_ext/1865254177/plib_gpio.o
+ .debug_line    0x00001d1c      0x30e build/default/production/_ext/513455433/plib_i2c1_master.o
+ .debug_line    0x0000202a      0x1ad build/default/production/_ext/60181895/plib_tmr2.o
+ .debug_line    0x000021d7      0x212 build/default/production/_ext/1865638794/plib_tmr1.o
+ .debug_line    0x000023e9      0x368 build/default/production/_ext/1865657120/plib_uart2.o
+ .debug_line    0x00002751      0x368 build/default/production/_ext/1865657120/plib_uart5.o
+ .debug_line    0x00002ab9       0xa6 build/default/production/_ext/163028504/xc32_monitor.o
+ .debug_line    0x00002b5f      0x4f5 build/default/production/_ext/1171490990/initialization.o
+ .debug_line    0x00003054      0x145 build/default/production/_ext/1171490990/interrupts.o
+ .debug_line    0x00003199       0xc7 build/default/production/_ext/1171490990/exceptions.o
+ .debug_line    0x00003260      0x6ae build/default/production/_ext/1019397905/mainCubeMeteo.o
+ .debug_line    0x0000390e      0x2f6 build/default/production/_ext/1019397905/cubeCommon.o
+ .debug_line    0x00003c04      0x22f build/default/production/_ext/1367680316/LM75A.o
+ .debug_line    0x00003e33      0x26d build/default/production/_ext/672751358/SAA1064T.o
+ .debug_line    0x000040a0      0x1d9 build/default/production/_ext/1360937237/mainCube.o
+ .debug_line    0x00004279       0x93 /opt/microchip/xc32/v2.50/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib/fpu64/libpic32.a(default-on-reset.o)
+ .debug_line    0x0000430c       0x97 /opt/microchip/xc32/v2.50/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib/fpu64/libpic32.a(default-on-bootstrap.o)
+ .debug_line    0x000043a3       0xa5 /opt/microchip/xc32/v2.50/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib/fpu64/libpic32.a(defaultinterrupt.o)
+ .debug_line    0x00004448       0x7f /opt/microchip/xc32/v2.50/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib/fpu64/libc.a(sprintf_cdnopuxX.eo)
+ .debug_line    0x000044c7       0x7e /opt/microchip/xc32/v2.50/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib/fpu64/libc.a(doprnt_cdnopuxX.eo)
+ .debug_line    0x00004545       0x7d /opt/microchip/xc32/v2.50/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib/fpu64/libc.a(_fputc_simple.o)
+ .debug_line    0x000045c2        0x0 /opt/microchip/xc32/v2.50/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib/fpu64/libc.a(ctype.o)
+ .debug_line    0x000045c2        0x0 /opt/microchip/xc32/v2.50/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib/fpu64/libc.a(_iob.o)
+ .debug_line    0x000045c2       0x7e /opt/microchip/xc32/v2.50/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib/fpu64/libc.a(_flsbuf_simple.o)
+ .debug_line    0x00004640       0xf7 /opt/microchip/xc32/v2.50/bin/bin/../../lib/gcc/pic32mx/4.8.3/fpu64/libgcc.a(_udivdi3.o)
+ .debug_line    0x00004737      0x109 /opt/microchip/xc32/v2.50/bin/bin/../../lib/gcc/pic32mx/4.8.3/fpu64/libgcc.a(_umoddi3.o)
+ .debug_line    0x00004840       0x88 /opt/microchip/xc32/v2.50/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib/fpu64/libpic32.a(write.o)
 
 .debug_frame    0x00000000     0x17d0
  *.elf(.debug_frame)
@@ -2796,7 +2796,7 @@ END GROUP
  .debug_frame   0x00001778       0x20 /opt/microchip/xc32/v2.50/bin/bin/../../lib/gcc/pic32mx/4.8.3/fpu64/libgcc.a(_umoddi3.o)
  .debug_frame   0x00001798       0x38 /opt/microchip/xc32/v2.50/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib/fpu64/libpic32.a(write.o)
 
-.debug_str      0x00000000      0x261
+.debug_str      0x00000000      0x252
  *.elf(.debug_str)
  *(.debug_str)
  .debug_str     0x00000000        0x0 build/default/production/_ext/1571292264/7segments.o
@@ -2813,66 +2813,66 @@ END GROUP
  .debug_str     0x00000100        0x0 build/default/production/_ext/111410402/serial.o
  .debug_str     0x00000100        0x0 build/default/production/_ext/92899495/system.o
  .debug_str     0x00000100        0x0 build/default/production/_ext/79239498/timer1.o
- .debug_str     0x00000100       0x16 build/default/production/_ext/1522154941/uart5.o
- .debug_str     0x00000116       0x14 build/default/production/_ext/1984157808/plib_cache.o
- .debug_str     0x0000012a        0x0 build/default/production/_ext/60165520/plib_clk.o
- .debug_str     0x0000012a       0x14 build/default/production/_ext/1249264884/plib_coretimer.o
- .debug_str     0x0000013e        0x7 build/default/production/_ext/1865200349/plib_evic.o
- .debug_str     0x00000145        0xa build/default/production/_ext/1865254177/plib_gpio.o
- .debug_str     0x0000014f       0x11 build/default/production/_ext/513455433/plib_i2c1_master.o
- .debug_str     0x00000160        0x0 build/default/production/_ext/60181895/plib_tmr2.o
- .debug_str     0x00000160        0xc build/default/production/_ext/1865638794/plib_tmr1.o
- .debug_str     0x0000016c       0x17 build/default/production/_ext/1865657120/plib_uart2.o
- .debug_str     0x00000183       0x17 build/default/production/_ext/1865657120/plib_uart5.o
- .debug_str     0x0000019a        0x0 build/default/production/_ext/163028504/xc32_monitor.o
- .debug_str     0x0000019a        0x0 build/default/production/_ext/1171490990/initialization.o
- .debug_str     0x0000019a        0x0 build/default/production/_ext/1171490990/interrupts.o
- .debug_str     0x0000019a        0x0 build/default/production/_ext/1171490990/exceptions.o
- .debug_str     0x0000019a       0x7d build/default/production/_ext/1019397905/mainCubeMeteo.o
- .debug_str     0x00000217       0x19 build/default/production/_ext/1019397905/cubeCommon.o
- .debug_str     0x00000230       0x18 build/default/production/_ext/1367680316/LM75A.o
- .debug_str     0x00000248       0x19 build/default/production/_ext/672751358/SAA1064T.o
- .debug_str     0x00000261        0x0 build/default/production/_ext/1360937237/mainCube.o
- .debug_str     0x00000261        0x0 /opt/microchip/xc32/v2.50/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib/fpu64/libpic32.a(default-on-reset.o)
- .debug_str     0x00000261        0x0 /opt/microchip/xc32/v2.50/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib/fpu64/libpic32.a(default-on-bootstrap.o)
- .debug_str     0x00000261        0x0 /opt/microchip/xc32/v2.50/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib/fpu64/libpic32.a(defaultinterrupt.o)
- .debug_str     0x00000261        0x0 /opt/microchip/xc32/v2.50/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib/fpu64/libc.a(sprintf_cdnopuxX.eo)
- .debug_str     0x00000261        0x0 /opt/microchip/xc32/v2.50/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib/fpu64/libc.a(doprnt_cdnopuxX.eo)
- .debug_str     0x00000261        0x0 /opt/microchip/xc32/v2.50/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib/fpu64/libc.a(_fputc_simple.o)
- .debug_str     0x00000261        0x0 /opt/microchip/xc32/v2.50/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib/fpu64/libc.a(ctype.o)
- .debug_str     0x00000261        0x0 /opt/microchip/xc32/v2.50/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib/fpu64/libc.a(_iob.o)
- .debug_str     0x00000261        0x0 /opt/microchip/xc32/v2.50/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib/fpu64/libc.a(_flsbuf_simple.o)
- .debug_str     0x00000261        0x0 /opt/microchip/xc32/v2.50/bin/bin/../../lib/gcc/pic32mx/4.8.3/fpu64/libgcc.a(_udivdi3.o)
- .debug_str     0x00000261        0x0 /opt/microchip/xc32/v2.50/bin/bin/../../lib/gcc/pic32mx/4.8.3/fpu64/libgcc.a(_umoddi3.o)
- .debug_str     0x00000261        0x0 /opt/microchip/xc32/v2.50/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib/fpu64/libpic32.a(write.o)
+ .debug_str     0x00000100        0x7 build/default/production/_ext/1522154941/uart5.o
+ .debug_str     0x00000107       0x14 build/default/production/_ext/1984157808/plib_cache.o
+ .debug_str     0x0000011b        0x0 build/default/production/_ext/60165520/plib_clk.o
+ .debug_str     0x0000011b       0x14 build/default/production/_ext/1249264884/plib_coretimer.o
+ .debug_str     0x0000012f        0x7 build/default/production/_ext/1865200349/plib_evic.o
+ .debug_str     0x00000136        0xa build/default/production/_ext/1865254177/plib_gpio.o
+ .debug_str     0x00000140       0x11 build/default/production/_ext/513455433/plib_i2c1_master.o
+ .debug_str     0x00000151        0x0 build/default/production/_ext/60181895/plib_tmr2.o
+ .debug_str     0x00000151        0xc build/default/production/_ext/1865638794/plib_tmr1.o
+ .debug_str     0x0000015d       0x17 build/default/production/_ext/1865657120/plib_uart2.o
+ .debug_str     0x00000174       0x17 build/default/production/_ext/1865657120/plib_uart5.o
+ .debug_str     0x0000018b        0x0 build/default/production/_ext/163028504/xc32_monitor.o
+ .debug_str     0x0000018b        0x0 build/default/production/_ext/1171490990/initialization.o
+ .debug_str     0x0000018b        0x0 build/default/production/_ext/1171490990/interrupts.o
+ .debug_str     0x0000018b        0x0 build/default/production/_ext/1171490990/exceptions.o
+ .debug_str     0x0000018b       0x7d build/default/production/_ext/1019397905/mainCubeMeteo.o
+ .debug_str     0x00000208       0x19 build/default/production/_ext/1019397905/cubeCommon.o
+ .debug_str     0x00000221       0x18 build/default/production/_ext/1367680316/LM75A.o
+ .debug_str     0x00000239       0x19 build/default/production/_ext/672751358/SAA1064T.o
+ .debug_str     0x00000252        0x0 build/default/production/_ext/1360937237/mainCube.o
+ .debug_str     0x00000252        0x0 /opt/microchip/xc32/v2.50/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib/fpu64/libpic32.a(default-on-reset.o)
+ .debug_str     0x00000252        0x0 /opt/microchip/xc32/v2.50/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib/fpu64/libpic32.a(default-on-bootstrap.o)
+ .debug_str     0x00000252        0x0 /opt/microchip/xc32/v2.50/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib/fpu64/libpic32.a(defaultinterrupt.o)
+ .debug_str     0x00000252        0x0 /opt/microchip/xc32/v2.50/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib/fpu64/libc.a(sprintf_cdnopuxX.eo)
+ .debug_str     0x00000252        0x0 /opt/microchip/xc32/v2.50/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib/fpu64/libc.a(doprnt_cdnopuxX.eo)
+ .debug_str     0x00000252        0x0 /opt/microchip/xc32/v2.50/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib/fpu64/libc.a(_fputc_simple.o)
+ .debug_str     0x00000252        0x0 /opt/microchip/xc32/v2.50/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib/fpu64/libc.a(ctype.o)
+ .debug_str     0x00000252        0x0 /opt/microchip/xc32/v2.50/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib/fpu64/libc.a(_iob.o)
+ .debug_str     0x00000252        0x0 /opt/microchip/xc32/v2.50/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib/fpu64/libc.a(_flsbuf_simple.o)
+ .debug_str     0x00000252        0x0 /opt/microchip/xc32/v2.50/bin/bin/../../lib/gcc/pic32mx/4.8.3/fpu64/libgcc.a(_udivdi3.o)
+ .debug_str     0x00000252        0x0 /opt/microchip/xc32/v2.50/bin/bin/../../lib/gcc/pic32mx/4.8.3/fpu64/libgcc.a(_umoddi3.o)
+ .debug_str     0x00000252        0x0 /opt/microchip/xc32/v2.50/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib/fpu64/libpic32.a(write.o)
 
-.debug_loc      0x00000000     0x2895
+.debug_loc      0x00000000     0x28b5
  *.elf(.debug_loc)
  *(.debug_loc)
  .debug_loc     0x00000000       0xa6 build/default/production/_ext/1571292264/7segments.o
- .debug_loc     0x000000a6      0x16c build/default/production/_ext/1571292264/7segmentsOutputStream.o
- .debug_loc     0x00000212       0x42 build/default/production/_ext/1506567961/delay.o
- .debug_loc     0x00000254       0x79 build/default/production/_ext/383772639/buffer.o
- .debug_loc     0x000002cd      0x12c build/default/production/_ext/1038083393/printWriter.o
- .debug_loc     0x000003f9       0x68 build/default/production/_ext/919093983/led.o
- .debug_loc     0x00000461       0x21 build/default/production/_ext/1240316727/temperatureStream.o
- .debug_loc     0x00000482       0x95 build/default/production/_ext/1240316727/temperature.o
- .debug_loc     0x00000517      0x109 build/default/production/_ext/111410402/serialOutpuStream.o
- .debug_loc     0x00000620       0xbb build/default/production/_ext/1522154941/uart5.o
- .debug_loc     0x000006db      0x23e build/default/production/_ext/1984157808/plib_cache.o
- .debug_loc     0x00000919       0x42 build/default/production/_ext/1249264884/plib_coretimer.o
- .debug_loc     0x0000095b       0x97 build/default/production/_ext/1865200349/plib_evic.o
- .debug_loc     0x000009f2      0x129 build/default/production/_ext/1865254177/plib_gpio.o
- .debug_loc     0x00000b1b       0x97 build/default/production/_ext/513455433/plib_i2c1_master.o
- .debug_loc     0x00000bb2       0x13 build/default/production/_ext/1865638794/plib_tmr1.o
- .debug_loc     0x00000bc5      0x332 build/default/production/_ext/1865657120/plib_uart2.o
- .debug_loc     0x00000ef7      0x332 build/default/production/_ext/1865657120/plib_uart5.o
- .debug_loc     0x00001229       0x21 build/default/production/_ext/1171490990/initialization.o
- .debug_loc     0x0000124a       0xdd build/default/production/_ext/1367680316/LM75A.o
- .debug_loc     0x00001327       0x8f build/default/production/_ext/672751358/SAA1064T.o
- .debug_loc     0x000013b6      0xa6a /opt/microchip/xc32/v2.50/bin/bin/../../lib/gcc/pic32mx/4.8.3/fpu64/libgcc.a(_udivdi3.o)
- .debug_loc     0x00001e20      0xa3d /opt/microchip/xc32/v2.50/bin/bin/../../lib/gcc/pic32mx/4.8.3/fpu64/libgcc.a(_umoddi3.o)
- .debug_loc     0x0000285d       0x38 /opt/microchip/xc32/v2.50/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib/fpu64/libpic32.a(write.o)
+ .debug_loc     0x000000a6      0x18c build/default/production/_ext/1571292264/7segmentsOutputStream.o
+ .debug_loc     0x00000232       0x42 build/default/production/_ext/1506567961/delay.o
+ .debug_loc     0x00000274       0x79 build/default/production/_ext/383772639/buffer.o
+ .debug_loc     0x000002ed      0x12c build/default/production/_ext/1038083393/printWriter.o
+ .debug_loc     0x00000419       0x68 build/default/production/_ext/919093983/led.o
+ .debug_loc     0x00000481       0x21 build/default/production/_ext/1240316727/temperatureStream.o
+ .debug_loc     0x000004a2       0x95 build/default/production/_ext/1240316727/temperature.o
+ .debug_loc     0x00000537      0x109 build/default/production/_ext/111410402/serialOutpuStream.o
+ .debug_loc     0x00000640       0xbb build/default/production/_ext/1522154941/uart5.o
+ .debug_loc     0x000006fb      0x23e build/default/production/_ext/1984157808/plib_cache.o
+ .debug_loc     0x00000939       0x42 build/default/production/_ext/1249264884/plib_coretimer.o
+ .debug_loc     0x0000097b       0x97 build/default/production/_ext/1865200349/plib_evic.o
+ .debug_loc     0x00000a12      0x129 build/default/production/_ext/1865254177/plib_gpio.o
+ .debug_loc     0x00000b3b       0x97 build/default/production/_ext/513455433/plib_i2c1_master.o
+ .debug_loc     0x00000bd2       0x13 build/default/production/_ext/1865638794/plib_tmr1.o
+ .debug_loc     0x00000be5      0x332 build/default/production/_ext/1865657120/plib_uart2.o
+ .debug_loc     0x00000f17      0x332 build/default/production/_ext/1865657120/plib_uart5.o
+ .debug_loc     0x00001249       0x21 build/default/production/_ext/1171490990/initialization.o
+ .debug_loc     0x0000126a       0xdd build/default/production/_ext/1367680316/LM75A.o
+ .debug_loc     0x00001347       0x8f build/default/production/_ext/672751358/SAA1064T.o
+ .debug_loc     0x000013d6      0xa6a /opt/microchip/xc32/v2.50/bin/bin/../../lib/gcc/pic32mx/4.8.3/fpu64/libgcc.a(_udivdi3.o)
+ .debug_loc     0x00001e40      0xa3d /opt/microchip/xc32/v2.50/bin/bin/../../lib/gcc/pic32mx/4.8.3/fpu64/libgcc.a(_umoddi3.o)
+ .debug_loc     0x0000287d       0x38 /opt/microchip/xc32/v2.50/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib/fpu64/libpic32.a(write.o)
 
 .debug_macinfo
  *.elf(.debug_macinfo)
@@ -3109,9 +3109,9 @@ END GROUP
                 0xbfc006d0                __pic32_tlb_init_values_end = ABSOLUTE (.)
                 0x00000008                __pic32_tlb_init_values_count = 0x8
                 0x00000200                _min_heap_size = 0x200
-LOAD /tmp/cc4dXv6a.o
-LOAD /tmp/ccIe2OYb.o
-LOAD /tmp/ccay8Xnb.o
+LOAD /tmp/ccYKHvAH.o
+LOAD /tmp/ccbzU0pF.o
+LOAD /tmp/ccd53EjI.o
 LOAD /opt/microchip/xc32/v2.50/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib/./proc/32MZ2048EFM100/default_isr_vectors.o
 LOAD /opt/microchip/xc32/v2.50/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib/fpu64/pic32_software_reset.o
 LOAD /opt/microchip/xc32/v2.50/bin/bin/../../lib/gcc/pic32mx/4.8.3/fpu64/libgcc.a
@@ -3137,8 +3137,8 @@ LOAD data_init
 .reginfo        0x00000000       0x18
  .reginfo       0x00000000       0x18 /opt/microchip/xc32/v2.50/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib/fpu64/debug-exception-return.o
 
-.stack          0x800073b0      0x400
- .stack         0x800073b0      0x400 stack
+.stack          0x80007470      0x400
+ .stack         0x80007470      0x400 stack
 
 .__vector_offset_BF810540_data
                 0xbf810540      0x178
@@ -3189,26 +3189,26 @@ LOAD data_init
  .bss           0x800000cc     0x6d60 build/default/production/_ext/1571292264/7segmentsOutputStream.o
  .bss           0x80006e2c      0x190 build/default/production/_ext/111410402/serialOutpuStream.o
 
-.data           0x80006fbc       0xc8
- .data          0x80006fbc       0xc8 build/default/production/_ext/1019397905/mainCubeMeteo.o
-                0x80006fbc                messageError
-                0x80006fdc                messageStart
+.bss            0x80006fbc      0x120
+ .bss           0x80006fbc      0x120 build/default/production/_ext/1240316727/temperatureStream.o
 
-.bss            0x80007084       0xa4
- .bss           0x80007084       0x60 build/default/production/_ext/1240316727/temperatureStream.o
- .bss           0x800070e4       0x44 /opt/microchip/xc32/v2.50/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib/fpu64/libc.a(_iob.o)
-                0x800070e4                _sobuf
-                0x80007104                _sibuf
-                0x80007124                _outdone
+.data           0x800070dc       0xc8
+ .data          0x800070dc       0xc8 build/default/production/_ext/1019397905/mainCubeMeteo.o
+                0x800070dc                messageError
+                0x800070fc                messageStart
 
-.bss            0x80007128       0x58
- .bss           0x80007128       0x34 build/default/production/_ext/513455433/plib_i2c1_master.o
- .bss           0x8000715c       0x24 build/default/production/_ext/1019397905/mainCubeMeteo.o
-                0x8000715c                echoBuffer
-                0x80007170                receiveBuffer
+.bss            0x800071a4       0x78
+ .bss           0x800071a4       0x44 /opt/microchip/xc32/v2.50/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib/fpu64/libc.a(_iob.o)
+                0x800071a4                _sobuf
+                0x800071c4                _sibuf
+                0x800071e4                _outdone
+ .bss           0x800071e8       0x34 build/default/production/_ext/513455433/plib_i2c1_master.o
 
-.bss            0x80007180       0x10
- .bss           0x80007180       0x10 build/default/production/_ext/1522154941/uart5.o
+.bss            0x8000721c       0x34
+ .bss           0x8000721c       0x24 build/default/production/_ext/1019397905/mainCubeMeteo.o
+                0x8000721c                echoBuffer
+                0x80007230                receiveBuffer
+ .bss           0x80007240       0x10 build/default/production/_ext/1522154941/uart5.o
 
 ._debug_exception
                 0xbfc00480       0x2c
@@ -3237,107 +3237,107 @@ LOAD data_init
  .text          0x9d001dd0      0x458 /opt/microchip/xc32/v2.50/bin/bin/../../lib/gcc/pic32mx/4.8.3/fpu64/libgcc.a(_udivdi3.o)
                 0x9d001dd0                __udivdi3
 
-.text.mainCube  0x9d002228      0x2ec
+.text.mainCube  0x9d002228      0x2a4
  .text.mainCube
-                0x9d002228      0x2ec build/default/production/_ext/1019397905/mainCubeMeteo.o
+                0x9d002228      0x2a4 build/default/production/_ext/1019397905/mainCubeMeteo.o
                 0x9d002228                mainCube
 
 .text.TIMER_1_Handler
-                0x9d002514      0x1a0
+                0x9d0024cc      0x1a0
  .text.TIMER_1_Handler
-                0x9d002514      0x1a0 build/default/production/_ext/1171490990/interrupts.o
-                0x9d002514                TIMER_1_Handler
+                0x9d0024cc      0x1a0 build/default/production/_ext/1171490990/interrupts.o
+                0x9d0024cc                TIMER_1_Handler
 
 .text.I2C1_BUS_Handler
-                0x9d0026b4      0x1a0
+                0x9d00266c      0x1a0
  .text.I2C1_BUS_Handler
-                0x9d0026b4      0x1a0 build/default/production/_ext/1171490990/interrupts.o
-                0x9d0026b4                I2C1_BUS_Handler
+                0x9d00266c      0x1a0 build/default/production/_ext/1171490990/interrupts.o
+                0x9d00266c                I2C1_BUS_Handler
 
 .text.I2C1_MASTER_Handler
-                0x9d002854      0x1a0
+                0x9d00280c      0x1a0
  .text.I2C1_MASTER_Handler
-                0x9d002854      0x1a0 build/default/production/_ext/1171490990/interrupts.o
-                0x9d002854                I2C1_MASTER_Handler
+                0x9d00280c      0x1a0 build/default/production/_ext/1171490990/interrupts.o
+                0x9d00280c                I2C1_MASTER_Handler
 
 .text.UART2_FAULT_Handler
-                0x9d0029f4      0x1a0
+                0x9d0029ac      0x1a0
  .text.UART2_FAULT_Handler
-                0x9d0029f4      0x1a0 build/default/production/_ext/1171490990/interrupts.o
-                0x9d0029f4                UART2_FAULT_Handler
+                0x9d0029ac      0x1a0 build/default/production/_ext/1171490990/interrupts.o
+                0x9d0029ac                UART2_FAULT_Handler
 
 .text.UART2_RX_Handler
-                0x9d002b94      0x1a0
+                0x9d002b4c      0x1a0
  .text.UART2_RX_Handler
-                0x9d002b94      0x1a0 build/default/production/_ext/1171490990/interrupts.o
-                0x9d002b94                UART2_RX_Handler
+                0x9d002b4c      0x1a0 build/default/production/_ext/1171490990/interrupts.o
+                0x9d002b4c                UART2_RX_Handler
 
 .text.UART2_TX_Handler
-                0x9d002d34      0x1a0
+                0x9d002cec      0x1a0
  .text.UART2_TX_Handler
-                0x9d002d34      0x1a0 build/default/production/_ext/1171490990/interrupts.o
-                0x9d002d34                UART2_TX_Handler
+                0x9d002cec      0x1a0 build/default/production/_ext/1171490990/interrupts.o
+                0x9d002cec                UART2_TX_Handler
 
 .text.UART5_FAULT_Handler
-                0x9d002ed4      0x1a0
+                0x9d002e8c      0x1a0
  .text.UART5_FAULT_Handler
-                0x9d002ed4      0x1a0 build/default/production/_ext/1171490990/interrupts.o
-                0x9d002ed4                UART5_FAULT_Handler
+                0x9d002e8c      0x1a0 build/default/production/_ext/1171490990/interrupts.o
+                0x9d002e8c                UART5_FAULT_Handler
 
 .text.UART5_RX_Handler
-                0x9d003074      0x1a0
+                0x9d00302c      0x1a0
  .text.UART5_RX_Handler
-                0x9d003074      0x1a0 build/default/production/_ext/1171490990/interrupts.o
-                0x9d003074                UART5_RX_Handler
+                0x9d00302c      0x1a0 build/default/production/_ext/1171490990/interrupts.o
+                0x9d00302c                UART5_RX_Handler
 
 .text.UART5_TX_Handler
-                0x9d003214      0x1a0
+                0x9d0031cc      0x1a0
  .text.UART5_TX_Handler
-                0x9d003214      0x1a0 build/default/production/_ext/1171490990/interrupts.o
-                0x9d003214                UART5_TX_Handler
+                0x9d0031cc      0x1a0 build/default/production/_ext/1171490990/interrupts.o
+                0x9d0031cc                UART5_TX_Handler
 
-.text           0x9d0033b4      0x2d0
- .text          0x9d0033b4      0x168 /opt/microchip/xc32/v2.50/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib/fpu64/libpic32.a(memcpy.o)
-                0x9d0033b4                memcpy
- .text          0x9d00351c      0x168 /opt/microchip/xc32/v2.50/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib/fpu64/libpic32.a(strlen.o)
-                0x9d00351c                strlen
+.text           0x9d00336c      0x2d0
+ .text          0x9d00336c      0x168 /opt/microchip/xc32/v2.50/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib/fpu64/libpic32.a(memcpy.o)
+                0x9d00336c                memcpy
+ .text          0x9d0034d4      0x168 /opt/microchip/xc32/v2.50/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib/fpu64/libpic32.a(strlen.o)
+                0x9d0034d4                strlen
 
-.text.fputc     0x9d003684      0x144
- .text.fputc    0x9d003684      0x144 /opt/microchip/xc32/v2.50/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib/fpu64/libc.a(_fputc_simple.o)
-                0x9d003684                fputc
+.text.fputc     0x9d00363c      0x144
+ .text.fputc    0x9d00363c      0x144 /opt/microchip/xc32/v2.50/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib/fpu64/libc.a(_fputc_simple.o)
+                0x9d00363c                fputc
 
-.text._flsbuf   0x9d0037c8      0x12c
- .text._flsbuf  0x9d0037c8      0x12c /opt/microchip/xc32/v2.50/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib/fpu64/libc.a(_flsbuf_simple.o)
-                0x9d0037c8                _flsbuf
+.text._flsbuf   0x9d003780      0x12c
+ .text._flsbuf  0x9d003780      0x12c /opt/microchip/xc32/v2.50/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib/fpu64/libc.a(_flsbuf_simple.o)
+                0x9d003780                _flsbuf
 
-.rodata         0x9d0038f4      0x204
- .rodata        0x9d0038f4      0x104 /opt/microchip/xc32/v2.50/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib/fpu64/libc.a(ctype.o)
-                0x9d0038f4                _ctype
- .rodata        0x9d0039f8      0x100 build/default/production/_ext/1571292264/7segments.o
+.rodata         0x9d0038ac      0x204
+ .rodata        0x9d0038ac      0x104 /opt/microchip/xc32/v2.50/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib/fpu64/libc.a(ctype.o)
+                0x9d0038ac                _ctype
+ .rodata        0x9d0039b0      0x100 build/default/production/_ext/1571292264/7segments.o
 
 .text.UART2_RX_InterruptHandler
-                0x9d003af8      0x100
+                0x9d003ab0      0x100
  .text.UART2_RX_InterruptHandler
-                0x9d003af8      0x100 build/default/production/_ext/1865657120/plib_uart2.o
-                0x9d003af8                UART2_RX_InterruptHandler
+                0x9d003ab0      0x100 build/default/production/_ext/1865657120/plib_uart2.o
+                0x9d003ab0                UART2_RX_InterruptHandler
 
 .text.UART5_RX_InterruptHandler
-                0x9d003bf8      0x100
+                0x9d003bb0      0x100
  .text.UART5_RX_InterruptHandler
-                0x9d003bf8      0x100 build/default/production/_ext/1865657120/plib_uart5.o
-                0x9d003bf8                UART5_RX_InterruptHandler
+                0x9d003bb0      0x100 build/default/production/_ext/1865657120/plib_uart5.o
+                0x9d003bb0                UART5_RX_InterruptHandler
 
 .text.UART2_TX_InterruptHandler
-                0x9d003cf8       0xfc
+                0x9d003cb0       0xfc
  .text.UART2_TX_InterruptHandler
-                0x9d003cf8       0xfc build/default/production/_ext/1865657120/plib_uart2.o
-                0x9d003cf8                UART2_TX_InterruptHandler
+                0x9d003cb0       0xfc build/default/production/_ext/1865657120/plib_uart2.o
+                0x9d003cb0                UART2_TX_InterruptHandler
 
 .text.UART5_TX_InterruptHandler
-                0x9d003df4       0xfc
+                0x9d003dac       0xfc
  .text.UART5_TX_InterruptHandler
-                0x9d003df4       0xfc build/default/production/_ext/1865657120/plib_uart5.o
-                0x9d003df4                UART5_TX_InterruptHandler
+                0x9d003dac       0xfc build/default/production/_ext/1865657120/plib_uart5.o
+                0x9d003dac                UART5_TX_InterruptHandler
 
 .text.general_exception
                 0x9d000010       0xdc
@@ -3346,113 +3346,113 @@ LOAD data_init
                 0x9d000010                _general_exception_context
 
 .text._cache_err_exception_context
-                0x9d003ef0       0xd8
+                0x9d003ea8       0xd8
  .text._cache_err_exception_context
-                0x9d003ef0       0xd8 /opt/microchip/xc32/v2.50/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib/fpu64/libpic32.a(cache-err-exception.o)
-                0x9d003ef0                _cache_err_exception_context
+                0x9d003ea8       0xd8 /opt/microchip/xc32/v2.50/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib/fpu64/libpic32.a(cache-err-exception.o)
+                0x9d003ea8                _cache_err_exception_context
 
 .text.simple_tlb_refill_context
-                0x9d003fc8       0xd8
+                0x9d003f80       0xd8
  .text.simple_tlb_refill_context
-                0x9d003fc8       0xd8 /opt/microchip/xc32/v2.50/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib/fpu64/libpic32.a(simple-tlb-refill-exception.o)
-                0x9d003fc8                _simple_tlb_refill_exception_context
+                0x9d003f80       0xd8 /opt/microchip/xc32/v2.50/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib/fpu64/libpic32.a(simple-tlb-refill-exception.o)
+                0x9d003f80                _simple_tlb_refill_exception_context
 
-.rodata         0x9d0040a0       0xd0
- .rodata        0x9d0040a0       0xd0 /opt/microchip/xc32/v2.50/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib/fpu64/libc.a(doprnt_cdnopuxX.eo)
+.rodata         0x9d004058       0xd0
+ .rodata        0x9d004058       0xd0 /opt/microchip/xc32/v2.50/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib/fpu64/libc.a(doprnt_cdnopuxX.eo)
 
 .text.UART5_Write
-                0x9d004170       0xcc
+                0x9d004128       0xcc
  .text.UART5_Write
-                0x9d004170       0xcc build/default/production/_ext/1865657120/plib_uart5.o
-                0x9d004170                UART5_Write
+                0x9d004128       0xcc build/default/production/_ext/1865657120/plib_uart5.o
+                0x9d004128                UART5_Write
 
 .tlb.__pic32_tlb_init_ebi_sqi
-                0x9d00423c       0xbc
+                0x9d0041f4       0xbc
  .tlb.__pic32_tlb_init_ebi_sqi
-                0x9d00423c       0xbc /opt/microchip/xc32/v2.50/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib/fpu64/libpic32.a(pic32_init_tlb_ebi_sqi.o)
-                0x9d00423c                __pic32_tlb_init_ebi_sqi
+                0x9d0041f4       0xbc /opt/microchip/xc32/v2.50/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib/fpu64/libpic32.a(pic32_init_tlb_ebi_sqi.o)
+                0x9d0041f4                __pic32_tlb_init_ebi_sqi
 
 .text.initMainCube
-                0x9d0042f8       0xb8
+                0x9d0042b0       0xb0
  .text.initMainCube
-                0x9d0042f8       0xb8 build/default/production/_ext/1019397905/mainCubeMeteo.o
-                0x9d0042f8                initMainCube
+                0x9d0042b0       0xb0 build/default/production/_ext/1019397905/mainCubeMeteo.o
+                0x9d0042b0                initMainCube
 
 .text.GPIO_Initialize
-                0x9d0043b0       0xa0
+                0x9d004360       0xa0
  .text.GPIO_Initialize
-                0x9d0043b0       0xa0 build/default/production/_ext/1865254177/plib_gpio.o
-                0x9d0043b0                GPIO_Initialize
+                0x9d004360       0xa0 build/default/production/_ext/1865254177/plib_gpio.o
+                0x9d004360                GPIO_Initialize
 
-.text.write     0x9d004450       0x9c
- .text.write    0x9d004450       0x9c /opt/microchip/xc32/v2.50/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib/fpu64/libpic32.a(write.o)
-                0x9d004450                write
+.text.write     0x9d004400       0x9c
+ .text.write    0x9d004400       0x9c /opt/microchip/xc32/v2.50/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib/fpu64/libpic32.a(write.o)
+                0x9d004400                write
 
 .text.SYS_Initialize
-                0x9d0044ec       0x98
+                0x9d00449c       0x98
  .text.SYS_Initialize
-                0x9d0044ec       0x98 build/default/production/_ext/1171490990/initialization.o
-                0x9d0044ec                SYS_Initialize
+                0x9d00449c       0x98 build/default/production/_ext/1171490990/initialization.o
+                0x9d00449c                SYS_Initialize
 
 .text.print7Seg
-                0x9d004584       0x94
+                0x9d004534       0x94
  .text.print7Seg
-                0x9d004584       0x94 build/default/production/_ext/1571292264/7segments.o
-                0x9d004584                print7Seg
+                0x9d004534       0x94 build/default/production/_ext/1571292264/7segments.o
+                0x9d004534                print7Seg
 
 .text.CLK_Initialize
-                0x9d004618       0x94
+                0x9d0045c8       0x94
  .text.CLK_Initialize
-                0x9d004618       0x94 build/default/production/_ext/60165520/plib_clk.o
-                0x9d004618                CLK_Initialize
+                0x9d0045c8       0x94 build/default/production/_ext/60165520/plib_clk.o
+                0x9d0045c8                CLK_Initialize
 
-.text.initLed   0x9d0046ac       0x88
- .text.initLed  0x9d0046ac       0x88 build/default/production/_ext/919093983/led.o
-                0x9d0046ac                initLed
+.text.initLed   0x9d00465c       0x88
+ .text.initLed  0x9d00465c       0x88 build/default/production/_ext/919093983/led.o
+                0x9d00465c                initLed
 
 .text.I2C1_WriteRead
-                0x9d004734       0x88
+                0x9d0046e4       0x88
  .text.I2C1_WriteRead
-                0x9d004734       0x88 build/default/production/_ext/513455433/plib_i2c1_master.o
-                0x9d004734                I2C1_WriteRead
+                0x9d0046e4       0x88 build/default/production/_ext/513455433/plib_i2c1_master.o
+                0x9d0046e4                I2C1_WriteRead
 
 .text.UART2_Initialize
-                0x9d0047bc       0x88
+                0x9d00476c       0x88
  .text.UART2_Initialize
-                0x9d0047bc       0x88 build/default/production/_ext/1865657120/plib_uart2.o
-                0x9d0047bc                UART2_Initialize
+                0x9d00476c       0x88 build/default/production/_ext/1865657120/plib_uart2.o
+                0x9d00476c                UART2_Initialize
 
 .text.UART5_Initialize
-                0x9d004844       0x88
+                0x9d0047f4       0x88
  .text.UART5_Initialize
-                0x9d004844       0x88 build/default/production/_ext/1865657120/plib_uart5.o
-                0x9d004844                UART5_Initialize
+                0x9d0047f4       0x88 build/default/production/_ext/1865657120/plib_uart5.o
+                0x9d0047f4                UART5_Initialize
 
 .text.I2C1_Write
-                0x9d0048cc       0x84
+                0x9d00487c       0x84
  .text.I2C1_Write
-                0x9d0048cc       0x84 build/default/production/_ext/513455433/plib_i2c1_master.o
-                0x9d0048cc                I2C1_Write
+                0x9d00487c       0x84 build/default/production/_ext/513455433/plib_i2c1_master.o
+                0x9d00487c                I2C1_Write
 
 .text.UART5_Read
-                0x9d004950       0x84
+                0x9d004900       0x84
  .text.UART5_Read
-                0x9d004950       0x84 build/default/production/_ext/1865657120/plib_uart5.o
-                0x9d004950                UART5_Read
+                0x9d004900       0x84 build/default/production/_ext/1865657120/plib_uart5.o
+                0x9d004900                UART5_Read
 
-.text           0x9d0049d4       0x84
- .text          0x9d0049d4       0x84 /opt/microchip/xc32/v2.50/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib/fpu64/libpic32.a(pic32_data_init.o)
-                0x9d0049d4                __pic32_data_init
+.text           0x9d004984       0x84
+ .text          0x9d004984       0x84 /opt/microchip/xc32/v2.50/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib/fpu64/libpic32.a(pic32_data_init.o)
+                0x9d004984                __pic32_data_init
 
 .text.UART2_ErrorClear
-                0x9d004a58       0x78
+                0x9d004a08       0x78
  .text.UART2_ErrorClear
-                0x9d004a58       0x78 build/default/production/_ext/1865657120/plib_uart2.o
+                0x9d004a08       0x78 build/default/production/_ext/1865657120/plib_uart2.o
 
 .text.UART5_ErrorClear
-                0x9d004ad0       0x78
+                0x9d004a80       0x78
  .text.UART5_ErrorClear
-                0x9d004ad0       0x78 build/default/production/_ext/1865657120/plib_uart5.o
+                0x9d004a80       0x78 build/default/production/_ext/1865657120/plib_uart5.o
 
 .text.EVIC_Initialize
                 0x9d000110       0x70
@@ -3467,295 +3467,301 @@ LOAD data_init
                 0x9d000190                _sprintf_cdnopuxX
 
 .text.init7SegOutputStream
-                0x9d004b48       0x64
+                0x9d004af8       0x64
  .text.init7SegOutputStream
-                0x9d004b48       0x64 build/default/production/_ext/1571292264/7segmentsOutputStream.o
-                0x9d004b48                init7SegOutputStream
+                0x9d004af8       0x64 build/default/production/_ext/1571292264/7segmentsOutputStream.o
+                0x9d004af8                init7SegOutputStream
 
 .text.readSensorValueAsString
-                0x9d004bac       0x64
+                0x9d004b5c       0x64
  .text.readSensorValueAsString
-                0x9d004bac       0x64 build/default/production/_ext/1240316727/temperature.o
-                0x9d004bac                readSensorValueAsString
+                0x9d004b5c       0x64 build/default/production/_ext/1240316727/temperature.o
+                0x9d004b5c                readSensorValueAsString
 
 .text.I2C1_Initialize
-                0x9d004c10       0x64
+                0x9d004bc0       0x64
  .text.I2C1_Initialize
-                0x9d004c10       0x64 build/default/production/_ext/513455433/plib_i2c1_master.o
-                0x9d004c10                I2C1_Initialize
+                0x9d004bc0       0x64 build/default/production/_ext/513455433/plib_i2c1_master.o
+                0x9d004bc0                I2C1_Initialize
 
 .text.UART2_FAULT_InterruptHandler
-                0x9d004c74       0x64
+                0x9d004c24       0x64
  .text.UART2_FAULT_InterruptHandler
-                0x9d004c74       0x64 build/default/production/_ext/1865657120/plib_uart2.o
-                0x9d004c74                UART2_FAULT_InterruptHandler
+                0x9d004c24       0x64 build/default/production/_ext/1865657120/plib_uart2.o
+                0x9d004c24                UART2_FAULT_InterruptHandler
 
 .text.UART5_FAULT_InterruptHandler
-                0x9d004cd8       0x64
+                0x9d004c88       0x64
  .text.UART5_FAULT_InterruptHandler
-                0x9d004cd8       0x64 build/default/production/_ext/1865657120/plib_uart5.o
-                0x9d004cd8                UART5_FAULT_InterruptHandler
+                0x9d004c88       0x64 build/default/production/_ext/1865657120/plib_uart5.o
+                0x9d004c88                UART5_FAULT_InterruptHandler
 
 .text.writeStringToBuffer
-                0x9d004d3c       0x60
+                0x9d004cec       0x60
  .text.writeStringToBuffer
-                0x9d004d3c       0x60 build/default/production/_ext/383772639/buffer.o
-                0x9d004d3c                writeStringToBuffer
+                0x9d004cec       0x60 build/default/production/_ext/383772639/buffer.o
+                0x9d004cec                writeStringToBuffer
 
 .text.initUart5
-                0x9d004d9c       0x60
+                0x9d004d4c       0x60
  .text.initUart5
-                0x9d004d9c       0x60 build/default/production/_ext/1522154941/uart5.o
-                0x9d004d9c                initUart5
+                0x9d004d4c       0x60 build/default/production/_ext/1522154941/uart5.o
+                0x9d004d4c                initUart5
 
 .text.I2C1_BUS_InterruptHandler
-                0x9d004dfc       0x5c
+                0x9d004dac       0x5c
  .text.I2C1_BUS_InterruptHandler
-                0x9d004dfc       0x5c build/default/production/_ext/513455433/plib_i2c1_master.o
-                0x9d004dfc                I2C1_BUS_InterruptHandler
+                0x9d004dac       0x5c build/default/production/_ext/513455433/plib_i2c1_master.o
+                0x9d004dac                I2C1_BUS_InterruptHandler
 
 .text._LM75A_readSensorValue
-                0x9d004e58       0x54
+                0x9d004e08       0x54
  .text._LM75A_readSensorValue
-                0x9d004e58       0x54 build/default/production/_ext/1367680316/LM75A.o
-                0x9d004e58                _LM75A_readSensorValue
+                0x9d004e08       0x54 build/default/production/_ext/1367680316/LM75A.o
+                0x9d004e08                _LM75A_readSensorValue
 
 .text.main_entry
-                0x9d004eac       0x54
+                0x9d004e5c       0x54
  .text.main_entry
-                0x9d004eac       0x54 /tmp/cc4dXv6a.o
-                0x9d004ee0                __crt0_exit
+                0x9d004e5c       0x54 /tmp/ccYKHvAH.o
+                0x9d004e90                __crt0_exit
 
 .text.I2C1_IsBusy
-                0x9d004f00       0x50
+                0x9d004eb0       0x50
  .text.I2C1_IsBusy
-                0x9d004f00       0x50 build/default/production/_ext/513455433/plib_i2c1_master.o
-                0x9d004f00                I2C1_IsBusy
+                0x9d004eb0       0x50 build/default/production/_ext/513455433/plib_i2c1_master.o
+                0x9d004eb0                I2C1_IsBusy
 
 .text.initCubeCommon
-                0x9d004f50       0x50
+                0x9d004f00       0x50
  .text.initCubeCommon
-                0x9d004f50       0x50 build/default/production/_ext/1019397905/cubeCommon.o
-                0x9d004f50                initCubeCommon
+                0x9d004f00       0x50 build/default/production/_ext/1019397905/cubeCommon.o
+                0x9d004f00                initCubeCommon
 
 .text._LM75A_writeAlertLimit
-                0x9d004fa0       0x50
+                0x9d004f50       0x50
  .text._LM75A_writeAlertLimit
-                0x9d004fa0       0x50 build/default/production/_ext/1367680316/LM75A.o
-                0x9d004fa0                _LM75A_writeAlertLimit
+                0x9d004f50       0x50 build/default/production/_ext/1367680316/LM75A.o
+                0x9d004f50                _LM75A_writeAlertLimit
 
 .text.SAA1064Twrite4DIGIT
-                0x9d004ff0       0x50
+                0x9d004fa0       0x50
  .text.SAA1064Twrite4DIGIT
-                0x9d004ff0       0x50 build/default/production/_ext/672751358/SAA1064T.o
-                0x9d004ff0                SAA1064Twrite4DIGIT
+                0x9d004fa0       0x50 build/default/production/_ext/672751358/SAA1064T.o
+                0x9d004fa0                SAA1064Twrite4DIGIT
 
 .text.readSensorValueAsStringFor7Seg
-                0x9d005040       0x4c
+                0x9d004ff0       0x4c
  .text.readSensorValueAsStringFor7Seg
-                0x9d005040       0x4c build/default/production/_ext/1240316727/temperature.o
-                0x9d005040                readSensorValueAsStringFor7Seg
+                0x9d004ff0       0x4c build/default/production/_ext/1240316727/temperature.o
+                0x9d004ff0                readSensorValueAsStringFor7Seg
 
 .text.CORETIMER_DelayMs
-                0x9d00508c       0x4c
+                0x9d00503c       0x4c
  .text.CORETIMER_DelayMs
-                0x9d00508c       0x4c build/default/production/_ext/1249264884/plib_coretimer.o
-                0x9d00508c                CORETIMER_DelayMs
+                0x9d00503c       0x4c build/default/production/_ext/1249264884/plib_coretimer.o
+                0x9d00503c                CORETIMER_DelayMs
 
 .text.initSerialOutputStream5
-                0x9d0050d8       0x48
+                0x9d005088       0x48
  .text.initSerialOutputStream5
-                0x9d0050d8       0x48 build/default/production/_ext/111410402/serialOutpuStream.o
-                0x9d0050d8                initSerialOutputStream5
+                0x9d005088       0x48 build/default/production/_ext/111410402/serialOutpuStream.o
+                0x9d005088                initSerialOutputStream5
+
+.rodata         0x9d0050d0       0x48
+ .rodata        0x9d0050d0       0x48 build/default/production/_ext/1019397905/mainCubeMeteo.o
 
 .text.appendString
-                0x9d005120       0x44
+                0x9d005118       0x44
  .text.appendString
-                0x9d005120       0x44 build/default/production/_ext/1038083393/printWriter.o
-                0x9d005120                appendString
+                0x9d005118       0x44 build/default/production/_ext/1038083393/printWriter.o
+                0x9d005118                appendString
 
-.rodata         0x9d005164       0x44
- .rodata        0x9d005164       0x44 build/default/production/_ext/1019397905/mainCubeMeteo.o
-
-.text           0x9d0051a8       0x44
- .text          0x9d0051a8       0x44 /opt/microchip/xc32/v2.50/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib/fpu64/pic32_software_reset.o
-                0x9d0051a8                __pic32_software_reset
+.text           0x9d00515c       0x44
+ .text          0x9d00515c       0x44 /opt/microchip/xc32/v2.50/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib/fpu64/pic32_software_reset.o
+                0x9d00515c                __pic32_software_reset
 
 .text.initSerialOutputStream
-                0x9d0051ec       0x40
+                0x9d0051a0       0x40
  .text.initSerialOutputStream
-                0x9d0051ec       0x40 build/default/production/_ext/111410402/serialOutpuStream.o
-                0x9d0051ec                initSerialOutputStream
+                0x9d0051a0       0x40 build/default/production/_ext/111410402/serialOutpuStream.o
+                0x9d0051a0                initSerialOutputStream
 
 .text.TMR1_Initialize
-                0x9d00522c       0x40
+                0x9d0051e0       0x40
  .text.TMR1_Initialize
-                0x9d00522c       0x40 build/default/production/_ext/1865638794/plib_tmr1.o
-                0x9d00522c                TMR1_Initialize
+                0x9d0051e0       0x40 build/default/production/_ext/1865638794/plib_tmr1.o
+                0x9d0051e0                TMR1_Initialize
 
 .text.TIMER_1_InterruptHandler
-                0x9d00526c       0x40
+                0x9d005220       0x40
  .text.TIMER_1_InterruptHandler
-                0x9d00526c       0x40 build/default/production/_ext/1865638794/plib_tmr1.o
-                0x9d00526c                TIMER_1_InterruptHandler
+                0x9d005220       0x40 build/default/production/_ext/1865638794/plib_tmr1.o
+                0x9d005220                TIMER_1_InterruptHandler
 
 .text.CORETIMER_Initialize
-                0x9d0052ac       0x3c
+                0x9d005260       0x3c
  .text.CORETIMER_Initialize
-                0x9d0052ac       0x3c build/default/production/_ext/1249264884/plib_coretimer.o
-                0x9d0052ac                CORETIMER_Initialize
+                0x9d005260       0x3c build/default/production/_ext/1249264884/plib_coretimer.o
+                0x9d005260                CORETIMER_Initialize
 
 .text.writeString5
-                0x9d0052e8       0x34
+                0x9d00529c       0x34
  .text.writeString5
-                0x9d0052e8       0x34 build/default/production/_ext/111410402/serialOutpuStream.o
-                0x9d0052e8                writeString5
+                0x9d00529c       0x34 build/default/production/_ext/111410402/serialOutpuStream.o
+                0x9d00529c                writeString5
 
 .text.APP_ReadCallbackUart5
-                0x9d00531c       0x30
+                0x9d0052d0       0x30
  .text.APP_ReadCallbackUart5
-                0x9d00531c       0x30 build/default/production/_ext/1522154941/uart5.o
-                0x9d00531c                APP_ReadCallbackUart5
+                0x9d0052d0       0x30 build/default/production/_ext/1522154941/uart5.o
+                0x9d0052d0                APP_ReadCallbackUart5
 
 .text.TMR2_Initialize
-                0x9d00534c       0x30
+                0x9d005300       0x30
  .text.TMR2_Initialize
-                0x9d00534c       0x30 build/default/production/_ext/60181895/plib_tmr2.o
-                0x9d00534c                TMR2_Initialize
+                0x9d005300       0x30 build/default/production/_ext/60181895/plib_tmr2.o
+                0x9d005300                TMR2_Initialize
 
-.text.append    0x9d00537c       0x2c
- .text.append   0x9d00537c       0x2c build/default/production/_ext/1038083393/printWriter.o
-                0x9d00537c                append
+.text.append    0x9d005330       0x2c
+ .text.append   0x9d005330       0x2c build/default/production/_ext/1038083393/printWriter.o
+                0x9d005330                append
 
-.text.initTmr1  0x9d0053a8       0x2c
+.text.initTmr1  0x9d00535c       0x2c
  .text.initTmr1
-                0x9d0053a8       0x2c build/default/production/_ext/79239498/timer1.o
-                0x9d0053a8                initTmr1
+                0x9d00535c       0x2c build/default/production/_ext/79239498/timer1.o
+                0x9d00535c                initTmr1
 
 .text.initTemperatureLM75A
-                0x9d0053d4       0x2c
+                0x9d005388       0x2c
  .text.initTemperatureLM75A
-                0x9d0053d4       0x2c build/default/production/_ext/1367680316/LM75A.o
-                0x9d0053d4                initTemperatureLM75A
+                0x9d005388       0x2c build/default/production/_ext/1367680316/LM75A.o
+                0x9d005388                initTemperatureLM75A
 
 .text._openOutputStream7Seg
-                0x9d005400       0x28
+                0x9d0053b4       0x28
  .text._openOutputStream7Seg
-                0x9d005400       0x28 build/default/production/_ext/1571292264/7segmentsOutputStream.o
-                0x9d005400                _openOutputStream7Seg
+                0x9d0053b4       0x28 build/default/production/_ext/1571292264/7segmentsOutputStream.o
+                0x9d0053b4                _openOutputStream7Seg
 
 .text._closeOutputStream7Seg
-                0x9d005428       0x28
+                0x9d0053dc       0x28
  .text._closeOutputStream7Seg
-                0x9d005428       0x28 build/default/production/_ext/1571292264/7segmentsOutputStream.o
-                0x9d005428                _closeOutputStream7Seg
+                0x9d0053dc       0x28 build/default/production/_ext/1571292264/7segmentsOutputStream.o
+                0x9d0053dc                _closeOutputStream7Seg
 
 .text._write7SegStreamChar
-                0x9d005450       0x28
+                0x9d005404       0x28
  .text._write7SegStreamChar
-                0x9d005450       0x28 build/default/production/_ext/1571292264/7segmentsOutputStream.o
-                0x9d005450                _write7SegStreamChar
+                0x9d005404       0x28 build/default/production/_ext/1571292264/7segmentsOutputStream.o
+                0x9d005404                _write7SegStreamChar
 
 .text._write7SegStreamString
-                0x9d005478       0x28
+                0x9d00542c       0x28
  .text._write7SegStreamString
-                0x9d005478       0x28 build/default/production/_ext/1571292264/7segmentsOutputStream.o
-                0x9d005478                _write7SegStreamString
+                0x9d00542c       0x28 build/default/production/_ext/1571292264/7segmentsOutputStream.o
+                0x9d00542c                _write7SegStreamString
 
 .text.writeChar5
-                0x9d0054a0       0x28
+                0x9d005454       0x28
  .text.writeChar5
-                0x9d0054a0       0x28 build/default/production/_ext/111410402/serialOutpuStream.o
-                0x9d0054a0                writeChar5
+                0x9d005454       0x28 build/default/production/_ext/111410402/serialOutpuStream.o
+                0x9d005454                writeChar5
 
-.text.main      0x9d0054c8       0x28
- .text.main     0x9d0054c8       0x28 build/default/production/_ext/1360937237/mainCube.o
-                0x9d0054c8                main
+.text.main      0x9d00547c       0x28
+ .text.main     0x9d00547c       0x28 build/default/production/_ext/1360937237/mainCube.o
+                0x9d00547c                main
 
 .text.writeUart5
-                0x9d0054f0       0x24
+                0x9d0054a4       0x24
  .text.writeUart5
-                0x9d0054f0       0x24 build/default/production/_ext/1522154941/uart5.o
-                0x9d0054f0                writeUart5
+                0x9d0054a4       0x24 build/default/production/_ext/1522154941/uart5.o
+                0x9d0054a4                writeUart5
 
 .text._general_exception_handler
-                0x9d005514       0x24
+                0x9d0054c8       0x24
  .text._general_exception_handler
-                0x9d005514       0x24 build/default/production/_ext/1171490990/exceptions.o
-                0x9d005514                _general_exception_handler
+                0x9d0054c8       0x24 build/default/production/_ext/1171490990/exceptions.o
+                0x9d0054c8                _general_exception_handler
 
 .text._bootstrap_exception_handler
-                0x9d005538       0x24
+                0x9d0054ec       0x24
  .text._bootstrap_exception_handler
-                0x9d005538       0x24 build/default/production/_ext/1171490990/exceptions.o
-                0x9d005538                _bootstrap_exception_handler
+                0x9d0054ec       0x24 build/default/production/_ext/1171490990/exceptions.o
+                0x9d0054ec                _bootstrap_exception_handler
 
 .text._cache_err_exception_handler
-                0x9d00555c       0x24
+                0x9d005510       0x24
  .text._cache_err_exception_handler
-                0x9d00555c       0x24 build/default/production/_ext/1171490990/exceptions.o
-                0x9d00555c                _cache_err_exception_handler
+                0x9d005510       0x24 build/default/production/_ext/1171490990/exceptions.o
+                0x9d005510                _cache_err_exception_handler
 
 .text._simple_tlb_refill_exception_handler
-                0x9d005580       0x24
+                0x9d005534       0x24
  .text._simple_tlb_refill_exception_handler
-                0x9d005580       0x24 build/default/production/_ext/1171490990/exceptions.o
-                0x9d005580                _simple_tlb_refill_exception_handler
+                0x9d005534       0x24 build/default/production/_ext/1171490990/exceptions.o
+                0x9d005534                _simple_tlb_refill_exception_handler
 
 .text.get7SegOutpuStream
-                0x9d0055a4       0x1c
+                0x9d005558       0x1c
  .text.get7SegOutpuStream
-                0x9d0055a4       0x1c build/default/production/_ext/1571292264/7segmentsOutputStream.o
-                0x9d0055a4                get7SegOutpuStream
+                0x9d005558       0x1c build/default/production/_ext/1571292264/7segmentsOutputStream.o
+                0x9d005558                get7SegOutpuStream
 
 .text.delayMilliSecs
-                0x9d0055c0       0x1c
+                0x9d005574       0x1c
  .text.delayMilliSecs
-                0x9d0055c0       0x1c build/default/production/_ext/1506567961/delay.o
-                0x9d0055c0                delayMilliSecs
+                0x9d005574       0x1c build/default/production/_ext/1506567961/delay.o
+                0x9d005574                delayMilliSecs
+
+.text.getTemperatureStream
+                0x9d005590       0x1c
+ .text.getTemperatureStream
+                0x9d005590       0x1c build/default/production/_ext/1240316727/temperatureStream.o
+                0x9d005590                getTemperatureStream
 
 .text.initTemperatureStream
-                0x9d0055dc       0x1c
+                0x9d0055ac       0x1c
  .text.initTemperatureStream
-                0x9d0055dc       0x1c build/default/production/_ext/1240316727/temperatureStream.o
-                0x9d0055dc                initTemperatureStream
+                0x9d0055ac       0x1c build/default/production/_ext/1240316727/temperatureStream.o
+                0x9d0055ac                initTemperatureStream
 
-.rodata         0x9d0055f8       0x1c
- .rodata        0x9d0055f8       0x1c build/default/production/_ext/1240316727/temperature.o
+.rodata         0x9d0055c8       0x1c
+ .rodata        0x9d0055c8       0x1c build/default/production/_ext/1240316727/temperature.o
 
 .text.I2C1_CallbackRegister
-                0x9d005614       0x1c
+                0x9d0055e4       0x1c
  .text.I2C1_CallbackRegister
-                0x9d005614       0x1c build/default/production/_ext/513455433/plib_i2c1_master.o
-                0x9d005614                I2C1_CallbackRegister
+                0x9d0055e4       0x1c build/default/production/_ext/513455433/plib_i2c1_master.o
+                0x9d0055e4                I2C1_CallbackRegister
 
 .text.getScreen_7Seg_CPU
-                0x9d005630       0x1c
+                0x9d005600       0x1c
  .text.getScreen_7Seg_CPU
-                0x9d005630       0x1c build/default/production/_ext/1019397905/cubeCommon.o
-                0x9d005630                getScreen_7Seg_CPU
+                0x9d005600       0x1c build/default/production/_ext/1019397905/cubeCommon.o
+                0x9d005600                getScreen_7Seg_CPU
 
 .text.initSAA1064T
-                0x9d00564c       0x1c
+                0x9d00561c       0x1c
  .text.initSAA1064T
-                0x9d00564c       0x1c build/default/production/_ext/672751358/SAA1064T.o
-                0x9d00564c                initSAA1064T
+                0x9d00561c       0x1c build/default/production/_ext/672751358/SAA1064T.o
+                0x9d00561c                initSAA1064T
 
 .text.writeCharToBuffer
-                0x9d005668       0x18
+                0x9d005638       0x18
  .text.writeCharToBuffer
-                0x9d005668       0x18 build/default/production/_ext/383772639/buffer.o
-                0x9d005668                writeCharToBuffer
+                0x9d005638       0x18 build/default/production/_ext/383772639/buffer.o
+                0x9d005638                writeCharToBuffer
 
 .text.UART5_ErrorGet
-                0x9d005680       0x18
+                0x9d005650       0x18
  .text.UART5_ErrorGet
-                0x9d005680       0x18 build/default/production/_ext/1865657120/plib_uart5.o
-                0x9d005680                UART5_ErrorGet
+                0x9d005650       0x18 build/default/production/_ext/1865657120/plib_uart5.o
+                0x9d005650                UART5_ErrorGet
 
-.text           0x9d005698       0x18
- .text          0x9d005698       0x18 /opt/microchip/xc32/v2.50/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib/fpu64/libpic32.a(default-nmi-handler.o)
-                0x9d005698                _nmi_handler
+.text           0x9d005668       0x18
+ .text          0x9d005668       0x18 /opt/microchip/xc32/v2.50/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib/fpu64/libpic32.a(default-nmi-handler.o)
+                0x9d005668                _nmi_handler
 
 .text.led1RedOn
                 0x9d0000ec       0x14
@@ -3764,90 +3770,84 @@ LOAD data_init
                 0x9d0000ec                led1RedOn
 
 .text.led1RedOff
-                0x9d0056b0       0x14
+                0x9d005680       0x14
  .text.led1RedOff
-                0x9d0056b0       0x14 build/default/production/_ext/919093983/led.o
-                0x9d0056b0                led1RedOff
+                0x9d005680       0x14 build/default/production/_ext/919093983/led.o
+                0x9d005680                led1RedOff
 
 .text.led2GreenOn
-                0x9d0056c4       0x14
+                0x9d005694       0x14
  .text.led2GreenOn
-                0x9d0056c4       0x14 build/default/production/_ext/919093983/led.o
-                0x9d0056c4                led2GreenOn
+                0x9d005694       0x14 build/default/production/_ext/919093983/led.o
+                0x9d005694                led2GreenOn
 
 .text.led2GreenOff
-                0x9d0056d8       0x14
+                0x9d0056a8       0x14
  .text.led2GreenOff
-                0x9d0056d8       0x14 build/default/production/_ext/919093983/led.o
-                0x9d0056d8                led2GreenOff
-
-.text.getTemperatureStream
-                0x9d0056ec       0x14
- .text.getTemperatureStream
-                0x9d0056ec       0x14 build/default/production/_ext/1240316727/temperatureStream.o
-                0x9d0056ec                getTemperatureStream
+                0x9d0056a8       0x14 build/default/production/_ext/919093983/led.o
+                0x9d0056a8                led2GreenOff
 
 .text.getSerialOutputStream
-                0x9d005700       0x14
+                0x9d0056bc       0x14
  .text.getSerialOutputStream
-                0x9d005700       0x14 build/default/production/_ext/111410402/serialOutpuStream.o
-                0x9d005700                getSerialOutputStream
+                0x9d0056bc       0x14 build/default/production/_ext/111410402/serialOutpuStream.o
+                0x9d0056bc                getSerialOutputStream
 
 .text.TMR1_Start
-                0x9d005714       0x14
+                0x9d0056d0       0x14
  .text.TMR1_Start
-                0x9d005714       0x14 build/default/production/_ext/1865638794/plib_tmr1.o
-                0x9d005714                TMR1_Start
+                0x9d0056d0       0x14 build/default/production/_ext/1865638794/plib_tmr1.o
+                0x9d0056d0                TMR1_Start
 
 .text.UART5_ReadCallbackRegister
-                0x9d005728       0x14
+                0x9d0056e4       0x14
  .text.UART5_ReadCallbackRegister
-                0x9d005728       0x14 build/default/production/_ext/1865657120/plib_uart5.o
-                0x9d005728                UART5_ReadCallbackRegister
+                0x9d0056e4       0x14 build/default/production/_ext/1865657120/plib_uart5.o
+                0x9d0056e4                UART5_ReadCallbackRegister
 
 .text.UART5_WriteCallbackRegister
-                0x9d00573c       0x14
+                0x9d0056f8       0x14
  .text.UART5_WriteCallbackRegister
-                0x9d00573c       0x14 build/default/production/_ext/1865657120/plib_uart5.o
-                0x9d00573c                UART5_WriteCallbackRegister
+                0x9d0056f8       0x14 build/default/production/_ext/1865657120/plib_uart5.o
+                0x9d0056f8                UART5_WriteCallbackRegister
 
-.rodata         0x9d005750       0x10
- .rodata        0x9d005750       0x10 build/default/production/_ext/1571292264/7segmentsOutputStream.o
+.rodata         0x9d00570c       0x10
+ .rodata        0x9d00570c       0x10 build/default/production/_ext/1571292264/7segmentsOutputStream.o
 
 .text.tmr1EventHandler
-                0x9d005760       0x10
+                0x9d00571c       0x10
  .text.tmr1EventHandler
-                0x9d005760       0x10 build/default/production/_ext/79239498/timer1.o
+                0x9d00571c       0x10 build/default/production/_ext/79239498/timer1.o
 
 .text.getIsTmr1Expired
-                0x9d005770        0xc
+                0x9d00572c        0xc
  .text.getIsTmr1Expired
-                0x9d005770        0xc build/default/production/_ext/79239498/timer1.o
-                0x9d005770                getIsTmr1Expired
+                0x9d00572c        0xc build/default/production/_ext/79239498/timer1.o
+                0x9d00572c                getIsTmr1Expired
 
 .text.setIsTmr1Expired
-                0x9d00577c        0xc
+                0x9d005738        0xc
  .text.setIsTmr1Expired
-                0x9d00577c        0xc build/default/production/_ext/79239498/timer1.o
-                0x9d00577c                setIsTmr1Expired
+                0x9d005738        0xc build/default/production/_ext/79239498/timer1.o
+                0x9d005738                setIsTmr1Expired
 
 .text.APP_WriteCallbackUart5
-                0x9d005788        0xc
+                0x9d005744        0xc
  .text.APP_WriteCallbackUart5
-                0x9d005788        0xc build/default/production/_ext/1522154941/uart5.o
-                0x9d005788                APP_WriteCallbackUart5
+                0x9d005744        0xc build/default/production/_ext/1522154941/uart5.o
+                0x9d005744                APP_WriteCallbackUart5
 
 .text.getTxBuffer
-                0x9d005794        0xc
+                0x9d005750        0xc
  .text.getTxBuffer
-                0x9d005794        0xc build/default/production/_ext/1522154941/uart5.o
-                0x9d005794                getTxBuffer
+                0x9d005750        0xc build/default/production/_ext/1522154941/uart5.o
+                0x9d005750                getTxBuffer
 
 .text.TMR1_CallbackRegister
-                0x9d0057a0        0xc
+                0x9d00575c        0xc
  .text.TMR1_CallbackRegister
-                0x9d0057a0        0xc build/default/production/_ext/1865638794/plib_tmr1.o
-                0x9d0057a0                TMR1_CallbackRegister
+                0x9d00575c        0xc build/default/production/_ext/1865638794/plib_tmr1.o
+                0x9d00575c                TMR1_CallbackRegister
 
 .text.MyI2CCallback
                 0x9d0001f8        0x8
@@ -3856,112 +3856,112 @@ LOAD data_init
                 0x9d0001f8                MyI2CCallback
 
 .text._flush7Seg
-                0x9d0057ac        0x8
+                0x9d005768        0x8
  .text._flush7Seg
-                0x9d0057ac        0x8 build/default/production/_ext/1571292264/7segmentsOutputStream.o
-                0x9d0057ac                _flush7Seg
+                0x9d005768        0x8 build/default/production/_ext/1571292264/7segmentsOutputStream.o
+                0x9d005768                _flush7Seg
 
 .text.initBuffer
-                0x9d0057b4        0x8
+                0x9d005770        0x8
  .text.initBuffer
-                0x9d0057b4        0x8 build/default/production/_ext/383772639/buffer.o
-                0x9d0057b4                initBuffer
+                0x9d005770        0x8 build/default/production/_ext/383772639/buffer.o
+                0x9d005770                initBuffer
 
 .text.flushBuffer
-                0x9d0057bc        0x8
+                0x9d005778        0x8
  .text.flushBuffer
-                0x9d0057bc        0x8 build/default/production/_ext/383772639/buffer.o
-                0x9d0057bc                flushBuffer
+                0x9d005778        0x8 build/default/production/_ext/383772639/buffer.o
+                0x9d005778                flushBuffer
 
 .text.appendDot
-                0x9d0057c4        0x8
+                0x9d005780        0x8
  .text.appendDot
-                0x9d0057c4        0x8 build/default/production/_ext/1038083393/printWriter.o
-                0x9d0057c4                appendDot
+                0x9d005780        0x8 build/default/production/_ext/1038083393/printWriter.o
+                0x9d005780                appendDot
 
 .text.flushSerial
-                0x9d0057cc        0x8
+                0x9d005788        0x8
  .text.flushSerial
-                0x9d0057cc        0x8 build/default/production/_ext/111410402/serialOutpuStream.o
-                0x9d0057cc                flushSerial
+                0x9d005788        0x8 build/default/production/_ext/111410402/serialOutpuStream.o
+                0x9d005788                flushSerial
 
 .text.openOutputStreamSerial5
-                0x9d0057d4        0x8
+                0x9d005790        0x8
  .text.openOutputStreamSerial5
-                0x9d0057d4        0x8 build/default/production/_ext/111410402/serialOutpuStream.o
-                0x9d0057d4                openOutputStreamSerial5
+                0x9d005790        0x8 build/default/production/_ext/111410402/serialOutpuStream.o
+                0x9d005790                openOutputStreamSerial5
 
 .text.closeOutputStreamSerial5
-                0x9d0057dc        0x8
+                0x9d005798        0x8
  .text.closeOutputStreamSerial5
-                0x9d0057dc        0x8 build/default/production/_ext/111410402/serialOutpuStream.o
-                0x9d0057dc                closeOutputStreamSerial5
+                0x9d005798        0x8 build/default/production/_ext/111410402/serialOutpuStream.o
+                0x9d005798                closeOutputStreamSerial5
 
 .text.setBoardName
-                0x9d0057e4        0x8
+                0x9d0057a0        0x8
  .text.setBoardName
-                0x9d0057e4        0x8 build/default/production/_ext/92899495/system.o
-                0x9d0057e4                setBoardName
+                0x9d0057a0        0x8 build/default/production/_ext/92899495/system.o
+                0x9d0057a0                setBoardName
 
 .text.getBoardName
-                0x9d0057ec        0x8
+                0x9d0057a8        0x8
  .text.getBoardName
-                0x9d0057ec        0x8 build/default/production/_ext/92899495/system.o
-                0x9d0057ec                getBoardName
+                0x9d0057a8        0x8 build/default/production/_ext/92899495/system.o
+                0x9d0057a8                getBoardName
 
 .text.getErrorStatusUart5
-                0x9d0057f4        0x8
+                0x9d0057b0        0x8
  .text.getErrorStatusUart5
-                0x9d0057f4        0x8 build/default/production/_ext/1522154941/uart5.o
-                0x9d0057f4                getErrorStatusUart5
+                0x9d0057b0        0x8 build/default/production/_ext/1522154941/uart5.o
+                0x9d0057b0                getErrorStatusUart5
 
 .text.setErrorStatusUart5
-                0x9d0057fc        0x8
+                0x9d0057b8        0x8
  .text.setErrorStatusUart5
-                0x9d0057fc        0x8 build/default/production/_ext/1522154941/uart5.o
-                0x9d0057fc                setErrorStatusUart5
+                0x9d0057b8        0x8 build/default/production/_ext/1522154941/uart5.o
+                0x9d0057b8                setErrorStatusUart5
 
 .text.getWriteStatusUart5
-                0x9d005804        0x8
+                0x9d0057c0        0x8
  .text.getWriteStatusUart5
-                0x9d005804        0x8 build/default/production/_ext/1522154941/uart5.o
-                0x9d005804                getWriteStatusUart5
+                0x9d0057c0        0x8 build/default/production/_ext/1522154941/uart5.o
+                0x9d0057c0                getWriteStatusUart5
 
 .text.setWriteStatusUart5
-                0x9d00580c        0x8
+                0x9d0057c8        0x8
  .text.setWriteStatusUart5
-                0x9d00580c        0x8 build/default/production/_ext/1522154941/uart5.o
-                0x9d00580c                setWriteStatusUart5
+                0x9d0057c8        0x8 build/default/production/_ext/1522154941/uart5.o
+                0x9d0057c8                setWriteStatusUart5
 
 .text.getReadStatusUart5
-                0x9d005814        0x8
+                0x9d0057d0        0x8
  .text.getReadStatusUart5
-                0x9d005814        0x8 build/default/production/_ext/1522154941/uart5.o
-                0x9d005814                getReadStatusUart5
+                0x9d0057d0        0x8 build/default/production/_ext/1522154941/uart5.o
+                0x9d0057d0                getReadStatusUart5
 
 .text.setReadStatusUart5
-                0x9d00581c        0x8
+                0x9d0057d8        0x8
  .text.setReadStatusUart5
-                0x9d00581c        0x8 build/default/production/_ext/1522154941/uart5.o
-                0x9d00581c                setReadStatusUart5
+                0x9d0057d8        0x8 build/default/production/_ext/1522154941/uart5.o
+                0x9d0057d8                setReadStatusUart5
 
 .text._mon_putc
-                0x9d005824        0x8
+                0x9d0057e0        0x8
  .text._mon_putc
-                0x9d005824        0x8 build/default/production/_ext/163028504/xc32_monitor.o
-                0x9d005824                _mon_putc
+                0x9d0057e0        0x8 build/default/production/_ext/163028504/xc32_monitor.o
+                0x9d0057e0                _mon_putc
 
 .text._on_reset
-                0x9d00582c        0x8
+                0x9d0057e8        0x8
  .text._on_reset
-                0x9d00582c        0x8 /opt/microchip/xc32/v2.50/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib/fpu64/libpic32.a(default-on-reset.o)
-                0x9d00582c                _on_reset
+                0x9d0057e8        0x8 /opt/microchip/xc32/v2.50/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib/fpu64/libpic32.a(default-on-reset.o)
+                0x9d0057e8                _on_reset
 
 .text._on_bootstrap
-                0x9d005834        0x8
+                0x9d0057f0        0x8
  .text._on_bootstrap
-                0x9d005834        0x8 /opt/microchip/xc32/v2.50/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib/fpu64/libpic32.a(default-on-bootstrap.o)
-                0x9d005834                _on_bootstrap
+                0x9d0057f0        0x8 /opt/microchip/xc32/v2.50/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib/fpu64/libpic32.a(default-on-bootstrap.o)
+                0x9d0057f0                _on_bootstrap
 
-.rodata         0x9d00583c        0x4
- .rodata        0x9d00583c        0x4 build/default/production/_ext/111410402/serialOutpuStream.o
+.rodata         0x9d0057f8        0x4
+ .rodata        0x9d0057f8        0x4 build/default/production/_ext/111410402/serialOutpuStream.o

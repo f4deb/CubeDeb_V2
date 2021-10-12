@@ -48,7 +48,8 @@ void _write7SegStreamChar(OutputStream* outputStream, unsigned char c) {
  *@private
  */
 void _write7SegStreamString(OutputStream* outputStream, const char* string) {
-    print7Seg(string,outputStream->object,outputStream->address);
+    char dot = outputStream->object;
+    print7Seg(string,dot,outputStream->address);
 }
 
 /**
