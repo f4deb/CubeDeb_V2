@@ -18,7 +18,6 @@ build/default/production/_ext/1019397905/mainCubeMeteo.o: \
  ../src/config/default/peripheral/tmr1/plib_tmr1_common.h \
  ../src/config/default/peripheral/uart/plib_uart5.h \
  ../src/cube/../common/7seg/7segments.h \
- ../src/cube/../common/7seg/../ascii/7seg.h \
  ../src/cube/../common/7seg/7segmentsOutputStream.h \
  ../src/cube/../common/7seg/../../common/IO/outputStream/outputStream.h \
  ../src/cube/../common/common.h ../src/cube/../common/IO/buffer/buffer.h \
@@ -78,8 +77,6 @@ build/default/production/_ext/1019397905/mainCubeMeteo.o: \
 ../src/config/default/peripheral/uart/plib_uart5.h:
 
 ../src/cube/../common/7seg/7segments.h:
-
-../src/cube/../common/7seg/../ascii/7seg.h:
 
 ../src/cube/../common/7seg/7segmentsOutputStream.h:
 

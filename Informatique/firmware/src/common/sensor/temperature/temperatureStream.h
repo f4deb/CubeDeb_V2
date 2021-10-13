@@ -31,7 +31,7 @@ typedef uint32_t TemperatureReadSensorValueFunction(Temperature* temperature);
  * Set the temperature to know if we are above the value.
  * @param temperatureSensorAlert the new limit for the temperature
  */
-typedef void TemperatureWriteAlertLimitFunction(Temperature* temperature, int temperatureSensorAlert);
+typedef void TemperatureWriteAlertLimitFunction(Temperature* temperature, uint8_t* temperatureSensorAlert);
 
 /**
  * Temperature sensor wrapping.
@@ -43,8 +43,12 @@ struct Temperature {
     TemperatureWriteAlertLimitFunction* writeAlertLimit;
     /** The address of I2C */
     int address;
+    /** The temperature value */
+    uint32_t value;
 
 };
+
+uint32_t getTemperatureSensor (Temperature* temperature);
 
 /**
  * Initialize the temperature object wrapper.

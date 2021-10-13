@@ -1,5 +1,6 @@
 #include "7segments.h"
 #include "drivers/SAA1064T/SAA1064T.h"
+#include "../ascii/7seg.h"
 
 static uint8_t data[] = " ";
 

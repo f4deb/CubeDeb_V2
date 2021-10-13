@@ -16,9 +16,8 @@ build/default/production/_ext/1360937237/mainCube.o: ../src/mainCube.c \
  ../src/config/default/peripheral/tmr1/plib_tmr1.h \
  ../src/config/default/peripheral/tmr1/plib_tmr1_common.h \
  ../src/config/default/peripheral/uart/plib_uart5.h \
- ../src/common/ascii/7seg.h ../src/common/delay/delay.h \
- ../src/common/I2C/I2CConfig.h ../src/common/led/led.h \
- ../src/common/7seg/7segments.h ../src/common/7seg/../ascii/7seg.h \
+ ../src/common/delay/delay.h ../src/common/I2C/I2CConfig.h \
+ ../src/common/led/led.h ../src/common/7seg/7segments.h \
  ../src/cube/mainCubeMeteo.h
 
 ../src/config/default/definitions.h:
@@ -55,8 +54,6 @@ build/default/production/_ext/1360937237/mainCube.o: ../src/mainCube.c \
 
 ../src/config/default/peripheral/uart/plib_uart5.h:
 
-../src/common/ascii/7seg.h:
-
 ../src/common/delay/delay.h:
 
 ../src/common/I2C/I2CConfig.h:
@@ -64,7 +61,5 @@ build/default/production/_ext/1360937237/mainCube.o: ../src/mainCube.c \
 ../src/common/led/led.h:
 
 ../src/common/7seg/7segments.h:
-
-../src/common/7seg/../ascii/7seg.h:
 
 ../src/cube/mainCubeMeteo.h:

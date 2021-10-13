@@ -1,7 +1,9 @@
 #ifndef _7SEGMENTS_H    /* Guard against multiple inclusion */
 #define _7SEGMENTS_H
 
-#include "../ascii/7seg.h"
+//#include "../ascii/7seg.h"
+#include "definitions.h"                // SYS function prototypes
+
 
     
 void MyI2CCallback(uintptr_t context);    

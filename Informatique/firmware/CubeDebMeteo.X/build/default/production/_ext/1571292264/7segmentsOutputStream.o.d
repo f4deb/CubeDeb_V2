@@ -20,7 +20,6 @@ build/default/production/_ext/1571292264/7segmentsOutputStream.o: \
  ../src/common/7seg/7segmentsOutputStream.h \
  ../src/common/7seg/../../common/IO/outputStream/outputStream.h \
  ../src/common/7seg/../../common/7seg/7segments.h \
- ../src/common/7seg/../../common/7seg/../ascii/7seg.h \
  ../src/common/7seg/../../common/I2C/I2CConfig.h
 
 ../src/config/default/definitions.h:
@@ -62,7 +61,5 @@ build/default/production/_ext/1571292264/7segmentsOutputStream.o: \
 ../src/common/7seg/../../common/IO/outputStream/outputStream.h:
 
 ../src/common/7seg/../../common/7seg/7segments.h:
-
-../src/common/7seg/../../common/7seg/../ascii/7seg.h:
 
 ../src/common/7seg/../../common/I2C/I2CConfig.h:

@@ -1,6 +1,9 @@
 #include "serialoutputStream.h"
 
+#include <string.h>
+
 #include "serial.h"
+#include "../../common/uart5/uart5.h"
 
 static OutputStream* serialOutputStream[100];
 

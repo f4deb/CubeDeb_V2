@@ -1,6 +1,6 @@
 build/default/production/_ext/1571292264/7segments.o: \
  ../src/common/7seg/7segments.c ../src/common/7seg/7segments.h \
- ../src/common/7seg/../ascii/7seg.h ../src/config/default/definitions.h \
+ ../src/config/default/definitions.h \
  ../src/config/default/peripheral/coretimer/plib_coretimer.h \
  ../src/config/default/peripheral/i2c/master/plib_i2c1_master.h \
  ../src/config/default/peripheral/i2c/master/plib_i2c_master_common.h \
@@ -18,11 +18,10 @@ build/default/production/_ext/1571292264/7segments.o: \
  ../src/config/default/peripheral/tmr1/plib_tmr1_common.h \
  ../src/config/default/peripheral/uart/plib_uart5.h \
  ../src/drivers/SAA1064T/SAA1064T.h \
- ../src/drivers/SAA1064T/../../common/IO/outputStream/outputStream.h
+ ../src/drivers/SAA1064T/../../common/IO/outputStream/outputStream.h \
+ ../src/common/7seg/../ascii/7seg.h
 
 ../src/common/7seg/7segments.h:
-
-../src/common/7seg/../ascii/7seg.h:
 
 ../src/config/default/definitions.h:
 
@@ -61,3 +60,5 @@ build/default/production/_ext/1571292264/7segments.o: \
 ../src/drivers/SAA1064T/SAA1064T.h:
 
 ../src/drivers/SAA1064T/../../common/IO/outputStream/outputStream.h:
+
+../src/common/7seg/../ascii/7seg.h:
