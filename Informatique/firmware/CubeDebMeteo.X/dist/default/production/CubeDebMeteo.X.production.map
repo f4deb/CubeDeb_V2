@@ -5,25 +5,25 @@ Archive member included because of file (symbol)
 /opt/microchip/xc32/v2.50/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib/fpu64/libpic32.a(strlen.o)
                               build/default/production/_ext/383772639/buffer.o (strlen)
 /opt/microchip/xc32/v2.50/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib/fpu64/libpic32.a(default-on-reset.o)
-                              /tmp/ccawfZRv.o (_on_reset)
+                              /tmp/ccZ8NYce.o (_on_reset)
 /opt/microchip/xc32/v2.50/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib/fpu64/libpic32.a(default-on-bootstrap.o)
-                              /tmp/ccawfZRv.o (_on_bootstrap)
+                              /tmp/ccZ8NYce.o (_on_bootstrap)
 /opt/microchip/xc32/v2.50/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib/fpu64/libpic32.a(default-nmi-handler.o)
-                              /tmp/ccawfZRv.o (_nmi_handler)
+                              /tmp/ccZ8NYce.o (_nmi_handler)
 /opt/microchip/xc32/v2.50/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib/fpu64/libpic32.a(pic32_data_init.o)
-                              /tmp/ccawfZRv.o (__pic32_data_init)
+                              /tmp/ccZ8NYce.o (__pic32_data_init)
 /opt/microchip/xc32/v2.50/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib/fpu64/libpic32.a(pic32_init_cache.o)
-                              /tmp/ccawfZRv.o (__pic32_init_cache)
+                              /tmp/ccZ8NYce.o (__pic32_init_cache)
 /opt/microchip/xc32/v2.50/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib/fpu64/libpic32.a(pic32_init_tlb_ebi_sqi.o)
-                              /tmp/ccawfZRv.o (__pic32_tlb_init_ebi_sqi)
+                              /tmp/ccZ8NYce.o (__pic32_tlb_init_ebi_sqi)
 /opt/microchip/xc32/v2.50/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib/fpu64/libpic32.a(general-exception.o)
-                              /tmp/ccawfZRv.o (_general_exception_context)
+                              /tmp/ccZ8NYce.o (_general_exception_context)
 /opt/microchip/xc32/v2.50/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib/fpu64/libpic32.a(cache-err-exception.o)
-                              /tmp/ccawfZRv.o (_cache_err_exception_context)
+                              /tmp/ccZ8NYce.o (_cache_err_exception_context)
 /opt/microchip/xc32/v2.50/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib/fpu64/libpic32.a(simple-tlb-refill-exception.o)
-                              /tmp/ccawfZRv.o (_simple_tlb_refill_exception_context)
+                              /tmp/ccZ8NYce.o (_simple_tlb_refill_exception_context)
 /opt/microchip/xc32/v2.50/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib/fpu64/libpic32.a(defaultinterrupt.o)
-                              /tmp/cc9ISHMu.o (_DefaultInterrupt)
+                              /tmp/ccaKtrye.o (_DefaultInterrupt)
 /opt/microchip/xc32/v2.50/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib/fpu64/libc.a(sprintf_cdnopuxX.eo)
                               build/default/production/_ext/1240316727/temperature.o (_sprintf_cdnopuxX)
 /opt/microchip/xc32/v2.50/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib/fpu64/libc.a(doprnt_cdnopuxX.eo)
@@ -586,19 +586,19 @@ Discarded input sections
  .data          0x00000000        0x0 /opt/microchip/xc32/v2.50/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib/./proc/32MZ2048EFM100/vector_offset_init.o
  .bss           0x00000000        0x0 /opt/microchip/xc32/v2.50/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib/./proc/32MZ2048EFM100/vector_offset_init.o
  .reginfo       0x00000000       0x18 /opt/microchip/xc32/v2.50/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib/./proc/32MZ2048EFM100/vector_offset_init.o
- .text          0x00000000        0x0 /tmp/ccawfZRv.o
- .data          0x00000000        0x0 /tmp/ccawfZRv.o
- .bss           0x00000000        0x0 /tmp/ccawfZRv.o
- .reginfo       0x00000000       0x18 /tmp/ccawfZRv.o
- .text          0x00000000        0x0 /tmp/cchpnCot.o
- .data          0x00000000        0x0 /tmp/cchpnCot.o
- .bss           0x00000000        0x0 /tmp/cchpnCot.o
- .reginfo       0x00000000       0x18 /tmp/cchpnCot.o
- .text          0x00000000        0x0 /tmp/cc9ISHMu.o
- .data          0x00000000        0x0 /tmp/cc9ISHMu.o
- .bss           0x00000000        0x0 /tmp/cc9ISHMu.o
- .reginfo       0x00000000       0x18 /tmp/cc9ISHMu.o
- .discard       0x00000000        0x4 /tmp/cc9ISHMu.o
+ .text          0x00000000        0x0 /tmp/ccZ8NYce.o
+ .data          0x00000000        0x0 /tmp/ccZ8NYce.o
+ .bss           0x00000000        0x0 /tmp/ccZ8NYce.o
+ .reginfo       0x00000000       0x18 /tmp/ccZ8NYce.o
+ .text          0x00000000        0x0 /tmp/ccL1tA1e.o
+ .data          0x00000000        0x0 /tmp/ccL1tA1e.o
+ .bss           0x00000000        0x0 /tmp/ccL1tA1e.o
+ .reginfo       0x00000000       0x18 /tmp/ccL1tA1e.o
+ .text          0x00000000        0x0 /tmp/ccaKtrye.o
+ .data          0x00000000        0x0 /tmp/ccaKtrye.o
+ .bss           0x00000000        0x0 /tmp/ccaKtrye.o
+ .reginfo       0x00000000       0x18 /tmp/ccaKtrye.o
+ .discard       0x00000000        0x4 /tmp/ccaKtrye.o
  .text          0x00000000        0x0 /opt/microchip/xc32/v2.50/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib/./proc/32MZ2048EFM100/default_isr_vectors.o
  .data          0x00000000        0x0 /opt/microchip/xc32/v2.50/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib/./proc/32MZ2048EFM100/default_isr_vectors.o
  .bss           0x00000000        0x0 /opt/microchip/xc32/v2.50/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib/./proc/32MZ2048EFM100/default_isr_vectors.o
@@ -1334,16 +1334,16 @@ END GROUP
 
 .reset          0xbfc00000      0x1b4
  *(.reset)
- .reset         0xbfc00000       0x18 /tmp/ccawfZRv.o
+ .reset         0xbfc00000       0x18 /tmp/ccZ8NYce.o
                 0xbfc00000                _reset
  *(.reset.startup)
  .reset.startup
-                0xbfc00018      0x19c /tmp/ccawfZRv.o
+                0xbfc00018      0x19c /tmp/ccZ8NYce.o
                 0xbfc00018                _startup
 
 .bev_excpt      0xbfc00380       0x10
  *(.bev_handler)
- .bev_handler   0xbfc00380       0x10 /tmp/ccawfZRv.o
+ .bev_handler   0xbfc00380       0x10 /tmp/ccZ8NYce.o
 
 .cache_init     0xbfc004b0      0x1c0
  *(.cache_init)
@@ -1358,17 +1358,17 @@ END GROUP
                 0x9d000000       0x10
  *(.simple_tlb_refill_vector)
  .simple_tlb_refill_vector
-                0x9d000000       0x10 /tmp/ccawfZRv.o
+                0x9d000000       0x10 /tmp/ccZ8NYce.o
 
 .cache_err_excpt
                 0x9d000100       0x10
  *(.cache_err_vector)
  .cache_err_vector
-                0x9d000100       0x10 /tmp/ccawfZRv.o
+                0x9d000100       0x10 /tmp/ccZ8NYce.o
 
 .app_excpt      0x9d000180       0x10
  *(.gen_handler)
- .gen_handler   0x9d000180       0x10 /tmp/ccawfZRv.o
+ .gen_handler   0x9d000180       0x10 /tmp/ccZ8NYce.o
 
 .vectors        0x9d000200       0x90
                 0x9d000200                . = ALIGN (0x4)
@@ -3108,9 +3108,9 @@ END GROUP
                 0xbfc006d0                __pic32_tlb_init_values_end = ABSOLUTE (.)
                 0x00000008                __pic32_tlb_init_values_count = 0x8
                 0x00000200                _min_heap_size = 0x200
-LOAD /tmp/ccawfZRv.o
-LOAD /tmp/cchpnCot.o
-LOAD /tmp/cc9ISHMu.o
+LOAD /tmp/ccZ8NYce.o
+LOAD /tmp/ccL1tA1e.o
+LOAD /tmp/ccaKtrye.o
 LOAD /opt/microchip/xc32/v2.50/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib/./proc/32MZ2048EFM100/default_isr_vectors.o
 LOAD /opt/microchip/xc32/v2.50/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib/fpu64/pic32_software_reset.o
 LOAD /opt/microchip/xc32/v2.50/bin/bin/../../lib/gcc/pic32mx/4.8.3/fpu64/libgcc.a
@@ -3525,7 +3525,7 @@ LOAD data_init
 .text.main_entry
                 0x9d004e64       0x54
  .text.main_entry
-                0x9d004e64       0x54 /tmp/ccawfZRv.o
+                0x9d004e64       0x54 /tmp/ccZ8NYce.o
                 0x9d004e98                __crt0_exit
 
 .text.I2C1_IsBusy

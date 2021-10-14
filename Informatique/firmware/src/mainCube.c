@@ -28,8 +28,6 @@
 #include <string.h>
 #include "definitions.h"                // SYS function prototypes
 
-
-//#include "common/ascii/7seg.h"
 #include "common/delay/delay.h"
 #include "common/I2C/I2CConfig.h"
 #include "common/led/led.h"
