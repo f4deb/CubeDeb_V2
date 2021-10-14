@@ -20,10 +20,11 @@ uint32_t getTemperatureSensor (Temperature* temperature){
     return temp;
 }
 
-void initTemperatureStream(Temperature* temperature,
+Temperature* initTemperatureStream(Temperature* temperature,
         TemperatureReadSensorValueFunction* readSensorValue,
         TemperatureWriteAlertLimitFunction* writeAlertLimit,
-        uint16_t I2C_ADDRESS) {
+        uint16_t I2C_ADDRESS,
+        uint16_t sensorIndex) {
     if (temperature == NULL) {
         //writeError(TEMPERATURE_NULL);
         return;
@@ -31,4 +32,6 @@ void initTemperatureStream(Temperature* temperature,
     temperature->readSensorValue = readSensorValue;
     temperature->writeAlertLimit = writeAlertLimit;
     temperature->address = I2C_ADDRESS;
+    temperature->sensorIndex = sensorIndex;
+    return getTemperatureStream(sensorIndex);;
 }

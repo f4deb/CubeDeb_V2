@@ -1,7 +1,7 @@
 #ifndef _TEMPERATURE_STREAM_H    /* Guard against multiple inclusion */
 #define _TEMPERATURE_STREAM_H
 
-#define TEMP_SENSOR_STREAM_SIZE 3
+#define TEMP_SENSOR_STREAM_SIZE 5
 #define TEMP_SENSOR_CPU 0
 #define TEMP_SENSOR_EXT1 TEMP_SENSOR_STREAM_SIZE
 #define TEMP_SENSOR_EXT2 TEMP_SENSOR_STREAM_SIZE*2
@@ -45,6 +45,8 @@ struct Temperature {
     int address;
     /** The temperature value */
     uint32_t value;
+    /** the index sensor*/
+    uint16_t sensorIndex;
 
 };
 
@@ -56,8 +58,9 @@ uint32_t getTemperatureSensor (Temperature* temperature);
  * @param readSensorValue the pointer on the callback function to read the value of the temperature (in celcius degree).
  * @param writeAlertLimit the pointer on the callback function to write the alert limit of the temperature sensor (in celcius degree).
  */
-void initTemperatureStream(Temperature* temperature,
+Temperature* initTemperatureStream(Temperature* temperature,
     TemperatureReadSensorValueFunction* readSensorValue,
     TemperatureWriteAlertLimitFunction* writeAlertLimit,
-    uint16_t I2C_ADDRESS);
+    uint16_t I2C_ADDRESS,
+    uint16_t sensorIndex);
 #endif

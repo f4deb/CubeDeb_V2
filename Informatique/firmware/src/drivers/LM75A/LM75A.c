@@ -48,6 +48,6 @@ void _LM75A_writeAlertLimit(Temperature* temperature, uint8_t* temperatureSensor
     while ( I2C1_IsBusy());
 }
 
-void initTemperatureLM75A(Temperature* temperature, uint16_t I2C_ADDRESS) {
-    initTemperatureStream(temperature, _LM75A_readSensorValue, _LM75A_writeAlertLimit, I2C_ADDRESS);
+Temperature* initTemperatureLM75A(Temperature* temperature, uint16_t sensorIndex, uint16_t I2C_ADDRESS) {
+    return initTemperatureStream(temperature, _LM75A_readSensorValue, _LM75A_writeAlertLimit, I2C_ADDRESS, sensorIndex);
 }

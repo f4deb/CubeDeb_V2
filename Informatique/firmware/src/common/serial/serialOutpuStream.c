@@ -11,7 +11,6 @@ OutputStream* getSerialOutputStream(enum SerialPort serialPort){
     return &serialOutputStream[serialPort];
 }
 
-
 void flushSerial(OutputStream* outputStream) {
     // don't do anything
 }
@@ -38,7 +37,6 @@ void writeChar5(OutputStream* outputStream, unsigned char c) {
 
 void writeString5(OutputStream* outputStream, unsigned char* str) {
     writeUart5(str, strlen(str));
-
 }
 
 void initSerialOutputStream5(OutputStream* outputStream) {
@@ -49,7 +47,6 @@ void initSerialOutputStream5(OutputStream* outputStream) {
     outputStream->writeString = writeString5;
     outputStream->flush = flushSerial;
 }
-
 
 // PUBLIC INTERFACE
 

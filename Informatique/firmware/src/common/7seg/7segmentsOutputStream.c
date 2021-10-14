@@ -14,7 +14,7 @@
 #include "../../common/I2C/I2CConfig.h"
 
 
-static OutputStream seg7OutputStream[1000] ;
+static OutputStream seg7OutputStream[100] ;
 
 OutputStream* get7SegOutpuStream(int index){
     return &seg7OutputStream[index];

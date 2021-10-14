@@ -49,8 +49,12 @@ char receiveBuffer[RX_BUFFER_SIZE] = {};
 char echoBuffer[RX_BUFFER_SIZE + 4] = {};
 
 
-
+// DEBUG Stream 
 static OutputStream* debugOutputStream;
+// Temperature Stream
+static Temperature* tempSensorCpuStream;
+static Temperature* tempSensorExt1Stream;
+
 
 
 void initMainCube (void) {
@@ -76,6 +80,14 @@ void initMainCube (void) {
     //initDebugOutputStream(DEBUG_OUTPUTSTREAM);    
  
     initCubeCommon();
+    
+    
+        // initialise driver et flux pour le capteur de temperature interne
+    tempSensorCpuStream = initTemperatureLM75A(getTemperatureStream(TEMP_SENSOR_CPU),TEMP_SENSOR_CPU, LM75_ADDRESS_0);
+    //tempSensorCpuStream = getTemperatureStream(TEMP_SENSOR_CPU);
+    // initialise driver et flux pour le capteur de temperature externe 1
+    tempSensorExt1Stream = initTemperatureLM75A(getTemperatureStream(TEMP_SENSOR_EXT1),TEMP_SENSOR_EXT1, LM75_ADDRESS_1);
+    //tempSensorExt1Stream = getTemperatureStream(TEMP_SENSOR_EXT1);
     
         // initialise UART 
     debugOutputStream = initSerialOutputStream(getSerialOutputStream(SERIAL_PORT_5),SERIAL_PORT_5);
@@ -128,9 +140,9 @@ void mainCube (void){
             led2 = false;             
             
             appendDot(SCREEN_7SEG_CPU,4);
-            appendString(SCREEN_7SEG_CPU, readSensorValueAsStringFor7Seg(getTemperatureStream(TEMP_SENSOR_CPU)));
+            appendString(SCREEN_7SEG_CPU, readSensorValueAsStringFor7Seg(tempSensorCpuStream));
             appendString(debugOutputStream,"Temperature Interne: "); 
-            appendString(debugOutputStream, readSensorValueAsString(getTemperatureStream(TEMP_SENSOR_CPU)));
+            appendString(debugOutputStream, readSensorValueAsString(tempSensorCpuStream));
             appendString(debugOutputStream, "deg");
             append(debugOutputStream,LF);       
         }
@@ -140,9 +152,9 @@ void mainCube (void){
             led2 = true;
             
             appendDot(SCREEN_7SEG_CPU,4);
-            appendString(SCREEN_7SEG_CPU, readSensorValueAsStringFor7Seg(getTemperatureStream(TEMP_SENSOR_EXT1)));
+            appendString(SCREEN_7SEG_CPU, readSensorValueAsStringFor7Seg(tempSensorExt1Stream));
             appendString(debugOutputStream,"Temperature Externe: ");
-            appendString(debugOutputStream, readSensorValueAsString(getTemperatureStream(TEMP_SENSOR_EXT1)));            
+            appendString(debugOutputStream, readSensorValueAsString(tempSensorExt1Stream));            
             appendString(debugOutputStream, "deg");
             append(debugOutputStream,LF);
         }
