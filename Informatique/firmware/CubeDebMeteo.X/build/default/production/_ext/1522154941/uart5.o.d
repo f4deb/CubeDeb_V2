@@ -18,7 +18,7 @@ build/default/production/_ext/1522154941/uart5.o: \
  ../src/config/default/peripheral/tmr1/plib_tmr1_common.h \
  ../src/config/default/peripheral/uart/plib_uart5.h \
  ../src/common/uart5/../IO/buffer/buffer.h \
- ../src/common/uart5/../../common/delay/delay.h
+ ../src/common/uart5/../delay/delay.h ../src/common/uart5/../led/led.h
 
 ../src/common/uart5/uart5.h:
 
@@ -58,4 +58,6 @@ build/default/production/_ext/1522154941/uart5.o: \
 
 ../src/common/uart5/../IO/buffer/buffer.h:
 
-../src/common/uart5/../../common/delay/delay.h:
+../src/common/uart5/../delay/delay.h:
+
+../src/common/uart5/../led/led.h:

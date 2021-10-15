@@ -1,8 +1,13 @@
 #include "uart5.h"
 
-#include "../IO/buffer/buffer.h"
-#include "../../common/delay/delay.h"
+#
 
+#include "../IO/buffer/buffer.h"
+#include "../delay/delay.h"
+#include "../led/led.h"
+
+
+static char rxBuffer[UART5_BUFFER_SIZE] = {};
 static char txBuffer[UART5_BUFFER_SIZE] = {};
 
 static bool errorStatus = false;
@@ -14,7 +19,6 @@ void APP_WriteCallbackUart5(uintptr_t context)
     writeStatus = true;
 }
 
-
 void APP_ReadCallbackUart5(uintptr_t context)
 {
     if(UART5_ErrorGet() != UART_ERROR_NONE)
@@ -25,6 +29,7 @@ void APP_ReadCallbackUart5(uintptr_t context)
     else
     {
         readStatus = true;
+        led2RedToggle();
     }
 }
 
@@ -54,19 +59,6 @@ bool getReadStatusUart5(void){
 
 void setReadStatusUart5 (bool status){
     readStatus = status;
-}
-
-
-void initUart5 (char* messageStart, int size){ 
-/* Register callback functions and send start message */
-    UART5_WriteCallbackRegister(APP_WriteCallbackUart5, 0);
-    UART5_ReadCallbackRegister(APP_ReadCallbackUart5, 0);
-    UART5_Write(messageStart, size);
-    
-    initBuffer();
-    
-
-    
 }
 
 void writeUart5 (char* message, int size){ 

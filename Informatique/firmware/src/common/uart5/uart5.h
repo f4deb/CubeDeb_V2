@@ -3,7 +3,7 @@
 
 #include "definitions.h"
 
-#define RX_BUFFER_SIZE                  13
+#define RX_BUFFER_SIZE                  5
 
 #define UART5_BUFFER_SIZE   13
 
@@ -24,8 +24,6 @@ void setWriteStatusUart5(bool status);
 bool getReadStatusUart5 (void);
 
 void setReadStatusUart5 (bool status);
-
-void initUart5 (char* messageStart, int size);
 
 void writeUart5 (char* message, int size);
 

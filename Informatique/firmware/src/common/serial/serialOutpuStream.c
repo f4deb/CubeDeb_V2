@@ -66,6 +66,13 @@ OutputStream* initSerialOutputStream(OutputStream* outputStream, enum SerialPort
         initSerialOutputStream5(outputStream);
     }
     
+    UART5_WriteCallbackRegister(APP_WriteCallbackUart5, 0);
+    UART5_ReadCallbackRegister(APP_ReadCallbackUart5, 0);
+    
+    initBuffer();
+    
+    
+    
     return getSerialOutputStream(serialPort);
  
 }

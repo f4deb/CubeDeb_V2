@@ -92,7 +92,6 @@ void initMainCube (void) {
         // initialise UART 
     debugOutputStream = initSerialOutputStream(getSerialOutputStream(SERIAL_PORT_5),SERIAL_PORT_5);
     
-    initUart5(getBoardName(), strlen(getBoardName()));
     appendString(debugOutputStream,getBoardName());
     }
 
@@ -107,14 +106,12 @@ void mainCube (void){
         /* Echo back received buffer and Toggle LED */
         setReadStatusUart5(false);
 
-        writeCharToBuffer (getTxBuffer(),'\n');
-        writeCharToBuffer (getTxBuffer(),'\r');
-        writeStringToBuffer (getTxBuffer(),receiveBuffer);
-        writeCharToBuffer (getTxBuffer(),'\n');
-        writeCharToBuffer (getTxBuffer(),'\r');
-        writeCharToBuffer (getTxBuffer(),'\0');
+
         
-        appendString(debugOutputStream, getTxBuffer());             
+
+
+        
+        appendStringLN(debugOutputStream, receiveBuffer);   
         
         flushBuffer(getTxBuffer());
 
@@ -123,7 +120,7 @@ void mainCube (void){
     else if(getWriteStatusUart5() == true){
         /* Submit buffer to read user data */
         setWriteStatusUart5(false);
-        UART5_Read(&receiveBuffer, sizeof(receiveBuffer));
+        UART5_Read(&receiveBuffer, 1);
     }
     else {
 
