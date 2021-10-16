@@ -30,6 +30,8 @@
 
 #include "cubeCommon.h"
 
+#include "../drivers/LM75A/LM75A.h"
+
 
 
 //static int SCREEN_7SEG_CPU;
@@ -48,12 +50,42 @@ char messageError[] = "**** UART error occurred ****\r\n";
 char receiveBuffer[RX_BUFFER_SIZE] = {};
 char echoBuffer[RX_BUFFER_SIZE + 4] = {};
 
+uint8_t txBuffer[50];
+uint8_t rxBuffer[10];
+volatile uint32_t nBytesRead = 0;
+volatile bool txThresholdEventReceived = false;
+volatile bool rxThresholdEventReceived = false;
+                uint32_t nBytes = 0; 
+
+
+
+
 
 // DEBUG Stream 
 static OutputStream* debugOutputStream;
 // Temperature Stream
 static Temperature* tempSensorCpuStream;
 static Temperature* tempSensorExt1Stream;
+
+
+
+void usartReadEventHandler(UART_EVENT event, uintptr_t context )
+{
+    uint32_t nBytesAvailable = 0;
+    
+    if (event == UART_EVENT_READ_THRESHOLD_REACHED)
+    {
+        /* Receiver should atleast have the thershold number of bytes in the ring buffer */
+        nBytesAvailable = UART5_ReadCountGet();
+        
+        nBytesRead += UART5_Read((uint8_t*)&rxBuffer[nBytesRead], nBytesAvailable);                          
+    }
+}
+
+void usartWriteEventHandler(UART_EVENT event, uintptr_t context )
+{
+    txThresholdEventReceived = true;
+}
 
 
 
@@ -92,39 +124,134 @@ void initMainCube (void) {
         // initialise UART 
     debugOutputStream = initSerialOutputStream(getSerialOutputStream(SERIAL_PORT_5),SERIAL_PORT_5);
     
+    
+    
+    
+    
+    
+        /* Register a callback for write events */
+    UART5_WriteCallbackRegister(usartWriteEventHandler, (uintptr_t) NULL);
+    
+    /* Register a callback for read events */
+    UART5_ReadCallbackRegister(usartReadEventHandler, (uintptr_t) NULL);   
+     
+    
+    
+    
     appendString(debugOutputStream,getBoardName());
+    
+    
+
+    
+
+    
+     /* Print the size of the read buffer on the terminal */
+    nBytes = sprintf((char*)txBuffer, "RX Buffer Size = %d\r\n", (int)UART5_ReadBufferSizeGet());
+    
+    UART5_Write((uint8_t*)txBuffer, nBytes);  
+    
+    /* Print the size of the write buffer on the terminal */
+    nBytes = sprintf((char*)txBuffer, "TX Buffer Size = %d\r\n", (int)UART5_WriteBufferSizeGet());
+    
+    UART5_Write((uint8_t*)txBuffer, nBytes);    
+    
+    UART5_Write((uint8_t*)"Adding 10 characters to the TX buffer - ", sizeof("Adding 10 characters to the TX buffer - "));   
+    
+    
+    
+       
     }
 
 void mainCube (void){
-    //UART debug echo
-    if(getErrorStatusUart5() == true){
-        /* Send error message to console */
-        setErrorStatusUart5(false);
-        writeUart5 (messageError, strlen(messageError));
-    }
-    else if(getReadStatusUart5() == true){
-        /* Echo back received buffer and Toggle LED */
-        setReadStatusUart5(false);
+    
+     UART5_Write((uint8_t*)"Adding 10 characters to the TX buffer - ", sizeof("Adding 10 characters to the TX buffer - "));   
 
+    
+    /* Wait for all bytes to be transmitted out */
+    while (UART5_WriteCountGet() != 0);    
+    
+    UART5_Write((uint8_t*)"0123456789012345678901234567890123456789012345678901234567890123456789012345678901234567", 88);   
+    
+        nBytes = sprintf((char*)txBuffer, "\r\nFree Space in Trans Buf = %d  \r\n", (int)UART5_WriteFreeBufferCountGet());
 
+    UART5_Write((uint8_t*)txBuffer, nBytes); 
+        /* Let's enable notifications to get notified when the TX buffer is empty */
+    UART5_WriteThresholdSet(UART5_WriteBufferSizeGet());   
+    
+    /* Enable notifications */
+    UART5_WriteNotificationEnable(true, false);
+    
+    /* Wait for the TX buffer to become empty. Flag "txThresholdEventReceived" is set in the callback. */
+    while (txThresholdEventReceived == false);
+    
+        txThresholdEventReceived = false;   
+    
         
+    /* Print the amount of free space available in the TX buffer. This should be 10 bytes less than the configured write buffer size. */
+    nBytes = sprintf((char*)txBuffer, "\r\nFree Space in Transmitt Buffer = %d\r\n", (int)UART5_WriteFreeBufferCountGet());
 
-
+    UART5_Write((uint8_t*)txBuffer, nBytes);    
+    
+    /* Let's enable notifications to get notified when the TX buffer is empty */
+    UART5_WriteThresholdSet(UART5_WriteBufferSizeGet());   
+    
+    /* Enable notifications */
+    UART5_WriteNotificationEnable(true, false);
+    
+    /* Wait for the TX buffer to become empty. Flag "txThresholdEventReceived" is set in the callback. */
+    while (txThresholdEventReceived == false);
+    
+        txThresholdEventReceived = false;   
+    
+    /* Disable TX notifications */
+    UART5_WriteNotificationEnable(false, false);
+    
+    UART5_Write((uint8_t*)"Enter 10 characters. The received characters are echoed back. \r\n>", sizeof("Enter 10 characters. The received characters are echoed back. \r\n>"));               
+            
+    /* Wait till 10 (or more) characters are received */
+    while (UART5_ReadCountGet() < 10);
+    
+    /* At-least 10 characters are available in the RX buffer. Read out into the application buffer */
+    UART5_Read((uint8_t*)rxBuffer, 10);  
+    
+    /* Echo the received data */
+    UART5_Write((uint8_t*)rxBuffer, 10);    
+    
+    /* Now demonstrating receiver notifications */
+    UART5_Write((uint8_t*)"\r\n Now turning on RX notifications \r\n>", sizeof("\r\n Now turning on RX notifications \r\n>"));
+    
+    /* For demonstration purpose, set a threshold value to receive a callback after every 5 characters are received */
+    UART5_ReadThresholdSet(5);
+    
+    /* Enable RX event notifications */
+    UART5_ReadNotificationEnable(true, false);
+                   
+    while(1)
+    {
+        /* Wait until at-least 10 characters are entered by the user */
+        while (nBytesRead < 2);    
+    
+        /* Echo the received data */
+        UART5_Write((uint8_t*)rxBuffer, nBytesRead);
         
-        appendStringLN(debugOutputStream, receiveBuffer);   
-        
-        flushBuffer(getTxBuffer());
+        UART5_Write((uint8_t*)"\r\n>", 3);
 
-        LED1_V_Toggle();
+        nBytesRead = 0;
     }
-    else if(getWriteStatusUart5() == true){
-        /* Submit buffer to read user data */
-        setWriteStatusUart5(false);
-        UART5_Read(&receiveBuffer, 1);
-    }
-    else {
 
-    }
+    
+    
+    //appendStringAndDecLN(debugOutputStream,"RX Buffer Size = ",nBytes);
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
 
     if (getIsTmr1Expired() == true) {
 

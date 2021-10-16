@@ -97,13 +97,13 @@ files:
   security: NON_SECURE
   type: SOURCE
   userChecksum: E929AA29555EDA747F11829EBDB1F8A6
-- generatedChecksum: 43EFEF089769568CE48B74087B3CDC78
+- generatedChecksum: A7D9982DAB34E7FC1585418120250A65
   logicalPath: config/default/peripheral/uart
   name: plib_uart5.c
   physicalPath: peripheral/uart
   security: NON_SECURE
   type: SOURCE
-  userChecksum: 43EFEF089769568CE48B74087B3CDC78
+  userChecksum: A7D9982DAB34E7FC1585418120250A65
 - generatedChecksum: 7806B30ECAE0D18D08CD583D8775530D
   logicalPath: config/default/stdio
   name: xc32_monitor.c
@@ -230,13 +230,13 @@ files:
   security: NON_SECURE
   type: HEADER
   userChecksum: ED74899E8093FE270EE378ABAE2DFBCB
-- generatedChecksum: 0E7D6E9DD000E6E483B566F19809A0B0
+- generatedChecksum: 813E39E5230554DAF99EA4FF7A3C5ECD
   logicalPath: config/default/peripheral/uart
   name: plib_uart5.h
   physicalPath: peripheral/uart
   security: NON_SECURE
   type: HEADER
-  userChecksum: 0E7D6E9DD000E6E483B566F19809A0B0
+  userChecksum: 813E39E5230554DAF99EA4FF7A3C5ECD
 - generatedChecksum: 91611515A95D92B82B7F4064C16D122B
   logicalPath: config/default/peripheral/uart
   name: plib_uart_common.h

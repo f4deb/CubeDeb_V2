@@ -3,7 +3,7 @@
 
 #include "definitions.h"
 
-#define RX_BUFFER_SIZE                  5
+#define RX_BUFFER_SIZE      20
 
 #define UART5_BUFFER_SIZE   13
 

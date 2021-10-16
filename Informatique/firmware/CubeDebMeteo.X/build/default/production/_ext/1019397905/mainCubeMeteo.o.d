@@ -38,7 +38,9 @@ build/default/production/_ext/1019397905/mainCubeMeteo.o: \
  ../src/cube/../common/serial/serial.h \
  ../src/cube/../common/serial/serialoutputStream.h \
  ../src/cube/../common/serial/../IO/outputStream/outputStream.h \
- ../src/cube/../common/serial/serial.h ../src/cube/cubeCommon.h
+ ../src/cube/../common/serial/serial.h ../src/cube/cubeCommon.h \
+ ../src/cube/../drivers/LM75A/LM75A.h \
+ ../src/cube/../drivers/LM75A/../../common/sensor/temperature/temperatureStream.h
 
 ../src/cube/mainCubeMeteo.h:
 
@@ -125,3 +127,7 @@ build/default/production/_ext/1019397905/mainCubeMeteo.o: \
 ../src/cube/../common/serial/serial.h:
 
 ../src/cube/cubeCommon.h:
+
+../src/cube/../drivers/LM75A/LM75A.h:
+
+../src/cube/../drivers/LM75A/../../common/sensor/temperature/temperatureStream.h:

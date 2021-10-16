@@ -19,7 +19,8 @@ build/default/production/_ext/1038083393/printWriter.o: \
  ../src/config/default/peripheral/uart/plib_uart5.h \
  ../src/common/IO/printWriter/printWriter.h \
  ../src/config/default/../../common/IO/outputStream/outputStream.h \
- ../src/common/IO/printWriter/../outputStream/outputStream.h
+ ../src/common/IO/printWriter/../outputStream/outputStream.h \
+ ../src/config/default/../../common/common.h
 
 ../src/config/default/definitions.h:
 
@@ -60,3 +61,5 @@ build/default/production/_ext/1038083393/printWriter.o: \
 ../src/config/default/../../common/IO/outputStream/outputStream.h:
 
 ../src/common/IO/printWriter/../outputStream/outputStream.h:
+
+../src/config/default/../../common/common.h:

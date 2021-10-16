@@ -63,6 +63,4 @@ void setReadStatusUart5 (bool status){
 
 void writeUart5 (char* message, int size){ 
     UART5_Write(message, size);
-    //TODO replace delayMilliSecs by control test
-    delayMilliSecs(2);
 }
