@@ -30,6 +30,10 @@
 
 #include "cubeCommon.h"
 
+#include "../common/clock/clock.h"
+#include "../common/clock/clockStream.h"
+
+#include "../drivers/PCF8563/PCF8563.h"
 #include "../drivers/LM75A/LM75A.h"
 
 
@@ -60,11 +64,16 @@ volatile bool rxThresholdEventReceived = false;
 
 
 
-// DEBUG Stream 
+//--------------- DEBUG Stream 
 static OutputStream* debugOutputStream;
-// Temperature Stream
+
+//--------------- I2C STREAM
+    // Temperature Stream
 static Temperature* tempSensorCpuStream;
 static Temperature* tempSensorExt1Stream;
+    // Clock Stream
+static Clock* clockCPUStream;
+
 
 
 
@@ -103,7 +112,23 @@ void initMainCube (void) {
     
         // initialise UART 
     debugOutputStream = initSerialOutputStream(getSerialOutputStream(SERIAL_PORT_5),SERIAL_PORT_5);
+    
+    clockCPUStream = initClockPCF8563(getClockStream(CLOCK_CPU),CLOCK_CPU,PCF8563_ADDRESS_0);
+    
+    
+    ClockData* clockParam = &(clockCPUStream->clockData);
+    clockParam->second = 01;
+    clockParam->minute = 17;
+    clockParam->hour = 2;
+    clockParam->day = 03;
+    clockParam->dayofweek = 1;
+    clockParam->month = 8;
+    clockParam->year = 32;
+    
+    //setClock(getClockStream(CLOCK_CPU), clockData);
         
+    printClock(debugOutputStream,getClockStream(CLOCK_CPU));
+    
     }
 
 void mainCube (void){
@@ -126,7 +151,10 @@ void mainCube (void){
             appendString(debugOutputStream,"Temperature Interne: "); 
             appendString(debugOutputStream, readSensorValueAsString(tempSensorCpuStream));
             appendString(debugOutputStream, "deg");
-            append(debugOutputStream,LF);       
+            append(debugOutputStream,LF);     
+
+            printClock(debugOutputStream,getClockStream(CLOCK_CPU));
+
         }
         else {
             led2GreenOn();
@@ -139,6 +167,9 @@ void mainCube (void){
             appendString(debugOutputStream, readSensorValueAsString(tempSensorExt1Stream));            
             appendString(debugOutputStream, "deg");
             append(debugOutputStream,LF);
+
+            printClock(debugOutputStream,getClockStream(CLOCK_CPU));
+
         }
     }            
 }

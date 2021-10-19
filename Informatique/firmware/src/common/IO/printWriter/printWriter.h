@@ -75,5 +75,63 @@ void appendStringAndDec(OutputStream* stream, const char* s, signed long value);
 
 void appendStringAndDecLN(OutputStream* stream, const char* s, float value);
 
+// --- Management of hex conversion
+
+/**
+ * Sends an hexadecimal value to the serial output.
+ * char c must be >= 0 and <= 15 to be appended to the outputStream. If not, the char will not be converted and we will write an error !
+ * @param outputStream the pointer on outputStream (POO simulation)
+ * @param c the char value to write as hexadecimal
+ * @return true if the char was appended, false else
+ */
+bool appendHex(OutputStream* outputStream, unsigned char c);
+
+/**
+ * Send a char value into hexadecimal value (2 chars)
+ * @param outputStream the pointer on outputStream (POO simulation)
+ * @param value the value which must be sent
+ */
+void appendHex2(OutputStream* outputStream, unsigned char value);
+
+/**
+ * Send a signed char value into hexadecimal value (2 chars)
+ * @param outputStream the pointer on outputStream (POO simulation)
+ * @param value the value which must be sent
+ */
+void appendSignedHex2(OutputStream* outputStream, signed char value);
+
+/**
+ * Send an signed int into hexadecimal value (3 chars)
+ * @param value the value which must be sent
+ */
+void appendHex3(OutputStream* outputStream, signed int value);
+
+/**
+ * Send an signed int into hexadecimal value (4 chars)
+ * @param outputStream the pointer on outputStream (POO simulation)
+ * @param value the value which must be sent
+ */
+void appendHex4(OutputStream* outputStream, signed int value);
+
+/**
+ * Send an signed int into hexadecimal value (5 chars)
+ * @param outputStream the pointer on outputStream (POO simulation)
+ * @param value the value which must be sent
+ */
+void appendHex5(OutputStream* outputStream, signed int value);
+
+/**
+ * Send an signed long into hexadecimal value (6 chars)
+ * @param outputStream the pointer on outputStream (POO simulation)
+ * @param value the value which must be sent
+ */
+void appendHex6(OutputStream* outputStream, signed long value);
+
+/**
+ * Send an signed long into hexadecimal value (8 chars)
+ * @param outputStream the pointer on outputStream (POO simulation)
+ * @param value the value which must be sent
+ */
+void appendHex8(OutputStream* outputStream, signed long value);
 
 #endif

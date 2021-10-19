@@ -127,3 +127,62 @@ void appendStringAndDecLN(OutputStream* stream, const char* s, float value) {
     appendDec(stream, value);
     println(stream);
 }
+
+// HEXADECIMAL
+
+unsigned char convertToHex(unsigned char c) {
+    // Value between 0 and 9
+    if (c < 10) {
+        return c + 48;
+    } else if (c < 16) {
+        // Value between A and F
+        // (65 - 10 + c)
+        return c + 55;
+    }
+//    writeError(PRINT_WRITER_NOT_HEX_VALUE);
+    return 0;
+}
+
+bool appendHex(OutputStream* outputStream, unsigned char c) {
+    unsigned char hexChar = convertToHex(c);
+    if (hexChar != 0) {
+        append(outputStream, hexChar);
+        return true;
+    }
+    return false;
+}
+
+void internalAppendHex(OutputStream* outputStream, signed long value, int shiftMax) {
+    int i;
+    for (i = shiftMax; i >= 0; i -= 4) {
+        appendHex(outputStream, (value >> i) & 0xF);
+    }
+}
+
+void appendHex2(OutputStream* outputStream, unsigned char value) {
+    internalAppendHex(outputStream, value, 4);
+}
+
+void appendSignedHex2(OutputStream* outputStream, signed char value) {
+    internalAppendHex(outputStream, value, 4);
+}
+
+void appendHex3(OutputStream* outputStream, signed int value) {
+    internalAppendHex(outputStream, value, 8);
+}
+
+void appendHex4(OutputStream* outputStream, signed int value) {
+    internalAppendHex(outputStream, value, 12);
+}
+
+void appendHex5(OutputStream* outputStream, signed int value) {
+    internalAppendHex(outputStream, value, 16);
+}
+
+void appendHex6(OutputStream* outputStream, signed long value) {
+    internalAppendHex(outputStream, value, 20);
+}
+
+void appendHex8(OutputStream* outputStream, signed long value) {
+    internalAppendHex(outputStream, value, 28);
+}

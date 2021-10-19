@@ -12,6 +12,10 @@
         <logicalFolder name="f2" displayName="ascii" projectFiles="true">
           <itemPath>../src/common/ascii/7seg.h</itemPath>
         </logicalFolder>
+        <logicalFolder name="f13" displayName="clock" projectFiles="true">
+          <itemPath>../src/common/clock/clock.h</itemPath>
+          <itemPath>../src/common/clock/clockStream.h</itemPath>
+        </logicalFolder>
         <logicalFolder name="f3" displayName="delay" projectFiles="true">
           <itemPath>../src/common/delay/delay.h</itemPath>
         </logicalFolder>
@@ -112,6 +116,9 @@
         <logicalFolder name="f1" displayName="LM75A" projectFiles="true">
           <itemPath>../src/drivers/LM75A/LM75A.h</itemPath>
         </logicalFolder>
+        <logicalFolder name="f3" displayName="PCF8563" projectFiles="true">
+          <itemPath>../src/drivers/PCF8563/PCF8563.h</itemPath>
+        </logicalFolder>
         <logicalFolder name="f2" displayName="SAA1064T" projectFiles="true">
           <itemPath>../src/drivers/SAA1064T/SAA1064T.h</itemPath>
         </logicalFolder>
@@ -137,6 +144,10 @@
           <itemPath>../src/common/7seg/7segmentsOutputStream.c</itemPath>
         </logicalFolder>
         <logicalFolder name="f2" displayName="ascii" projectFiles="true">
+        </logicalFolder>
+        <logicalFolder name="f12" displayName="clock" projectFiles="true">
+          <itemPath>../src/common/clock/clock.c</itemPath>
+          <itemPath>../src/common/clock/clockStream.c</itemPath>
         </logicalFolder>
         <logicalFolder name="f3" displayName="delay" projectFiles="true">
           <itemPath>../src/common/delay/delay.c</itemPath>
@@ -229,6 +240,9 @@
       <logicalFolder name="f4" displayName="drivers" projectFiles="true">
         <logicalFolder name="f3" displayName="LM75A" projectFiles="true">
           <itemPath>../src/drivers/LM75A/LM75A.c</itemPath>
+        </logicalFolder>
+        <logicalFolder name="f1" displayName="PCF8563" projectFiles="true">
+          <itemPath>../src/drivers/PCF8563/PCF8563.c</itemPath>
         </logicalFolder>
         <logicalFolder name="f2" displayName="SAA1064T" projectFiles="true">
           <itemPath>../src/drivers/SAA1064T/SAA1064T.c</itemPath>

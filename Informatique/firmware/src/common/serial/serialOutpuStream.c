@@ -76,9 +76,6 @@ OutputStream* initSerialOutputStream(OutputStream* outputStream, enum SerialPort
          
     appendString(outputStream,getBoardName());
     
-    
-    
-    
     return getSerialOutputStream(serialPort);
  
 }

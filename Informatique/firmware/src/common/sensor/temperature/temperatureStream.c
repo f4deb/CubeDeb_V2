@@ -33,5 +33,5 @@ Temperature* initTemperatureStream(Temperature* temperature,
     temperature->writeAlertLimit = writeAlertLimit;
     temperature->address = I2C_ADDRESS;
     temperature->sensorIndex = sensorIndex;
-    return getTemperatureStream(sensorIndex);;
+    return getTemperatureStream(sensorIndex);
 }
