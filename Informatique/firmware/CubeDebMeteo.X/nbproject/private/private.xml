@@ -3,12 +3,12 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/media/f4deb/ROBOT/ELECTRONIQUE/CubDebV2/Informatique/firmware/src/cube/cubeCommon.c</file>
-            <file>file:/media/f4deb/ROBOT/ELECTRONIQUE/CubDebV2/Informatique/firmware/src/common/IO/printWriter/printWriter.h</file>
+            <file>file:/media/f4deb/ROBOT/ELECTRONIQUE/CubDebV2/Informatique/firmware/src/config/default/peripheral/uart/plib_uart5.c</file>
+            <file>file:/media/f4deb/ROBOT/ELECTRONIQUE/CubDebV2/Informatique/firmware/src/common/serial/serialOutpuStream.c</file>
             <file>file:/media/f4deb/ROBOT/ELECTRONIQUE/CubDebV2/Informatique/firmware/src/common/uart5/uart5.c</file>
-            <file>file:/media/f4deb/ROBOT/ELECTRONIQUE/CubDebV2/Informatique/firmware/src/cube/cubeCommon.h</file>
             <file>file:/media/f4deb/ROBOT/ELECTRONIQUE/CubDebV2/Informatique/firmware/src/cube/mainCubeMeteo.c</file>
             <file>file:/media/f4deb/ROBOT/ELECTRONIQUE/CubDebV2/Informatique/firmware/src/common/uart5/uart5.h</file>
+            <file>file:/media/f4deb/ROBOT/ELECTRONIQUE/CubDebV2/Informatique/firmware/src/config/default/peripheral/uart/plib_uart5.h</file>
             <file>file:/media/f4deb/ROBOT/ELECTRONIQUE/CubDebV2/Informatique/firmware/src/common/IO/printWriter/printWriter.c</file>
         </group>
     </open-files>

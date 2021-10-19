@@ -66,10 +66,16 @@ OutputStream* initSerialOutputStream(OutputStream* outputStream, enum SerialPort
         initSerialOutputStream5(outputStream);
     }
     
-    UART5_WriteCallbackRegister(APP_WriteCallbackUart5, 0);
-    UART5_ReadCallbackRegister(APP_ReadCallbackUart5, 0);
-    
     initBuffer();
+       
+    /* Register a callback for write events */
+    UART5_WriteCallbackRegister(usartWriteEventHandler, (uintptr_t) NULL);
+    
+    /* Register a callback for read events */
+    UART5_ReadCallbackRegister(usartReadEventHandler, (uintptr_t) NULL);   
+         
+    appendString(outputStream,getBoardName());
+    
     
     
     

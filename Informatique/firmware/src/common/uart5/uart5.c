@@ -6,6 +6,10 @@
 #include "../delay/delay.h"
 #include "../led/led.h"
 
+volatile static bool txThresholdEventReceived = false;
+
+volatile static int32_t nBytesRead = 0;
+
 
 static char rxBuffer[UART5_BUFFER_SIZE] = {};
 static char txBuffer[UART5_BUFFER_SIZE] = {};
@@ -61,6 +65,48 @@ void setReadStatusUart5 (bool status){
     readStatus = status;
 }
 
+
+bool getTxThresholdEventReceived (void){
+    return txThresholdEventReceived;
+}
+
+void setTxThresholdEventReceived (bool status){
+    txThresholdEventReceived = status;
+}
+
 void writeUart5 (char* message, int size){ 
+
+    /* Wait for the TX buffer to become empty. Flag "txThresholdEventReceived" is set in the callback. */
+    while (getTxThresholdEventReceived == false);
+    setTxThresholdEventReceived(false);   
+
     UART5_Write(message, size);
+    
+    /* Wait for all bytes to be transmitted out */
+    while (UART5_WriteCountGet() != 0);    
+}
+
+size_t writeUart5_WriteCountGet(void){
+    return UART5_WriteCountGet();
+}
+
+
+
+
+void usartReadEventHandler(UART_EVENT event, uintptr_t context )
+{
+    uint32_t nBytesAvailable = 0;
+    
+    if (event == UART_EVENT_READ_THRESHOLD_REACHED)
+    {
+        /* Receiver should atleast have the thershold number of bytes in the ring buffer */
+        nBytesAvailable = UART5_ReadCountGet();
+        
+        nBytesRead += UART5_Read((uint8_t*)&rxBuffer[nBytesRead], nBytesAvailable);                          
+    }
+}
+
+void usartWriteEventHandler(UART_EVENT event, uintptr_t context )
+{
+    setTxThresholdEventReceived(true);
 }
