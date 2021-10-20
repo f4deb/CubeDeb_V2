@@ -117,13 +117,13 @@ void initMainCube (void) {
     
     
     ClockData* clockParam = &(clockCPUStream->clockData);
-    clockParam->second = 01;
-    clockParam->minute = 17;
-    clockParam->hour = 2;
-    clockParam->day = 03;
-    clockParam->dayofweek = 1;
-    clockParam->month = 8;
-    clockParam->year = 32;
+    clockParam->second = 0x41;
+    clockParam->minute = 0x35;
+    clockParam->hour = 0x21;
+    clockParam->day = 0x20;
+    clockParam->dayofweek = 0x03;
+    clockParam->month = 0x10;
+    clockParam->year = 0x21;
     
     //setClock(clockCPUStream, clockParam);
         

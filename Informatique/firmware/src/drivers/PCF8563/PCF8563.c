@@ -4,8 +4,8 @@
 
 #include "../../common/clock/clockStream.h"
 
-static uint8_t datarx[16];
-static uint8_t datatx[16];
+static uint8_t datarx[8];
+static uint8_t datatx[8];
 
 /**
  * @see clock.h
@@ -14,16 +14,17 @@ static uint8_t datatx[16];
  * @param clock the clock
  */
 ClockData* _readPcf8563Clock(Clock* clock) {
-    datatx[0] = clock->address;
-    datatx[1] = PCF8563_CLOCK_REGISTER;
+    datatx[0] = PCF8563_CLOCK_REGISTER;
 
-    if (I2C1_WriteRead(clock->address, &datatx[0], 1,  &datarx[0], 2)){
+    //read the PCF8563
+    if (I2C1_WriteRead(clock->address, &datatx[0], 1,  &datarx[0], 7)){
     // error handling
     };
     while ( I2C1_IsBusy());
 
     ClockData* clockData = &(clock->clockData);
     
+    //record data
     clockData->second = datarx[0];
     clockData->minute = datarx[1];
     clockData->hour = datarx[2];
@@ -32,7 +33,7 @@ ClockData* _readPcf8563Clock(Clock* clock) {
     clockData->month = datarx[5];
     clockData->year = datarx[6];
 
-
+    //format data
     clockData->second = clockData->second & 0b01111111;
     clockData->minute = clockData->minute & 0b01111111;
     clockData->hour = clockData->hour & 0b00111111;
@@ -53,18 +54,17 @@ void _writePcf8563Clock(Clock* clock) {
 
     ClockData* clockData = &(clock->clockData);
 
-    char* time;
+    char time[9];
     time[0] = PCF8563_CLOCK_REGISTER;
     time[1] = clockData->second;
     time[2] = clockData->minute;
-    time[3] = clockData->hour;
+    time[3]= clockData->hour;
     time[4] = clockData->day;
     time[5] = clockData->dayofweek;
     time[6] = clockData->month;
     time[7] = clockData->year;
-    time[8] = '\0';
     
-    while(I2C1_Write( clock->address , time, strlen(time))){
+    while(I2C1_Write( clock->address, time, 8)){
                 // error handling
     }    
     while ( I2C1_IsBusy());
