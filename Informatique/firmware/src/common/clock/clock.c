@@ -12,7 +12,29 @@
 void printClock(OutputStream* outputStream, Clock* clock) {
     //ClockData* clockData = &(clock->clockData);
     
-    ClockData* clockData = clock->readClock(clock);
+    ClockData* clockData = clock->readClock(clock,PCF8563_CLOCK_REGISTER);
+
+    
+    appendHex2(outputStream, clockData->hour);
+    append(outputStream, ':');
+    appendHex2(outputStream, clockData->minute);
+    append(outputStream, ':');
+    appendHex2(outputStream, clockData->second);
+
+    appendSpace(outputStream);
+    appendHex2(outputStream, clockData->day);
+
+    append(outputStream, '/');
+    appendHex2(outputStream, clockData->month);
+    append(outputStream, '/');
+    appendHex2(outputStream, clockData->year);
+    appendSpace(outputStream);
+}
+
+void printClockAlarm(OutputStream* outputStream, Clock* clock) {
+    //ClockData* clockData = &(clock->clockData);
+    
+    ClockData* clockData = clock->readClock(clock,PCF8563_ALARM_REGISTER);
 
     
     appendHex2(outputStream, clockData->hour);
@@ -43,7 +65,22 @@ void setClock(Clock* clock, ClockData* clockParam){
   clockData->month = clockParam->month;
   clockData->year = clockParam->year;
   
-  clock->writeClock(clock);
+  clock->writeClock(clock, PCF8563_CLOCK_REGISTER);
+}
+
+void setClockAlarm(Clock* clock, ClockData* clockParam){
+  
+  ClockData* clockData = &(clock->clockData);
+  
+  clockData->second = clockParam->second;
+  clockData->minute = clockParam->minute;
+  clockData->hour = clockParam->hour;
+  clockData->day = clockParam->day;
+  clockData->dayofweek = clockParam->dayofweek;
+  clockData->month = clockParam->month;
+  clockData->year = clockParam->year;
+  
+  clock->writeClock(clock, PCF8563_ALARM_REGISTER);
 }
 
 bool isClockInitialized(Clock* clock) {

@@ -9,6 +9,7 @@
 #define PCF8563_READ_ADDRESS            PCF8563_WRITE_ADDRESS + 1
 
 #define PCF8563_CLOCK_REGISTER          0x02
+#define PCF8563_ALARM_REGISTER          0x09
 
 /**
  * Initializes a clock object with a PCF8563 hardware component.

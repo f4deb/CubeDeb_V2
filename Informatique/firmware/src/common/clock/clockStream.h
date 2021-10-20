@@ -33,14 +33,14 @@ Clock* getClockStream(int index);
  * Update the specific clock hardware with value from the struct.
  * @param clockParam the pointer on clock object
  */
-typedef void WriteClockFunction(Clock* clockParam);
+typedef void WriteClockFunction(Clock* clockParam,int reg);
 
 /**
  * Update the software clock structure from the hardware.
  * @param clockParam the pointer on clock object.
  * @return the pointer on ClockData with refresh data (from hardware)
  */
-typedef ClockData* ReadClockFunction(Clock* clockParam);
+typedef ClockData* ReadClockFunction(Clock* clockParam, int reg);
 
 /**
  * Defines the contract for a clock object.

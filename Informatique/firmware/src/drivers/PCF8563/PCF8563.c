@@ -12,9 +12,10 @@ static uint8_t datatx[8];
  * @private
  * Read the hour and the date from the Pcf8563, and store in the structure.
  * @param clock the clock
+ * @param reg define register as CLOCK or ALARM
  */
-ClockData* _readPcf8563Clock(Clock* clock) {
-    datatx[0] = PCF8563_CLOCK_REGISTER;
+ClockData* _readPcf8563Clock(Clock* clock,int reg) {
+    datatx[0] = reg;
 
     //read the PCF8563
     if (I2C1_WriteRead(clock->address, &datatx[0], 1,  &datarx[0], 7)){
@@ -49,13 +50,14 @@ ClockData* _readPcf8563Clock(Clock* clock) {
  * @private
  * Set the Clock into the Pcf8563.
  * @param clock the new value of clock
+ * @param reg define register as CLOCK or ALARM
  */
-void _writePcf8563Clock(Clock* clock) {
+void _writePcf8563Clock(Clock* clock,int reg) {
 
     ClockData* clockData = &(clock->clockData);
 
     char time[9];
-    time[0] = PCF8563_CLOCK_REGISTER;
+    time[0] = reg;
     time[1] = clockData->second;
     time[2] = clockData->minute;
     time[3]= clockData->hour;

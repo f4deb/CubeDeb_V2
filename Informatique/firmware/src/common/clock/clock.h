@@ -8,6 +8,11 @@
 
 void printClock(OutputStream* outputStream, Clock* clock);
 
+void printClockAlarm(OutputStream* outputStream, Clock* clock);
+
 void setClock(Clock* clock, ClockData* clockParam);
+
+void setClockAlarm(Clock* clock, ClockData* clockParam);
+
 
 #endif
