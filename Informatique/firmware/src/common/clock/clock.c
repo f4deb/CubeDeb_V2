@@ -10,7 +10,11 @@
 #include "../../drivers/PCF8563/PCF8563.h"
 
 void printClock(OutputStream* outputStream, Clock* clock) {
-    ClockData* clockData = &(clock->clockData);
+    //ClockData* clockData = &(clock->clockData);
+    
+    ClockData* clockData = clock->readClock(clock);
+
+    
     appendHex2(outputStream, clockData->hour);
     append(outputStream, ':');
     appendHex2(outputStream, clockData->minute);

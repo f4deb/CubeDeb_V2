@@ -125,9 +125,9 @@ void initMainCube (void) {
     clockParam->month = 8;
     clockParam->year = 32;
     
-    //setClock(getClockStream(CLOCK_CPU), clockData);
+    //setClock(clockCPUStream, clockParam);
         
-    printClock(debugOutputStream,getClockStream(CLOCK_CPU));
+    printClock(debugOutputStream,clockCPUStream);
     
     }
 
