@@ -24,14 +24,12 @@
 #include "../common/timer1/timer1.h"
 #include "../common/uart5/uart5.h"
 #include "../common/sensor/temperature/temperature.h"
-#include "../common/sensor/temperature/temperatureStream.h"
 #include "../common/serial/serial.h"
 #include "../common/serial/serialoutputStream.h"
 
 #include "cubeCommon.h"
 
 #include "../common/clock/clock.h"
-#include "../common/clock/clockStream.h"
 
 #include "../drivers/PCF8563/PCF8563.h"
 #include "../drivers/LM75A/LM75A.h"
@@ -116,6 +114,12 @@ void initMainCube (void) {
     clockCPUStream = initClockPCF8563(getClockStream(CLOCK_CPU),CLOCK_CPU,PCF8563_ADDRESS_0);
     
     
+
+    
+    }
+
+void mainCube (void){
+     
     ClockData* clockParam = &(clockCPUStream->clockData);
     clockParam->second = 0x41;
     clockParam->minute = 0x35;
@@ -127,16 +131,7 @@ void initMainCube (void) {
     
     //setClock(clockCPUStream, clockParam);
         
-    printClock(debugOutputStream,clockCPUStream);
-    
-    }
-
-void mainCube (void){
-     
-    
-    
-
-    if (getIsTmr1Expired() == true) {
+   if (getIsTmr1Expired() == true) {
 
         setIsTmr1Expired(false);
 
@@ -145,21 +140,27 @@ void mainCube (void){
             led2GreenOff();
 
             led2 = false;             
-            
+
+            printClock(debugOutputStream,getClockStream(CLOCK_CPU));
+           
             appendDot(SCREEN_7SEG_CPU,4);
             appendString(SCREEN_7SEG_CPU, readSensorValueAsStringFor7Seg(tempSensorCpuStream));
             appendString(debugOutputStream,"Temperature Interne: "); 
             appendString(debugOutputStream, readSensorValueAsString(tempSensorCpuStream));
             appendString(debugOutputStream, "deg");
-            append(debugOutputStream,LF);     
-
+            append(debugOutputStream,LF);  
+            
             printClock(debugOutputStream,getClockStream(CLOCK_CPU));
-
+            appendString(debugOutputStream, "Distance : ");
+            appendDec(debugOutputStream,readDistance(0));
+            append(debugOutputStream,LF);
         }
         else {
             led2GreenOn();
             led1RedOff();
             led2 = true;
+            
+            printClock(debugOutputStream,getClockStream(CLOCK_CPU));
             
             appendDot(SCREEN_7SEG_CPU,4);
             appendString(SCREEN_7SEG_CPU, readSensorValueAsStringFor7Seg(tempSensorExt1Stream));
@@ -167,9 +168,11 @@ void mainCube (void){
             appendString(debugOutputStream, readSensorValueAsString(tempSensorExt1Stream));            
             appendString(debugOutputStream, "deg");
             append(debugOutputStream,LF);
-
+            
             printClock(debugOutputStream,getClockStream(CLOCK_CPU));
-
+            appendString(debugOutputStream, "Distance : ");
+            appendDec(debugOutputStream,readDistance(0));
+            append(debugOutputStream,LF);
         }
     }            
 }

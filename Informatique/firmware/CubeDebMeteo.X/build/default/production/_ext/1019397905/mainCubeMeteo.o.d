@@ -34,7 +34,6 @@ build/default/production/_ext/1019397905/mainCubeMeteo.o: \
  ../src/config/default/../../cube/../common/IO/outputStream/outputStream.h \
  ../src/config/default/../../cube/../common/sensor/temperature/temperatureStream.h \
  ../src/config/default/../../cube/../common/serial/serial.h \
- ../src/cube/../common/sensor/temperature/temperatureStream.h \
  ../src/cube/../common/serial/serial.h \
  ../src/cube/../common/serial/serialoutputStream.h \
  ../src/cube/../common/serial/../IO/outputStream/outputStream.h \
@@ -42,7 +41,6 @@ build/default/production/_ext/1019397905/mainCubeMeteo.o: \
  ../src/cube/../common/clock/clock.h \
  ../src/cube/../common/clock/clockStream.h \
  ../src/cube/../common/clock/../IO/outputStream/outputStream.h \
- ../src/cube/../common/clock/clockStream.h \
  ../src/cube/../drivers/PCF8563/PCF8563.h \
  ../src/cube/../drivers/PCF8563/../../common/clock/clockStream.h \
  ../src/cube/../drivers/LM75A/LM75A.h \
@@ -122,8 +120,6 @@ build/default/production/_ext/1019397905/mainCubeMeteo.o: \
 
 ../src/config/default/../../cube/../common/serial/serial.h:
 
-../src/cube/../common/sensor/temperature/temperatureStream.h:
-
 ../src/cube/../common/serial/serial.h:
 
 ../src/cube/../common/serial/serialoutputStream.h:
@@ -139,8 +135,6 @@ build/default/production/_ext/1019397905/mainCubeMeteo.o: \
 ../src/cube/../common/clock/clockStream.h:
 
 ../src/cube/../common/clock/../IO/outputStream/outputStream.h:
-
-../src/cube/../common/clock/clockStream.h:
 
 ../src/cube/../drivers/PCF8563/PCF8563.h:
 

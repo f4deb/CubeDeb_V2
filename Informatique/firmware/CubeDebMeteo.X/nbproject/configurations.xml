@@ -40,6 +40,9 @@
           <itemPath>../src/common/led/led.h</itemPath>
         </logicalFolder>
         <logicalFolder name="f10" displayName="sensor" projectFiles="true">
+          <logicalFolder name="f2" displayName="distance" projectFiles="true">
+            <itemPath>../src/common/sensor/distance/HC-SR04.h</itemPath>
+          </logicalFolder>
           <logicalFolder name="f1" displayName="temperature" projectFiles="true">
             <itemPath>../src/common/sensor/temperature/temperatureStream.h</itemPath>
             <itemPath>../src/common/sensor/temperature/temperature.h</itemPath>
@@ -170,6 +173,9 @@
           <itemPath>../src/common/led/led.c</itemPath>
         </logicalFolder>
         <logicalFolder name="f10" displayName="sensor" projectFiles="true">
+          <logicalFolder name="f2" displayName="distance" projectFiles="true">
+            <itemPath>../src/common/sensor/distance/HC-SR04.c</itemPath>
+          </logicalFolder>
           <logicalFolder name="f1" displayName="temperature" projectFiles="true">
             <itemPath>../src/common/sensor/temperature/temperatureStream.c</itemPath>
             <itemPath>../src/common/sensor/temperature/temperature.c</itemPath>

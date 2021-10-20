@@ -10,10 +10,8 @@
 #include "../../drivers/PCF8563/PCF8563.h"
 
 void printClock(OutputStream* outputStream, Clock* clock) {
-    //ClockData* clockData = &(clock->clockData);
-    
+   
     ClockData* clockData = clock->readClock(clock,PCF8563_CLOCK_REGISTER);
-
     
     appendHex2(outputStream, clockData->hour);
     append(outputStream, ':');
@@ -32,11 +30,9 @@ void printClock(OutputStream* outputStream, Clock* clock) {
 }
 
 void printClockAlarm(OutputStream* outputStream, Clock* clock) {
-    //ClockData* clockData = &(clock->clockData);
     
     ClockData* clockData = clock->readClock(clock,PCF8563_ALARM_REGISTER);
 
-    
     appendHex2(outputStream, clockData->hour);
     append(outputStream, ':');
     appendHex2(outputStream, clockData->minute);
