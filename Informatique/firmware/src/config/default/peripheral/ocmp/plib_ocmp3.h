@@ -1,27 +1,17 @@
 /*******************************************************************************
-  SYS CLK Static Functions for Clock System Service
+  Output Compare (OCMP) Peripheral Library Interface Header File
 
   Company:
     Microchip Technology Inc.
 
   File Name:
-    plib_clk.c
+    plib_ocmp3.h
 
   Summary:
-    SYS CLK static function implementations for the Clock System Service.
+    OCMP PLIB Header File
 
   Description:
-    The Clock System Service provides a simple interface to manage the
-    oscillators on Microchip microcontrollers. This file defines the static
-    implementation for the Clock System Service.
-
-  Remarks:
-    Static functions incorporate all system clock configuration settings as
-    determined by the user via the Microchip Harmony Configurator GUI.
-    It provides static version of the routines, eliminating the need for an
-    object ID or object handle.
-
-    Static single-open interfaces also eliminate the need for the open handle.
+    None
 
 *******************************************************************************/
 
@@ -48,59 +38,96 @@
 * THAT YOU HAVE PAID DIRECTLY TO MICROCHIP FOR THIS SOFTWARE.
 *******************************************************************************/
 
-// *****************************************************************************
-// *****************************************************************************
-// Section: Include Files
-// *****************************************************************************
-// *****************************************************************************
+#ifndef _PLIB_OCMP3_H
+#define _PLIB_OCMP3_H
 
+#include <stddef.h>
+#include <stdbool.h>
+#include <stdint.h>
 #include "device.h"
-#include "plib_clk.h"
+#include "plib_ocmp_common.h"
+
+// DOM-IGNORE-BEGIN
+#ifdef __cplusplus  // Provide C++ Compatibility
+    extern "C" {
+#endif
+// DOM-IGNORE-END
+
 
 // *****************************************************************************
+// Section: Interface
 // *****************************************************************************
-// Section: File Scope Functions
 // *****************************************************************************
+
+/*************************** OCMP3 API ****************************************/
 // *****************************************************************************
+/* Function:
+   void OCMP3_Initialize (void)
+
+  Summary:
+    Initialization function OCMP3 peripheral
+
+  Description:
+    This function initializes the OCMP3 peripheral with user input
+	from the configurator.
+
+  Parameters:
+    void
+
+  Returns:
+    void
+*/
+void OCMP3_Initialize (void);
 
 // *****************************************************************************
 /* Function:
-    void CLK_Initialize( void )
+   void OCMP3_Enable (void)
 
   Summary:
-    Initializes hardware and internal data structure of the System Clock.
+    Enable function OCMP3 peripheral
 
   Description:
-    This function initializes the hardware and internal data structure of System
-    Clock Service.
+    This function enables the OCMP3 peripheral
 
-  Remarks:
-    This is configuration values for the static version of the Clock System
-    Service module is determined by the user via the MHC GUI.
+  Parameters:
+    void
 
-    The objective is to eliminate the user's need to be knowledgeable in the
-    function of the 'configuration bits' to configure the system oscillators.
+  Returns:
+    void
 */
+void OCMP3_Enable (void);
 
-void CLK_Initialize( void )
-{
-    /* unlock system for clock configuration */
-    SYSKEY = 0x00000000;
-    SYSKEY = 0xAA996655;
-    SYSKEY = 0x556699AA;
+// *****************************************************************************
+/* Function:
+   void OCMP3_Disable (void)
+
+  Summary:
+    Disable function OCMP3 peripheral
+
+  Description:
+    This function disables the OCMP3 peripheral.
+
+  Parameters:
+    void
+
+  Returns:
+    void
+*/
+void OCMP3_Disable (void);
 
 
-  
+void OCMP3_CompareValueSet (uint16_t value);
 
-    /* Peripheral Module Disable Configuration */
-    PMD1 = 0x1001;
-    PMD2 = 0x3;
-    PMD3 = 0x1fb01fd;
-    PMD4 = 0x1f8;
-    PMD5 = 0x301e3f2d;
-    PMD6 = 0x10830001;
-    PMD7 = 0x500000;
+uint16_t OCMP3_CompareValueGet (void);
 
-    /* Lock system since done with clock configuration */
-    SYSKEY = 0x33333333;
-}
+uint16_t OCMP3_CompareSecondaryValueGet (void);
+void OCMP3_CompareSecondaryValueSet (uint16_t value);
+
+
+// DOM-IGNORE-BEGIN
+#ifdef __cplusplus  // Provide C++ Compatibility
+    }
+#endif
+
+// DOM-IGNORE-END
+#endif // _PLIB_OCMP3_H

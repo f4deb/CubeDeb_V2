@@ -76,7 +76,8 @@ static Clock* clockCPUStream;
 
 
 
-
+uint16_t capturedValue[2];
+volatile uint8_t captureIndex = 0;
 
 
 
@@ -130,6 +131,42 @@ void mainCube (void){
     clockParam->year = 0x21;
     
     //setClock(clockCPUStream, clockParam);
+    
+    
+    
+    appendString(debugOutputStream,"\n\r---------------------------------------------------------"); 
+    appendString(debugOutputStream,"\n\r                    ICAP Demo                 "); 
+    appendString(debugOutputStream,"\n\r---------------------------------------------------------\n\r"); 
+
+
+    ICAP2_Enable();
+    
+    
+    TMR3_Start();
+    TMR2_Start();
+
+        OCMP3_Enable();
+        int i =0;
+        int j =0;
+
+        /* Maintain state machines of all polled MPLAB Harmony modules. */
+        SYS_Tasks ( );
+        while (1){
+        OCMP3_CompareValueSet(i);
+        //OC3RS = i;    
+        i++;
+        CORETIMER_DelayUs(50);
+        }
+        //OC3RS = 500;        
+
+   
+    
+    
+    
+    
+    
+    
+    
         
    if (getIsTmr1Expired() == true) {
 

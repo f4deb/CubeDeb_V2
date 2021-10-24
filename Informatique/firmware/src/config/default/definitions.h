@@ -51,13 +51,16 @@
 #include "peripheral/coretimer/plib_coretimer.h"
 #include "peripheral/i2c/master/plib_i2c1_master.h"
 #include "peripheral/uart/plib_uart2.h"
+#include "peripheral/icap/plib_icap2.h"
 #include "peripheral/tmr/plib_tmr2.h"
+#include "peripheral/tmr/plib_tmr3.h"
 #include "peripheral/clk/plib_clk.h"
 #include "peripheral/gpio/plib_gpio.h"
 #include "peripheral/cache/plib_cache.h"
 #include "peripheral/evic/plib_evic.h"
 #include "peripheral/tmr1/plib_tmr1.h"
 #include "peripheral/uart/plib_uart5.h"
+#include "peripheral/ocmp/plib_ocmp3.h"
 
 // DOM-IGNORE-BEGIN
 #ifdef __cplusplus  // Provide C++ Compatibility

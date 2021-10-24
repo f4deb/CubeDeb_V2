@@ -182,11 +182,17 @@ void SYS_Initialize ( void* data )
 
 	UART2_Initialize();
 
+    ICAP2_Initialize();
+
     TMR2_Initialize();
+
+    TMR3_Initialize();
 
     TMR1_Initialize();
 
 	UART5_Initialize();
+
+    OCMP3_Initialize();
 
 
 

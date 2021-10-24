@@ -1,27 +1,17 @@
 /*******************************************************************************
-  SYS CLK Static Functions for Clock System Service
+  Input Capture (ICAP) Peripheral Library Interface Header File
 
   Company:
     Microchip Technology Inc.
 
   File Name:
-    plib_clk.c
+    plib_icap2.h
 
   Summary:
-    SYS CLK static function implementations for the Clock System Service.
+    ICAP PLIB Header File
 
   Description:
-    The Clock System Service provides a simple interface to manage the
-    oscillators on Microchip microcontrollers. This file defines the static
-    implementation for the Clock System Service.
-
-  Remarks:
-    Static functions incorporate all system clock configuration settings as
-    determined by the user via the Microchip Harmony Configurator GUI.
-    It provides static version of the routines, eliminating the need for an
-    object ID or object handle.
-
-    Static single-open interfaces also eliminate the need for the open handle.
+    None
 
 *******************************************************************************/
 
@@ -48,59 +38,143 @@
 * THAT YOU HAVE PAID DIRECTLY TO MICROCHIP FOR THIS SOFTWARE.
 *******************************************************************************/
 
-// *****************************************************************************
-// *****************************************************************************
-// Section: Include Files
-// *****************************************************************************
-// *****************************************************************************
+#ifndef _PLIB_ICAP2_H
+#define _PLIB_ICAP2_H
 
+#include <stddef.h>
+#include <stdbool.h>
+#include <stdint.h>
 #include "device.h"
-#include "plib_clk.h"
+#include "plib_icap_common.h"
+
+// DOM-IGNORE-BEGIN
+#ifdef __cplusplus  // Provide C++ Compatibility
+    extern "C" {
+#endif
+// DOM-IGNORE-END
+
 
 // *****************************************************************************
+// Section: Interface
 // *****************************************************************************
-// Section: File Scope Functions
 // *****************************************************************************
+
+// *************************** ICAP2 API ***************************************/
 // *****************************************************************************
+/* Function:
+   void ICAP2_Initialize (void)
+
+  Summary:
+    Initialization function ICAP2 peripheral
+
+  Description:
+    This function initializes the ICAP2 peripheral with user input
+    from the configurator.
+
+  Parameters:
+    none
+
+  Returns:
+    void
+*/
+void ICAP2_Initialize (void);
 
 // *****************************************************************************
 /* Function:
-    void CLK_Initialize( void )
+   void ICAP2_Enable (void)
 
   Summary:
-    Initializes hardware and internal data structure of the System Clock.
+    Enable function for the ICAP2 peripheral
 
   Description:
-    This function initializes the hardware and internal data structure of System
-    Clock Service.
+    This function enables the ICAP2 peripheral.
 
-  Remarks:
-    This is configuration values for the static version of the Clock System
-    Service module is determined by the user via the MHC GUI.
+  Parameters:
+    none
 
-    The objective is to eliminate the user's need to be knowledgeable in the
-    function of the 'configuration bits' to configure the system oscillators.
+  Returns:
+    void
 */
+void ICAP2_Enable (void);
 
-void CLK_Initialize( void )
-{
-    /* unlock system for clock configuration */
-    SYSKEY = 0x00000000;
-    SYSKEY = 0xAA996655;
-    SYSKEY = 0x556699AA;
+// *****************************************************************************
+/* Function:
+   void ICAP2_Disable (void)
+
+  Summary:
+    Disable function for the ICAP2 peripheral
+
+  Description:
+    This function disables the ICAP2 peripheral.
+
+  Parameters:
+    none
+
+  Returns:
+    void
+*/
+void ICAP2_Disable (void);
+
+// *****************************************************************************
+/* Function:
+   uint16_t ICAP2_CaptureBufferRead (void)
+
+  Summary:
+    Read buffer function ICAP2 peripheral
+
+  Description:
+    This function will return the value contained in the ICAP2 peripheral
+    buffer.
+
+  Parameters:
+    none
+
+  Returns:
+    uint16_t
+*/
+uint16_t ICAP2_CaptureBufferRead (void);
+
+// *****************************************************************************
+/* Function:
+   void ICAP2_CaptureStatusGet (void)
+
+  Summary:
+    ICAP2 status
+
+  Description:
+    Returns the current state overflow or buffer not empty flags
+
+  Parameters:
+    None
+
+  Returns:
+    bool
+*/
+bool ICAP2_CaptureStatusGet (void);
 
 
-  
+// *****************************************************************************
+/* Function:
+   void ICAP2_ErrorStatusGet (void)
 
-    /* Peripheral Module Disable Configuration */
-    PMD1 = 0x1001;
-    PMD2 = 0x3;
-    PMD3 = 0x1fb01fd;
-    PMD4 = 0x1f8;
-    PMD5 = 0x301e3f2d;
-    PMD6 = 0x10830001;
-    PMD7 = 0x500000;
+  Summary:
+    ICAP2 status
 
-    /* Lock system since done with clock configuration */
-    SYSKEY = 0x33333333;
-}
+  Description:
+    Returns the current state of overflow
+
+  Parameters:
+    None
+
+  Returns:
+    bool
+*/
+bool ICAP2_ErrorStatusGet (void);
+
+// DOM-IGNORE-BEGIN
+#ifdef __cplusplus  // Provide C++ Compatibility
+    }
+#endif
+
+// DOM-IGNORE-END
+#endif // _PLIB_ICAP2_H
