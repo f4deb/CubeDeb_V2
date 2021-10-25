@@ -3,8 +3,8 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/media/f4deb/ROBOT/ELECTRONIQUE/CubDebV2/Informatique/firmware/src/mainCube.c</file>
             <file>file:/media/f4deb/ROBOT/ELECTRONIQUE/CubDebV2/Informatique/firmware/src/cube/mainCubeMeteo.c</file>
+            <file>file:/media/f4deb/ROBOT/ELECTRONIQUE/CubDebV2/Informatique/firmware/src/config/default/peripheral/ocmp/plib_ocmp3.c</file>
         </group>
     </open-files>
 </project-private>
