@@ -31,7 +31,7 @@ children:
     - type: Values
       children:
       - type: User
-        attributes: {value: '5'}
+        attributes: {value: '6'}
   - type: KeyValueSet
     attributes: {id: OCMP_OCxCON_OCTSEL}
     children:
@@ -51,7 +51,7 @@ children:
     - type: Values
       children:
       - type: User
-        attributes: {value: '5000'}
+        attributes: {value: '62000'}
   - type: Long
     attributes: {id: OCMP_OCxRS}
     children:
@@ -61,14 +61,10 @@ children:
         attributes: {id: max}
         children:
         - {type: Value, value: '65535'}
-      - type: Boolean
-        attributes: {id: visible}
-        children:
-        - {type: Value, value: 'true'}
     - type: Values
       children:
       - type: User
-        attributes: {value: '1001'}
+        attributes: {value: '11001'}
   - type: Comment
     attributes: {id: OCMP_PERIOD_COMMENT}
     children:
@@ -84,6 +80,6 @@ children:
     - type: Values
       children:
       - type: Dynamic
-        attributes: {id: ocmp3, value: '13'}
+        attributes: {id: ocmp3, value: '14'}
 - type: ElementPosition
-  attributes: {x: '396', y: '414', id: ocmp3}
+  attributes: {x: '293', y: '446', id: ocmp3}

@@ -1,6 +1,6 @@
 format_version: v1.0
 type: UniqueComponent
-attributes: {id: tmr3}
+attributes: {id: tmr4}
 children:
 - type: Symbols
   children:
@@ -10,35 +10,50 @@ children:
     - type: Values
       children:
       - type: Dynamic
-        attributes: {id: tmr3, value: '80'}
+        attributes: {id: tmr4, value: '8'}
+  - type: Comment
+    attributes: {id: TIMER_32BIT_COMMENT}
+    children:
+    - type: Attributes
+      children:
+      - type: Boolean
+        attributes: {id: visible}
+        children:
+        - {type: Value, value: 'true'}
+  - type: KeyValueSet
+    attributes: {id: TIMER_32BIT_MODE_SEL}
+    children:
+    - type: Values
+      children:
+      - type: User
+        attributes: {value: '0'}
   - type: Integer
     attributes: {id: TIMER_CLOCK_FREQ}
     children:
     - type: Values
       children:
       - type: Dynamic
-        attributes: {id: tmr3, value: '3125000'}
+        attributes: {id: tmr4, value: '100000000'}
   - type: Long
     attributes: {id: TIMER_PERIOD}
     children:
+    - type: Attributes
+      children:
+      - type: Long
+        attributes: {id: max}
+        children:
+        - {type: Value, value: '4294967295'}
     - type: Values
       children:
       - type: Dynamic
-        attributes: {id: tmr3, value: '62498'}
+        attributes: {id: tmr4, value: '9'}
   - type: KeyValueSet
     attributes: {id: TIMER_PRE_SCALER}
     children:
     - type: Values
       children:
       - type: User
-        attributes: {value: '2'}
-  - type: Boolean
-    attributes: {id: TIMER_SLAVE}
-    children:
-    - type: Values
-      children:
-      - type: Dynamic
-        attributes: {id: tmr3, value: 'false'}
+        attributes: {value: '7'}
   - type: Float
     attributes: {id: TIMER_TIME_PERIOD_MS}
     children:
@@ -47,27 +62,32 @@ children:
       - type: Float
         attributes: {id: max}
         children:
-        - {type: Value, value: '20.97184'}
+        - {type: Value, value: '4.2949672E7'}
     - type: Values
       children:
       - type: User
-        attributes: {value: '20.0'}
+        attributes: {value: '0.1'}
   - type: Combo
     attributes: {id: TIMER_UNIT}
     children:
     - type: Values
       children:
       - type: User
-        attributes: {value: millisecond}
-  - type: File
-    attributes: {id: TMR_HEADER1}
+        attributes: {value: microsecond}
+  - type: String
+    attributes: {id: TMR_IEC_REG}
     children:
-    - type: Attributes
+    - type: Values
       children:
-      - type: Boolean
-        attributes: {id: enabled}
-        children:
-        - {type: Value, value: 'true'}
+      - type: Dynamic
+        attributes: {id: tmr4, value: IEC0}
+  - type: String
+    attributes: {id: TMR_IFS_REG}
+    children:
+    - type: Values
+      children:
+      - type: Dynamic
+        attributes: {id: tmr4, value: IFS0}
   - type: Boolean
     attributes: {id: TMR_INTERRUPT_MODE}
     children:
@@ -76,11 +96,11 @@ children:
       - type: Boolean
         attributes: {id: visible}
         children:
-        - {type: Value, value: 'true'}
+        - {type: Value, value: 'false'}
     - type: Values
       children:
       - type: Dynamic
-        attributes: {id: tmr3, value: 'true'}
+        attributes: {id: tmr4, value: 'false'}
       - type: User
         attributes: {value: 'false'}
   - type: Integer
@@ -89,22 +109,6 @@ children:
     - type: Values
       children:
       - type: Dynamic
-        attributes: {id: tmr3, value: '32'}
-  - type: Boolean
-    attributes: {id: TMR_SLAVE_INTERRUPT_MODE}
-    children:
-    - type: Values
-      children:
-      - type: Dynamic
-        attributes: {id: tmr3, value: 'false'}
-  - type: File
-    attributes: {id: TMR_SOURCE}
-    children:
-    - type: Attributes
-      children:
-      - type: Boolean
-        attributes: {id: enabled}
-        children:
-        - {type: Value, value: 'true'}
+        attributes: {id: tmr4, value: '1'}
 - type: ElementPosition
-  attributes: {x: '292', y: '492', id: tmr3}
+  attributes: {x: '615', y: '493', id: tmr4}

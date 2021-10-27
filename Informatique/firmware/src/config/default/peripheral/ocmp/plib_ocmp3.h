@@ -116,7 +116,6 @@ void OCMP3_Enable (void);
 void OCMP3_Disable (void);
 
 
-void OCMP3_CompareValueSet (uint16_t value);
 
 uint16_t OCMP3_CompareValueGet (void);
 

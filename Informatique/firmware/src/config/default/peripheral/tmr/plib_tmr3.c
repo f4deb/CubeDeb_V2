@@ -62,17 +62,17 @@ void TMR3_Initialize(void)
 
     /*
     SIDL = 0
-    TCKPS =0
+    TCKPS =5
     T32   = 0
     TCS = 0
     */
-    T3CONSET = 0x0;
+    T3CONSET = 0x50;
 
     /* Clear counter */
     TMR3 = 0x0;
 
     /*Set period */
-    PR3 = 65535U;
+    PR3 = 62498U;
 
 
 }
@@ -107,7 +107,7 @@ uint16_t TMR3_CounterGet(void)
 
 uint32_t TMR3_FrequencyGet(void)
 {
-    return (100000000);
+    return (3125000);
 }
 
 

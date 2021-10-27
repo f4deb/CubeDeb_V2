@@ -1,20 +1,23 @@
 /*******************************************************************************
-  Input Capture (ICAP2) Peripheral Library (PLIB)
+  TMR Peripheral Library Interface Source File
 
-  Company:
+  Company
     Microchip Technology Inc.
 
-  File Name:
-    plib_icap2.c
+  File Name
+    plib_tmr4.c
 
-  Summary:
-    ICAP2 Source File
+  Summary
+    TMR4 peripheral library source file.
 
-  Description:
-    None
+  Description
+    This file implements the interface to the TMR peripheral library.  This
+    library provides access to and control of the associated peripheral
+    instance.
 
 *******************************************************************************/
 
+// DOM-IGNORE-BEGIN
 /*******************************************************************************
 * Copyright (C) 2019 Microchip Technology Inc. and its subsidiaries.
 *
@@ -37,62 +40,74 @@
 * ANY WAY RELATED TO THIS SOFTWARE WILL NOT EXCEED THE AMOUNT OF FEES, IF ANY,
 * THAT YOU HAVE PAID DIRECTLY TO MICROCHIP FOR THIS SOFTWARE.
 *******************************************************************************/
-#include "plib_icap2.h"
+// DOM-IGNORE-END
+
 
 // *****************************************************************************
-
 // *****************************************************************************
-// Section: ICAP2 Implementation
+// Section: Included Files
 // *****************************************************************************
 // *****************************************************************************
 
+#include "device.h"
+#include "plib_tmr4.h"
 
-void ICAP2_Initialize (void)
+
+
+
+void TMR4_Initialize(void)
 {
-    /*Setup IC2CON    */
-    /*ICM     = 2        */
-    /*ICI     = 0        */
-    /*ICTMR = 1*/
-    /*C32     = 1        */
-    /*FEDGE = 1        */
-    /*SIDL     = false    */
+    /* Disable Timer */
+    T4CONCLR = _T4CON_ON_MASK;
 
-    IC2CON = 0x382;
+    /*
+    SIDL = 0
+    TCKPS =0
+    T32   = 1
+    TCS = 0
+    */
+    T4CONSET = 0x8;
 
-    CFGCON |= 0x00020000;
+    /* Clear counter */
+    TMR4 = 0x0;
+
+    /*Set period */
+    PR4 = 9U;
+
 
 }
 
 
-void ICAP2_Enable (void)
+void TMR4_Start(void)
 {
-    IC2CONSET = _IC2CON_ON_MASK;
+    T4CONSET = _T4CON_ON_MASK;
 }
 
 
-void ICAP2_Disable (void)
+void TMR4_Stop (void)
 {
-    IC2CONCLR = _IC2CON_ON_MASK;
+    T4CONCLR = _T4CON_ON_MASK;
 }
 
-uint32_t ICAP2_CaptureBufferRead (void)
+void TMR4_PeriodSet(uint32_t period)
 {
-    return IC2BUF;
+    PR4  = period;
+}
+
+uint32_t TMR4_PeriodGet(void)
+{
+    return PR4;
+}
+
+uint32_t TMR4_CounterGet(void)
+{
+    return (TMR4);
 }
 
 
-
-
-bool ICAP2_CaptureStatusGet (void)
+uint32_t TMR4_FrequencyGet(void)
 {
-    bool status = false;
-    status = ((IC2CON >> ICAP_STATUS_BUFNOTEMPTY) & 0x1);
-    return status;
+    return (100000000);
 }
 
-bool ICAP2_ErrorStatusGet (void)
-{
-    bool status = false;
-    status = ((IC2CON >> ICAP_STATUS_OVERFLOW) & 0x1);
-    return status;
-}
+

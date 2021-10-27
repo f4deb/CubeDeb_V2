@@ -76,7 +76,7 @@ static Clock* clockCPUStream;
 
 
 
-uint16_t capturedValue[2];
+uint32_t capturedValue[2];
 volatile uint8_t captureIndex = 0;
 
 
@@ -113,8 +113,21 @@ void initMainCube (void) {
     debugOutputStream = initSerialOutputStream(getSerialOutputStream(SERIAL_PORT_5),SERIAL_PORT_5);
     
     clockCPUStream = initClockPCF8563(getClockStream(CLOCK_CPU),CLOCK_CPU,PCF8563_ADDRESS_0);
+
+    
+    appendString(debugOutputStream,"\n\r---------------------------------------------------------"); 
+    appendString(debugOutputStream,"\n\r                    ICAP Demo                 "); 
+    appendString(debugOutputStream,"\n\r---------------------------------------------------------\n\r"); 
     
     
+    ICAP2_Enable();
+
+    TMR4_Start();
+
+    TMR3_Start();
+    TMR2_Start();
+
+    OCMP3_Enable();
 
     
     }
@@ -131,41 +144,14 @@ void mainCube (void){
     clockParam->year = 0x21;
     
     //setClock(clockCPUStream, clockParam);
-    
-    
-    
-    appendString(debugOutputStream,"\n\r---------------------------------------------------------"); 
-    appendString(debugOutputStream,"\n\r                    ICAP Demo                 "); 
-    appendString(debugOutputStream,"\n\r---------------------------------------------------------\n\r"); 
 
 
-    ICAP2_Enable();
-    
-    
-    TMR3_Start();
-    TMR2_Start();
+    OC3RS = 62499/2; //62489 = 320ns     62488 = 640ns     62490/2 = 10ms 
 
-        OCMP3_Enable();
-        int i =0;
-        int j =0;
 
-        /* Maintain state machines of all polled MPLAB Harmony modules. */
-        SYS_Tasks ( );
-        while (1){
-        OCMP3_CompareValueSet(i);
-        //OC3RS = i;    
-        i++;
-        CORETIMER_DelayUs(50);
-        }
-        //OC3RS = 500;        
 
-   
-    
-    
-    
-    
-    
-    
+
+
     
         
    if (getIsTmr1Expired() == true) {
@@ -191,6 +177,7 @@ void mainCube (void){
             appendString(debugOutputStream, "Distance : ");
             appendDec(debugOutputStream,readDistance(0));
             append(debugOutputStream,LF);
+            mesure_time();
         }
         else {
             led2GreenOn();
@@ -210,6 +197,34 @@ void mainCube (void){
             appendString(debugOutputStream, "Distance : ");
             appendDec(debugOutputStream,readDistance(0));
             append(debugOutputStream,LF);
+            mesure_time();
         }
     }            
+}
+
+void mesure_time(void){
+ 
+            
+            
+
+        while(!ICAP2_CaptureStatusGet());
+
+        capturedValue[captureIndex++] = ICAP2_CaptureBufferRead();
+
+        if ( captureIndex > 0){
+            uint16_t value = (capturedValue[0] - capturedValue[1]);
+            appendDec(debugOutputStream,capturedValue[1]); 
+            appendLF(debugOutputStream);
+            appendDec(debugOutputStream,capturedValue[2]); 
+            appendLF(debugOutputStream);
+
+            appendHex4(debugOutputStream,TMR4_CounterGet()); 
+            appendLF(debugOutputStream);
+
+            appendDec(debugOutputStream,ICAP2_CaptureBufferRead()); 
+            appendLF(debugOutputStream);
+
+
+            captureIndex = 0;
+        }
 }

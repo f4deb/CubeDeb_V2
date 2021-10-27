@@ -96,9 +96,9 @@
 #define UART0_TX_Get()               ((PORTD >> 11) & 0x1)
 #define UART0_TX_PIN                  GPIO_PIN_RD11
 
-/*** Macros for INPUT_COMPARE_2 pin ***/
-#define INPUT_COMPARE_2_Get()               ((PORTD >> 12) & 0x1)
-#define INPUT_COMPARE_2_PIN                  GPIO_PIN_RD12
+/*** Macros for INPUT_CAPTURE_2 pin ***/
+#define INPUT_CAPTURE_2_Get()               ((PORTD >> 12) & 0x1)
+#define INPUT_CAPTURE_2_PIN                  GPIO_PIN_RD12
 
 /*** Macros for UART1_RX pin ***/
 #define UART1_RX_Get()               ((PORTD >> 4) & 0x1)

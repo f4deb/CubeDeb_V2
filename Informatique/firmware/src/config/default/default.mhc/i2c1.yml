@@ -82,4 +82,4 @@ children:
       - type: User
         attributes: {value: 'false'}
 - type: ElementPosition
-  attributes: {x: '17', y: '323', id: i2c1}
+  attributes: {x: '12', y: '495', id: i2c1}

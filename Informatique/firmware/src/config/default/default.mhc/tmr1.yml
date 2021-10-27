@@ -91,4 +91,4 @@ children:
       - type: Dynamic
         attributes: {id: tmr1, value: '8'}
 - type: ElementPosition
-  attributes: {x: '347', y: '16', id: tmr1}
+  attributes: {x: '522', y: '15', id: tmr1}
