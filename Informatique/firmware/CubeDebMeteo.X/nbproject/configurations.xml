@@ -90,7 +90,7 @@
             </logicalFolder>
             <logicalFolder name="f10" displayName="icap" projectFiles="true">
               <itemPath>../src/config/default/peripheral/icap/plib_icap_common.h</itemPath>
-              <itemPath>../src/config/default/peripheral/icap/plib_icap2.h</itemPath>
+              <itemPath>../src/config/default/peripheral/icap/plib_icap1.h</itemPath>
             </logicalFolder>
             <logicalFolder name="f11" displayName="ocmp" projectFiles="true">
               <itemPath>../src/config/default/peripheral/ocmp/plib_ocmp_common.h</itemPath>
@@ -99,8 +99,6 @@
             <logicalFolder name="f8" displayName="tmr" projectFiles="true">
               <itemPath>../src/config/default/peripheral/tmr/plib_tmr_common.h</itemPath>
               <itemPath>../src/config/default/peripheral/tmr/plib_tmr2.h</itemPath>
-              <itemPath>../src/config/default/peripheral/tmr/plib_tmr3.h</itemPath>
-              <itemPath>../src/config/default/peripheral/tmr/plib_tmr4.h</itemPath>
             </logicalFolder>
             <logicalFolder name="f6" displayName="tmr1" projectFiles="true">
               <itemPath>../src/config/default/peripheral/tmr1/plib_tmr1_common.h</itemPath>
@@ -231,15 +229,13 @@
               </logicalFolder>
             </logicalFolder>
             <logicalFolder name="f10" displayName="icap" projectFiles="true">
-              <itemPath>../src/config/default/peripheral/icap/plib_icap2.c</itemPath>
+              <itemPath>../src/config/default/peripheral/icap/plib_icap1.c</itemPath>
             </logicalFolder>
             <logicalFolder name="f11" displayName="ocmp" projectFiles="true">
               <itemPath>../src/config/default/peripheral/ocmp/plib_ocmp3.c</itemPath>
             </logicalFolder>
             <logicalFolder name="f8" displayName="tmr" projectFiles="true">
               <itemPath>../src/config/default/peripheral/tmr/plib_tmr2.c</itemPath>
-              <itemPath>../src/config/default/peripheral/tmr/plib_tmr3.c</itemPath>
-              <itemPath>../src/config/default/peripheral/tmr/plib_tmr4.c</itemPath>
             </logicalFolder>
             <logicalFolder name="f6" displayName="tmr1" projectFiles="true">
               <itemPath>../src/config/default/peripheral/tmr1/plib_tmr1.c</itemPath>
@@ -286,14 +282,13 @@
         <itemPath>../src/config/default/default.mhc/dfp.yml</itemPath>
         <itemPath>../src/config/default/default.mhc/GraphSettings.yml</itemPath>
         <itemPath>../src/config/default/default.mhc/i2c1.yml</itemPath>
-        <itemPath>../src/config/default/default.mhc/icap2.yml</itemPath>
+        <itemPath>../src/config/default/default.mhc/icap1.yml</itemPath>
         <itemPath>../src/config/default/default.mhc/ocmp3.yml</itemPath>
         <itemPath>../src/config/default/default.mhc/project.yml</itemPath>
         <itemPath>../src/config/default/default.mhc/settings.yml</itemPath>
         <itemPath>../src/config/default/default.mhc/tmr1.yml</itemPath>
         <itemPath>../src/config/default/default.mhc/tmr2.yml</itemPath>
         <itemPath>../src/config/default/default.mhc/tmr3.yml</itemPath>
-        <itemPath>../src/config/default/default.mhc/tmr4.yml</itemPath>
         <itemPath>../src/config/default/default.mhc/uart2.yml</itemPath>
         <itemPath>../src/config/default/default.mhc/uart5.yml</itemPath>
       </logicalFolder>

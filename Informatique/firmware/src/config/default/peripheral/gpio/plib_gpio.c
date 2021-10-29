@@ -65,6 +65,7 @@ void GPIO_Initialize ( void )
     ANSELBCLR = 0x23; /* Digital Mode Enable */
 
     /* PORTC Initialization */
+    ANSELCCLR = 0x4; /* Digital Mode Enable */
 
     /* PORTD Initialization */
 
@@ -87,6 +88,7 @@ void GPIO_Initialize ( void )
     U5RXR = 3;
     U2RXR = 4;
     IC2R = 10;
+    IC1R = 12;
 
     /* PPS Output Remapping */
     RPD11R = 3;

@@ -1,20 +1,17 @@
 /*******************************************************************************
-  Data Type definition of Timer PLIB
+  Input Capture (ICAP) Peripheral Library Interface Header File
 
   Company:
     Microchip Technology Inc.
 
   File Name:
-    plib_tmr2.h
+    plib_icap1.h
 
   Summary:
-    Data Type definition of the Timer Peripheral Interface Plib.
+    ICAP PLIB Header File
 
   Description:
-    This file defines the Data Types for the Timer Plib.
-
-  Remarks:
-    None.
+    None
 
 *******************************************************************************/
 
@@ -41,56 +38,152 @@
 * THAT YOU HAVE PAID DIRECTLY TO MICROCHIP FOR THIS SOFTWARE.
 *******************************************************************************/
 
-#ifndef PLIB_TMR2_H
-#define PLIB_TMR2_H
+#ifndef _PLIB_ICAP1_H
+#define _PLIB_ICAP1_H
 
 #include <stddef.h>
+#include <stdbool.h>
 #include <stdint.h>
 #include "device.h"
-#include "plib_tmr_common.h"
+#include "plib_icap_common.h"
 
 // DOM-IGNORE-BEGIN
 #ifdef __cplusplus  // Provide C++ Compatibility
-
     extern "C" {
-
 #endif
 // DOM-IGNORE-END
 
-// *****************************************************************************
-// *****************************************************************************
-// Section: Data Types
-// *****************************************************************************
-// *****************************************************************************
 
 // *****************************************************************************
-// *****************************************************************************
-// Section: Interface Routines
+// Section: Interface
 // *****************************************************************************
 // *****************************************************************************
 
+// *************************** ICAP1 API ***************************************/
+// *****************************************************************************
+/* Function:
+   void ICAP1_Initialize (void)
+
+  Summary:
+    Initialization function ICAP1 peripheral
+
+  Description:
+    This function initializes the ICAP1 peripheral with user input
+    from the configurator.
+
+  Parameters:
+    none
+
+  Returns:
+    void
+*/
+void ICAP1_Initialize (void);
 
 // *****************************************************************************
-void TMR2_Initialize(void);
+/* Function:
+   void ICAP1_Enable (void)
 
-void TMR2_Start(void);
+  Summary:
+    Enable function for the ICAP1 peripheral
 
-void TMR2_Stop(void);
+  Description:
+    This function enables the ICAP1 peripheral.
 
-void TMR2_PeriodSet(uint32_t);
+  Parameters:
+    none
 
-uint32_t TMR2_PeriodGet(void);
+  Returns:
+    void
+*/
+void ICAP1_Enable (void);
 
-uint32_t TMR2_CounterGet(void);
+// *****************************************************************************
+/* Function:
+   void ICAP1_Disable (void)
 
-uint32_t TMR2_FrequencyGet(void);
+  Summary:
+    Disable function for the ICAP1 peripheral
 
+  Description:
+    This function disables the ICAP1 peripheral.
+
+  Parameters:
+    none
+
+  Returns:
+    void
+*/
+void ICAP1_Disable (void);
+
+// *****************************************************************************
+/* Function:
+   uint32_t ICAP1_CaptureBufferRead (void)
+
+  Summary:
+    Read buffer function ICAP1 peripheral
+
+  Description:
+    This function will return the value contained in the ICAP1 peripheral
+    buffer.
+
+  Parameters:
+    none
+
+  Returns:
+    uint32_t
+*/
+uint32_t ICAP1_CaptureBufferRead (void);
+
+
+// *****************************************************************************
+/* Function:
+  void ICAP1_CallbackRegister( ICAP_CALLBACK callback, uintptr_t context )
+
+  Summary:
+    Sets the callback function for a icap interrupt.
+
+  Description:
+    This function sets the callback function that will be called when the ICAP
+    conditions are met.
+
+  Precondition:
+    None.
+
+  Parameters:
+    *callback   - a pointer to the function to be called when value is reached.
+                  Use NULL to Un Register the compare callback
+
+    context     - a pointer to user defined data to be used when the callback
+                  function is called. NULL can be passed in if no data needed.
+
+  Returns:
+    void
+*/
+void ICAP1_CallbackRegister(ICAP_CALLBACK callback, uintptr_t context);
+
+
+// *****************************************************************************
+/* Function:
+   void ICAP1_ErrorStatusGet (void)
+
+  Summary:
+    ICAP1 status
+
+  Description:
+    Returns the current state of overflow
+
+  Parameters:
+    None
+
+  Returns:
+    bool
+*/
+bool ICAP1_ErrorStatusGet (void);
 
 // DOM-IGNORE-BEGIN
 #ifdef __cplusplus  // Provide C++ Compatibility
-
     }
 #endif
-// DOM-IGNORE-END
 
-#endif /* PLIB_TMR2_H */
+// DOM-IGNORE-END
+#endif // _PLIB_ICAP1_H

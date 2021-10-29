@@ -1,14 +1,14 @@
 /*******************************************************************************
-  Output Compare OCMP3 Peripheral Library (PLIB)
+  Input Capture (ICAP1) Peripheral Library (PLIB)
 
   Company:
     Microchip Technology Inc.
 
   File Name:
-    plib_ocmp3.c
+    plib_icap1.c
 
   Summary:
-    OCMP3 Source File
+    ICAP1 Source File
 
   Description:
     None
@@ -37,58 +37,72 @@
 * ANY WAY RELATED TO THIS SOFTWARE WILL NOT EXCEED THE AMOUNT OF FEES, IF ANY,
 * THAT YOU HAVE PAID DIRECTLY TO MICROCHIP FOR THIS SOFTWARE.
 *******************************************************************************/
-#include "plib_ocmp3.h"
+#include "plib_icap1.h"
 
+ICAP_OBJECT icap1Obj;
 // *****************************************************************************
 
 // *****************************************************************************
-// Section: OCMP3 Implementation
+// Section: ICAP1 Implementation
 // *****************************************************************************
 // *****************************************************************************
 
-// *****************************************************************************
 
-
-void OCMP3_Initialize (void)
+void ICAP1_Initialize (void)
 {
-    /*Setup OC3CON        */
-    /*OCM         = 6        */
-    /*OCTSEL       = 0        */
-    /*OC32         = 1        */
-    /*SIDL         = false    */
+    /*Setup IC1CON    */
+    /*ICM     = 1        */
+    /*ICI     = 0        */
+    /*ICTMR = 1*/
+    /*C32     = 1        */
+    /*FEDGE = 0        */
+    /*SIDL     = false    */
 
-    OC3CON = 0x26;
+    IC1CON = 0x181;
 
-    OC3R = 1000;
-    OC3RS = 1000;
 
-}
-
-void OCMP3_Enable (void)
-{
-    OC3CONSET = _OC3CON_ON_MASK;
-}
-
-void OCMP3_Disable (void)
-{
-    OC3CONCLR = _OC3CON_ON_MASK;
+        IEC0SET = _IEC0_IC1IE_MASK;
 }
 
 
-
-uint32_t OCMP3_CompareValueGet (void)
+void ICAP1_Enable (void)
 {
-    return OC3R;
-}
-
-void OCMP3_CompareSecondaryValueSet (uint32_t value)
-{
-    OC3RS = value;
-}
-
-uint32_t OCMP3_CompareSecondaryValueGet (void)
-{
-    return OC3RS;
+    IC1CONSET = _IC1CON_ON_MASK;
 }
 
 
+void ICAP1_Disable (void)
+{
+    IC1CONCLR = _IC1CON_ON_MASK;
+}
+
+uint32_t ICAP1_CaptureBufferRead (void)
+{
+    return IC1BUF;
+}
+
+
+
+void ICAP1_CallbackRegister(ICAP_CALLBACK callback, uintptr_t context)
+{
+    icap1Obj.callback = callback;
+    icap1Obj.context = context;
+}
+
+void INPUT_CAPTURE_1_InterruptHandler(void)
+{
+    if( (icap1Obj.callback != NULL))
+    {
+        icap1Obj.callback(icap1Obj.context);
+    }
+    IFS0CLR = _IFS0_IC1IF_MASK;    //Clear IRQ flag
+
+}
+
+
+bool ICAP1_ErrorStatusGet (void)
+{
+    bool status = false;
+    status = ((IC1CON >> ICAP_STATUS_OVERFLOW) & 0x1);
+    return status;
+}

@@ -1,8 +1,8 @@
 #ifndef _LED_H    
 #define _LED_H
 
-#define LED1RED true
-#define LED1GREEN false
+#define LED1RED false
+#define LED1GREEN true
 #define LED2RED false
 #define LED2GREEN true
 

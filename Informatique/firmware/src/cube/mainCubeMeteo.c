@@ -76,8 +76,25 @@ static Clock* clockCPUStream;
 
 
 
-uint32_t capturedValue[2];
+static uint32_t capturedValue[100];
 volatile uint8_t captureIndex = 0;
+
+
+void MyIcap1Callback(uintptr_t context){
+    
+//    if (captureIndex == 10) captureIndex=0;
+    
+    led1GreenToggle();
+//    led2RedOff();
+
+    capturedValue[captureIndex] = TMR3;
+    capturedValue[captureIndex++] = ICAP1_CaptureBufferRead();
+
+    //captureIndex++;
+    
+
+    }
+
 
 
 
@@ -120,11 +137,10 @@ void initMainCube (void) {
     appendString(debugOutputStream,"\n\r---------------------------------------------------------\n\r"); 
     
     
-    ICAP2_Enable();
+    ICAP1_Enable();
+    ICAP1_CallbackRegister(MyIcap1Callback, NULL);
 
-    TMR4_Start();
 
-    TMR3_Start();
     TMR2_Start();
 
     OCMP3_Enable();
@@ -145,12 +161,15 @@ void mainCube (void){
     
     //setClock(clockCPUStream, clockParam);
 
-
-    OC3RS = 62499/2; //62489 = 320ns     62488 = 640ns     62490/2 = 10ms 
-
-
+    
+    OC3RS = PR2/3; //high level 1 = 320ns     2 = 640ns      
 
 
+
+    if (captureIndex == 6) {
+                    mesure_time();
+         captureIndex = 0;           
+    }
 
     
         
@@ -159,14 +178,14 @@ void mainCube (void){
         setIsTmr1Expired(false);
 
         if (led2 == true ) {
-            led1RedOn();
+            //led1RedOn();
             led2GreenOff();
 
             led2 = false;             
 
-            printClock(debugOutputStream,getClockStream(CLOCK_CPU));
+            //printClock(debugOutputStream,getClockStream(CLOCK_CPU));
            
-            appendDot(SCREEN_7SEG_CPU,4);
+            /*appendDot(SCREEN_7SEG_CPU,4);
             appendString(SCREEN_7SEG_CPU, readSensorValueAsStringFor7Seg(tempSensorCpuStream));
             appendString(debugOutputStream,"Temperature Interne: "); 
             appendString(debugOutputStream, readSensorValueAsString(tempSensorCpuStream));
@@ -176,16 +195,17 @@ void mainCube (void){
             printClock(debugOutputStream,getClockStream(CLOCK_CPU));
             appendString(debugOutputStream, "Distance : ");
             appendDec(debugOutputStream,readDistance(0));
-            append(debugOutputStream,LF);
+            append(debugOutputStream,LF);*/
             mesure_time();
+            //ICAP1_Enable();
         }
         else {
             led2GreenOn();
             led1RedOff();
             led2 = true;
             
-            printClock(debugOutputStream,getClockStream(CLOCK_CPU));
-            
+           // printClock(debugOutputStream,getClockStream(CLOCK_CPU));
+            /*
             appendDot(SCREEN_7SEG_CPU,4);
             appendString(SCREEN_7SEG_CPU, readSensorValueAsStringFor7Seg(tempSensorExt1Stream));
             appendString(debugOutputStream,"Temperature Externe: ");
@@ -197,34 +217,44 @@ void mainCube (void){
             appendString(debugOutputStream, "Distance : ");
             appendDec(debugOutputStream,readDistance(0));
             append(debugOutputStream,LF);
+             * */
             mesure_time();
+            //
         }
     }            
 }
 
 void mesure_time(void){
- 
-            
-            
 
-        while(!ICAP2_CaptureStatusGet());
+    
 
-        capturedValue[captureIndex++] = ICAP2_CaptureBufferRead();
 
-        if ( captureIndex > 0){
-            uint16_t value = (capturedValue[0] - capturedValue[1]);
+            printClock(debugOutputStream,getClockStream(CLOCK_CPU));                                              
+            appendDec(debugOutputStream,capturedValue[0]); 
+            appendLF(debugOutputStream);
+
+            printClock(debugOutputStream,getClockStream(CLOCK_CPU));       
             appendDec(debugOutputStream,capturedValue[1]); 
             appendLF(debugOutputStream);
+
+            printClock(debugOutputStream,getClockStream(CLOCK_CPU));       
             appendDec(debugOutputStream,capturedValue[2]); 
             appendLF(debugOutputStream);
-
-            appendHex4(debugOutputStream,TMR4_CounterGet()); 
+            
+            printClock(debugOutputStream,getClockStream(CLOCK_CPU));                                              
+            appendDec(debugOutputStream,capturedValue[3]); 
             appendLF(debugOutputStream);
 
-            appendDec(debugOutputStream,ICAP2_CaptureBufferRead()); 
+            printClock(debugOutputStream,getClockStream(CLOCK_CPU));       
+            appendDec(debugOutputStream,capturedValue[4]); 
             appendLF(debugOutputStream);
 
+            printClock(debugOutputStream,getClockStream(CLOCK_CPU));       
+            appendDec(debugOutputStream,capturedValue[5]); 
+            appendLF(debugOutputStream);
+            
+            appendLF(debugOutputStream);
 
             captureIndex = 0;
-        }
+
 }
