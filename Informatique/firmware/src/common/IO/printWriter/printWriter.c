@@ -117,6 +117,34 @@ int appendDec(OutputStream* stream, signed long value) {
     return nchars;
 }
 
+int appendDecUnsigned(OutputStream* stream, unsigned long value) {
+    unsigned char num[11]; // 2^31 plus sign
+    int pos = 0;
+    int nchars = 0;
+
+    if (value == 0) {
+        append(stream, '0');
+        nchars++;
+        return nchars;
+    }
+
+    while (value != 0) {
+        unsigned char c = value % 10;
+        value = value / 10;
+        num[pos++] = c + '0';
+    }
+
+    if (pos == 0)
+        num[pos++] = '0';
+
+    while (--pos >= 0) {
+        append(stream, num[pos]);
+        nchars++;
+    }
+
+    return nchars;
+}
+
 void appendStringAndDec(OutputStream* stream, const char* s, signed long value) {
     appendString(stream, s);
     appendDec(stream, value);

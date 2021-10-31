@@ -71,6 +71,9 @@ unsigned int appendCRLF(OutputStream* outputStream);
  */
 int appendDec(OutputStream* outputStream, signed long value);
 
+int appendDecUnsigned(OutputStream* stream, unsigned long value) ;
+
+
 void appendStringAndDec(OutputStream* stream, const char* s, signed long value);
 
 void appendStringAndDecLN(OutputStream* stream, const char* s, float value);

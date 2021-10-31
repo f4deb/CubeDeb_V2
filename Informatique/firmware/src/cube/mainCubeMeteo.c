@@ -86,12 +86,15 @@ void MyIcap1Callback(uintptr_t context){
     
     led1GreenToggle();
 //    led2RedOff();
-
-    capturedValue[captureIndex] = TMR3;
+    capturedValue[captureIndex] = 0xFFFF;
+    capturedValue[captureIndex++] = TMR4;
     capturedValue[captureIndex++] = ICAP1_CaptureBufferRead();
 
+
+    capturedValue[captureIndex++] = TMR4;
     //captureIndex++;
     
+
 
     }
 
@@ -114,7 +117,7 @@ void initMainCube (void) {
     //initUart5(getBoardName(), strlen(getBoardName()));
     
 // I2C1 initialisation
-    I2C1_Initialize();
+    //I2C1_Initialize();
     I2C1_CallbackRegister(MyI2CCallback, NULL);
     
     initCubeCommon();    
@@ -142,6 +145,7 @@ void initMainCube (void) {
 
 
     TMR2_Start();
+    TMR4_Start();
 
     OCMP3_Enable();
 
@@ -162,8 +166,13 @@ void mainCube (void){
     //setClock(clockCPUStream, clockParam);
 
     
-    OC3RS = PR2/3; //high level 1 = 320ns     2 = 640ns      
+    OC3RS = PR2/4; //high level 1 = 320ns     2 = 640ns      
 
+/*    
+        printClock(debugOutputStream,getClockStream(CLOCK_CPU));       
+            appendDecUnsigned(debugOutputStream,TMR2); 
+            appendLF(debugOutputStream);
+  */  
 
 
     if (captureIndex == 6) {
@@ -226,31 +235,16 @@ void mainCube (void){
 
 void mesure_time(void){
 
-    
-
+    int i;
+    for (i=0;i<12;i++){
 
             printClock(debugOutputStream,getClockStream(CLOCK_CPU));                                              
-            appendDec(debugOutputStream,capturedValue[0]); 
+            appendDec(debugOutputStream,capturedValue[i]); 
             appendLF(debugOutputStream);
-
-            printClock(debugOutputStream,getClockStream(CLOCK_CPU));       
-            appendDec(debugOutputStream,capturedValue[1]); 
-            appendLF(debugOutputStream);
-
-            printClock(debugOutputStream,getClockStream(CLOCK_CPU));       
-            appendDec(debugOutputStream,capturedValue[2]); 
-            appendLF(debugOutputStream);
+    }
             
-            printClock(debugOutputStream,getClockStream(CLOCK_CPU));                                              
-            appendDec(debugOutputStream,capturedValue[3]); 
-            appendLF(debugOutputStream);
-
             printClock(debugOutputStream,getClockStream(CLOCK_CPU));       
-            appendDec(debugOutputStream,capturedValue[4]); 
-            appendLF(debugOutputStream);
-
-            printClock(debugOutputStream,getClockStream(CLOCK_CPU));       
-            appendDec(debugOutputStream,capturedValue[5]); 
+            appendDecUnsigned(debugOutputStream,TMR4); 
             appendLF(debugOutputStream);
             
             appendLF(debugOutputStream);

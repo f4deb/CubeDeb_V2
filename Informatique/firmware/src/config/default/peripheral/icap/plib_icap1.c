@@ -51,14 +51,14 @@ ICAP_OBJECT icap1Obj;
 void ICAP1_Initialize (void)
 {
     /*Setup IC1CON    */
-    /*ICM     = 1        */
+    /*ICM     = 6        */
     /*ICI     = 0        */
     /*ICTMR = 1*/
     /*C32     = 1        */
-    /*FEDGE = 0        */
+    /*FEDGE = 1        */
     /*SIDL     = false    */
 
-    IC1CON = 0x181;
+    IC1CON = 0x386;
 
 
         IEC0SET = _IEC0_IC1IE_MASK;

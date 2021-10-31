@@ -53,6 +53,7 @@
 #include "plib_tmr4.h"
 
 
+static TMR_TIMER_OBJECT tmr4Obj;
 
 
 void TMR4_Initialize(void)
@@ -62,18 +63,20 @@ void TMR4_Initialize(void)
 
     /*
     SIDL = 0
-    TCKPS =2
+    TCKPS =0
     T32   = 1
     TCS = 0
     */
-    T4CONSET = 0x28;
+    T4CONSET = 0x8;
 
     /* Clear counter */
     TMR4 = 0x0;
 
     /*Set period */
-    PR4 = 124998U;
+    PR4 = 9999999U;
 
+    /* Enable TMR Interrupt of odd numbered timer in 32-bit mode */
+    IEC0SET = _IEC0_T5IE_MASK;
 
 }
 
@@ -107,7 +110,38 @@ uint32_t TMR4_CounterGet(void)
 
 uint32_t TMR4_FrequencyGet(void)
 {
-    return (25000000);
+    return (100000000);
 }
 
 
+void TIMER_5_InterruptHandler (void)
+{
+    uint32_t status  = 0U;
+    status = IFS0bits.T5IF;
+    IFS0CLR = _IFS0_T5IF_MASK;
+
+    if((tmr4Obj.callback_fn != NULL))
+    {
+        tmr4Obj.callback_fn(status, tmr4Obj.context);
+    }
+}
+
+
+void TMR4_InterruptEnable(void)
+{
+    IEC0SET = _IEC0_T5IE_MASK;
+}
+
+
+void TMR4_InterruptDisable(void)
+{
+    IEC0CLR = _IEC0_T5IE_MASK;
+}
+
+
+void TMR4_CallbackRegister( TMR_CALLBACK callback_fn, uintptr_t context )
+{
+    /* Save callback_fn and context in local memory */
+    tmr4Obj.callback_fn = callback_fn;
+    tmr4Obj.context = context;
+}
