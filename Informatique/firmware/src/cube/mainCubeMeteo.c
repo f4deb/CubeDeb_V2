@@ -86,7 +86,7 @@ void MyIcap1Callback(uintptr_t context){
     
     led1GreenToggle();
 //    led2RedOff();
-    capturedValue[captureIndex] = 0xFFFF;
+    capturedValue[captureIndex++] = 1234567890;
     capturedValue[captureIndex++] = TMR4;
     capturedValue[captureIndex++] = ICAP1_CaptureBufferRead();
 
@@ -166,7 +166,7 @@ void mainCube (void){
     //setClock(clockCPUStream, clockParam);
 
     
-    OC3RS = PR2/4; //high level 1 = 320ns     2 = 640ns      
+    OC3RS = PR2/9; //high level 1 = 320ns     2 = 640ns      
 
 /*    
         printClock(debugOutputStream,getClockStream(CLOCK_CPU));       
@@ -175,7 +175,7 @@ void mainCube (void){
   */  
 
 
-    if (captureIndex == 6) {
+    if (captureIndex > 8) {
                     mesure_time();
          captureIndex = 0;           
     }
@@ -235,13 +235,14 @@ void mainCube (void){
 
 void mesure_time(void){
 
-    int i;
-    for (i=0;i<12;i++){
 
             printClock(debugOutputStream,getClockStream(CLOCK_CPU));                                              
-            appendDec(debugOutputStream,capturedValue[i]); 
+            appendDecUnsigned(debugOutputStream,capturedValue[9]-capturedValue[5]); 
             appendLF(debugOutputStream);
-    }
+            printClock(debugOutputStream,getClockStream(CLOCK_CPU));                                              
+            appendDecUnsigned(debugOutputStream,capturedValue[5]-capturedValue[1]); 
+            appendLF(debugOutputStream);
+   
             
             printClock(debugOutputStream,getClockStream(CLOCK_CPU));       
             appendDecUnsigned(debugOutputStream,TMR4); 

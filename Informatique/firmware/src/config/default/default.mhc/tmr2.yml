@@ -46,7 +46,7 @@ children:
     - type: Values
       children:
       - type: Dynamic
-        attributes: {id: tmr2, value: '124998'}
+        attributes: {id: tmr2, value: '562499'}
   - type: KeyValueSet
     attributes: {id: TIMER_PRE_SCALER}
     children:
@@ -66,7 +66,7 @@ children:
     - type: Values
       children:
       - type: User
-        attributes: {value: '10.0'}
+        attributes: {value: '45.0'}
   - type: Combo
     attributes: {id: TIMER_UNIT}
     children:
