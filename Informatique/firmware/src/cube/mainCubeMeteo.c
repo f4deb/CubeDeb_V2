@@ -76,16 +76,15 @@ static Clock* clockCPUStream;
 
 
 
-static uint32_t capturedValue[6];
+static uint32_t capturedValue[20];
 volatile uint8_t captureIndex = 0;
 
 
 void MyIcap1Callback(uintptr_t context){
     
-//    if (captureIndex == 10) captureIndex=0;
+    if (captureIndex == 10) captureIndex=0;
     
     led1GreenToggle();
-//    led2RedOff();
     capturedValue[captureIndex++] = TMR4;
     capturedValue[captureIndex++] = ICAP1_CaptureBufferRead();
     }
@@ -154,24 +153,9 @@ void mainCube (void){
     clockParam->month = 0x10;
     clockParam->year = 0x21;
     
-    //setClock(clockCPUStream, clockParam);
-
-    
     OC3RS = PR2/3; //high level 1 = 320ns     2 = 640ns      
 
-/*    
-        printClock(debugOutputStream,getClockStream(CLOCK_CPU));       
-            appendDecUnsigned(debugOutputStream,TMR2); 
-            appendLF(debugOutputStream);
-  */  
-
-
-
-
-
-    
-        
-   if (getIsTmr1Expired() == true) {
+    if (getIsTmr1Expired() == true) {
 
         setIsTmr1Expired(false);
 
@@ -181,7 +165,7 @@ void mainCube (void){
 
             led2 = false;             
 
-/*          
+          
             appendDot(SCREEN_7SEG_CPU,4);
             appendString(SCREEN_7SEG_CPU, readSensorValueAsStringFor7Seg(tempSensorCpuStream));
             appendString(debugOutputStream,"Temperature Interne: "); 
@@ -193,7 +177,7 @@ void mainCube (void){
             appendString(debugOutputStream, "Distance : ");
             appendDec(debugOutputStream,readDistance(0));
             append(debugOutputStream,LF);
-*/          
+          
             mesure_time();
 
         }
@@ -202,7 +186,6 @@ void mainCube (void){
             led1RedOff();
             led2 = true;
             
-/*
             appendDot(SCREEN_7SEG_CPU,4);
             appendString(SCREEN_7SEG_CPU, readSensorValueAsStringFor7Seg(tempSensorExt1Stream));
             appendString(debugOutputStream,"Temperature Externe: ");
@@ -214,7 +197,7 @@ void mainCube (void){
             appendString(debugOutputStream, "Distance : ");
             appendDec(debugOutputStream,readDistance(0));
             append(debugOutputStream,LF);
-  */
+
             mesure_time();
 
         }
@@ -226,7 +209,6 @@ void mesure_time(void){
 
     while (captureIndex < 6);
     ICAP1_Disable();
-    captureIndex = 0;
 
     printClock(debugOutputStream,getClockStream(CLOCK_CPU));                                              
     appendDec(debugOutputStream,capturedValue[2]-capturedValue[0]); 

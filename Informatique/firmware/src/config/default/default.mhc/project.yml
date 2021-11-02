@@ -97,13 +97,13 @@ files:
   security: NON_SECURE
   type: SOURCE
   userChecksum: 4D1CFBB074BB9C27C12E01A30E732FFE
-- generatedChecksum: 5A00C06FCE89751A3B82751AB03C98A3
+- generatedChecksum: F9B759015B1DC5E4AFF55F0F0C299154
   logicalPath: config/default/peripheral/tmr
   name: plib_tmr2.c
   physicalPath: peripheral/tmr
   security: NON_SECURE
   type: SOURCE
-  userChecksum: 5A00C06FCE89751A3B82751AB03C98A3
+  userChecksum: F9B759015B1DC5E4AFF55F0F0C299154
 - generatedChecksum: DF772E28C093E362B0C4DDDBD0F545F4
   logicalPath: config/default/peripheral/tmr
   name: plib_tmr4.c

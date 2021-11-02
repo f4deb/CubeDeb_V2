@@ -46,7 +46,7 @@ children:
     - type: Values
       children:
       - type: Dynamic
-        attributes: {id: tmr2, value: '6999998'}
+        attributes: {id: tmr2, value: '499'}
   - type: KeyValueSet
     attributes: {id: TIMER_PRE_SCALER}
     children:
@@ -62,18 +62,18 @@ children:
       - type: Float
         attributes: {id: max}
         children:
-        - {type: Value, value: '42949.67'}
+        - {type: Value, value: '4.2949672E7'}
     - type: Values
       children:
       - type: User
-        attributes: {value: '70.0'}
+        attributes: {value: '5.0'}
   - type: Combo
     attributes: {id: TIMER_UNIT}
     children:
     - type: Values
       children:
       - type: User
-        attributes: {value: millisecond}
+        attributes: {value: microsecond}
   - type: String
     attributes: {id: TMR_IEC_REG}
     children:
