@@ -84,7 +84,7 @@ void MyIcap1Callback(uintptr_t context){
     
     if (captureIndex == 10) captureIndex=0;
     
-    led1GreenToggle();
+    //led1GreenToggle();
     capturedValue[captureIndex++] = TMR4;
     capturedValue[captureIndex++] = ICAP1_CaptureBufferRead();
     }
@@ -146,14 +146,16 @@ void mainCube (void){
      
     ClockData* clockParam = &(clockCPUStream->clockData);
     clockParam->second = 0x41;
-    clockParam->minute = 0x35;
-    clockParam->hour = 0x21;
-    clockParam->day = 0x20;
-    clockParam->dayofweek = 0x03;
-    clockParam->month = 0x10;
+    clockParam->minute = 0x43;
+    clockParam->hour = 0x22;
+    clockParam->day = 0x02;
+    clockParam->dayofweek = 0x02;
+    clockParam->month = 0x11;
     clockParam->year = 0x21;
     
-    OC3RS = PR2/3; //high level 1 = 320ns     2 = 640ns      
+    //setClock(clockCPUStream,clockParam);
+    
+    OC3RS = 1000;//10µs      resolution => 1 = 10ns
 
     if (getIsTmr1Expired() == true) {
 
@@ -206,7 +208,7 @@ void mainCube (void){
 
 void mesure_time(void){
     ICAP1_Enable();
-
+    delayMicroSecs(100);
     while (captureIndex < 6);
     ICAP1_Disable();
 
@@ -216,5 +218,8 @@ void mesure_time(void){
     printClock(debugOutputStream,getClockStream(CLOCK_CPU));                                              
     appendDec(debugOutputStream,capturedValue[4]-capturedValue[2]); 
     appendLF(debugOutputStream);
+    
+    int distance = ((capturedValue[4]-capturedValue[2])*17)/100000;
+    appendStringAndDec(debugOutputStream,"Distance en cm :",distance); 
     appendLF(debugOutputStream);
 }

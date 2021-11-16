@@ -5,6 +5,8 @@
 
 
 
-uint16_t readDistance (int trig);
+uint32_t readDistanceSensor (int trig);
+
+void resetSensor (void);
 
 #endif 
