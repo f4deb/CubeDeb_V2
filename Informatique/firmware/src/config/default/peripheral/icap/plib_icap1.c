@@ -39,7 +39,6 @@
 *******************************************************************************/
 #include "plib_icap1.h"
 
-ICAP_OBJECT icap1Obj;
 // *****************************************************************************
 
 // *****************************************************************************
@@ -51,18 +50,17 @@ ICAP_OBJECT icap1Obj;
 void ICAP1_Initialize (void)
 {
     /*Setup IC1CON    */
-    /*ICM     = 1        */
+    /*ICM     = 6        */
     /*ICI     = 3        */
     /*ICTMR = 1*/
     /*C32     = 1        */
-    /*FEDGE = 0        */
+    /*FEDGE = 1        */
     /*SIDL     = false    */
 
-    IC1CON = 0x1e1;
+    IC1CON = 0x3e6;
 
     CFGCON |= 0x00020000;
 
-        IEC0SET = _IEC0_IC1IE_MASK;
 }
 
 
@@ -84,22 +82,13 @@ uint32_t ICAP1_CaptureBufferRead (void)
 
 
 
-void ICAP1_CallbackRegister(ICAP_CALLBACK callback, uintptr_t context)
+
+bool ICAP1_CaptureStatusGet (void)
 {
-    icap1Obj.callback = callback;
-    icap1Obj.context = context;
+    bool status = false;
+    status = ((IC1CON >> ICAP_STATUS_BUFNOTEMPTY) & 0x1);
+    return status;
 }
-
-void INPUT_CAPTURE_1_InterruptHandler(void)
-{
-    if( (icap1Obj.callback != NULL))
-    {
-        icap1Obj.callback(icap1Obj.context);
-    }
-    IFS0CLR = _IFS0_IC1IF_MASK;    //Clear IRQ flag
-
-}
-
 
 bool ICAP1_ErrorStatusGet (void)
 {

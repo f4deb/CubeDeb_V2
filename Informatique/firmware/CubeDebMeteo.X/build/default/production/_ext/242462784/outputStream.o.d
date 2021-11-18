@@ -3,9 +3,6 @@ build/default/production/_ext/242462784/outputStream.o: \
  ../src/common/IO/outputStream/outputStream.h \
  ../src/common/IO/outputStream/../buffer/buffer.h \
  ../src/config/default/../../common/IO/printWriter/printWriter.h \
- ../src/config/default/../../common/IO/outputStream/outputStream.h \
- ../src/config/default/../../common/system/system.h \
- ../src/config/default/../../common/uart5/uart5.h \
  ../src/config/default/definitions.h \
  ../src/config/default/peripheral/clk/plib_clk.h \
  ../src/config/default/peripheral/gpio/plib_gpio.h \
@@ -27,19 +24,16 @@ build/default/production/_ext/242462784/outputStream.o: \
  ../src/config/default/peripheral/uart/plib_uart2.h \
  ../src/config/default/peripheral/tmr/plib_tmr2.h \
  ../src/config/default/peripheral/tmr1/plib_tmr1.h \
- ../src/config/default/peripheral/tmr1/plib_tmr1_common.h
+ ../src/config/default/peripheral/tmr1/plib_tmr1_common.h \
+ ../src/config/default/../../common/IO/outputStream/outputStream.h \
+ ../src/config/default/../../common/system/system.h \
+ ../src/config/default/../../common/uart5/uart5.h
 
 ../src/common/IO/outputStream/outputStream.h:
 
 ../src/common/IO/outputStream/../buffer/buffer.h:
 
 ../src/config/default/../../common/IO/printWriter/printWriter.h:
-
-../src/config/default/../../common/IO/outputStream/outputStream.h:
-
-../src/config/default/../../common/system/system.h:
-
-../src/config/default/../../common/uart5/uart5.h:
 
 ../src/config/default/definitions.h:
 
@@ -84,3 +78,9 @@ build/default/production/_ext/242462784/outputStream.o: \
 ../src/config/default/peripheral/tmr1/plib_tmr1.h:
 
 ../src/config/default/peripheral/tmr1/plib_tmr1_common.h:
+
+../src/config/default/../../common/IO/outputStream/outputStream.h:
+
+../src/config/default/../../common/system/system.h:
+
+../src/config/default/../../common/uart5/uart5.h:
