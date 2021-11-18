@@ -207,10 +207,13 @@ void mainCube (void){
 }
 
 void mesure_time(void){
+
+
     ICAP1_Enable();
     delayMicroSecs(100);
     while (captureIndex < 6);
     ICAP1_Disable();
+
 
     printClock(debugOutputStream,getClockStream(CLOCK_CPU));                                              
     appendDec(debugOutputStream,capturedValue[2]-capturedValue[0]); 
@@ -219,7 +222,13 @@ void mesure_time(void){
     appendDec(debugOutputStream,capturedValue[4]-capturedValue[2]); 
     appendLF(debugOutputStream);
     
-    int distance = ((capturedValue[4]-capturedValue[2])*17)/100000;
-    appendStringAndDec(debugOutputStream,"Distance en cm :",distance); 
+    int distance = ((capturedValue[4]-capturedValue[2])*17)/10000;
+    appendStringAndDec(debugOutputStream,"Distance en mm :",distance); 
     appendLF(debugOutputStream);
+    delayMilliSecs(100);
+    appendDot(SCREEN_7SEG_CPU,0);
+    appendDec4AsString(SCREEN_7SEG_CPU,distance); 
+
+
+    
 }

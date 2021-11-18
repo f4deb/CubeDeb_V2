@@ -2,6 +2,7 @@
 #define PRINT_WRITER_H
 
 #include <stdbool.h>
+#include "definitions.h"                // SYS function prototypes
 
 
 #include "../../common/IO/outputStream/outputStream.h"
@@ -77,6 +78,8 @@ int appendDecUnsigned(OutputStream* stream, unsigned long value) ;
 void appendStringAndDec(OutputStream* stream, const char* s, signed long value);
 
 void appendStringAndDecLN(OutputStream* stream, const char* s, float value);
+
+void appendDec4AsString(OutputStream* stream,uint16_t value);
 
 // --- Management of hex conversion
 

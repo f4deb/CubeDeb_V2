@@ -156,6 +156,12 @@ void appendStringAndDecLN(OutputStream* stream, const char* s, float value) {
     println(stream);
 }
 
+void appendDec4AsString(OutputStream* stream,uint16_t value){
+    char* str = "    ";
+    sprintf(str,"%.4d", value); 
+    appendString(stream, str);
+}
+
 // HEXADECIMAL
 
 unsigned char convertToHex(unsigned char c) {
