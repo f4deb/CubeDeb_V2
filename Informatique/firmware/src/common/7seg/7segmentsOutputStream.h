@@ -22,7 +22,7 @@ OutputStream* get7SegOutpuStream(int index);
  * init the outputStream for the 7segments.
  * @param outputStream the pointer to the outputStream which must be initialized
  */
-void init7SegOutputStream(OutputStream* outputStream, uint8_t address);
+OutputStream* init7SegOutputStream(OutputStream* outputStream, uint8_t address);
 
 
 

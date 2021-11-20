@@ -18,7 +18,7 @@
 
 
 //SAA1064T I2C ADDRESS
-#define SAA1064_ADDR 0x38
+#define SAA1064_ADDR_0 0x38
 
 
 

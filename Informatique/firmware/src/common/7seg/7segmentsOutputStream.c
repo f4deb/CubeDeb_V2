@@ -58,7 +58,7 @@ void _flush7Seg(OutputStream* outputStream) {
     //
 }
 
-void init7SegOutputStream(OutputStream* outputStream,uint8_t address) {
+OutputStream* init7SegOutputStream(OutputStream* outputStream,uint8_t address) {
     outputStream->address = address;
     outputStream->openOutputStream = _openOutputStream7Seg;
     outputStream->closeOutputStream = _closeOutputStream7Seg;
@@ -68,4 +68,5 @@ void init7SegOutputStream(OutputStream* outputStream,uint8_t address) {
     outputStream->data = 0; //no dot
     
     _openOutputStream7Seg(outputStream, 0);
+    return (get7SegOutpuStream (SAA1064_PRINT_7SEG_CPU));
 }

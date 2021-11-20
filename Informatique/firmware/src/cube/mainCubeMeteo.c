@@ -72,6 +72,11 @@ static Temperature* tempSensorExt1Stream;
     // Clock Stream
 static Clock* clockCPUStream;
 
+    // 7 Segments Stream
+static OutputStream* screen7SegCpu;
+static OutputStream* screen7SegExt1;
+
+
 
 
 
@@ -94,7 +99,7 @@ void MyIcap1Callback(uintptr_t context){
 
 void initMainCube (void) {
     
-    
+// Define the name of the Board    
     setBoardName (BOARD_NAME);
     
 //CPU LED initialisation    
@@ -102,44 +107,40 @@ void initMainCube (void) {
     
 //TIMER 1 initialisation
     initTmr1();
-    
-//Uart5 initialisation
 
-    //initUart5(getBoardName(), strlen(getBoardName()));
+//TIMER 2 initialisation
+    TMR2_Start();
     
-// I2C1 initialisation
-    //I2C1_Initialize();
+//TIMER 4 initialisation
+    TMR4_Start();
+
+//INPUT CAPTURE 1 Enable    
+    ICAP1_Enable();
+
+//OUPTUT COMPARE 3 Enable    
+    OCMP3_Enable();
+    OC3RS = 1000;//10µs      resolution => 1 = 10ns
+
+    // I2C1 initialisation interruption
     I2C1_CallbackRegister(MyI2CCallback, NULL);
     
     initCubeCommon();    
     
     // initialise driver et flux pour le capteur de temperature interne
     tempSensorCpuStream = initTemperatureLM75A(getTemperatureStream(TEMP_SENSOR_CPU),TEMP_SENSOR_CPU, LM75_ADDRESS_0);
-    //tempSensorCpuStream = getTemperatureStream(TEMP_SENSOR_CPU);
+
     // initialise driver et flux pour le capteur de temperature externe 1
     tempSensorExt1Stream = initTemperatureLM75A(getTemperatureStream(TEMP_SENSOR_EXT1),TEMP_SENSOR_EXT1, LM75_ADDRESS_1);
-    //tempSensorExt1Stream = getTemperatureStream(TEMP_SENSOR_EXT1);
+   
+    // initialise driver et flux pour l horloge interne
+    clockCPUStream = initClockPCF8563(getClockStream(CLOCK_CPU),CLOCK_CPU,PCF8563_ADDRESS_0);
     
-        // initialise UART 
+    // initialise UART 
     debugOutputStream = initSerialOutputStream(getSerialOutputStream(SERIAL_PORT_5),SERIAL_PORT_5);
     
-    clockCPUStream = initClockPCF8563(getClockStream(CLOCK_CPU),CLOCK_CPU,PCF8563_ADDRESS_0);
+    // initialise afficheur driver et flux pour afficheur 7 Segments de la carte CPU
+    screen7SegCpu = initSAA1064T(get7SegOutpuStream(SAA1064_PRINT_7SEG_CPU), SAA1064_ADDR_0);  
 
-    
-    appendString(debugOutputStream,"\n\r---------------------------------------------------------"); 
-    appendString(debugOutputStream,"\n\r                    ICAP Demo                 "); 
-    appendString(debugOutputStream,"\n\r---------------------------------------------------------\n\r"); 
-    
-    ICAP1_Enable();
-    //ICAP1_CallbackRegister(MyIcap1Callback, NULL);
-
-
-    TMR2_Start();
-    TMR4_Start();
-
-    OCMP3_Enable();
-
-    
     }
 
 void mainCube (void){
@@ -155,7 +156,6 @@ void mainCube (void){
     
     //setClock(clockCPUStream,clockParam);
     
-    OC3RS = 1000;//10µs      resolution => 1 = 10ns
 
     if (getIsTmr1Expired() == true) {
 
@@ -168,8 +168,8 @@ void mainCube (void){
             led2 = false;             
 
           
-            appendDot(SCREEN_7SEG_CPU,4);
-            appendString(SCREEN_7SEG_CPU, readSensorValueAsStringFor7Seg(tempSensorCpuStream));
+            appendDot(screen7SegCpu,4);
+            appendString(screen7SegCpu, readSensorValueAsStringFor7Seg(tempSensorCpuStream));
             appendString(debugOutputStream,"Temperature Interne: "); 
             appendString(debugOutputStream, readSensorValueAsString(tempSensorCpuStream));
             appendString(debugOutputStream, "deg");
@@ -188,8 +188,8 @@ void mainCube (void){
             led1RedOff();
             led2 = true;
             
-            appendDot(SCREEN_7SEG_CPU,4);
-            appendString(SCREEN_7SEG_CPU, readSensorValueAsStringFor7Seg(tempSensorExt1Stream));
+            appendDot(screen7SegCpu,4);
+            appendString(screen7SegCpu, readSensorValueAsStringFor7Seg(tempSensorExt1Stream));
             appendString(debugOutputStream,"Temperature Externe: ");
             appendString(debugOutputStream, readSensorValueAsString(tempSensorExt1Stream));            
             appendString(debugOutputStream, "deg");
@@ -208,10 +208,7 @@ void mainCube (void){
 
 void mesure_time(void){
 
-    while ( true )
-    {
-
-        
+    while ( true ){
         while(!ICAP1_CaptureStatusGet());
 
         capturedValue[captureIndex++] = ICAP1_CaptureBufferRead();
@@ -226,8 +223,8 @@ void mesure_time(void){
             }
                 appendStringAndDec(debugOutputStream,"Distance en mm :",distance); 
                 appendLF(debugOutputStream);
-                appendDot(SCREEN_7SEG_CPU,0);  
-                appendDec4AsString(SCREEN_7SEG_CPU,distance);
+                appendDot(screen7SegCpu,0);  
+                appendDec4AsString(screen7SegCpu,distance);
         captureIndex = 0;
         }
     }

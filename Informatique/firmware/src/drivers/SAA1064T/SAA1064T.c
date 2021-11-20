@@ -11,6 +11,6 @@ void SAA1064Twrite4DIGIT (uint16_t I2C_ADDRESS, uint8_t *data){
 
 }
 
-void initSAA1064T(OutputStream* outputStream, uint16_t I2C_ADDRESS) {
-    init7SegOutputStream(outputStream, I2C_ADDRESS);
+OutputStream* initSAA1064T(OutputStream* outputStream, uint16_t I2C_ADDRESS) {
+    return (init7SegOutputStream(outputStream, I2C_ADDRESS));
 }
