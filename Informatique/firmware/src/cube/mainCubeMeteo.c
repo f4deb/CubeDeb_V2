@@ -216,30 +216,19 @@ void mesure_time(void){
 
         capturedValue[captureIndex++] = ICAP1_CaptureBufferRead();
         capturedValue[captureIndex++] = TMR4;
-        if ( captureIndex > 20){
-            
-            
-            
-         /*   
-                printClock(debugOutputStream,getClockStream(CLOCK_CPU));                                              
-    appendDec(debugOutputStream,capturedValue[3]-capturedValue[1]); 
-    appendLF(debugOutputStream);
-    printClock(debugOutputStream,getClockStream(CLOCK_CPU));                                              
-    appendDec(debugOutputStream,capturedValue[5]-capturedValue[3]); 
-    appendLF(debugOutputStream);
-    */
-    
-int distance = ((capturedValue[4]-capturedValue[2])*17)/10000;
-    appendStringAndDec(debugOutputStream,"Distance en mm :",distance); 
-    appendLF(debugOutputStream);
-    delayMilliSecs(300);
-    appendDot(SCREEN_7SEG_CPU,0);
-    appendDec4AsString(SCREEN_7SEG_CPU,distance);             
-    captureIndex = 0;
+        if ( captureIndex > 12){
+            int distance;          
+            if (capturedValue[4]>capturedValue[2]){
+                distance = ((capturedValue[4]-capturedValue[2])*17)/10000;
+            }
+            else {
+                distance = ((capturedValue[2]-capturedValue[4])*17)/10000;
+            }
+                appendStringAndDec(debugOutputStream,"Distance en mm :",distance); 
+                appendLF(debugOutputStream);
+                appendDot(SCREEN_7SEG_CPU,0);  
+                appendDec4AsString(SCREEN_7SEG_CPU,distance);
+        captureIndex = 0;
         }
     }
-    
-   
-
-    
 }
