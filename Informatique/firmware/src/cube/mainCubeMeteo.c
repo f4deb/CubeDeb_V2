@@ -175,7 +175,7 @@ void mainCube (void){
     clockParam->year = 0x21;
     
     //setClock(clockCPUStream,clockParam);
-    mesure_time();
+    //mesure_time();
 
     if (getIsTmr1Expired() == true) {
 
