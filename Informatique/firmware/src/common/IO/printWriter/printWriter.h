@@ -51,6 +51,10 @@ unsigned int appendStringLN(OutputStream* outputStream, const char* s);
  */
 unsigned int println(OutputStream* outputStream);
 
+
+unsigned int appendLF(OutputStream* outputStream);
+
+
 /**
  * Write a CRLF to the outputStream.
  * @param outputStream the pointer on outputStream (POO simulation)

@@ -27,7 +27,7 @@ bool getTxThresholdEventReceived (void);
 
 void setTxThresholdEventReceived (bool status);
 
-void writeUart5 (char* message, int size);
+void writeUart5 (uint8_t* message, int size);
 
 
 void usartReadEventHandler(UART_EVENT event, uintptr_t context );

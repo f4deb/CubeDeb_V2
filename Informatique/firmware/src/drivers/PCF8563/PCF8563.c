@@ -60,7 +60,7 @@ void _writePcf8563Clock(Clock* clock,int reg) {
     time[0] = reg;
     time[1] = clockData->second;
     time[2] = clockData->minute;
-    time[3]= clockData->hour;
+    time[3] = clockData->hour;
     time[4] = clockData->day;
     time[5] = clockData->dayofweek;
     time[6] = clockData->month;

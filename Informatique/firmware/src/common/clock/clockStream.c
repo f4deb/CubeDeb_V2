@@ -6,7 +6,7 @@
 static Clock clock[CLOCK_CPU_SIZE][CLOCK_QUANTITY];
 
 Clock* getClockStream(int index){
-    return &clock[index];
+    return clock[index];
 }
 Clock* initClockStream(Clock* clock,
         WriteClockFunction* WriteClock,
@@ -15,7 +15,7 @@ Clock* initClockStream(Clock* clock,
         uint16_t clockIndex){
     if (clock == NULL){
         //writeError(CLOCK_NULL);
-        return;
+        return 0;
     }
     clock->readClock = ReadClock;
     clock->writeClock = WriteClock;

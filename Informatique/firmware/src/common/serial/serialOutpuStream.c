@@ -1,14 +1,17 @@
 #include "serialoutputStream.h"
-
 #include <string.h>
 
 #include "serial.h"
+
+#include "../../common/IO/buffer/buffer.h"
+#include "../../common/IO/printWriter/printWriter.h"
+#include "../../common/system/system.h"
 #include "../../common/uart5/uart5.h"
 
 static OutputStream* serialOutputStream[100];
 
 OutputStream* getSerialOutputStream(enum SerialPort serialPort){
-    return &serialOutputStream[serialPort];
+    return (OutputStream*)&serialOutputStream[serialPort];
 }
 
 void flushSerial(OutputStream* outputStream) {
@@ -32,11 +35,11 @@ void closeOutputStreamSerial5(OutputStream* outputStream) {
 void writeChar5(OutputStream* outputStream, unsigned char c) {
     char* str = "1";
     str[0] = c;
-    writeUart5(str, 1);
+    writeUart5((uint8_t*)str, 1);
 }
 
-void writeString5(OutputStream* outputStream, unsigned char* str) {
-    writeUart5(str, strlen(str));
+void writeString5(OutputStream* outputStream, const char* str) {
+    writeUart5((uint8_t*)str, strlen(str));
 }
 
 void initSerialOutputStream5(OutputStream* outputStream) {

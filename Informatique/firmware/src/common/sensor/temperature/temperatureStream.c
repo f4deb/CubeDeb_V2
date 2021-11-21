@@ -10,7 +10,7 @@
 static Temperature temperatureSensor[24];
 
 Temperature* getTemperatureStream(int index){
-    return &temperatureSensor[index];
+    return  &temperatureSensor[index];
 }
 
 
@@ -27,7 +27,7 @@ Temperature* initTemperatureStream(Temperature* temperature,
         uint16_t sensorIndex) {
     if (temperature == NULL) {
         //writeError(TEMPERATURE_NULL);
-        return;
+        return 0;
     }
     temperature->readSensorValue = readSensorValue;
     temperature->writeAlertLimit = writeAlertLimit;

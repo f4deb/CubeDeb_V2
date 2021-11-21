@@ -74,10 +74,10 @@ void setTxThresholdEventReceived (bool status){
     txThresholdEventReceived = status;
 }
 
-void writeUart5 (char* message, int size){ 
+void writeUart5 (uint8_t* message, int size){ 
 
     /* Wait for the TX buffer to become empty. Flag "txThresholdEventReceived" is set in the callback. */
-    while (getTxThresholdEventReceived == false);
+    //while (getTxThresholdEventReceived() == false);
     setTxThresholdEventReceived(false);   
 
     UART5_Write(message, size);

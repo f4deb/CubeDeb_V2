@@ -42,6 +42,8 @@
         <logicalFolder name="f10" displayName="sensor" projectFiles="true">
           <logicalFolder name="f2" displayName="distance" projectFiles="true">
             <itemPath>../src/common/sensor/distance/HC-SR04.h</itemPath>
+            <itemPath>../src/common/sensor/distance/distance.h</itemPath>
+            <itemPath>../src/common/sensor/distance/distanceStream.h</itemPath>
           </logicalFolder>
           <logicalFolder name="f1" displayName="temperature" projectFiles="true">
             <itemPath>../src/common/sensor/temperature/temperatureStream.h</itemPath>
@@ -184,6 +186,8 @@
         <logicalFolder name="f10" displayName="sensor" projectFiles="true">
           <logicalFolder name="f2" displayName="distance" projectFiles="true">
             <itemPath>../src/common/sensor/distance/HC-SR04.c</itemPath>
+            <itemPath>../src/common/sensor/distance/distance.c</itemPath>
+            <itemPath>../src/common/sensor/distance/distanceStream.c</itemPath>
           </logicalFolder>
           <logicalFolder name="f1" displayName="temperature" projectFiles="true">
             <itemPath>../src/common/sensor/temperature/temperatureStream.c</itemPath>
@@ -553,7 +557,6 @@
         <property key="UART5" value="true"/>
         <property key="UART6" value="true"/>
         <property key="debugoptions.useswbreakpoints" value="false"/>
-        <property key="firmware.download.all" value="false"/>
         <property key="hwtoolclock.frcindebug" value="false"/>
         <property key="memories.aux" value="false"/>
         <property key="memories.bootflash" value="false"/>

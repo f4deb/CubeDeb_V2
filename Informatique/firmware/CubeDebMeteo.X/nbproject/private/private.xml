@@ -3,11 +3,10 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
+            <file>file:/media/f4deb/ROBOT/ELECTRONIQUE/CubDebV2/Informatique/firmware/src/common/sensor/temperature/temperatureStream.c</file>
             <file>file:/media/f4deb/ROBOT/ELECTRONIQUE/CubDebV2/Informatique/firmware/src/common/sensor/distance/HC-SR04.c</file>
-            <file>file:/media/f4deb/ROBOT/ELECTRONIQUE/CubDebV2/Informatique/firmware/src/config/default/peripheral/icap/plib_icap1.c</file>
-            <file>file:/media/f4deb/ROBOT/ELECTRONIQUE/CubDebV2/Informatique/firmware/src/config/default/peripheral/tmr/plib_tmr4.c</file>
             <file>file:/media/f4deb/ROBOT/ELECTRONIQUE/CubDebV2/Informatique/firmware/src/cube/mainCubeMeteo.c</file>
-            <file>file:/media/f4deb/ROBOT/ELECTRONIQUE/CubDebV2/Informatique/firmware/src/common/sensor/distance/HC-SR04.h</file>
+            <file>file:/media/f4deb/ROBOT/ELECTRONIQUE/CubDebV2/Informatique/firmware/src/common/sensor/temperature/temperature.c</file>
         </group>
     </open-files>
 </project-private>

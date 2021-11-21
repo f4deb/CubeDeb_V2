@@ -1,5 +1,7 @@
 #include <stdlib.h>
 #include <math.h>
+#include <stdio.h>
+
 
 #include "definitions.h"                // SYS function prototypes
 #include "printWriter.h"

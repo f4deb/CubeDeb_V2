@@ -7,36 +7,34 @@
 #include <stdlib.h>                     // Defines EXIT_FAILURE
 #include <string.h>
 #include "definitions.h"                // SYS function prototypes
-#include "../common/7seg/7segments.h"
 
-#include "../common/7seg/7segmentsOutputStream.h"
-
-//#include "../../cube/cubeCommon7Seg.h"
 #include "../common/common.h"
 
-#include "../common/IO/buffer/buffer.h"
-#include "../common/IO/outputStream/outputStream.h"
+//#include "../common/IO/buffer/buffer.h"
 #include "../common/IO/printWriter/printWriter.h"
+//#include "../common/IO/outputStream/outputStream.h"
+
 #include "../common/led/led.h"
 #include "../common/I2C/I2CConfig.h"
-#include "../common/led/led.h"
-#include "../common/system/system.h"
-#include "../common/timer1/timer1.h"
+
+//#include "../common/led/led.h"
+//#include "../common/system/system.h"
+//#include "../common/timer1/timer1.h"
+
 #include "../common/uart5/uart5.h"
-#include "../common/sensor/temperature/temperature.h"
-#include "../common/serial/serial.h"
-#include "../common/serial/serialoutputStream.h"
+
+//#include "../common/serial/serial.h"
+//#include "../common/serial/serialoutputStream.h"
 
 #include "cubeCommon.h"
 
-#include "../common/clock/clock.h"
+//#include "../common/clock/clock.h"
 
 #include "../drivers/PCF8563/PCF8563.h"
 #include "../drivers/LM75A/LM75A.h"
 
-
-
-//static int SCREEN_7SEG_CPU;
+#include "../common/7seg/7segments.h"
+#include "../common/7seg/7segmentsOutputStream.h"
 
 
 //LED Gestion        
@@ -58,43 +56,55 @@ uint8_t rxBuffer[10];
 volatile bool rxThresholdEventReceived = false;
                 uint32_t nBytes = 0; 
 
-
-
-
-
 //--------------- DEBUG Stream 
 static OutputStream* debugOutputStream;
 
-//--------------- I2C STREAM
-    // Temperature Stream
+
+//--------------- Temperature Stream
 static Temperature* tempSensorCpuStream;
 static Temperature* tempSensorExt1Stream;
-    // Clock Stream
+//---------------  Clock Stream
 static Clock* clockCPUStream;
 
-    // 7 Segments Stream
+//--------------- 7 Segments Stream
 static OutputStream* screen7SegCpu;
-static OutputStream* screen7SegExt1;
+//static OutputStream* screen7SegExt1;
 
-
-
-
-
-
+//--------------- Input Capture Value
 static uint32_t capturedValue[20];
 volatile uint8_t captureIndex = 0;
 
+void mesure_time(void){
 
-void MyIcap1Callback(uintptr_t context){
-    
-    if (captureIndex == 10) captureIndex=0;
-    
-    //led1GreenToggle();
-    capturedValue[captureIndex++] = TMR4;
-    capturedValue[captureIndex++] = ICAP1_CaptureBufferRead();
-    }
+    //while ( true ){
+        while(!ICAP1_CaptureStatusGet());
+
+        capturedValue[captureIndex++] = ICAP1_CaptureBufferRead();
+        capturedValue[captureIndex++] = TMR4;
+        if ( captureIndex > 12){
+            int distance;          
+            if (capturedValue[4]>capturedValue[2]){
+                distance = ((capturedValue[4]-capturedValue[2])*17)/10000;
+            }
+            else {
+                distance = ((capturedValue[2]-capturedValue[4])*17)/10000;
+            }
+                appendStringAndDec(debugOutputStream,"Distance en mm :",distance); 
+                appendLF(debugOutputStream);
+                appendDot(screen7SegCpu,0);  
+                appendDec4AsString(screen7SegCpu,distance);
+        captureIndex = 0;
+        }
+    //}
+}
 
 
+
+// ***************************************************************************************** //
+// ***************************************************************************************** //
+// **********************************   INIT MAIN CUBE   *********************************** //
+// ***************************************************************************************** //
+// ***************************************************************************************** //
 
 
 void initMainCube (void) {
@@ -142,6 +152,12 @@ void initMainCube (void) {
     screen7SegCpu = initSAA1064T(get7SegOutpuStream(SAA1064_PRINT_7SEG_CPU), SAA1064_ADDR_0);  
 
     }
+
+// ***************************************************************************************** //
+// ***************************************************************************************** //
+// *************************************   MAIN CUBE   ************************************* //
+// ***************************************************************************************** //
+// ***************************************************************************************** //
 
 void mainCube (void){
      
@@ -206,26 +222,3 @@ void mainCube (void){
     }            
 }
 
-void mesure_time(void){
-
-    while ( true ){
-        while(!ICAP1_CaptureStatusGet());
-
-        capturedValue[captureIndex++] = ICAP1_CaptureBufferRead();
-        capturedValue[captureIndex++] = TMR4;
-        if ( captureIndex > 12){
-            int distance;          
-            if (capturedValue[4]>capturedValue[2]){
-                distance = ((capturedValue[4]-capturedValue[2])*17)/10000;
-            }
-            else {
-                distance = ((capturedValue[2]-capturedValue[4])*17)/10000;
-            }
-                appendStringAndDec(debugOutputStream,"Distance en mm :",distance); 
-                appendLF(debugOutputStream);
-                appendDot(screen7SegCpu,0);  
-                appendDec4AsString(screen7SegCpu,distance);
-        captureIndex = 0;
-        }
-    }
-}
