@@ -51,7 +51,7 @@ struct Clock {
     /** The function which must be used to read the content in the hardware to store in the clockData */
     ReadClockFunction* readClock;
     /** The address of I2C */
-    int address;
+    uint16_t address;
     /** The content with all values. */
     ClockData clockData;
     /** The index clock */

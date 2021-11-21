@@ -66,7 +66,7 @@ void _writePcf8563Clock(Clock* clock,int reg) {
     time[6] = clockData->month;
     time[7] = clockData->year;
     
-    while(I2C1_Write( clock->address, time, 8)){
+    while(I2C1_Write( clock->address, (uint8_t*)time, 8)){
                 // error handling
     }    
     while ( I2C1_IsBusy());
