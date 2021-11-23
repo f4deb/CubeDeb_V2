@@ -56,8 +56,8 @@ void appendDot(OutputStream* outputStream, unsigned int dot) {
 
 unsigned int appendStringLN(OutputStream* outputStream, const char* s) {
     unsigned result = appendString(outputStream, s);
-    append(outputStream,13);
-    append(outputStream,10);
+    append(outputStream, CARRIAGE_RETURN);
+    append(outputStream, LF);
 
    return result;
 }

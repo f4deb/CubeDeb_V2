@@ -13,4 +13,18 @@ void setBoardName(char* boardName);
  */
 char* getBoardName(void);
 
+/**
+ * Defines the version of the BOARD.
+ * @param boardVersion the Version of the BOARD
+ */
+void setBoardVersion(char* version);
+
+/**
+ * Returns the version of the BOARD.
+ * @return the version of the BOARD
+ */
+char* getBoardVersion(void);
+
+
+
 #endif

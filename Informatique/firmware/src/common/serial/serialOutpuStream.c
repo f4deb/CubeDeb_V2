@@ -77,7 +77,7 @@ OutputStream* initSerialOutputStream(OutputStream* outputStream, enum SerialPort
     /* Register a callback for read events */
     UART5_ReadCallbackRegister(usartReadEventHandler, (uintptr_t) NULL);   
          
-    appendString(outputStream,getBoardName());
+    
     
     return getSerialOutputStream(serialPort);
  

@@ -1,3 +1,4 @@
 /Informatique/Validation PIC32MZ2048EF-100/firmware/LED1-2.X/dist/
 /Informatique/Validation PIC32MZ2048EF-100/firmware/LED1-2.X/build/
 /Informatique/firmware/CubeDebMeteo.X/build
+*.o

@@ -41,8 +41,6 @@
 #include "../common/sensor/temperature/temperature.h"
 
 
-//LED Gestion        
-static bool led2 = true;
 
 
 char messageStart[] = "****  UART5 echo demo: Non-blocking Transfer with the interrupt  ****\r\n\
@@ -78,28 +76,97 @@ static OutputStream* screen7SegCpu;
 static uint32_t capturedValue[20];
 volatile uint8_t captureIndex = 0;
 
-void mesure_time(void){
+//--------------- Timing Synchronisation
+static uint16_t timingSync;
 
-    //while ( true ){
+
+uint16_t mesure_time(void){
+    int i;
+    uint16_t distance = 0;
+    for (i=0;i<4;i++){
         while(!ICAP1_CaptureStatusGet());
 
         capturedValue[captureIndex++] = ICAP1_CaptureBufferRead();
         capturedValue[captureIndex++] = TMR4;
-        if ( captureIndex > 12){
-            int distance;          
+        if ( captureIndex > 4){
+                      
             if (capturedValue[4]>capturedValue[2]){
                 distance = ((capturedValue[4]-capturedValue[2])*17)/10000;
             }
             else {
                 distance = ((capturedValue[2]-capturedValue[4])*17)/10000;
             }
-                appendStringAndDec(debugOutputStream,"Distance en mm :",distance); 
-                appendLF(debugOutputStream);
-                appendDot(screen7SegCpu,0);  
-                appendDec4AsString(screen7SegCpu,distance);
+            
         captureIndex = 0;
         }
-    //}
+    }
+
+    return distance;
+}
+
+
+void ws2812b0(void){
+    uint32_t time0 = TMR4;   
+    uint32_t time1 = TMR4;
+    time0 = TMR4;
+        IO1_Clear();
+        while (time1 < time0 + 37){
+            time1 = TMR4;
+        } 
+        time0 = TMR4;
+        IO1_Set();
+        while (time1 < time0 + 75){
+            time1 = TMR4;
+        }    
+}
+
+void ws2812b1(void){
+    uint32_t time0 = TMR4;   
+    uint32_t time1 = TMR4;
+    time0 = TMR4;
+        IO1_Clear();
+        while (time1 < time0 + 75){
+            time1 = TMR4;
+        } 
+        time0 = TMR4;
+        IO1_Set();
+        while (time1 < time0 + 37){
+            time1 = TMR4;
+        }    
+}
+
+void ws2812bReset (void){
+    IO1_Clear();
+    delayMicroSecs(50);
+}
+    
+    
+    
+void ws2812b (void){
+
+    TMR4_Start();
+    int i;
+    while (1){
+        
+                       
+
+
+        
+        for (i=0;i<24;i++){
+            ws2812b1();
+
+        }   
+        for (i=0;i<24;i++){
+
+            ws2812b1();
+        }    
+        for (i=0;i<24;i++){
+            ws2812b1();
+
+        }    
+       delayMilliSecs(500); 
+       ws2812bReset();
+    }
 }
 
 
@@ -115,6 +182,9 @@ void initMainCube (void) {
     
 // Define the name of the Board    
     setBoardName (BOARD_NAME);
+    
+// Define the version of the Board
+    setBoardVersion(BOARD_VERSION);
     
 //CPU LED initialisation    
     initLed(LED1RED,LED1GREEN,LED2RED,LED2GREEN);
@@ -154,8 +224,17 @@ void initMainCube (void) {
     
     // initialise afficheur driver et flux pour afficheur 7 Segments de la carte CPU
     screen7SegCpu = initSAA1064T(get7SegOutpuStream(SAA1064_PRINT_7SEG_CPU), SAA1064_ADDR_0);  
+    
+    // Set to 0 the Timing Synchronisation
+    timingSync = 0;
 
-    }
+    // Print the Name and the Version on DebugPort
+    appendString(debugOutputStream,getBoardName());
+    appendStringLN(debugOutputStream,getBoardVersion());
+    
+    // Print the Name and the Version on DebugPort
+    appendString(screen7SegCpu,getBoardVersion());   
+}
 
 // ***************************************************************************************** //
 // ***************************************************************************************** //
@@ -175,56 +254,53 @@ void mainCube (void){
     clockParam->year = 0x21;
     
     //setClock(clockCPUStream,clockParam);
-    //mesure_time();
-
+    
     if (getIsTmr1Expired() == true) {
 
         setIsTmr1Expired(false);
 
-        if (led2 == true ) {
-            //led1RedOn();
-            led2GreenOff();
-
-            led2 = false;             
-
-          
-            appendDot(screen7SegCpu,4);
-            appendString(screen7SegCpu, readSensorValueAsStringFor7Seg(tempSensorCpuStream));
-            printClock(debugOutputStream,getClockStream(CLOCK_CPU));
-            appendString(debugOutputStream,"Temperature Interne: "); 
-            appendString(debugOutputStream, readSensorValueAsString(tempSensorCpuStream));
-            appendString(debugOutputStream, "deg");
-            append(debugOutputStream,LF);  
+//Timing Synchronisation
+    //- 1/2    
+        led2GreenToggle();
+        
+        ws2812b();
             
-/*            printClock(debugOutputStream,getClockStream(CLOCK_CPU));
-            appendString(debugOutputStream, "Distance : ");
-            appendDec(debugOutputStream,readDistance(0));
-            append(debugOutputStream,LF);
-          
-            mesure_time();
-*/
-        }
-        else {
-            led2GreenOn();
-            led1RedOff();
-            led2 = true;
+        switch (timingSync) {
+            case 2: 
+                appendDot(screen7SegCpu,4);
+                appendString(screen7SegCpu, readSensorValueAsStringFor7Seg(tempSensorCpuStream));
+                printClock(debugOutputStream,getClockStream(CLOCK_CPU));
+                appendString(debugOutputStream,"Temperature Interne: "); 
+                appendString(debugOutputStream, readSensorValueAsString(tempSensorCpuStream));
+                appendString(debugOutputStream, "deg");
+                append(debugOutputStream,LF);  
+                break;
+           
+            case 4:
+                appendDot(screen7SegCpu,4);
+                appendString(screen7SegCpu, readSensorValueAsStringFor7Seg(tempSensorExt1Stream));
+                printClock(debugOutputStream,getClockStream(CLOCK_CPU));
+                appendString(debugOutputStream,"Temperature Externe: ");
+                appendString(debugOutputStream, readSensorValueAsString(tempSensorExt1Stream));            
+                appendString(debugOutputStream, "deg");
+                append(debugOutputStream,LF);
+                break;
             
-            appendDot(screen7SegCpu,4);
-            appendString(screen7SegCpu, readSensorValueAsStringFor7Seg(tempSensorExt1Stream));
-            printClock(debugOutputStream,getClockStream(CLOCK_CPU));
-            appendString(debugOutputStream,"Temperature Externe: ");
-            appendString(debugOutputStream, readSensorValueAsString(tempSensorExt1Stream));            
-            appendString(debugOutputStream, "deg");
-            append(debugOutputStream,LF);
+            case 6:
+                printClock(debugOutputStream,getClockStream(CLOCK_CPU));
+                appendStringAndDec(debugOutputStream,"Distance en mm :",mesure_time()); 
+                appendLF(debugOutputStream);
+                appendDot(screen7SegCpu,0);  
+                appendDec4AsString(screen7SegCpu,mesure_time());           
+                break;
             
-/*            printClock(debugOutputStream,getClockStream(CLOCK_CPU));
-            appendString(debugOutputStream, "Distance : ");
-            appendDec(debugOutputStream,readDistance(0));
-            append(debugOutputStream,LF);
-
-            mesure_time();
-*/
-        }
+            default : 
+                //appendDec(debugOutputStream, timingSync);
+                appendCRLF(debugOutputStream);                         
+        }    
+        timingSync++;
+        if (timingSync >6 ) {
+            timingSync = 1;
+        }    
     }            
 }
-
