@@ -81,6 +81,8 @@ static uint16_t timingSync;
 
 
 uint16_t mesure_time(void){
+        TMR4_Start();
+
     int i;
     uint16_t distance = 0;
     for (i=0;i<4;i++){
@@ -109,28 +111,59 @@ void ws2812b0(void){
     uint32_t time0 = TMR4;   
     uint32_t time1 = TMR4;
     time0 = TMR4;
-        IO1_Clear();
-        while (time1 < time0 + 37){
+        IO1_Set();
+        while (time1 < time0 + 30){
             time1 = TMR4;
         } 
         time0 = TMR4;
-        IO1_Set();
-        while (time1 < time0 + 75){
+        IO1_Clear();
+        while (time1 < time0 + 70){
             time1 = TMR4;
         }    
+}
+
+void RGBbit(uint8_t level){
+    if (level == 1 ){
+        ws2812b1();
+    }
+    else           
+        ws2812b0();
+}
+
+void GRBcolor(uint8_t color){
+    uint8_t i = 0;
+    uint8_t color1;
+    uint8_t mask = 0x80;
+    uint8_t bitc = 0;
+    while (i<8){
+        bitc = 0;
+        color1 = color & mask;
+        if (color1 > 0){
+            ws2812b1();
+            //bitc = 1;    
+        }
+        else {
+            ws2812b0();
+            //bitc = 0;    
+        }
+        //RGBbit(bitc);
+        mask = mask>>1;
+        i++;
+    }
+    
 }
 
 void ws2812b1(void){
     uint32_t time0 = TMR4;   
     uint32_t time1 = TMR4;
     time0 = TMR4;
-        IO1_Clear();
-        while (time1 < time0 + 75){
+        IO1_Set();
+        while (time1 < time0 + 70){
             time1 = TMR4;
         } 
         time0 = TMR4;
-        IO1_Set();
-        while (time1 < time0 + 37){
+        IO1_Clear();
+        while (time1 < time0 + 30){
             time1 = TMR4;
         }    
 }
@@ -142,34 +175,11 @@ void ws2812bReset (void){
     
     
     
-void ws2812b (void){
-
-    TMR4_Start();
-    int i;
-    while (1){
-        
-                       
-
-
-        
-        for (i=0;i<24;i++){
-            ws2812b1();
-
-        }   
-        for (i=0;i<24;i++){
-
-            ws2812b1();
-        }    
-        for (i=0;i<24;i++){
-            ws2812b1();
-
-        }    
-       delayMilliSecs(500); 
-       ws2812bReset();
-    }
+void ws2812bGRB (uint8_t green,uint8_t red,uint8_t blue){                 
+            GRBcolor(green);          
+            GRBcolor(red);          
+            GRBcolor(blue);       
 }
-
-
 
 // ***************************************************************************************** //
 // ***************************************************************************************** //
@@ -263,9 +273,17 @@ void mainCube (void){
     //- 1/2    
         led2GreenToggle();
         
-        ws2812b();
+
             
         switch (timingSync) {
+            case 1 :
+                ws2812bGRB(70,0,0);
+                ws2812bGRB(0,70,0);
+                ws2812bGRB(0,0,70);
+                ws2812bGRB(70,0,0);
+                ws2812bGRB(0,70,0);
+                ws2812bGRB(0,0,70);
+                break;
             case 2: 
                 appendDot(screen7SegCpu,4);
                 appendString(screen7SegCpu, readSensorValueAsStringFor7Seg(tempSensorCpuStream));
@@ -274,6 +292,14 @@ void mainCube (void){
                 appendString(debugOutputStream, readSensorValueAsString(tempSensorCpuStream));
                 appendString(debugOutputStream, "deg");
                 append(debugOutputStream,LF);  
+                break;
+            case 3 :
+                ws2812bGRB(0,0,40);
+                ws2812bGRB(40,0,0);
+                ws2812bGRB(0,40,0);
+                ws2812bGRB(0,0,40);
+                ws2812bGRB(40,0,0);
+                ws2812bGRB(0,40,0);
                 break;
            
             case 4:
@@ -284,6 +310,15 @@ void mainCube (void){
                 appendString(debugOutputStream, readSensorValueAsString(tempSensorExt1Stream));            
                 appendString(debugOutputStream, "deg");
                 append(debugOutputStream,LF);
+                break;
+            case 5 :
+                ws2812bGRB(0,10,0);
+                ws2812bGRB(0,0,10);
+                ws2812bGRB(10,0,0);
+                ws2812bGRB(0,10,0);
+                ws2812bGRB(0,0,10);
+                ws2812bGRB(10,0,0);
+
                 break;
             
             case 6:
