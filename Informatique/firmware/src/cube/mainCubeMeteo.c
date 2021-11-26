@@ -17,6 +17,7 @@
 #include "../common/led/led.h"
 #include "../common/I2C/I2CConfig.h"
 
+#include "../common/delay/delay.h"
 //#include "../common/led/led.h"
 #include "../common/system/system.h"
 #include "../common/timer1/timer1.h"
@@ -32,12 +33,14 @@
 #include "../drivers/PCF8563/PCF8563.h"
 #include "../drivers/LM75A/LM75A.h"
 #include "../drivers/SAA1064T/SAA1064T.h"
+#include "../drivers/WS2812b/WS2812b.h"
 
 #include "../common/7seg/7segments.h"
 #include "../common/7seg/7segmentsOutputStream.h"
 
 #include "../common/clock/clock.h"
-
+#include "../common/RGB/RGB.h"
+#include "../common/RGB/RGBStream.h"
 #include "../common/sensor/temperature/temperature.h"
 
 
@@ -72,12 +75,17 @@ static Clock* clockCPUStream;
 static OutputStream* screen7SegCpu;
 //static OutputStream* screen7SegExt1;
 
+//-------------- RGB STREAM
+static RGB* rgbStream;
+
 //--------------- Input Capture Value
 static uint32_t capturedValue[20];
 volatile uint8_t captureIndex = 0;
 
 //--------------- Timing Synchronisation
 static uint16_t timingSync;
+
+
 
 
 uint16_t mesure_time(void){
@@ -107,79 +115,6 @@ uint16_t mesure_time(void){
 }
 
 
-void ws2812b0(void){
-    uint32_t time0 = TMR4;   
-    uint32_t time1 = TMR4;
-    time0 = TMR4;
-        IO1_Set();
-        while (time1 < time0 + 30){
-            time1 = TMR4;
-        } 
-        time0 = TMR4;
-        IO1_Clear();
-        while (time1 < time0 + 70){
-            time1 = TMR4;
-        }    
-}
-
-void RGBbit(uint8_t level){
-    if (level == 1 ){
-        ws2812b1();
-    }
-    else           
-        ws2812b0();
-}
-
-void GRBcolor(uint8_t color){
-    uint8_t i = 0;
-    uint8_t color1;
-    uint8_t mask = 0x80;
-    uint8_t bitc = 0;
-    while (i<8){
-        bitc = 0;
-        color1 = color & mask;
-        if (color1 > 0){
-            ws2812b1();
-            //bitc = 1;    
-        }
-        else {
-            ws2812b0();
-            //bitc = 0;    
-        }
-        //RGBbit(bitc);
-        mask = mask>>1;
-        i++;
-    }
-    
-}
-
-void ws2812b1(void){
-    uint32_t time0 = TMR4;   
-    uint32_t time1 = TMR4;
-    time0 = TMR4;
-        IO1_Set();
-        while (time1 < time0 + 70){
-            time1 = TMR4;
-        } 
-        time0 = TMR4;
-        IO1_Clear();
-        while (time1 < time0 + 30){
-            time1 = TMR4;
-        }    
-}
-
-void ws2812bReset (void){
-    IO1_Clear();
-    delayMicroSecs(50);
-}
-    
-    
-    
-void ws2812bGRB (uint8_t green,uint8_t red,uint8_t blue){                 
-            GRBcolor(green);          
-            GRBcolor(red);          
-            GRBcolor(blue);       
-}
 
 // ***************************************************************************************** //
 // ***************************************************************************************** //
@@ -235,6 +170,9 @@ void initMainCube (void) {
     // initialise afficheur driver et flux pour afficheur 7 Segments de la carte CPU
     screen7SegCpu = initSAA1064T(get7SegOutpuStream(SAA1064_PRINT_7SEG_CPU), SAA1064_ADDR_0);  
     
+    // initialise le flux pour l'affichage des leds RGB
+    rgbStream = initRGBWS2812b(getRGBStream(0),6,0);
+    
     // Set to 0 the Timing Synchronisation
     timingSync = 0;
 
@@ -277,12 +215,12 @@ void mainCube (void){
             
         switch (timingSync) {
             case 1 :
-                ws2812bGRB(70,0,0);
-                ws2812bGRB(0,70,0);
-                ws2812bGRB(0,0,70);
-                ws2812bGRB(70,0,0);
-                ws2812bGRB(0,70,0);
-                ws2812bGRB(0,0,70);
+                setColorRGB(rgbStream,70,0,0);
+                setColorRGB(rgbStream,0,70,0);
+                setColorRGB(rgbStream,0,0,70);
+                setColorRGB(rgbStream,70,0,0);
+                setColorRGB(rgbStream,0,70,0);
+                setColorRGB(rgbStream,0,0,70);
                 break;
             case 2: 
                 appendDot(screen7SegCpu,4);
@@ -294,12 +232,12 @@ void mainCube (void){
                 append(debugOutputStream,LF);  
                 break;
             case 3 :
-                ws2812bGRB(0,0,40);
-                ws2812bGRB(40,0,0);
-                ws2812bGRB(0,40,0);
-                ws2812bGRB(0,0,40);
-                ws2812bGRB(40,0,0);
-                ws2812bGRB(0,40,0);
+                setColorRGB(rgbStream,0,0,40);
+                setColorRGB(rgbStream,40,0,0);
+                setColorRGB(rgbStream,0,40,0);
+                setColorRGB(rgbStream,0,0,40);
+                setColorRGB(rgbStream,40,0,0);
+                setColorRGB(rgbStream,0,40,0);
                 break;
            
             case 4:
@@ -312,12 +250,12 @@ void mainCube (void){
                 append(debugOutputStream,LF);
                 break;
             case 5 :
-                ws2812bGRB(0,10,0);
-                ws2812bGRB(0,0,10);
-                ws2812bGRB(10,0,0);
-                ws2812bGRB(0,10,0);
-                ws2812bGRB(0,0,10);
-                ws2812bGRB(10,0,0);
+                setColorRGB(rgbStream,0,10,0);
+                setColorRGB(rgbStream,0,0,10);
+                setColorRGB(rgbStream,10,0,0);
+                setColorRGB(rgbStream,0,10,0);
+                setColorRGB(rgbStream,0,0,10);
+                setColorRGB(rgbStream,10,0,0);
 
                 break;
             

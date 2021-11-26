@@ -39,6 +39,10 @@
         <logicalFolder name="f5" displayName="led" projectFiles="true">
           <itemPath>../src/common/led/led.h</itemPath>
         </logicalFolder>
+        <logicalFolder name="f14" displayName="RGB" projectFiles="true">
+          <itemPath>../src/common/RGB/RGB.h</itemPath>
+          <itemPath>../src/common/RGB/RGBStream.h</itemPath>
+        </logicalFolder>
         <logicalFolder name="f10" displayName="sensor" projectFiles="true">
           <logicalFolder name="f2" displayName="distance" projectFiles="true">
             <itemPath>../src/common/sensor/distance/HC-SR04.h</itemPath>
@@ -136,6 +140,7 @@
         <logicalFolder name="f2" displayName="SAA1064T" projectFiles="true">
           <itemPath>../src/drivers/SAA1064T/SAA1064T.h</itemPath>
         </logicalFolder>
+        <itemPath>../src/drivers/WS2812b/WS2812b.h</itemPath>
       </logicalFolder>
       <logicalFolder name="f2" displayName="main" projectFiles="true">
       </logicalFolder>
@@ -182,6 +187,10 @@
         </logicalFolder>
         <logicalFolder name="f4" displayName="led" projectFiles="true">
           <itemPath>../src/common/led/led.c</itemPath>
+        </logicalFolder>
+        <logicalFolder name="f13" displayName="RGB" projectFiles="true">
+          <itemPath>../src/common/RGB/RGB.c</itemPath>
+          <itemPath>../src/common/RGB/RGBStream.c</itemPath>
         </logicalFolder>
         <logicalFolder name="f10" displayName="sensor" projectFiles="true">
           <logicalFolder name="f2" displayName="distance" projectFiles="true">
@@ -272,6 +281,9 @@
         </logicalFolder>
         <logicalFolder name="f2" displayName="SAA1064T" projectFiles="true">
           <itemPath>../src/drivers/SAA1064T/SAA1064T.c</itemPath>
+        </logicalFolder>
+        <logicalFolder name="f4" displayName="WS2812b" projectFiles="true">
+          <itemPath>../src/drivers/WS2812b/WS2812b.c</itemPath>
         </logicalFolder>
       </logicalFolder>
       <logicalFolder name="f3" displayName="main" projectFiles="true">
