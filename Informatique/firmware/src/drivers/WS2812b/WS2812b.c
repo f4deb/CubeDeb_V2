@@ -59,11 +59,8 @@ void GRBcolor(uint8_t color){
         }
         mask = mask>>1;
         i++;
-    }
-    
+    }    
 }
-
-
 
 void ws2812bReset (void){
     IO1_Clear();

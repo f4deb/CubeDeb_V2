@@ -210,10 +210,13 @@ void mainCube (void){
 //Timing Synchronisation
     //- 1/2    
         led2GreenToggle();
-        
+
 
             
         switch (timingSync) {
+            case 0:    
+                RainRGB(rgbStream, 10,0,0, 50,3);
+                break;            
             case 1 :
                 setColorRGB(rgbStream,70,0,0);
                 setColorRGB(rgbStream,0,70,0);
@@ -266,14 +269,17 @@ void mainCube (void){
                 appendDot(screen7SegCpu,0);  
                 appendDec4AsString(screen7SegCpu,mesure_time());           
                 break;
+                
+            case 7:    
+                break;
             
             default : 
                 //appendDec(debugOutputStream, timingSync);
                 appendCRLF(debugOutputStream);                         
         }    
         timingSync++;
-        if (timingSync >6 ) {
-            timingSync = 1;
+        if (timingSync >7 ) {
+            timingSync = 0;
         }    
     }            
 }

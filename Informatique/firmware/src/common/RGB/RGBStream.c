@@ -1,7 +1,7 @@
 #include "RGBStream.h"
 #include "definitions.h"                // SYS function prototypes
 
-static RGB rgb[18];
+static RGB rgb[100];
 
 RGB* getRGBStream(int index){
     return &rgb[index];
