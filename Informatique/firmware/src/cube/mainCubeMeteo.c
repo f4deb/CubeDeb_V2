@@ -206,16 +206,16 @@ void mainCube (void){
     if (getIsTmr1Expired() == true) {
 
         setIsTmr1Expired(false);
-
+        TMR1_InterruptDisable();
+        
 //Timing Synchronisation
-    //- 1/2    
-        led2GreenToggle();
+         led2GreenToggle();
 
 
             
         switch (timingSync) {
             case 0:    
-                RainRGB(rgbStream, 10,0,0, 50,3);
+                RainRGB(rgbStream, 10,0,0, -300,3);
                 break;            
             case 1 :
                 setColorRGB(rgbStream,70,0,0);
@@ -278,8 +278,9 @@ void mainCube (void){
                 appendCRLF(debugOutputStream);                         
         }    
         timingSync++;
-        if (timingSync >7 ) {
+        if (timingSync >3 ) {
             timingSync = 0;
         }    
+        TMR1_InterruptEnable();
     }            
 }
