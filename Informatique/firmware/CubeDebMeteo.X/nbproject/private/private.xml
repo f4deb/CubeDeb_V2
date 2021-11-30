@@ -5,16 +5,12 @@
         <group>
             <file>file:/media/f4deb/ROBOT/ELECTRONIQUE/CubDebV2/Informatique/firmware/src/common/sensor/temperature/temperature.h</file>
             <file>file:/media/f4deb/ROBOT/ELECTRONIQUE/CubDebV2/Informatique/firmware/src/common/sensor/temperature/temperatureStream.c</file>
-            <file>file:/media/f4deb/ROBOT/ELECTRONIQUE/CubDebV2/Informatique/firmware/src/common/RGB/RGB.c</file>
-            <file>file:/media/f4deb/ROBOT/ELECTRONIQUE/CubDebV2/Informatique/firmware/src/config/default/peripheral/tmr1/plib_tmr1.c</file>
-            <file>file:/media/f4deb/ROBOT/ELECTRONIQUE/CubDebV2/Informatique/firmware/src/common/RGB/RGB.h</file>
-            <file>file:/media/f4deb/ROBOT/ELECTRONIQUE/CubDebV2/Informatique/firmware/src/drivers/LM75A/LM75A.c</file>
+            <file>file:/media/f4deb/ROBOT/ELECTRONIQUE/CubDebV2/Informatique/firmware/src/common/clock/clock.c</file>
             <file>file:/media/f4deb/ROBOT/ELECTRONIQUE/CubDebV2/Informatique/firmware/src/cube/mainCubeMeteo.c</file>
+            <file>file:/media/f4deb/ROBOT/ELECTRONIQUE/CubDebV2/Informatique/firmware/src/drivers/LM75A/LM75A.c</file>
             <file>file:/media/f4deb/ROBOT/ELECTRONIQUE/CubDebV2/Informatique/firmware/src/common/sensor/temperature/temperatureStream.h</file>
             <file>file:/media/f4deb/ROBOT/ELECTRONIQUE/CubDebV2/Informatique/firmware/src/common/sensor/temperature/temperature.c</file>
             <file>file:/media/f4deb/ROBOT/ELECTRONIQUE/CubDebV2/Informatique/firmware/src/drivers/LM75A/LM75A.h</file>
-            <file>file:/media/f4deb/ROBOT/ELECTRONIQUE/CubDebV2/Informatique/firmware/src/common/RGB/RGBStream.c</file>
-            <file>file:/media/f4deb/ROBOT/ELECTRONIQUE/CubDebV2/Informatique/firmware/src/drivers/WS2812b/WS2812b.c</file>
         </group>
     </open-files>
 </project-private>

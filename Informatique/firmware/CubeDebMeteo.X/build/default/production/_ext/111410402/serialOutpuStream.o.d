@@ -3,7 +3,8 @@ build/default/production/_ext/111410402/serialOutpuStream.o: \
  ../src/common/serial/serialoutputStream.h \
  ../src/common/serial/../IO/outputStream/outputStream.h \
  ../src/common/serial/serial.h \
- ../src/common/serial/../../common/uart5/uart5.h \
+ ../src/common/serial/../../common/IO/buffer/buffer.h \
+ ../src/common/serial/../../common/IO/printWriter/printWriter.h \
  ../src/config/default/definitions.h \
  ../src/config/default/peripheral/clk/plib_clk.h \
  ../src/config/default/peripheral/gpio/plib_gpio.h \
@@ -25,7 +26,10 @@ build/default/production/_ext/111410402/serialOutpuStream.o: \
  ../src/config/default/peripheral/uart/plib_uart2.h \
  ../src/config/default/peripheral/tmr/plib_tmr2.h \
  ../src/config/default/peripheral/tmr1/plib_tmr1.h \
- ../src/config/default/peripheral/tmr1/plib_tmr1_common.h
+ ../src/config/default/peripheral/tmr1/plib_tmr1_common.h \
+ ../src/config/default/../../common/IO/outputStream/outputStream.h \
+ ../src/common/serial/../../common/system/system.h \
+ ../src/common/serial/../../common/uart5/uart5.h
 
 ../src/common/serial/serialoutputStream.h:
 
@@ -33,7 +37,9 @@ build/default/production/_ext/111410402/serialOutpuStream.o: \
 
 ../src/common/serial/serial.h:
 
-../src/common/serial/../../common/uart5/uart5.h:
+../src/common/serial/../../common/IO/buffer/buffer.h:
+
+../src/common/serial/../../common/IO/printWriter/printWriter.h:
 
 ../src/config/default/definitions.h:
 
@@ -78,3 +84,9 @@ build/default/production/_ext/111410402/serialOutpuStream.o: \
 ../src/config/default/peripheral/tmr1/plib_tmr1.h:
 
 ../src/config/default/peripheral/tmr1/plib_tmr1_common.h:
+
+../src/config/default/../../common/IO/outputStream/outputStream.h:
+
+../src/common/serial/../../common/system/system.h:
+
+../src/common/serial/../../common/uart5/uart5.h:
