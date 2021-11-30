@@ -203,6 +203,12 @@ void mainCube (void){
     
     //setClock(clockCPUStream,clockParam);
     
+   /* while (1){
+                        appendStringAndDec(debugOutputStream,"Distance en mm :",mesure_time()); 
+                appendLF(debugOutputStream);
+    }*/
+    
+    
     if (getIsTmr1Expired() == true) {
 
         setIsTmr1Expired(false);
@@ -215,7 +221,7 @@ void mainCube (void){
             
         switch (timingSync) {
             case 0:    
-                RainRGB(rgbStream, 10,0,0, -300,3);
+                RainRGB(rgbStream, 10,0,0, -50,3);
                 break;            
             case 1 :
                 setColorRGB(rgbStream,70,0,0);
@@ -270,7 +276,8 @@ void mainCube (void){
                 appendDec4AsString(screen7SegCpu,mesure_time());           
                 break;
                 
-            case 7:    
+            case 7:   
+                    RainRGB(rgbStream, 10,0,0,50,3);
                 break;
             
             default : 
@@ -278,7 +285,7 @@ void mainCube (void){
                 appendCRLF(debugOutputStream);                         
         }    
         timingSync++;
-        if (timingSync >3 ) {
+        if (timingSync >7 ) {
             timingSync = 0;
         }    
         TMR1_InterruptEnable();

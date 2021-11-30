@@ -50,14 +50,14 @@
 void ICAP1_Initialize (void)
 {
     /*Setup IC1CON    */
-    /*ICM     = 3        */
+    /*ICM     = 6        */
     /*ICI     = 3        */
     /*ICTMR = 1*/
     /*C32     = 1        */
     /*FEDGE = 1        */
     /*SIDL     = false    */
 
-    IC1CON = 0x3e3;
+    IC1CON = 0x3e6;
 
     CFGCON |= 0x00020000;
 
