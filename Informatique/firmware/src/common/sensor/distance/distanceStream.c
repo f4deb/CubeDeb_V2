@@ -11,7 +11,7 @@ Distance* getDistanceStream(int index){
 
 uint32_t getDistanceSensor (Distance* distance){
     distance->readSensorValue(distance);
-    uint32_t dist = distance->value;
+    uint32_t dist = distance->readSensorValue(distance);
     return dist;
 }
 

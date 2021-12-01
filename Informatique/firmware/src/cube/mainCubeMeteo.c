@@ -34,6 +34,7 @@
 #include "../drivers/LM75A/LM75A.h"
 #include "../drivers/SAA1064T/SAA1064T.h"
 #include "../drivers/WS2812b/WS2812b.h"
+#include "../drivers/HCSR04/HC-SR04.h"
 
 #include "../common/7seg/7segments.h"
 #include "../common/7seg/7segmentsOutputStream.h"
@@ -42,6 +43,7 @@
 #include "../common/RGB/RGB.h"
 #include "../common/RGB/RGBStream.h"
 #include "../common/sensor/temperature/temperature.h"
+#include "../common/sensor/distance/distance.h"
 
 
 
@@ -77,6 +79,9 @@ static OutputStream* screen7SegCpu;
 
 //-------------- RGB STREAM
 static RGB* rgbStream;
+
+//-------------- Distance STREAM
+static Distance* distanceStream;
 
 
 
@@ -170,6 +175,9 @@ void initMainCube (void) {
     
     // initialise le flux pour l'affichage des leds RGB
     rgbStream = initRGBWS2812b(getRGBStream(0),6,0);
+    
+    // initialise HCSR04 driver et flux pour mesure de distance
+    distanceStream = initDistanceHCSR04(getDistanceStream(0),0);
        
     // Set to 0 the Timing Synchronisation
     timingSync = 0;
@@ -206,7 +214,7 @@ void mainCube (void){
                 appendLF(debugOutputStream);
     }*/
                     printClock(debugOutputStream,getClockStream(CLOCK_CPU));
-                appendStringAndDec(debugOutputStream,"Distance en mm :",mesure_time()); 
+                appendStringAndDec(debugOutputStream,"Distance en mm :",mesure_time(distanceStream)); 
                 appendLF(debugOutputStream);
     
     if (getIsTmr1Expired() == true) {
@@ -268,10 +276,10 @@ void mainCube (void){
             
             case 6:
                 printClock(debugOutputStream,getClockStream(CLOCK_CPU));
-                appendStringAndDec(debugOutputStream,"Distance en mm :",mesure_time()); 
+                appendStringAndDec(debugOutputStream,"Distance en mm :",mesure_time(distanceStream)); 
                 appendLF(debugOutputStream);
                 appendDot(screen7SegCpu,0);  
-                appendDec4AsString(screen7SegCpu,mesure_time());           
+                appendDec4AsString(screen7SegCpu,mesure_time(distanceStream));           
                 break;
                 
             case 7:   

@@ -10,7 +10,7 @@ uint32_t _HCSR04_readDistanceValue (Distance* distance){
     TMR4_Start();
 
     int i;
-    uint16_t dist = 0;
+    uint32_t dist = 0;
     for (i=0;i<4;i++){
         while(!ICAP1_CaptureStatusGet());
 
@@ -28,6 +28,7 @@ uint32_t _HCSR04_readDistanceValue (Distance* distance){
         captureIndex = 0;
         }
     }
+    return dist;
 }
 
 Distance* initDistanceHCSR04(Distance* distance, uint16_t distanceIndex) {
