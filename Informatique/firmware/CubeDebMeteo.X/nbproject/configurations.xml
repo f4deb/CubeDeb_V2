@@ -45,7 +45,6 @@
         </logicalFolder>
         <logicalFolder name="f10" displayName="sensor" projectFiles="true">
           <logicalFolder name="f2" displayName="distance" projectFiles="true">
-            <itemPath>../src/common/sensor/distance/HC-SR04.h</itemPath>
             <itemPath>../src/common/sensor/distance/distance.h</itemPath>
             <itemPath>../src/common/sensor/distance/distanceStream.h</itemPath>
           </logicalFolder>
@@ -131,6 +130,9 @@
       <logicalFolder name="f3" displayName="device" projectFiles="true">
       </logicalFolder>
       <logicalFolder name="f4" displayName="drivers" projectFiles="true">
+        <logicalFolder name="f4" displayName="HCSR04" projectFiles="true">
+          <itemPath>../src/drivers/HCSR04/HC-SR04.h</itemPath>
+        </logicalFolder>
         <logicalFolder name="f1" displayName="LM75A" projectFiles="true">
           <itemPath>../src/drivers/LM75A/LM75A.h</itemPath>
         </logicalFolder>
@@ -194,7 +196,6 @@
         </logicalFolder>
         <logicalFolder name="f10" displayName="sensor" projectFiles="true">
           <logicalFolder name="f2" displayName="distance" projectFiles="true">
-            <itemPath>../src/common/sensor/distance/HC-SR04.c</itemPath>
             <itemPath>../src/common/sensor/distance/distance.c</itemPath>
             <itemPath>../src/common/sensor/distance/distanceStream.c</itemPath>
           </logicalFolder>
@@ -273,6 +274,9 @@
         <itemPath>../src/cube/cubeCommon.c</itemPath>
       </logicalFolder>
       <logicalFolder name="f4" displayName="drivers" projectFiles="true">
+        <logicalFolder name="f5" displayName="HCSR04" projectFiles="true">
+          <itemPath>../src/drivers/HCSR04/HC-SR04.c</itemPath>
+        </logicalFolder>
         <logicalFolder name="f3" displayName="LM75A" projectFiles="true">
           <itemPath>../src/drivers/LM75A/LM75A.c</itemPath>
         </logicalFolder>

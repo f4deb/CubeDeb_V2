@@ -2,7 +2,7 @@
 #define _7SEGMENTS_H
 
 //#include "../ascii/7seg.h"
-#include "definitions.h"                // SYS function prototypes
+#include <definitions.h>                // SYS function prototypes
 
 
     

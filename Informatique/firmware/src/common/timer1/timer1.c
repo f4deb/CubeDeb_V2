@@ -2,7 +2,7 @@
 
 #include <stdbool.h>
 
-#include "definitions.h"
+#include <definitions.h>
 
 static volatile bool isTmr1Expired = false;
 

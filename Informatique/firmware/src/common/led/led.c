@@ -1,7 +1,7 @@
 
 #include <stdbool.h>
 #include "led.h"
-#include "definitions.h"                // SYS function prototypes
+#include <definitions.h>                // SYS function prototypes
 
 //// LED 1
 //RED

@@ -2,7 +2,7 @@
 #define PRINT_WRITER_H
 
 #include <stdbool.h>
-#include "definitions.h"                // SYS function prototypes
+#include <definitions.h>                // SYS function prototypes
 
 
 #include "../../common/IO/outputStream/outputStream.h"

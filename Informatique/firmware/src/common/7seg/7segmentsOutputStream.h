@@ -2,7 +2,7 @@
 #define _7SEGMENTS_OUTPUT_STREAM_H
 
 #include <stdbool.h>
-#include "definitions.h"                // SYS function prototypes
+#include <definitions.h>                // SYS function prototypes
 
 #include "../../common/IO/outputStream/outputStream.h"
 

@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 #include "RGB.h"
-#include "definitions.h"                // SYS function prototypes
+#include <definitions.h>                // SYS function prototypes
 
 #include "../delay/delay.h"
 #include "../RGB/RGBStream.h"

@@ -1,7 +1,7 @@
 #ifndef _7SEG_H
 #define _7SEG_H
     
-#include "definitions.h"                // SYS function prototypes
+#include <definitions.h>                // SYS function prototypes
     
 static uint8_t ascii7[256] = {
     0xBD, // 0

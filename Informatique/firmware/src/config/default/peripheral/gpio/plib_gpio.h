@@ -80,14 +80,14 @@
 #define LED2_V_Get()               ((PORTB >> 0) & 0x1)
 #define LED2_V_PIN                  GPIO_PIN_RB0
 
-/*** Macros for IO1 pin ***/
-#define IO1_Set()               (LATASET = (1<<1))
-#define IO1_Clear()             (LATACLR = (1<<1))
-#define IO1_Toggle()            (LATAINV= (1<<1))
-#define IO1_OutputEnable()      (TRISACLR = (1<<1))
-#define IO1_InputEnable()       (TRISASET = (1<<1))
-#define IO1_Get()               ((PORTA >> 1) & 0x1)
-#define IO1_PIN                  GPIO_PIN_RA1
+/*** Macros for RGB_1 pin ***/
+#define RGB_1_Set()               (LATASET = (1<<1))
+#define RGB_1_Clear()             (LATACLR = (1<<1))
+#define RGB_1_Toggle()            (LATAINV= (1<<1))
+#define RGB_1_OutputEnable()      (TRISACLR = (1<<1))
+#define RGB_1_InputEnable()       (TRISASET = (1<<1))
+#define RGB_1_Get()               ((PORTA >> 1) & 0x1)
+#define RGB_1_PIN                  GPIO_PIN_RA1
 
 /*** Macros for I2C1_SCL pin ***/
 #define I2C1_SCL_Get()               ((PORTA >> 14) & 0x1)

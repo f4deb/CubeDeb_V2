@@ -1,7 +1,7 @@
 #ifndef _UART5_H   
 #define _UART5_H
 
-#include "definitions.h"
+#include <definitions.h>
 
 #define RX_BUFFER_SIZE      20
 

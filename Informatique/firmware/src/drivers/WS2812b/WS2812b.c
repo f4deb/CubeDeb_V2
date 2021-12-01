@@ -6,31 +6,31 @@
 
 
 
-void ws2812b0(void){
+void NZR0(void){
     uint32_t time0 = TMR4;   
     uint32_t time1 = TMR4;
     time0 = TMR4;
-        IO1_Set();
+        RGB_1_Set();
         while (time1 < time0 + 30){
             time1 = TMR4;
         } 
         time0 = TMR4;
-        IO1_Clear();
+        RGB_1_Clear();
         while (time1 < time0 + 70){
             time1 = TMR4;
         }    
 }
 
-void ws2812b1(void){
+void NZR1(void){
     uint32_t time0 = TMR4;   
     uint32_t time1 = TMR4;
     time0 = TMR4;
-        IO1_Set();
+        RGB_1_Set();
         while (time1 < time0 + 70){
             time1 = TMR4;
         } 
         time0 = TMR4;
-        IO1_Clear();
+        RGB_1_Clear();
         while (time1 < time0 + 30){
             time1 = TMR4;
         }    
@@ -38,10 +38,10 @@ void ws2812b1(void){
 
 void RGBbit(uint8_t level){
     if (level == 1 ){
-        ws2812b1();
+        NZR1();
     }
     else           
-        ws2812b0();
+        NZR0();
 }
 
 void GRBcolor(uint8_t color){
@@ -63,7 +63,7 @@ void GRBcolor(uint8_t color){
 }
 
 void ws2812bReset (void){
-    IO1_Clear();
+    RGB_1_Clear();
     delayMicroSecs(50);
 }
     

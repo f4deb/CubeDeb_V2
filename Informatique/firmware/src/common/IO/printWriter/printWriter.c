@@ -3,7 +3,7 @@
 #include <stdio.h>
 
 
-#include "definitions.h"                // SYS function prototypes
+#include <definitions.h>                // SYS function prototypes
 #include "printWriter.h"
 #include "../outputStream/outputStream.h"
 #include "../../common/common.h"

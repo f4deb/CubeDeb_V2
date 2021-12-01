@@ -1,7 +1,7 @@
 #ifndef _DELAY_H    
 #define _DELAY_H
 
-#include "definitions.h"
+#include <definitions.h>
 
 void delayMicroSecs(uint32_t microSeconds);
 

@@ -1,5 +1,5 @@
 #include "RGBStream.h"
-#include "definitions.h"                // SYS function prototypes
+#include <definitions.h>                // SYS function prototypes
 
 static RGB rgb[100];
 

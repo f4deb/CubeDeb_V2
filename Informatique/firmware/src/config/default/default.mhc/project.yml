@@ -195,13 +195,13 @@ files:
   security: NON_SECURE
   type: HEADER
   userChecksum: C8175D686FECDA56EC0FED1578D4ECA7
-- generatedChecksum: 0CF5C41384523EEDFAF32B5F790809F7
+- generatedChecksum: 3F92536608B24D82E9A9E69933D6B785
   logicalPath: config/default/peripheral/gpio
   name: plib_gpio.h
   physicalPath: peripheral/gpio
   security: NON_SECURE
   type: HEADER
-  userChecksum: 0CF5C41384523EEDFAF32B5F790809F7
+  userChecksum: 3F92536608B24D82E9A9E69933D6B785
 - generatedChecksum: 407D8CE5F0C091BCEBB78967FECBE53E
   logicalPath: config/default/peripheral/i2c/master
   name: plib_i2c1_master.h

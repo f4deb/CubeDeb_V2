@@ -1,12 +1,12 @@
 #include "mainCubeMeteo.h"
-#include "definitions.h"                // SYS function prototypes
+#include <definitions.h>                // SYS function prototypes
 
 #include <stddef.h>                     // Defines NULL
 #include <stdbool.h>                    // Defines true
 #include <stdio.h>
 #include <stdlib.h>                     // Defines EXIT_FAILURE
 #include <string.h>
-#include "definitions.h"                // SYS function prototypes
+#include <definitions.h>                // SYS function prototypes
 
 #include "../common/common.h"
 
@@ -78,16 +78,14 @@ static OutputStream* screen7SegCpu;
 //-------------- RGB STREAM
 static RGB* rgbStream;
 
-//--------------- Input Capture Value
-static uint32_t capturedValue[20];
-volatile uint8_t captureIndex = 0;
+
 
 //--------------- Timing Synchronisation
 static uint16_t timingSync;
 
 
 
-
+/*
 uint16_t mesure_time(void){
         TMR4_Start();
 
@@ -112,7 +110,7 @@ uint16_t mesure_time(void){
     }
 
     return distance;
-}
+}*/
 
 
 
@@ -172,7 +170,7 @@ void initMainCube (void) {
     
     // initialise le flux pour l'affichage des leds RGB
     rgbStream = initRGBWS2812b(getRGBStream(0),6,0);
-    
+       
     // Set to 0 the Timing Synchronisation
     timingSync = 0;
 
@@ -207,7 +205,9 @@ void mainCube (void){
                         appendStringAndDec(debugOutputStream,"Distance en mm :",mesure_time()); 
                 appendLF(debugOutputStream);
     }*/
-    
+                    printClock(debugOutputStream,getClockStream(CLOCK_CPU));
+                appendStringAndDec(debugOutputStream,"Distance en mm :",mesure_time()); 
+                appendLF(debugOutputStream);
     
     if (getIsTmr1Expired() == true) {
 
@@ -216,9 +216,7 @@ void mainCube (void){
         
 //Timing Synchronisation
          led2GreenToggle();
-
-
-            
+        
         switch (timingSync) {
             case 0:    
                 RainRGB(rgbStream, 10,0,0, -50,3);
@@ -277,7 +275,7 @@ void mainCube (void){
                 break;
                 
             case 7:   
-                    RainRGB(rgbStream, 10,0,0,50,3);
+                RainRGB(rgbStream, 10,0,0,50,3);
                 break;
             
             default : 

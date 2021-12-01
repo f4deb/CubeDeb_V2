@@ -115,7 +115,7 @@ children:
     - type: Values
       children:
       - type: User
-        attributes: {value: IO1}
+        attributes: {value: RGB_1}
   - type: String
     attributes: {id: BSP_PIN_38_FUNCTION_TYPE}
     children:
