@@ -48,6 +48,7 @@ void RainRGB(RGB* rgb, uint16_t red, int16_t green, uint16_t blue, signed int sp
         direction = true;
         j = 0;
     }  
+    
     if (direction == true ){
         while ( i <= cycle ){
             while (j < rgb->maxLed){

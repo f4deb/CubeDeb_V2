@@ -193,6 +193,7 @@ void mainCube (void){
             case 0:    
                 RainRGB(rgbStream, 10,0,0, -50,3);
                 break;            
+                
             case 1 :
                 setColorRGB(rgbStream,70,0,0);
                 setColorRGB(rgbStream,0,70,0);
@@ -201,6 +202,7 @@ void mainCube (void){
                 setColorRGB(rgbStream,0,70,0);
                 setColorRGB(rgbStream,0,0,70);
                 break;
+                
             case 2: 
                 appendDot(screen7SegCpu,4);
                 appendString(screen7SegCpu, readSensorValueAsStringFor7Seg(tempSensorCpuStream));
@@ -210,6 +212,7 @@ void mainCube (void){
                 appendString(debugOutputStream, "deg");
                 append(debugOutputStream,LF);  
                 break;
+                
             case 3 :
                 setColorRGB(rgbStream,0,0,40);
                 setColorRGB(rgbStream,40,0,0);
@@ -230,7 +233,12 @@ void mainCube (void){
                 break;
 
             case 5 :
-                valueToRGB(rgbStream,mesure_time(distanceStream));
+                printClock(debugOutputStream,getClockStream(CLOCK_CPU));
+                appendStringAndDec(debugOutputStream,"Distance en mm :",mesure_time(distanceStream)); 
+                appendLF(debugOutputStream);
+                appendDot(screen7SegCpu,0);  
+                appendDec4AsString(screen7SegCpu,mesure_time(distanceStream));    
+                valueToRGB(rgbStream,mesure_time(distanceStream));                
                 break;
             
             case 6:
@@ -238,7 +246,8 @@ void mainCube (void){
                 appendStringAndDec(debugOutputStream,"Distance en mm :",mesure_time(distanceStream)); 
                 appendLF(debugOutputStream);
                 appendDot(screen7SegCpu,0);  
-                appendDec4AsString(screen7SegCpu,mesure_time(distanceStream));           
+                appendDec4AsString(screen7SegCpu,mesure_time(distanceStream));    
+                valueToRGB(rgbStream,mesure_time(distanceStream));                
                 break;
                 
             case 7:   
