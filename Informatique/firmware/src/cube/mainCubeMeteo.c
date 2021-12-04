@@ -1,12 +1,12 @@
 #include "mainCubeMeteo.h"
-#include <definitions.h>                // SYS function prototypes
 
-#include <stddef.h>                     // Defines NULL
+#include <definitions.h>                // SYS function prototypes
+#include <math.h>
 #include <stdbool.h>                    // Defines true
+#include <stddef.h>                     // Defines NULL
 #include <stdio.h>
 #include <stdlib.h>                     // Defines EXIT_FAILURE
 #include <string.h>
-#include <definitions.h>                // SYS function prototypes
 
 #include "../common/common.h"
 
@@ -88,43 +88,11 @@ static Distance* distanceStream;
 //--------------- Timing Synchronisation
 static uint16_t timingSync;
 
-
-
-/*
-uint16_t mesure_time(void){
-        TMR4_Start();
-
-    int i;
-    uint16_t distance = 0;
-    for (i=0;i<4;i++){
-        while(!ICAP1_CaptureStatusGet());
-
-        capturedValue[captureIndex++] = ICAP1_CaptureBufferRead();
-        capturedValue[captureIndex++] = TMR4;
-        if ( captureIndex > 4){
-                      
-            if (capturedValue[4]>capturedValue[2]){
-                distance = ((capturedValue[4]-capturedValue[2])*17)/10000;
-            }
-            else {
-                distance = ((capturedValue[2]-capturedValue[4])*17)/10000;
-            }
-            
-        captureIndex = 0;
-        }
-    }
-
-    return distance;
-}*/
-
-
-
 // ***************************************************************************************** //
 // ***************************************************************************************** //
 // **********************************   INIT MAIN CUBE   *********************************** //
 // ***************************************************************************************** //
 // ***************************************************************************************** //
-
 
 void initMainCube (void) {
     
@@ -209,13 +177,9 @@ void mainCube (void){
     
     //setClock(clockCPUStream,clockParam);
     
-   /* while (1){
-                        appendStringAndDec(debugOutputStream,"Distance en mm :",mesure_time()); 
-                appendLF(debugOutputStream);
-    }*/
-                    printClock(debugOutputStream,getClockStream(CLOCK_CPU));
-                appendStringAndDec(debugOutputStream,"Distance en mm :",mesure_time(distanceStream)); 
-                appendLF(debugOutputStream);
+    printClock(debugOutputStream,getClockStream(CLOCK_CPU));
+    appendStringAndDec(debugOutputStream,"Distance en mm :",mesure_time(distanceStream)); 
+    appendLF(debugOutputStream);
     
     if (getIsTmr1Expired() == true) {
 
@@ -223,8 +187,8 @@ void mainCube (void){
         TMR1_InterruptDisable();
         
 //Timing Synchronisation
-         led2GreenToggle();
-        
+        led2GreenToggle();
+                
         switch (timingSync) {
             case 0:    
                 RainRGB(rgbStream, 10,0,0, -50,3);
@@ -264,14 +228,9 @@ void mainCube (void){
                 appendString(debugOutputStream, "deg");
                 append(debugOutputStream,LF);
                 break;
-            case 5 :
-                setColorRGB(rgbStream,0,10,0);
-                setColorRGB(rgbStream,0,0,10);
-                setColorRGB(rgbStream,10,0,0);
-                setColorRGB(rgbStream,0,10,0);
-                setColorRGB(rgbStream,0,0,10);
-                setColorRGB(rgbStream,10,0,0);
 
+            case 5 :
+                valueToRGB(rgbStream,mesure_time(distanceStream));
                 break;
             
             case 6:

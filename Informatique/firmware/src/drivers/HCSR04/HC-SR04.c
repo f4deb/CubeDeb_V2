@@ -5,7 +5,6 @@
 static uint32_t capturedValue[20];
 volatile uint8_t captureIndex = 0;
 
-
 uint32_t _HCSR04_readDistanceValue (Distance* distance){
     TMR4_Start();
 

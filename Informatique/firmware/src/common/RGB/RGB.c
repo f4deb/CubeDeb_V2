@@ -10,10 +10,28 @@
 #include "../../drivers/WS2812b/WS2812b.h"
 
 
-void setColorRGB (RGB* rgb, uint16_t green,uint16_t red,uint16_t blue){
-    rgb->colorWrite (rgb,green,red,blue);
+/************************************************************
+ * RainRGB
+ * @param   RGB* rgb        the led RGB stream
+ * @param   uint16_t red    define the red level of the led
+ * @param   uint16_t green  define the green level of the led
+ * @param   uint16_t blue   define the blue level of the led
+ *
+ * @return  void
+ ***********************************************************/
+void setColorRGB (RGB* rgb, uint16_t red,uint16_t green,uint16_t blue){
+    rgb->colorWrite (rgb,red,green,blue);
 }
 
+/************************************************************
+ * RainRGB
+ * @param   RGB* rgb        the led RGB stream
+ * @param   uint16_t red    define the red level of the led
+ * @param   uint16_t green  define the green level of the led
+ * @param   uint16_t blue   define the blue level of the led
+ *
+ * @return  void
+ ***********************************************************/
 void RainRGB(RGB* rgb, uint16_t red, int16_t green, uint16_t blue, signed int speed, uint16_t cycle){
     bool direction;
     int i = 0;
@@ -29,11 +47,7 @@ void RainRGB(RGB* rgb, uint16_t red, int16_t green, uint16_t blue, signed int sp
     else {
         direction = true;
         j = 0;
-    }
-    
-
-    
-  
+    }  
     if (direction == true ){
         while ( i <= cycle ){
             while (j < rgb->maxLed){
@@ -74,11 +88,105 @@ void RainRGB(RGB* rgb, uint16_t red, int16_t green, uint16_t blue, signed int sp
             j = rgb->maxLed;
         }    
     }
+}
 
-    /*TODO -> does not work
-    while ( k < rgb->maxLed ){
-        rgb->colorWrite (rgb,0,0,0);
-        k++;
-    }    
-     */
+/************************************************************
+ * valueToRGB
+ * @param   RGB* rgb        the led RGB stream
+ * @param   uint16_t value  define the level of baragraphe
+ *
+ * @return  void
+ ***********************************************************/
+
+void valueToRGB (RGB* rgb,uint16_t value){
+    uint8_t r,v,b = 0;
+    uint16_t calc;
+    
+// 30mm->60mm        
+    r = 0;
+    v = 0;
+    b = 0;   
+
+    if (value < 35 ){    
+         r = 255;
+         v = 255;
+         b = 255;       
+    }
+    else if (value < 127) {
+        calc = value - 30;
+        calc = (calc * 255) / 92;
+        r = 255 - calc;
+    }
+    setColorRGB(rgb,r,v,b);
+
+// 127mm->382mm       
+    r = 0;
+    v = 0;
+    b = 0;   
+    if (value <127){    
+        r = 255;
+        v = 255;   
+    }
+    else if (value < 382) {
+        calc = value - 127;
+        r = 255 - calc;
+        v = 255 - calc;
+    }
+    setColorRGB(rgb,r,v,b);
+
+// 382mm->637mm     
+    r = 0;
+    v = 0;
+    b = 0;   
+    if (value <382){    
+        v = 255;
+    }
+    else if (value <637) {
+        calc = value - 382;
+        v = 255 - calc;
+    }
+    setColorRGB(rgb,r,v,b);
+
+// 637mm->892mm   
+    r = 0;
+    v = 0;
+    b = 0;   
+    if (value <637){    
+        v = 255;
+        b = 255;        
+    }
+    else if (value <892) {
+        calc = value - 637;
+        v = 255 - calc;
+        b = 255 - calc;
+    }
+    setColorRGB(rgb,r,v,b);
+
+// 892mm->1147mm    
+    r = 0;
+    v = 0;
+    b = 0;   
+    if (value <892){              
+        b = 255;
+    }            
+    else if (value <1147) {
+        calc = value - 892;
+        b = calc;
+    }            
+    setColorRGB(rgb,r,v,b);
+
+// 1147mm->1402mm      
+    r = 0;
+    v = 0;
+    b = 0;   
+    if (value <1147){                         
+        r = 255;
+        b = 255;
+    }
+    else if (value <1402) {
+        calc = value - 1147;
+        r = calc;
+        b = calc;
+    }
+    setColorRGB(rgb,r,v,b);
 }

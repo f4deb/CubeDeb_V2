@@ -5,7 +5,7 @@
 #include <stdint.h>
 
 #define BOARD_NAME "Meteo Cube "
-#define BOARD_VERSION "V203"
+#define BOARD_VERSION "V204"
 
 void initMainCube (void);
 
