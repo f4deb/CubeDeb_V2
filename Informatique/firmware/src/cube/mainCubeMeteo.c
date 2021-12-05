@@ -180,7 +180,7 @@ void mainCube (void){
     printClock(debugOutputStream,getClockStream(CLOCK_CPU));
     appendStringAndDec(debugOutputStream,"Distance en mm :",mesure_time(distanceStream)); 
     appendLF(debugOutputStream);
-    
+
     if (getIsTmr1Expired() == true) {
 
         setIsTmr1Expired(false);
@@ -188,19 +188,21 @@ void mainCube (void){
         
 //Timing Synchronisation
         led2GreenToggle();
-                
+        int i =0;
         switch (timingSync) {
             case 0:    
-                RainRGB(rgbStream, 10,0,0, -50,3);
+                RainRGB(rgbStream, 0,0,20, -50,3);
+                RainRGB(rgbStream, 0,20,0, -50,3);
+                RainRGB(rgbStream, 20,0,0, -50,3);
                 break;            
                 
-            case 1 :
-                setColorRGB(rgbStream,70,0,0);
-                setColorRGB(rgbStream,0,70,0);
-                setColorRGB(rgbStream,0,0,70);
-                setColorRGB(rgbStream,70,0,0);
-                setColorRGB(rgbStream,0,70,0);
-                setColorRGB(rgbStream,0,0,70);
+            case 1 :;
+                    i = 0;
+                    while (i<1500){
+                        valueToRGB(rgbStream,i);  
+                        delayMilliSecs(10);
+                        i++;
+                    }
                 break;
                 
             case 2: 
@@ -213,13 +215,13 @@ void mainCube (void){
                 append(debugOutputStream,LF);  
                 break;
                 
-            case 3 :
-                setColorRGB(rgbStream,0,0,40);
-                setColorRGB(rgbStream,40,0,0);
-                setColorRGB(rgbStream,0,40,0);
-                setColorRGB(rgbStream,0,0,40);
-                setColorRGB(rgbStream,40,0,0);
-                setColorRGB(rgbStream,0,40,0);
+            case 3 :;
+                    i = 1500;
+                    while (i>0){
+                        valueToRGB(rgbStream,i);                      
+                        delayMilliSecs(10);
+                        i--;
+                    }
                 break;
            
             case 4:
@@ -251,7 +253,10 @@ void mainCube (void){
                 break;
                 
             case 7:   
-                RainRGB(rgbStream, 10,0,0,50,3);
+                RainRGB(rgbStream, 20,0,0,50,1);
+                RainRGB(rgbStream, 0,20,0,50,1);
+                RainRGB(rgbStream, 0,0,20,50,1);
+
                 break;
             
             default : 
