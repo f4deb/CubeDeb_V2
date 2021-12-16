@@ -44,6 +44,8 @@ build/default/production/_ext/1019397905/mainCubeMeteo.o: \
  ../src/cube/../drivers/SAA1064T/../../common/IO/outputStream/outputStream.h \
  ../src/cube/../drivers/WS2812b/WS2812b.h \
  ../src/cube/../drivers/WS2812b/../../common/RGB/RGBStream.h \
+ ../src/cube/../drivers/HCSR04/HC-SR04.h \
+ ../src/cube/../drivers/HCSR04/../../common/sensor/distance/distanceStream.h \
  ../src/cube/../common/7seg/7segments.h \
  ../src/cube/../common/7seg/7segmentsOutputStream.h \
  ../src/cube/../common/7seg/../../common/IO/outputStream/outputStream.h \
@@ -54,7 +56,9 @@ build/default/production/_ext/1019397905/mainCubeMeteo.o: \
  ../src/cube/../common/RGB/RGBStream.h \
  ../src/cube/../common/sensor/temperature/temperature.h \
  ../src/cube/../common/sensor/temperature/temperatureStream.h \
- ../src/config/default/../../cube/cubeCommon.h
+ ../src/config/default/../../cube/cubeCommon.h \
+ ../src/cube/../common/sensor/distance/distance.h \
+ ../src/cube/../common/sensor/distance/distanceStream.h
 
 ../src/cube/mainCubeMeteo.h:
 
@@ -150,6 +154,10 @@ build/default/production/_ext/1019397905/mainCubeMeteo.o: \
 
 ../src/cube/../drivers/WS2812b/../../common/RGB/RGBStream.h:
 
+../src/cube/../drivers/HCSR04/HC-SR04.h:
+
+../src/cube/../drivers/HCSR04/../../common/sensor/distance/distanceStream.h:
+
 ../src/cube/../common/7seg/7segments.h:
 
 ../src/cube/../common/7seg/7segmentsOutputStream.h:
@@ -173,3 +181,7 @@ build/default/production/_ext/1019397905/mainCubeMeteo.o: \
 ../src/cube/../common/sensor/temperature/temperatureStream.h:
 
 ../src/config/default/../../cube/cubeCommon.h:
+
+../src/cube/../common/sensor/distance/distance.h:
+
+../src/cube/../common/sensor/distance/distanceStream.h:

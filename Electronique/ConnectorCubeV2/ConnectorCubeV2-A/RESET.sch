@@ -1,0 +1,72 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 8 10
+Title "Connector Cube V2"
+Date "2021-12-06"
+Rev "V2.00A"
+Comp "CubeDeb-F4DEB"
+Comment1 "RESET"
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Connector_Generic:Conn_01x02 J801
+U 1 1 61B02D73
+P 6375 3800
+F 0 "J801" H 6293 3475 50  0000 C CNN
+F 1 "Conn_01x02" H 6293 3566 50  0000 C CNN
+F 2 "Connector_JST:JST_GH_BM02B-GHS-TBT_1x02-1MP_P1.25mm_Vertical" H 6375 3800 50  0001 C CNN
+F 3 "~" H 6375 3800 50  0001 C CNN
+	1    6375 3800
+	1    0    0    1   
+$EndComp
+Wire Wire Line
+	6000 3700 6175 3700
+Wire Wire Line
+	6000 3800 6175 3800
+Text HLabel 6000 3700 0    50   Input ~ 0
+RST
+$Comp
+L power:GND #PWR0225
+U 1 1 61B038DF
+P 6000 3800
+F 0 "#PWR0225" H 6000 3550 50  0001 C CNN
+F 1 "GND" H 6005 3627 50  0000 C CNN
+F 2 "" H 6000 3800 50  0001 C CNN
+F 3 "" H 6000 3800 50  0001 C CNN
+	1    6000 3800
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x02 J802
+U 1 1 61B04804
+P 6375 4325
+F 0 "J802" H 6293 4000 50  0000 C CNN
+F 1 "Conn_01x02" H 6293 4091 50  0000 C CNN
+F 2 "Connector_JST:JST_GH_BM02B-GHS-TBT_1x02-1MP_P1.25mm_Vertical" H 6375 4325 50  0001 C CNN
+F 3 "~" H 6375 4325 50  0001 C CNN
+	1    6375 4325
+	1    0    0    1   
+$EndComp
+Wire Wire Line
+	6000 4225 6175 4225
+Wire Wire Line
+	6000 4325 6175 4325
+Text HLabel 6000 4225 0    50   Input ~ 0
+RST
+$Comp
+L power:GND #PWR0226
+U 1 1 61B04841
+P 6000 4325
+F 0 "#PWR0226" H 6000 4075 50  0001 C CNN
+F 1 "GND" H 6005 4152 50  0000 C CNN
+F 2 "" H 6000 4325 50  0001 C CNN
+F 3 "" H 6000 4325 50  0001 C CNN
+	1    6000 4325
+	1    0    0    -1  
+$EndComp
+$EndSCHEMATC

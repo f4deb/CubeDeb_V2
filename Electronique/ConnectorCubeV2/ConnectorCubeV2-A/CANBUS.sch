@@ -1,0 +1,63 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 5 10
+Title "Connector Cube V2"
+Date "2021-12-06"
+Rev "V2.00A"
+Comp "CubeDeb-F4DEB"
+Comment1 "BUS CAN"
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+Text HLabel 4750 2525 0    50   Input ~ 0
+CANRX
+Text HLabel 4750 2625 0    50   Input ~ 0
+CANTX
+$Comp
+L Connector_Generic:Conn_01x04 J501
+U 1 1 61B71016
+P 5625 2725
+F 0 "J501" H 5543 2300 50  0000 C CNN
+F 1 "Conn_01x04" H 5543 2391 50  0000 C CNN
+F 2 "Connector_JST:JST_GH_BM04B-GHS-TBT_1x04-1MP_P1.25mm_Vertical" H 5625 2725 50  0001 C CNN
+F 3 "~" H 5625 2725 50  0001 C CNN
+	1    5625 2725
+	1    0    0    1   
+$EndComp
+Wire Wire Line
+	5425 2525 4750 2525
+Wire Wire Line
+	5425 2625 4750 2625
+Wire Wire Line
+	5425 2825 5400 2825
+Wire Wire Line
+	5400 2825 5400 2900
+Wire Wire Line
+	5425 2725 5300 2725
+$Comp
+L power:+5VD #PWR0201
+U 1 1 61B73C7C
+P 5300 2725
+F 0 "#PWR0201" H 5300 2575 50  0001 C CNN
+F 1 "+5VD" V 5315 2853 50  0000 L CNN
+F 2 "" H 5300 2725 50  0001 C CNN
+F 3 "" H 5300 2725 50  0001 C CNN
+	1    5300 2725
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:GND #PWR0202
+U 1 1 61B740EF
+P 5400 2900
+F 0 "#PWR0202" H 5400 2650 50  0001 C CNN
+F 1 "GND" H 5405 2727 50  0000 C CNN
+F 2 "" H 5400 2900 50  0001 C CNN
+F 3 "" H 5400 2900 50  0001 C CNN
+	1    5400 2900
+	1    0    0    -1  
+$EndComp
+$EndSCHEMATC
