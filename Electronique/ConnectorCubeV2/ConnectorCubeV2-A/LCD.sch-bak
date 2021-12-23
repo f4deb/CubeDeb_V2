@@ -3,9 +3,9 @@ EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 3 10
+Sheet 3 12
 Title "Connector Cube V2"
-Date "2021-12-06"
+Date "2021-12-21"
 Rev "V2.00A"
 Comp "CubeDeb-F4DEB"
 Comment1 "LCD"
@@ -740,10 +740,10 @@ Text Label 6050 5275 0    50   ~ 0
 BRETRO
 Text Label 9250 5475 0    50   ~ 0
 BRETRO
+Text HLabel 9450 4975 2    50   Input ~ 0
+RST
 Wire Bus Line
 	3975 4800 3975 5500
 Wire Bus Line
 	2525 4700 2525 5500
-Text HLabel 9450 4975 2    50   Input ~ 0
-RST
 $EndSCHEMATC

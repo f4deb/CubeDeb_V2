@@ -3,9 +3,9 @@ EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 2 10
+Sheet 2 12
 Title "Connector Cube V2"
-Date "2021-12-06"
+Date "2021-12-21"
 Rev "V2.00A"
 Comp "CubeDeb-F4DEB"
 Comment1 "I2C"

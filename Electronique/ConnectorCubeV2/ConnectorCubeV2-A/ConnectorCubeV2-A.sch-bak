@@ -3,9 +3,9 @@ EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 1 10
+Sheet 1 12
 Title "Connector Cube V2"
-Date "2021-12-06"
+Date "2021-12-21"
 Rev "V2.00A"
 Comp "CubeDeb-F4DEB"
 Comment1 "Connector"
@@ -92,8 +92,6 @@ Wire Wire Line
 	7650 2425 7350 2425
 Wire Wire Line
 	7650 2525 7350 2525
-Wire Wire Line
-	7650 2625 7350 2625
 Wire Wire Line
 	7650 2725 7350 2725
 Wire Wire Line
@@ -559,8 +557,6 @@ Text Label 7500 2425 2    50   ~ 0
 UART-RX3
 Text Label 7525 2525 2    50   ~ 0
 SDA1
-Text Label 7525 2625 2    50   ~ 0
-SDA2
 Text Label 7525 2725 2    50   ~ 0
 SDA3
 Text Label 7475 2825 2    50   ~ 0
@@ -612,10 +608,10 @@ F0 "I2C" 50
 F1 "I2C.sch" 50
 F2 "SDA1" I L 1725 3525 50 
 F3 "SCL1" I L 1725 3450 50 
-F4 "SDL2" I L 1725 3725 50 
-F5 "SCL2" I L 1725 3650 50 
-F6 "SDA3" I L 1725 3925 50 
-F7 "SCL3" I L 1725 3850 50 
+F4 "SCL2" I L 1725 3650 50 
+F5 "SDA3" I L 1725 3925 50 
+F6 "SCL3" I L 1725 3850 50 
+F7 "SDA2" I L 1725 3725 50 
 $EndSheet
 $Sheet
 S 1700 5525 950  950 
@@ -627,6 +623,7 @@ F3 "RETRO" I L 1700 6400 50
 F4 "E" I L 1700 5650 50 
 F5 "RW" I L 1700 5900 50 
 F6 "RS" I L 1700 5775 50 
+F7 "RST" I R 2650 5650 50 
 $EndSheet
 $Sheet
 S 1700 4500 950  675 
@@ -794,7 +791,7 @@ SDO1
 Text Label 3300 4750 0    50   ~ 0
 SCK1
 Text Label 3300 4825 0    50   ~ 0
-SCS
+IO10
 Text Label 3300 4900 0    50   ~ 0
 CS1
 Text Label 3300 4975 0    50   ~ 0
@@ -907,8 +904,43 @@ Text Label 8625 1975 0    50   ~ 0
 D[0..7]
 Wire Wire Line
 	7350 1625 7650 1625
+Wire Wire Line
+	2650 5650 2825 5650
+Text Label 2700 5650 0    50   ~ 0
+RST
+$Sheet
+S 7975 3475 775  1150
+U 61BE7334
+F0 "7Seg" 50
+F1 "7Seg.sch" 50
+F2 "CS7" I L 7975 3650 50 
+F3 "CLK7" I L 7975 3750 50 
+F4 "DIO7" I L 7975 3850 50 
+$EndSheet
+Wire Wire Line
+	7825 3650 7975 3650
+Wire Wire Line
+	7825 3750 7975 3750
+Wire Wire Line
+	7825 3850 7975 3850
+Text Label 7825 3650 0    50   ~ 0
+IO5
+Text Label 7825 3750 0    50   ~ 0
+IO6
+Text Label 7825 3850 0    50   ~ 0
+IO7
+Text Label 7525 2625 2    50   ~ 0
+SDA2
+Wire Wire Line
+	7350 2625 7650 2625
 Wire Bus Line
 	7250 1725 7250 2100
 Wire Bus Line
 	8475 1625 8475 1975
+$Sheet
+S 8125 5525 500  700 
+U 61C2E239
+F0 "POWER" 50
+F1 "Power.sch" 50
+$EndSheet
 $EndSCHEMATC

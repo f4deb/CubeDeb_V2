@@ -1,0 +1,362 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 11 12
+Title "Connector Cube V2"
+Date "2021-12-21"
+Rev "V2.00A"
+Comp "CubeDeb-F4DEB"
+Comment1 "7 Segments Display / Keyboard"
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Display_Character:CA56-12EWA U1102
+U 1 1 61BEAAA5
+P 7325 1975
+F 0 "U1102" H 7325 2642 50  0000 C CNN
+F 1 "CA56-12EWA" H 7325 2551 50  0000 C CNN
+F 2 "F4DEB-LIBRARY-KICAD5:2841BS" H 7325 1375 50  0001 C CNN
+F 3 "http://www.kingbrightusa.com/images/catalog/SPEC/CA56-12EWA.pdf" H 6895 2005 50  0001 C CNN
+	1    7325 1975
+	1    0    0    -1  
+$EndComp
+$Comp
+L Display_Character:CA56-12EWA U1103
+U 1 1 61BEC211
+P 7325 3175
+F 0 "U1103" H 7325 3842 50  0000 C CNN
+F 1 "CA56-12EWA" H 7325 3751 50  0000 C CNN
+F 2 "F4DEB-LIBRARY-KICAD5:2841BS" H 7325 2575 50  0001 C CNN
+F 3 "http://www.kingbrightusa.com/images/catalog/SPEC/CA56-12EWA.pdf" H 6895 3205 50  0001 C CNN
+	1    7325 3175
+	1    0    0    -1  
+$EndComp
+$Comp
+L f4deb:TM1638 U1101
+U 1 1 61BF01E5
+P 3200 2025
+F 0 "U1101" H 3650 2600 50  0000 C CNN
+F 1 "TM1638" H 3650 2509 50  0000 C CNN
+F 2 "Package_SO:SOIC-28W_7.5x17.9mm_P1.27mm" H 3200 2275 50  0001 C CNN
+F 3 "" H 3200 2275 50  0001 C CNN
+	1    3200 2025
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5900 1675 6225 1675
+Wire Wire Line
+	5900 1775 6225 1775
+Wire Wire Line
+	5900 1875 6225 1875
+Wire Wire Line
+	5900 1975 6225 1975
+Wire Wire Line
+	5900 2075 6225 2075
+Wire Wire Line
+	5900 2175 6225 2175
+Wire Wire Line
+	5900 2275 6225 2275
+Wire Wire Line
+	5900 2375 6225 2375
+Wire Wire Line
+	8425 2075 8750 2075
+Wire Wire Line
+	8425 2175 8750 2175
+Wire Wire Line
+	8425 2275 8750 2275
+Wire Wire Line
+	8425 2375 8750 2375
+Wire Wire Line
+	4200 2375 4525 2375
+Wire Wire Line
+	4200 1675 4525 1675
+Wire Wire Line
+	4200 1775 4525 1775
+Wire Wire Line
+	4200 1875 4525 1875
+Wire Wire Line
+	2775 1675 3100 1675
+Wire Wire Line
+	2775 1775 3100 1775
+Wire Wire Line
+	2775 1875 3100 1875
+Wire Wire Line
+	2775 1975 3100 1975
+Text Label 5950 1675 0    50   ~ 0
+A
+Text Label 5950 1775 0    50   ~ 0
+B
+Text Label 5950 1875 0    50   ~ 0
+C
+Text Label 5950 1975 0    50   ~ 0
+D
+Text Label 5950 2075 0    50   ~ 0
+E
+Text Label 5950 2175 0    50   ~ 0
+F
+Text Label 5925 2275 0    50   ~ 0
+G
+Text Label 5950 2375 0    50   ~ 0
+DOT
+Wire Wire Line
+	5900 2875 6225 2875
+Wire Wire Line
+	5900 2975 6225 2975
+Wire Wire Line
+	5900 3075 6225 3075
+Wire Wire Line
+	5900 3175 6225 3175
+Wire Wire Line
+	5900 3275 6225 3275
+Wire Wire Line
+	5900 3375 6225 3375
+Wire Wire Line
+	5900 3475 6225 3475
+Wire Wire Line
+	5900 3575 6225 3575
+Text Label 5950 2875 0    50   ~ 0
+A
+Text Label 5950 2975 0    50   ~ 0
+B
+Text Label 5950 3075 0    50   ~ 0
+C
+Text Label 5950 3175 0    50   ~ 0
+D
+Text Label 5950 3275 0    50   ~ 0
+E
+Text Label 5950 3375 0    50   ~ 0
+F
+Text Label 5925 3475 0    50   ~ 0
+G
+Text Label 5950 3575 0    50   ~ 0
+DOT
+Wire Wire Line
+	4200 2525 4525 2525
+Wire Wire Line
+	4200 2625 4525 2625
+Wire Wire Line
+	4200 2725 4525 2725
+Wire Wire Line
+	4200 2825 4525 2825
+Wire Wire Line
+	4200 2925 4525 2925
+Wire Wire Line
+	4200 3025 4525 3025
+Wire Wire Line
+	4200 3125 4525 3125
+Wire Wire Line
+	4200 3225 4525 3225
+Text Label 4250 2525 0    50   ~ 0
+A
+Text Label 4250 2625 0    50   ~ 0
+B
+Text Label 4250 2725 0    50   ~ 0
+C
+Text Label 4250 2825 0    50   ~ 0
+D
+Text Label 4250 2925 0    50   ~ 0
+E
+Text Label 4250 3025 0    50   ~ 0
+F
+Text Label 4225 3125 0    50   ~ 0
+G
+Text Label 4250 3225 0    50   ~ 0
+DOT
+Text Label 8525 2075 0    50   ~ 0
+S1
+Text Label 8525 2175 0    50   ~ 0
+S2
+Text Label 8525 2275 0    50   ~ 0
+S3
+Text Label 8525 2375 0    50   ~ 0
+S4
+Wire Wire Line
+	8425 3275 8750 3275
+Wire Wire Line
+	8425 3375 8750 3375
+Wire Wire Line
+	8425 3475 8750 3475
+Wire Wire Line
+	8425 3575 8750 3575
+Text Label 8525 3275 0    50   ~ 0
+S5
+Text Label 8525 3375 0    50   ~ 0
+S6
+Text Label 8525 3475 0    50   ~ 0
+S7
+Text Label 8525 3575 0    50   ~ 0
+S8
+Wire Wire Line
+	2775 2525 3100 2525
+Wire Wire Line
+	2775 2625 3100 2625
+Wire Wire Line
+	2775 2725 3100 2725
+Wire Wire Line
+	2775 2825 3100 2825
+Text Label 2875 2525 0    50   ~ 0
+S1
+Text Label 2875 2625 0    50   ~ 0
+S2
+Text Label 2875 2725 0    50   ~ 0
+S3
+Text Label 2875 2825 0    50   ~ 0
+S4
+Wire Wire Line
+	2775 2925 3100 2925
+Wire Wire Line
+	2775 3025 3100 3025
+Wire Wire Line
+	2775 3125 3100 3125
+Wire Wire Line
+	2775 3225 3100 3225
+Text Label 2875 2925 0    50   ~ 0
+S5
+Text Label 2875 3025 0    50   ~ 0
+S6
+Text Label 2875 3125 0    50   ~ 0
+S7
+Text Label 2875 3225 0    50   ~ 0
+S8
+Wire Wire Line
+	2775 1775 2775 1675
+Wire Wire Line
+	2775 1675 2775 1600
+Connection ~ 2775 1675
+Wire Wire Line
+	2775 1875 2775 1975
+Wire Wire Line
+	2775 1975 2725 1975
+Connection ~ 2775 1975
+$Comp
+L power:+3.3V #PWR0158
+U 1 1 61C41C24
+P 2775 1600
+F 0 "#PWR0158" H 2775 1450 50  0001 C CNN
+F 1 "+3.3V" H 2790 1773 50  0000 C CNN
+F 2 "" H 2775 1600 50  0001 C CNN
+F 3 "" H 2775 1600 50  0001 C CNN
+	1    2775 1600
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0169
+U 1 1 61C42302
+P 2725 1975
+F 0 "#PWR0169" H 2725 1725 50  0001 C CNN
+F 1 "GND" V 2730 1847 50  0000 R CNN
+F 2 "" H 2725 1975 50  0001 C CNN
+F 3 "" H 2725 1975 50  0001 C CNN
+	1    2725 1975
+	0    1    1    0   
+$EndComp
+NoConn ~ 4200 2175
+NoConn ~ 4200 2275
+NoConn ~ 3100 2275
+NoConn ~ 3100 2175
+Text HLabel 4525 1675 2    50   Input ~ 0
+CS7
+Text HLabel 4525 1775 2    50   Input ~ 0
+CLK7
+Text HLabel 4525 1875 2    50   Input ~ 0
+DIO7
+$Comp
+L CEN-SCHEMA:SW_PUSH_SMALL SW1101
+U 1 1 61C1A76B
+P 3800 4225
+F 0 "SW1101" H 3800 4459 30  0000 C CNN
+F 1 "SW_PUSH_SMALL" H 3800 4399 30  0000 C CNN
+F 2 "F4DEB-LIBRARY-KICAD5:BOUTON_SWITCH_4.5x4.5_angled" H 3800 4422 60  0001 C CNN
+F 3 "" H 3800 4225 60  0000 C CNN
+	1    3800 4225
+	1    0    0    -1  
+$EndComp
+$Comp
+L CEN-SCHEMA:SW_PUSH_SMALL SW1102
+U 1 1 61C1AF10
+P 3800 4700
+F 0 "SW1102" H 3800 4934 30  0000 C CNN
+F 1 "SW_PUSH_SMALL" H 3800 4874 30  0000 C CNN
+F 2 "F4DEB-LIBRARY-KICAD5:BOUTON_SWITCH_4.5x4.5_angled" H 3800 4700 60  0001 C CNN
+F 3 "" H 3800 4700 60  0000 C CNN
+	1    3800 4700
+	1    0    0    -1  
+$EndComp
+$Comp
+L CEN-SCHEMA:SW_PUSH_SMALL SW1103
+U 1 1 61C1C03D
+P 3800 5125
+F 0 "SW1103" H 3800 5359 30  0000 C CNN
+F 1 "SW_PUSH_SMALL" H 3800 5299 30  0000 C CNN
+F 2 "F4DEB-LIBRARY-KICAD5:BOUTON_SWITCH_4.5x4.5_angled" H 3800 5125 60  0001 C CNN
+F 3 "" H 3800 5125 60  0000 C CNN
+	1    3800 5125
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3900 4325 3900 4800
+Connection ~ 3900 4800
+Connection ~ 3900 5225
+Wire Wire Line
+	3700 5025 3300 5025
+Wire Wire Line
+	3700 4600 3300 4600
+Wire Wire Line
+	3700 4125 3300 4125
+Text Label 4300 2375 0    50   ~ 0
+K1
+Text Label 3350 4125 0    50   ~ 0
+A
+Text Label 3350 4600 0    50   ~ 0
+B
+Text Label 3350 5025 0    50   ~ 0
+C
+$Comp
+L CEN-SCHEMA:SW_PUSH_SMALL SW1104
+U 1 1 61C31E75
+P 3800 5550
+F 0 "SW1104" H 3800 5784 30  0000 C CNN
+F 1 "SW_PUSH_SMALL" H 3800 5724 30  0000 C CNN
+F 2 "F4DEB-LIBRARY-KICAD5:BOUTON_SWITCH_4.5x4.5_angled" H 3800 5550 60  0001 C CNN
+F 3 "" H 3800 5550 60  0000 C CNN
+	1    3800 5550
+	1    0    0    -1  
+$EndComp
+$Comp
+L CEN-SCHEMA:SW_PUSH_SMALL SW1105
+U 1 1 61C31F57
+P 3800 5975
+F 0 "SW1105" H 3800 6209 30  0000 C CNN
+F 1 "SW_PUSH_SMALL" H 3800 6149 30  0000 C CNN
+F 2 "F4DEB-LIBRARY-KICAD5:BOUTON_SWITCH_4.5x4.5_angled" H 3800 5975 60  0001 C CNN
+F 3 "" H 3800 5975 60  0000 C CNN
+	1    3800 5975
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3900 5650 3900 6075
+Connection ~ 3900 5650
+Wire Wire Line
+	3900 6075 3900 6175
+Wire Wire Line
+	3900 6175 4025 6175
+Connection ~ 3900 6075
+Wire Wire Line
+	3700 5875 3300 5875
+Wire Wire Line
+	3700 5450 3300 5450
+Text Label 3950 6175 0    50   ~ 0
+K1
+Text Label 3350 5450 0    50   ~ 0
+D
+Text Label 3350 5875 0    50   ~ 0
+E
+Wire Wire Line
+	3900 4800 3900 5225
+Wire Wire Line
+	3900 5225 3900 5650
+$EndSCHEMATC

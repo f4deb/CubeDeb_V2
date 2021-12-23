@@ -3,9 +3,9 @@ EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 7 10
+Sheet 7 12
 Title "Connector Cube V2"
-Date "2021-12-06"
+Date "2021-12-21"
 Rev "V2.00A"
 Comp "CubeDeb-F4DEB"
 Comment1 "Input Capture"
@@ -64,7 +64,7 @@ U 1 1 61C49A1E
 P 4850 3550
 F 0 "K702" H 4717 3229 50  0000 C CNN
 F 1 "CONN_3" H 4717 3313 40  0000 C CNN
-F 2 "Connector_JST:JST_GH_BM04B-GHS-TBT_1x04-1MP_P1.25mm_Vertical" H 4850 3550 60  0001 C CNN
+F 2 "Connector_JST:JST_GH_BM03B-GHS-TBT_1x03-1MP_P1.25mm_Vertical" H 4850 3550 60  0001 C CNN
 F 3 "" H 4850 3550 60  0000 C CNN
 	1    4850 3550
 	1    0    0    1   
