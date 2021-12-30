@@ -621,6 +621,7 @@ F7 "micro" I R 4650 1525 50
 F8 "CMD-RX" I L 3525 2425 50 
 F9 "SCL1" I L 3525 2825 50 
 F10 "SDA1" I L 3525 2700 50 
+F11 "MOD" I R 4650 2400 50 
 $EndSheet
 $Comp
 L Connector:RJ12 J1003
@@ -761,4 +762,62 @@ Text Label 4700 1525 0    50   ~ 0
 MICRO
 Text Label 4700 1650 0    50   ~ 0
 BFE
+Wire Wire Line
+	4650 2400 4900 2400
+$Comp
+L Connector:Conn_Coaxial J?
+U 1 1 61C7A6AB
+P 5125 6825
+F 0 "J?" H 5225 6800 50  0000 L CNN
+F 1 "Conn_Coaxial" H 5225 6709 50  0000 L CNN
+F 2 "" H 5125 6825 50  0001 C CNN
+F 3 " ~" H 5125 6825 50  0001 C CNN
+	1    5125 6825
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:Conn_Coaxial J?
+U 1 1 61C7B2D8
+P 6275 6825
+F 0 "J?" H 6375 6800 50  0000 L CNN
+F 1 "Conn_Coaxial" H 6375 6709 50  0000 L CNN
+F 2 "" H 6275 6825 50  0001 C CNN
+F 3 " ~" H 6275 6825 50  0001 C CNN
+	1    6275 6825
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6275 7025 6275 7075
+$Comp
+L power:GND #PWR?
+U 1 1 61C8C229
+P 6275 7075
+F 0 "#PWR?" H 6275 6825 50  0001 C CNN
+F 1 "GND" H 6280 6902 50  0000 C CNN
+F 2 "" H 6275 7075 50  0001 C CNN
+F 3 "" H 6275 7075 50  0001 C CNN
+	1    6275 7075
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 61C8C72E
+P 5125 7075
+F 0 "#PWR?" H 5125 6825 50  0001 C CNN
+F 1 "GND" H 5130 6902 50  0000 C CNN
+F 2 "" H 5125 7075 50  0001 C CNN
+F 3 "" H 5125 7075 50  0001 C CNN
+	1    5125 7075
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5125 7025 5125 7075
+Wire Wire Line
+	6075 6825 5800 6825
+Wire Wire Line
+	4650 6825 4925 6825
+Text Label 4650 6825 0    50   ~ 0
+MOD
+Text Label 5800 6825 0    50   ~ 0
+DEMOD
 $EndSCHEMATC
