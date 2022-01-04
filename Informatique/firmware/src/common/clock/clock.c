@@ -9,6 +9,25 @@
 
 #include "../../drivers/PCF8563/PCF8563.h"
 
+char* printTimeTo7Seg(Clock* clock){
+    ClockData* clockData = clock->readClock(clock,PCF8563_CLOCK_REGISTER);
+    char* str = "abcd";
+
+    uint8_t i;
+    sprintf(str,"%x",clockData->hour);
+
+    i = clockData->minute >> 4;
+    i = i + 0x30;
+    str[2] = i;
+    
+    i = clockData->minute & 0xF;
+    i = i + 0x30;
+    str[3] = i;
+    
+
+    return str;
+}
+
 void printClock(OutputStream* outputStream, Clock* clock) {
    
     ClockData* clockData = clock->readClock(clock,PCF8563_CLOCK_REGISTER);

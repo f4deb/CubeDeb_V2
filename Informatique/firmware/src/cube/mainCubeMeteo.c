@@ -168,94 +168,69 @@ void mainCube (void){
      
     ClockData* clockParam = &(clockCPUStream->clockData);
     clockParam->second = 0x41;
-    clockParam->minute = 0x31;
-    clockParam->hour = 0x22;
-    clockParam->day = 0x02;
-    clockParam->dayofweek = 0x21;
-    clockParam->month = 0x11;
-    clockParam->year = 0x21;
+    clockParam->minute = 0x22;
+    clockParam->hour = 0x21;
+    clockParam->day = 0x06;
+    clockParam->dayofweek = 0x01;
+    clockParam->month = 0x01;
+    clockParam->year = 0x22;
     
     //setClock(clockCPUStream,clockParam);
     
-    printClock(debugOutputStream,getClockStream(CLOCK_CPU));
-    appendStringAndDec(debugOutputStream,"Distance en mm :",mesure_time(distanceStream)); 
-    appendLF(debugOutputStream);
+    //printClock(debugOutputStream,getClockStream(CLOCK_CPU));
+    //appendStringAndDec(debugOutputStream,"Distance en mm :",mesure_time(distanceStream)); 
+    //appendLF(debugOutputStream);
 
     if (getIsTmr1Expired() == true) {
 
         setIsTmr1Expired(false);
         TMR1_InterruptDisable();
         
-//Timing Synchronisation
+///Timing Synchronisation
         led2GreenToggle();
         int i =0;
         switch (timingSync) {
-            case 0:    
-                RainRGB(rgbStream, 0,0,20, -50,3);
-                RainRGB(rgbStream, 0,20,0, -50,3);
-                RainRGB(rgbStream, 20,0,0, -50,3);
-                break;            
-                
-            case 1 :;
-                    i = 0;
-                    while (i<1500){
-                        valueToRGB(rgbStream,i);  
-                        delayMilliSecs(10);
-                        i++;
-                    }
-                break;
-                
-            case 2: 
+            case 0:; 
                 appendDot(screen7SegCpu,4);
                 appendString(screen7SegCpu, readSensorValueAsStringFor7Seg(tempSensorCpuStream));
                 printClock(debugOutputStream,getClockStream(CLOCK_CPU));
                 appendString(debugOutputStream,"Temperature Interne: "); 
                 appendString(debugOutputStream, readSensorValueAsString(tempSensorCpuStream));
                 appendString(debugOutputStream, "deg");
+                append(debugOutputStream,LF); 
+               
+                break;            
+                
+            case 1 :;
+                   
+                break;
+                
+            case 2: 
+                appendDot(screen7SegCpu,4);
+                appendString(screen7SegCpu, printTimeTo7Seg(getClockStream(CLOCK_CPU)));
+                
+
+                append(debugOutputStream,LF); 
+                printClock(debugOutputStream,getClockStream(CLOCK_CPU));
                 append(debugOutputStream,LF);  
                 break;
                 
             case 3 :;
-                    i = 1500;
-                    while (i>0){
-                        valueToRGB(rgbStream,i);                      
-                        delayMilliSecs(10);
-                        i--;
-                    }
+                    
                 break;
            
-            case 4:
-                appendDot(screen7SegCpu,4);
-                appendString(screen7SegCpu, readSensorValueAsStringFor7Seg(tempSensorExt1Stream));
-                printClock(debugOutputStream,getClockStream(CLOCK_CPU));
-                appendString(debugOutputStream,"Temperature Externe: ");
-                appendString(debugOutputStream, readSensorValueAsString(tempSensorExt1Stream));            
-                appendString(debugOutputStream, "deg");
-                append(debugOutputStream,LF);
+            case 4:;
+                
                 break;
 
-            case 5 :
-                printClock(debugOutputStream,getClockStream(CLOCK_CPU));
-                appendStringAndDec(debugOutputStream,"Distance en mm :",mesure_time(distanceStream)); 
-                appendLF(debugOutputStream);
-                appendDot(screen7SegCpu,0);  
-                appendDec4AsString(screen7SegCpu,mesure_time(distanceStream));    
-                valueToRGB(rgbStream,mesure_time(distanceStream));                
+            case 5 :;
+                
                 break;
             
-            case 6:
-                printClock(debugOutputStream,getClockStream(CLOCK_CPU));
-                appendStringAndDec(debugOutputStream,"Distance en mm :",mesure_time(distanceStream)); 
-                appendLF(debugOutputStream);
-                appendDot(screen7SegCpu,0);  
-                appendDec4AsString(screen7SegCpu,mesure_time(distanceStream));    
-                valueToRGB(rgbStream,mesure_time(distanceStream));                
+            case 6:;
                 break;
                 
-            case 7:   
-                RainRGB(rgbStream, 20,0,0,50,1);
-                RainRGB(rgbStream, 0,20,0,50,1);
-                RainRGB(rgbStream, 0,0,20,50,1);
+            case 7:   ;
 
                 break;
             
