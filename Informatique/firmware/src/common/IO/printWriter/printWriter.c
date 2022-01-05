@@ -26,6 +26,24 @@ void append(OutputStream* outputStream, unsigned char c) {
     outputStream->writeChar(outputStream, c);
 }
 
+unsigned int appendBool(OutputStream* outputStream, bool b) {
+    if (b) {
+        append(outputStream, '1');
+    } else {
+        append(outputStream, '0');
+    }
+	return 1;
+}
+
+unsigned int appendBoolAsString(OutputStream* outputStream, bool b) {
+    if (b) {
+        return appendString(outputStream, "true");
+    }
+    else {
+        return appendString(outputStream, "false");
+    }
+}
+
 void appendSeparator(OutputStream* outputStream) {
     append(outputStream, '-');
 }
@@ -33,8 +51,6 @@ void appendSeparator(OutputStream* outputStream) {
 void appendSpace(OutputStream* outputStream) {
     append(outputStream, ' ');
 }
-
-
 
 unsigned int appendString(OutputStream* outputStream, const char* s) {
     unsigned int result = 0;
@@ -147,15 +163,66 @@ int appendDecUnsigned(OutputStream* stream, unsigned long value) {
     return nchars;
 }
 
-void appendStringAndDec(OutputStream* stream, const char* s, signed long value) {
-    appendString(stream, s);
-    appendDec(stream, value);
+int appendDecf(OutputStream* stream, float value) {
+    if (isnan(value)) {
+        return appendString(stream, "NAN");
+    }
+    int result = 0;
+    float decimalValue;
+    long decimalValueLong;
+
+	float absValue = value;
+	if (absValue < 0) {
+		absValue = -absValue;
+	}
+	// By default, 1 decimal
+	int decimalCount = 1;
+	float decimalFactorMultiplicator = 10;
+	if (absValue < 10) {
+		// 3 decimal
+		decimalCount = 3;
+		decimalFactorMultiplicator = 1000;
+	}
+	else if (absValue < 100) {
+		// 2 decimal
+		decimalCount = 2;
+		decimalFactorMultiplicator = 100;
+	}
+
+    if (value < 0) {
+        decimalValue = ((value - (long) value) * (-decimalFactorMultiplicator));
+        append(stream, '-');
+        result++;
+        result += appendDec(stream, -(long) value);
+    } else {
+        decimalValue = ((value - (long) value) * decimalFactorMultiplicator);
+        result += appendDec(stream, (long) value);
+    }
+    decimalValueLong = (long) decimalValue;
+
+    append(stream, DECIMAL_SEPARATOR);
+    result++;
+
+	// Decimals
+	if (decimalCount >= 3 && decimalValueLong < 100) {
+		append(stream, '0');
+		result++;
+	}
+    if (decimalCount >= 2 && decimalValueLong < 10) {
+        append(stream, '0');
+		result++;
+	}
+    result += appendDec(stream, decimalValueLong);
+
+    return result;
 }
 
-void appendStringAndDecLN(OutputStream* stream, const char* s, float value) {
-    appendString(stream, s);
-    appendDec(stream, value);
-    println(stream);
+
+
+void appendStringAndDecLN(OutputStream* outputStream, const char* s, long value) {
+    appendString(outputStream, s);
+    appendDec(outputStream, value);
+    println(outputStream);
 }
 
 void appendDec4AsString(OutputStream* stream,uint16_t value){
@@ -221,4 +288,88 @@ void appendHex6(OutputStream* outputStream, signed long value) {
 
 void appendHex8(OutputStream* outputStream, signed long value) {
     internalAppendHex(outputStream, value, 28);
+}
+
+
+// FLOAT
+
+void appendHexFloat2(OutputStream* stream, float value, unsigned int digitPrecision) {
+    // we append it as a long value excluding digit after comma (but we multiply it before)
+    float valueWrite = value;
+    unsigned int i;
+    for (i = 0; i < digitPrecision; i++) {
+        valueWrite *= 10.0f;
+    }
+    unsigned char truncatedValue = (unsigned char) valueWrite;
+    appendHex2(stream, truncatedValue);
+}
+
+void appendHexFloat4(OutputStream* stream, float value, unsigned int digitPrecision) {
+    // we append it as a long value excluding digit after comma (but we multiply it before)
+    float valueWrite = value;
+    unsigned int i;
+    for (i = 0; i < digitPrecision; i++) {
+        valueWrite *= 10.0f;
+    }
+    signed long longValue = (signed long) valueWrite;
+    appendHex4(stream, longValue);
+}
+
+void appendHexFloat6(OutputStream* stream, float value, unsigned int digitPrecision) {
+    // we append it as a long value excluding digit after comma (but we multiply it before)
+    float valueWrite = value;
+    unsigned int i;
+    for (i = 0; i < digitPrecision; i++) {
+        valueWrite *= 10.0f;
+    }
+    signed long longValue = (signed long)valueWrite;
+    appendHex6(stream, longValue);
+}
+
+void appendHexFloat8(OutputStream* stream, float value, unsigned int digitPrecision) {
+    // we append it as a long value excluding digit after comma (but we multiply it before)
+    float valueWrite = value;
+    unsigned int i;
+    for (i = 0; i < digitPrecision; i++) {
+        valueWrite *= 10.0f;
+    }
+    signed long longValue = (signed long)valueWrite;
+    appendHex8(stream, longValue);
+}
+
+
+// AGGREGATION
+
+
+void appendStringAndDecf(OutputStream* stream, const char* s, float value) {
+    appendString(stream, s);
+    appendDecf(stream, value);
+}
+
+void appendStringAndDec(OutputStream* stream, const char* s, long value) {
+    appendString(stream, s);
+    appendDec(stream, value);
+}
+
+void appendStringAndHex2(OutputStream* stream, const char* s, unsigned char value) {
+    appendString(stream, s);
+    appendHex2(stream, value);
+}
+
+
+
+void appendStringAndHex2LN(OutputStream* stream, const char* s, unsigned char value) {
+    appendString(stream, s);
+    appendHex2(stream, value);
+    println(stream);
+}
+
+void appendStringAndBool(OutputStream* outputStream, const char* s, bool value) {
+	appendString(outputStream, s);
+	appendBool(outputStream, value);
+}
+
+void appendKeyAndName(OutputStream* stream, const char* key, const char* name) {
+    appendString(stream, key);
+    appendString(stream, name);
 }

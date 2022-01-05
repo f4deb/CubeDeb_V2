@@ -80,6 +80,10 @@
 #define LED2_V_Get()               ((PORTB >> 0) & 0x1)
 #define LED2_V_PIN                  GPIO_PIN_RB0
 
+/*** Macros for U12V pin ***/
+#define U12V_Get()               ((PORTB >> 11) & 0x1)
+#define U12V_PIN                  GPIO_PIN_RB11
+
 /*** Macros for RGB_1 pin ***/
 #define RGB_1_Set()               (LATASET = (1<<1))
 #define RGB_1_Clear()             (LATACLR = (1<<1))
@@ -88,6 +92,18 @@
 #define RGB_1_InputEnable()       (TRISASET = (1<<1))
 #define RGB_1_Get()               ((PORTA >> 1) & 0x1)
 #define RGB_1_PIN                  GPIO_PIN_RA1
+
+/*** Macros for U5VA pin ***/
+#define U5VA_Get()               ((PORTB >> 12) & 0x1)
+#define U5VA_PIN                  GPIO_PIN_RB12
+
+/*** Macros for U5VD pin ***/
+#define U5VD_Get()               ((PORTB >> 13) & 0x1)
+#define U5VD_PIN                  GPIO_PIN_RB13
+
+/*** Macros for U3V3 pin ***/
+#define U3V3_Get()               ((PORTB >> 15) & 0x1)
+#define U3V3_PIN                  GPIO_PIN_RB15
 
 /*** Macros for I2C1_SCL pin ***/
 #define I2C1_SCL_Get()               ((PORTA >> 14) & 0x1)

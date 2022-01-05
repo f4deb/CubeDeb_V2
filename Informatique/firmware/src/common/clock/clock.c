@@ -2,6 +2,7 @@
 
 #include <stdlib.h>
 #include <stdbool.h>
+#include <stdio.h>
 
 #include "../clock/clockStream.h"
 #include "../IO/outputStream/outputStream.h"
@@ -23,7 +24,6 @@ char* printTimeTo7Seg(Clock* clock){
     i = clockData->minute & 0xF;
     i = i + 0x30;
     str[3] = i;
-    
 
     return str;
 }

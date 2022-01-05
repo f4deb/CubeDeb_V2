@@ -43,7 +43,7 @@
 // Section: Included Files
 // *****************************************************************************
 // *****************************************************************************
-#include <definitions.h>
+#include "definitions.h"
 #include "device.h"
 
 
@@ -186,10 +186,12 @@ void SYS_Initialize ( void* data )
     CORETIMER_Initialize();
     I2C1_Initialize();
 
+    ADCHS_Initialize();
+
     TMR4_Initialize();
 
-	UART2_Initialize();
 
+	UART2_Initialize();
 
     TMR2_Initialize();
 

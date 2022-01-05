@@ -20,6 +20,20 @@
 void append(OutputStream* outputStream, unsigned char c);
 
 /**
+ * Append a bool value (1 for true, 0 for false)
+ * @param outputStream the pointer on outputStream (POO simulation)
+ * @param b the bool value to write
+ */
+unsigned int appendBool(OutputStream* outputStream, bool b);
+
+/**
+ * Append a bool value, but as string ("true" for true, "false" for false)
+ * @param outputStream the pointer on outputStream (POO simulation)
+ * @param b the bool value to write
+ */
+unsigned int appendBoolAsString(OutputStream* outputStream, bool b);
+
+/**
  * Append a separator to the outputStream.
  * @param outputStream the pointer on outputStream (POO simulation)
  */
@@ -65,23 +79,10 @@ unsigned int appendCRLF(OutputStream* outputStream);
 
 
 
-// DEC
-
-/**
- * Sends the decimal value of a long.
- * @param outputStream the pointer on outputStream (POO simulation)
- * @param value the value to send
- * @return the number of characters sent
- * @return the number of char which are written
- */
-int appendDec(OutputStream* outputStream, signed long value);
-
-int appendDecUnsigned(OutputStream* stream, unsigned long value) ;
 
 
-void appendStringAndDec(OutputStream* stream, const char* s, signed long value);
 
-void appendStringAndDecLN(OutputStream* stream, const char* s, float value);
+
 
 void appendDec4AsString(OutputStream* stream,uint16_t value);
 
@@ -143,5 +144,111 @@ void appendHex6(OutputStream* outputStream, signed long value);
  * @param value the value which must be sent
  */
 void appendHex8(OutputStream* outputStream, signed long value);
+
+// Hex - Float
+
+/**
+* Append a float value into hexadecimal value (2 chars).
+* @param outputStream the pointer on outputStream (POO simulation)
+* @param value the float value
+* @param digitPrecision how many digit we would like to have
+*/
+void appendHexFloat2(OutputStream* outputStream, float value, unsigned int digitPrecision);
+
+/**
+ * Append a float value into hexadecimal value (4 chars).
+ * @param outputStream the pointer on outputStream (POO simulation)
+ * @param value the float value
+ * @param digitPrecision how many digit we would like to have
+ */
+void appendHexFloat4(OutputStream* outputStream, float value, unsigned int digitPrecision);
+
+/**
+* Append a float value into hexadecimal value (6 chars).
+* @param outputStream the pointer on outputStream (POO simulation)
+* @param value the float value
+* @param digitPrecision how many digit we would like to have
+*/
+void appendHexFloat6(OutputStream* outputStream, float value, unsigned int digitPrecision);
+
+/**
+ * Append a float value into hexadecimal value (8 chars).
+ * @param outputStream the pointer on outputStream (POO simulation)
+ * @param value the float value
+ * @param digitPrecision how many digit we would like to have
+ */
+void appendHexFloat8(OutputStream* outputStream, float value, unsigned int digitPrecision);
+
+// DEC
+
+/**
+ * Sends the decimal value of a long.
+ * @param outputStream the pointer on outputStream (POO simulation)
+ * @param value the value to send
+ * @return the number of characters sent
+ * @return the number of char which are written
+ */
+int appendDec(OutputStream* outputStream, signed long value);
+
+int appendDecUnsigned(OutputStream* stream, unsigned long value) ;
+
+/**
+ * Sends the decimal value of a float. The precision after the comma depend on the value. For value very low, we have 3 chars after the comma, but we could have only 1.
+ * @param outputStream the pointer on outputStream (POO simulation)
+ * @param value the value to send
+ * @return the number of char which are written including part before comma, the comma, and after the comma
+ */
+int appendDecf(OutputStream* outputStream, float value);
+
+// AGGREGATE FUNCTION
+
+// -> FLOATING VALUES
+
+/**
+ * Append a string followed by a float value.
+ * @param outputStream the pointer on outputStream (POO simulation)
+ * @param s the string to write
+ * @param float the float value to write
+ */
+void appendStringAndDecf(OutputStream* outputStream, const char* s, float value);
+
+
+// -> INTEGER / LONG VALUES
+
+/**
+ * Append a string followed by a long value.
+ * @param outputStream the pointer on outputStream (POO simulation)
+ * @param s the string to write
+ * @param value the value to write
+ */
+void appendStringAndDec(OutputStream* outputStream, const char* s, long value);
+
+void appendStringAndDecLN(OutputStream* outputStream, const char* s, long value);
+
+
+// -> HEXA VALUES
+
+void appendStringAndHex2(OutputStream* stream, const char* s, unsigned char value);
+
+
+
+void appendStringAndHex2LN(OutputStream* stream, const char* s, unsigned char value);
+
+/**
+* Append a string followed by a bool value.
+* @param outputStream the pointer on outputStream (POO simulation)
+* @param s the string to write
+* @param value the value to write
+*/
+void appendStringAndBool(OutputStream* outputStream, const char* s, bool value);
+
+/**
+ * Append both string : key followed by a value.
+ * @param outputStream the pointer on outputStream (POO simulation)
+ * @param key the key to write
+ * @param name the name to write
+ */
+void appendKeyAndName(OutputStream* outputStream, const char* key, const char* name);
+
 
 #endif

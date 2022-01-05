@@ -188,7 +188,77 @@ void mainCube (void){
         
 ///Timing Synchronisation
         led2GreenToggle();
-        int i =0;
+        
+        uint32_t volt=0;
+        
+        uint32_t adc_count;
+        float input_voltage;
+        
+        #define ADC_VREF                (2.048f)
+#define ADC_MAX_COUNT           (4095)
+        
+        
+         ADCHS_ChannelConversionStart(6);      
+         ADCHS_ChannelConversionStart(7); 
+         ADCHS_ChannelConversionStart(8); 
+         ADCHS_ChannelConversionStart(10); 
+        /* Wait till ADC conversion result is available */
+        while(!ADCHS_ChannelResultIsReady(ADCHS_CH6))
+        {
+        };
+        while(!ADCHS_ChannelResultIsReady(ADCHS_CH7))
+        {
+        };
+          while(!ADCHS_ChannelResultIsReady(ADCHS_CH8))
+        {
+        };
+          while(!ADCHS_ChannelResultIsReady(ADCHS_CH10))
+        {
+        };
+
+        /* Read the ADC result */
+        adc_count = ADCHS_ChannelResultGet(ADCHS_CH6);
+        input_voltage = (float)adc_count * ADC_VREF / ADC_MAX_COUNT;        
+        input_voltage = input_voltage * 11500/1500;        
+        appendStringAndDecf(debugOutputStream,"Tension 12V : ", input_voltage);
+        append(debugOutputStream,LF);        
+
+        adc_count = ADCHS_ChannelResultGet(ADCHS_CH7);
+        input_voltage = (float)adc_count * ADC_VREF / ADC_MAX_COUNT;        
+        input_voltage = input_voltage * 14700/4700;        
+        appendStringAndDecf(debugOutputStream,"Tension 5VA : ", input_voltage);
+        append(debugOutputStream,LF); 
+
+        adc_count = ADCHS_ChannelResultGet(ADCHS_CH8);
+        input_voltage = (float)adc_count * ADC_VREF / ADC_MAX_COUNT;        
+        input_voltage = input_voltage * 14700/4700;        
+        appendStringAndDecf(debugOutputStream,"Tension 5VD : ", input_voltage);        
+        append(debugOutputStream,LF); 
+
+        adc_count = ADCHS_ChannelResultGet(ADCHS_CH10);
+        input_voltage = (float)adc_count * ADC_VREF / ADC_MAX_COUNT;        
+        input_voltage = input_voltage * 14700/4700;        
+        appendStringAndDecf(debugOutputStream,"Tension 3V3 : ", input_voltage);  
+        append(debugOutputStream,LF); 
+        
+        /*        adc_count = ADCHS_ChannelResultGet(ADCHS_CH7);
+        input_voltage = (float)adc_count * ADC_VREF / ADC_MAX_COUNT;
+        appendHex4(debugOutputStream,adc_count);
+        append(debugOutputStream,LF); 
+        
+                adc_count = ADCHS_ChannelResultGet(ADCHS_CH8);
+        input_voltage = (float)adc_count * ADC_VREF / ADC_MAX_COUNT;
+        appendHex4(debugOutputStream,adc_count);
+        append(debugOutputStream,LF); 
+        
+                adc_count = ADCHS_ChannelResultGet(ADCHS_CH10);
+        input_voltage = (float)adc_count * ADC_VREF / ADC_MAX_COUNT;
+        appendHex4(debugOutputStream,adc_count);
+        append(debugOutputStream,LF); */
+
+                append(debugOutputStream,LF); 
+                        append(debugOutputStream,LF); 
+
         switch (timingSync) {
             case 0:; 
                 appendDot(screen7SegCpu,4);

@@ -4,13 +4,132 @@ attributes: {id: core}
 children:
 - type: Symbols
   children:
+  - type: Boolean
+    attributes: {id: ADCHS_CLOCK_ENABLE}
+    children:
+    - type: Values
+      children:
+      - type: Dynamic
+        attributes: {id: adchs, value: 'true'}
   - type: Integer
     attributes: {id: ADCHS_CLOCK_FREQUENCY}
     children:
     - type: Values
       children:
       - type: Dynamic
-        attributes: {id: core, value: '0'}
+        attributes: {id: core, value: '100000000'}
+  - type: Boolean
+    attributes: {id: ADC_DATA10_INTERRUPT_ENABLE}
+    children:
+    - type: Values
+      children:
+      - type: Dynamic
+        attributes: {id: adchs, value: 'false'}
+  - type: Boolean
+    attributes: {id: ADC_DATA10_INTERRUPT_ENABLE_UPDATE}
+    children:
+    - type: Values
+      children:
+      - type: Dynamic
+        attributes: {id: core, value: 'true'}
+  - type: String
+    attributes: {id: ADC_DATA10_INTERRUPT_HANDLER}
+    children:
+    - type: Values
+      children:
+      - type: Dynamic
+        attributes: {id: adchs, value: ADC_DATA10_Handler}
+  - type: Boolean
+    attributes: {id: ADC_DATA10_INTERRUPT_HANDLER_LOCK}
+    children:
+    - type: Values
+      children:
+      - type: Dynamic
+        attributes: {id: adchs, value: 'false'}
+  - type: Boolean
+    attributes: {id: ADC_DATA6_INTERRUPT_ENABLE}
+    children:
+    - type: Values
+      children:
+      - type: Dynamic
+        attributes: {id: adchs, value: 'false'}
+  - type: Boolean
+    attributes: {id: ADC_DATA6_INTERRUPT_ENABLE_UPDATE}
+    children:
+    - type: Values
+      children:
+      - type: Dynamic
+        attributes: {id: core, value: 'true'}
+  - type: String
+    attributes: {id: ADC_DATA6_INTERRUPT_HANDLER}
+    children:
+    - type: Values
+      children:
+      - type: Dynamic
+        attributes: {id: adchs, value: ADC_DATA6_Handler}
+  - type: Boolean
+    attributes: {id: ADC_DATA6_INTERRUPT_HANDLER_LOCK}
+    children:
+    - type: Values
+      children:
+      - type: Dynamic
+        attributes: {id: adchs, value: 'false'}
+  - type: Boolean
+    attributes: {id: ADC_DATA7_INTERRUPT_ENABLE}
+    children:
+    - type: Values
+      children:
+      - type: Dynamic
+        attributes: {id: adchs, value: 'false'}
+  - type: Boolean
+    attributes: {id: ADC_DATA7_INTERRUPT_ENABLE_UPDATE}
+    children:
+    - type: Values
+      children:
+      - type: Dynamic
+        attributes: {id: core, value: 'true'}
+  - type: String
+    attributes: {id: ADC_DATA7_INTERRUPT_HANDLER}
+    children:
+    - type: Values
+      children:
+      - type: Dynamic
+        attributes: {id: adchs, value: ADC_DATA7_Handler}
+  - type: Boolean
+    attributes: {id: ADC_DATA7_INTERRUPT_HANDLER_LOCK}
+    children:
+    - type: Values
+      children:
+      - type: Dynamic
+        attributes: {id: adchs, value: 'false'}
+  - type: Boolean
+    attributes: {id: ADC_DATA8_INTERRUPT_ENABLE}
+    children:
+    - type: Values
+      children:
+      - type: Dynamic
+        attributes: {id: adchs, value: 'false'}
+  - type: Boolean
+    attributes: {id: ADC_DATA8_INTERRUPT_ENABLE_UPDATE}
+    children:
+    - type: Values
+      children:
+      - type: Dynamic
+        attributes: {id: core, value: 'true'}
+  - type: String
+    attributes: {id: ADC_DATA8_INTERRUPT_HANDLER}
+    children:
+    - type: Values
+      children:
+      - type: Dynamic
+        attributes: {id: adchs, value: ADC_DATA8_Handler}
+  - type: Boolean
+    attributes: {id: ADC_DATA8_INTERRUPT_HANDLER_LOCK}
+    children:
+    - type: Values
+      children:
+      - type: Dynamic
+        attributes: {id: adchs, value: 'false'}
   - type: String
     attributes: {id: BSP_PIN_15_MODE}
     children:
@@ -103,6 +222,20 @@ children:
       - type: User
         attributes: {value: DIGITAL}
   - type: String
+    attributes: {id: BSP_PIN_35_FUNCTION_NAME}
+    children:
+    - type: Values
+      children:
+      - type: User
+        attributes: {value: U12V}
+  - type: String
+    attributes: {id: BSP_PIN_35_FUNCTION_TYPE}
+    children:
+    - type: Values
+      children:
+      - type: User
+        attributes: {value: AN6}
+  - type: String
     attributes: {id: BSP_PIN_38_DIR}
     children:
     - type: Values
@@ -137,6 +270,55 @@ children:
       children:
       - type: User
         attributes: {value: '0'}
+  - type: String
+    attributes: {id: BSP_PIN_41_FUNCTION_NAME}
+    children:
+    - type: Values
+      children:
+      - type: User
+        attributes: {value: U5VA}
+  - type: String
+    attributes: {id: BSP_PIN_41_FUNCTION_TYPE}
+    children:
+    - type: Values
+      children:
+      - type: User
+        attributes: {value: AN7}
+  - type: String
+    attributes: {id: BSP_PIN_42_FUNCTION_NAME}
+    children:
+    - type: Values
+      children:
+      - type: User
+        attributes: {value: U5VD}
+  - type: String
+    attributes: {id: BSP_PIN_42_FUNCTION_TYPE}
+    children:
+    - type: Values
+      children:
+      - type: User
+        attributes: {value: AN8}
+  - type: String
+    attributes: {id: BSP_PIN_44_FUNCTION_NAME}
+    children:
+    - type: Values
+      children:
+      - type: User
+        attributes: {value: U3V3}
+  - type: String
+    attributes: {id: BSP_PIN_44_FUNCTION_TYPE}
+    children:
+    - type: Values
+      children:
+      - type: User
+        attributes: {value: AN10}
+  - type: String
+    attributes: {id: BSP_PIN_44_MODE}
+    children:
+    - type: Values
+      children:
+      - type: User
+        attributes: {value: ''}
   - type: String
     attributes: {id: BSP_PIN_51_MODE}
     children:
@@ -1229,6 +1411,90 @@ children:
       - type: Dynamic
         attributes: {id: core, value: '4'}
   - type: Boolean
+    attributes: {id: EVIC_65_ENABLE}
+    children:
+    - type: Values
+      children:
+      - type: Dynamic
+        attributes: {id: core, value: 'false'}
+  - type: Boolean
+    attributes: {id: EVIC_65_HANDLER_LOCK}
+    children:
+    - type: Values
+      children:
+      - type: Dynamic
+        attributes: {id: core, value: 'false'}
+  - type: String
+    attributes: {id: EVIC_65_INTERRUPT_HANDLER}
+    children:
+    - type: Values
+      children:
+      - type: Dynamic
+        attributes: {id: core, value: ADC_DATA6_Handler}
+  - type: Boolean
+    attributes: {id: EVIC_66_ENABLE}
+    children:
+    - type: Values
+      children:
+      - type: Dynamic
+        attributes: {id: core, value: 'false'}
+  - type: Boolean
+    attributes: {id: EVIC_66_HANDLER_LOCK}
+    children:
+    - type: Values
+      children:
+      - type: Dynamic
+        attributes: {id: core, value: 'false'}
+  - type: String
+    attributes: {id: EVIC_66_INTERRUPT_HANDLER}
+    children:
+    - type: Values
+      children:
+      - type: Dynamic
+        attributes: {id: core, value: ADC_DATA7_Handler}
+  - type: Boolean
+    attributes: {id: EVIC_67_ENABLE}
+    children:
+    - type: Values
+      children:
+      - type: Dynamic
+        attributes: {id: core, value: 'false'}
+  - type: Boolean
+    attributes: {id: EVIC_67_HANDLER_LOCK}
+    children:
+    - type: Values
+      children:
+      - type: Dynamic
+        attributes: {id: core, value: 'false'}
+  - type: String
+    attributes: {id: EVIC_67_INTERRUPT_HANDLER}
+    children:
+    - type: Values
+      children:
+      - type: Dynamic
+        attributes: {id: core, value: ADC_DATA8_Handler}
+  - type: Boolean
+    attributes: {id: EVIC_69_ENABLE}
+    children:
+    - type: Values
+      children:
+      - type: Dynamic
+        attributes: {id: core, value: 'false'}
+  - type: Boolean
+    attributes: {id: EVIC_69_HANDLER_LOCK}
+    children:
+    - type: Values
+      children:
+      - type: Dynamic
+        attributes: {id: core, value: 'false'}
+  - type: String
+    attributes: {id: EVIC_69_INTERRUPT_HANDLER}
+    children:
+    - type: Values
+      children:
+      - type: Dynamic
+        attributes: {id: core, value: ADC_DATA10_Handler}
+  - type: Boolean
     attributes: {id: EVIC_6_ENABLE}
     children:
     - type: Values
@@ -1633,6 +1899,13 @@ children:
       children:
       - type: Dynamic
         attributes: {id: core, value: '0x8001'}
+  - type: Hex
+    attributes: {id: PMD1_REG_VALUE}
+    children:
+    - type: Values
+      children:
+      - type: Dynamic
+        attributes: {id: core, value: '4096'}
   - type: Hex
     attributes: {id: PMD2_REG_VALUE}
     children:
