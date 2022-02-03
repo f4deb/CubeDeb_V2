@@ -100,6 +100,7 @@
             <logicalFolder name="f10" displayName="icap" projectFiles="true">
               <itemPath>../src/config/default/peripheral/icap/plib_icap_common.h</itemPath>
               <itemPath>../src/config/default/peripheral/icap/plib_icap1.h</itemPath>
+              <itemPath>../src/config/default/peripheral/icap/plib_icap2.h</itemPath>
             </logicalFolder>
             <logicalFolder name="f11" displayName="ocmp" projectFiles="true">
               <itemPath>../src/config/default/peripheral/ocmp/plib_ocmp_common.h</itemPath>
@@ -146,7 +147,12 @@
         <logicalFolder name="f2" displayName="SAA1064T" projectFiles="true">
           <itemPath>../src/drivers/SAA1064T/SAA1064T.h</itemPath>
         </logicalFolder>
-        <itemPath>../src/drivers/WS2812b/WS2812b.h</itemPath>
+        <logicalFolder name="f6" displayName="TM1638" projectFiles="true">
+          <itemPath>../src/drivers/TM1638/TM1638.h</itemPath>
+        </logicalFolder>
+        <logicalFolder name="f5" displayName="WS2812b" projectFiles="true">
+          <itemPath>../src/drivers/WS2812b/WS2812b.h</itemPath>
+        </logicalFolder>
       </logicalFolder>
       <logicalFolder name="f2" displayName="main" projectFiles="true">
       </logicalFolder>
@@ -252,6 +258,7 @@
             </logicalFolder>
             <logicalFolder name="f10" displayName="icap" projectFiles="true">
               <itemPath>../src/config/default/peripheral/icap/plib_icap1.c</itemPath>
+              <itemPath>../src/config/default/peripheral/icap/plib_icap2.c</itemPath>
             </logicalFolder>
             <logicalFolder name="f11" displayName="ocmp" projectFiles="true">
               <itemPath>../src/config/default/peripheral/ocmp/plib_ocmp3.c</itemPath>
@@ -293,6 +300,9 @@
         <logicalFolder name="f2" displayName="SAA1064T" projectFiles="true">
           <itemPath>../src/drivers/SAA1064T/SAA1064T.c</itemPath>
         </logicalFolder>
+        <logicalFolder name="f6" displayName="TM1638" projectFiles="true">
+          <itemPath>../src/drivers/TM1638/TM1638.c</itemPath>
+        </logicalFolder>
         <logicalFolder name="f4" displayName="WS2812b" projectFiles="true">
           <itemPath>../src/drivers/WS2812b/WS2812b.c</itemPath>
         </logicalFolder>
@@ -313,6 +323,7 @@
         <itemPath>../src/config/default/default.mhc/GraphSettings.yml</itemPath>
         <itemPath>../src/config/default/default.mhc/i2c1.yml</itemPath>
         <itemPath>../src/config/default/default.mhc/icap1.yml</itemPath>
+        <itemPath>../src/config/default/default.mhc/icap2.yml</itemPath>
         <itemPath>../src/config/default/default.mhc/ocmp3.yml</itemPath>
         <itemPath>../src/config/default/default.mhc/project.yml</itemPath>
         <itemPath>../src/config/default/default.mhc/settings.yml</itemPath>

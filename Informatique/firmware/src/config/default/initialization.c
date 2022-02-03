@@ -177,6 +177,8 @@ void SYS_Initialize ( void* data )
 
 	GPIO_Initialize();
 
+    ICAP2_Initialize();
+
     ICAP1_Initialize();
 
 	UART5_Initialize();

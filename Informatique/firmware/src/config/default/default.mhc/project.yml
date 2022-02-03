@@ -6,13 +6,13 @@ files:
   security: NON_SECURE
   type: SOURCE
   userChecksum: AB67D8A7D0606ADFF3E9184E6CB5B5F9
-- generatedChecksum: 52700A41B9C5E21ECA7F23A955A23D24
+- generatedChecksum: 762EE258359BE965E5DE3D7578E86221
   logicalPath: config/default
   name: initialization.c
   physicalPath: ''
   security: NON_SECURE
   type: SOURCE
-  userChecksum: 52700A41B9C5E21ECA7F23A955A23D24
+  userChecksum: 762EE258359BE965E5DE3D7578E86221
 - generatedChecksum: B093F5D425B4526112BCD188DE653029
   logicalPath: config/default
   name: interrupts.c
@@ -48,13 +48,13 @@ files:
   security: NON_SECURE
   type: SOURCE
   userChecksum: 0DA10C8889278A796D0EE4C6096B57C3
-- generatedChecksum: 0B6E961533F5478DC4051550FA1F0AA5
+- generatedChecksum: A60E2F69A2405B4FD809E2A250FB3D8E
   logicalPath: config/default/peripheral/clk
   name: plib_clk.c
   physicalPath: peripheral/clk
   security: NON_SECURE
   type: SOURCE
-  userChecksum: 0B6E961533F5478DC4051550FA1F0AA5
+  userChecksum: A60E2F69A2405B4FD809E2A250FB3D8E
 - generatedChecksum: F8BB2BAA74068083A80E6E229BBCF3E3
   logicalPath: config/default/peripheral/coretimer
   name: plib_coretimer.c
@@ -69,13 +69,13 @@ files:
   security: NON_SECURE
   type: SOURCE
   userChecksum: 25C14639EC70744E89DF1C0EC068E9BD
-- generatedChecksum: 120455DDB5D4455AFAED7FC749EE76D9
+- generatedChecksum: 017B5D7D47A30F5C56499350E8F46B1A
   logicalPath: config/default/peripheral/gpio
   name: plib_gpio.c
   physicalPath: peripheral/gpio
   security: NON_SECURE
   type: SOURCE
-  userChecksum: 120455DDB5D4455AFAED7FC749EE76D9
+  userChecksum: 017B5D7D47A30F5C56499350E8F46B1A
 - generatedChecksum: 89B031B13F2C1ED9FA92D7861609797D
   logicalPath: config/default/peripheral/i2c/master
   name: plib_i2c1_master.c
@@ -90,6 +90,13 @@ files:
   security: NON_SECURE
   type: SOURCE
   userChecksum: F8AA73116ED82D082C16EBA5E04C8873
+- generatedChecksum: 432467DD70AAE4E6081994C9FDD689FA
+  logicalPath: config/default/peripheral/icap
+  name: plib_icap2.c
+  physicalPath: peripheral/icap
+  security: NON_SECURE
+  type: SOURCE
+  userChecksum: 432467DD70AAE4E6081994C9FDD689FA
 - generatedChecksum: 188016D2D04A147D7E3EDF62A622C94E
   logicalPath: config/default/peripheral/ocmp
   name: plib_ocmp3.c
@@ -139,13 +146,13 @@ files:
   security: NON_SECURE
   type: SOURCE
   userChecksum: 7806B30ECAE0D18D08CD583D8775530D
-- generatedChecksum: 6B3CEA01FDC0E73AB37A6564D0D8E5C1
+- generatedChecksum: D687576FB12A644D8D1D22E9EB067331
   logicalPath: config/default
   name: definitions.h
   physicalPath: ''
   security: NON_SECURE
   type: HEADER
-  userChecksum: 6B3CEA01FDC0E73AB37A6564D0D8E5C1
+  userChecksum: D687576FB12A644D8D1D22E9EB067331
 - generatedChecksum: E189C26B2269F8DE46033CCD0621958D
   logicalPath: config/default
   name: device.h
@@ -216,13 +223,13 @@ files:
   security: NON_SECURE
   type: HEADER
   userChecksum: C8175D686FECDA56EC0FED1578D4ECA7
-- generatedChecksum: 9D47100680D132CEA95C9227AF1995E2
+- generatedChecksum: E2081FDB92D3AC662C064C998ED469AD
   logicalPath: config/default/peripheral/gpio
   name: plib_gpio.h
   physicalPath: peripheral/gpio
   security: NON_SECURE
   type: HEADER
-  userChecksum: 9D47100680D132CEA95C9227AF1995E2
+  userChecksum: E2081FDB92D3AC662C064C998ED469AD
 - generatedChecksum: 407D8CE5F0C091BCEBB78967FECBE53E
   logicalPath: config/default/peripheral/i2c/master
   name: plib_i2c1_master.h
@@ -244,6 +251,13 @@ files:
   security: NON_SECURE
   type: HEADER
   userChecksum: 6695E8586DC2FD687CE55021E1686471
+- generatedChecksum: F8B110B7D77ADDF4EF0B9678CE38B011
+  logicalPath: config/default/peripheral/icap
+  name: plib_icap2.h
+  physicalPath: peripheral/icap
+  security: NON_SECURE
+  type: HEADER
+  userChecksum: F8B110B7D77ADDF4EF0B9678CE38B011
 - generatedChecksum: B75BC5AEF7A117FB761A3A8548E16E3D
   logicalPath: config/default/peripheral/icap
   name: plib_icap_common.h
@@ -362,12 +376,6 @@ settings:
   key: no-device-startup-code
   security: NON_SECURE
   value: 'true'
-- append: true
-  category: C32-LD
-  delimiter: ;=
-  key: preprocessor-macros
-  security: NON_SECURE
-  value: ''
 - append: true
   category: C32CPP
   delimiter: ;

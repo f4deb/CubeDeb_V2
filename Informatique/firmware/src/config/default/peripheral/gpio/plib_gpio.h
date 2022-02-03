@@ -62,6 +62,51 @@
 // *****************************************************************************
 
 
+/*** Macros for BD5 pin ***/
+#define BD5_Set()               (LATESET = (1<<5))
+#define BD5_Clear()             (LATECLR = (1<<5))
+#define BD5_Toggle()            (LATEINV= (1<<5))
+#define BD5_OutputEnable()      (TRISECLR = (1<<5))
+#define BD5_InputEnable()       (TRISESET = (1<<5))
+#define BD5_Get()               ((PORTE >> 5) & 0x1)
+#define BD5_PIN                  GPIO_PIN_RE5
+
+/*** Macros for BD6 pin ***/
+#define BD6_Set()               (LATESET = (1<<6))
+#define BD6_Clear()             (LATECLR = (1<<6))
+#define BD6_Toggle()            (LATEINV= (1<<6))
+#define BD6_OutputEnable()      (TRISECLR = (1<<6))
+#define BD6_InputEnable()       (TRISESET = (1<<6))
+#define BD6_Get()               ((PORTE >> 6) & 0x1)
+#define BD6_PIN                  GPIO_PIN_RE6
+
+/*** Macros for BD7 pin ***/
+#define BD7_Set()               (LATESET = (1<<7))
+#define BD7_Clear()             (LATECLR = (1<<7))
+#define BD7_Toggle()            (LATEINV= (1<<7))
+#define BD7_OutputEnable()      (TRISECLR = (1<<7))
+#define BD7_InputEnable()       (TRISESET = (1<<7))
+#define BD7_Get()               ((PORTE >> 7) & 0x1)
+#define BD7_PIN                  GPIO_PIN_RE7
+
+/*** Macros for BRS pin ***/
+#define BRS_Set()               (LATESET = (1<<8))
+#define BRS_Clear()             (LATECLR = (1<<8))
+#define BRS_Toggle()            (LATEINV= (1<<8))
+#define BRS_OutputEnable()      (TRISECLR = (1<<8))
+#define BRS_InputEnable()       (TRISESET = (1<<8))
+#define BRS_Get()               ((PORTE >> 8) & 0x1)
+#define BRS_PIN                  GPIO_PIN_RE8
+
+/*** Macros for BE pin ***/
+#define BE_Set()               (LATESET = (1<<9))
+#define BE_Clear()             (LATECLR = (1<<9))
+#define BE_Toggle()            (LATEINV= (1<<9))
+#define BE_OutputEnable()      (TRISECLR = (1<<9))
+#define BE_InputEnable()       (TRISESET = (1<<9))
+#define BE_Get()               ((PORTE >> 9) & 0x1)
+#define BE_PIN                  GPIO_PIN_RE9
+
 /*** Macros for LED1_V pin ***/
 #define LED1_V_Set()               (LATBSET = (1<<1))
 #define LED1_V_Clear()             (LATBCLR = (1<<1))
@@ -79,6 +124,24 @@
 #define LED2_V_InputEnable()       (TRISBSET = (1<<0))
 #define LED2_V_Get()               ((PORTB >> 0) & 0x1)
 #define LED2_V_PIN                  GPIO_PIN_RB0
+
+/*** Macros for CLK_TM1638 pin ***/
+#define CLK_TM1638_Set()               (LATBSET = (1<<9))
+#define CLK_TM1638_Clear()             (LATBCLR = (1<<9))
+#define CLK_TM1638_Toggle()            (LATBINV= (1<<9))
+#define CLK_TM1638_OutputEnable()      (TRISBCLR = (1<<9))
+#define CLK_TM1638_InputEnable()       (TRISBSET = (1<<9))
+#define CLK_TM1638_Get()               ((PORTB >> 9) & 0x1)
+#define CLK_TM1638_PIN                  GPIO_PIN_RB9
+
+/*** Macros for DIO_TM1638 pin ***/
+#define DIO_TM1638_Set()               (LATBSET = (1<<10))
+#define DIO_TM1638_Clear()             (LATBCLR = (1<<10))
+#define DIO_TM1638_Toggle()            (LATBINV= (1<<10))
+#define DIO_TM1638_OutputEnable()      (TRISBCLR = (1<<10))
+#define DIO_TM1638_InputEnable()       (TRISBSET = (1<<10))
+#define DIO_TM1638_Get()               ((PORTB >> 10) & 0x1)
+#define DIO_TM1638_PIN                  GPIO_PIN_RB10
 
 /*** Macros for U12V pin ***/
 #define U12V_Get()               ((PORTB >> 11) & 0x1)
@@ -133,6 +196,15 @@
 #define UART1_TX_Get()               ((PORTD >> 5) & 0x1)
 #define UART1_TX_PIN                  GPIO_PIN_RD5
 
+/*** Macros for BRW pin ***/
+#define BRW_Set()               (LATFSET = (1<<0))
+#define BRW_Clear()             (LATFCLR = (1<<0))
+#define BRW_Toggle()            (LATFINV= (1<<0))
+#define BRW_OutputEnable()      (TRISFCLR = (1<<0))
+#define BRW_InputEnable()       (TRISFSET = (1<<0))
+#define BRW_Get()               ((PORTF >> 0) & 0x1)
+#define BRW_PIN                  GPIO_PIN_RF0
+
 /*** Macros for LED2_R pin ***/
 #define LED2_R_Set()               (LATGSET = (1<<1))
 #define LED2_R_Clear()             (LATGCLR = (1<<1))
@@ -150,6 +222,60 @@
 #define LED1_R_InputEnable()       (TRISGSET = (1<<0))
 #define LED1_R_Get()               ((PORTG >> 0) & 0x1)
 #define LED1_R_PIN                  GPIO_PIN_RG0
+
+/*** Macros for STB_TM1638 pin ***/
+#define STB_TM1638_Set()               (LATASET = (1<<7))
+#define STB_TM1638_Clear()             (LATACLR = (1<<7))
+#define STB_TM1638_Toggle()            (LATAINV= (1<<7))
+#define STB_TM1638_OutputEnable()      (TRISACLR = (1<<7))
+#define STB_TM1638_InputEnable()       (TRISASET = (1<<7))
+#define STB_TM1638_Get()               ((PORTA >> 7) & 0x1)
+#define STB_TM1638_PIN                  GPIO_PIN_RA7
+
+/*** Macros for BD0 pin ***/
+#define BD0_Set()               (LATESET = (1<<0))
+#define BD0_Clear()             (LATECLR = (1<<0))
+#define BD0_Toggle()            (LATEINV= (1<<0))
+#define BD0_OutputEnable()      (TRISECLR = (1<<0))
+#define BD0_InputEnable()       (TRISESET = (1<<0))
+#define BD0_Get()               ((PORTE >> 0) & 0x1)
+#define BD0_PIN                  GPIO_PIN_RE0
+
+/*** Macros for BD1 pin ***/
+#define BD1_Set()               (LATESET = (1<<1))
+#define BD1_Clear()             (LATECLR = (1<<1))
+#define BD1_Toggle()            (LATEINV= (1<<1))
+#define BD1_OutputEnable()      (TRISECLR = (1<<1))
+#define BD1_InputEnable()       (TRISESET = (1<<1))
+#define BD1_Get()               ((PORTE >> 1) & 0x1)
+#define BD1_PIN                  GPIO_PIN_RE1
+
+/*** Macros for BD2 pin ***/
+#define BD2_Set()               (LATESET = (1<<2))
+#define BD2_Clear()             (LATECLR = (1<<2))
+#define BD2_Toggle()            (LATEINV= (1<<2))
+#define BD2_OutputEnable()      (TRISECLR = (1<<2))
+#define BD2_InputEnable()       (TRISESET = (1<<2))
+#define BD2_Get()               ((PORTE >> 2) & 0x1)
+#define BD2_PIN                  GPIO_PIN_RE2
+
+/*** Macros for BD3 pin ***/
+#define BD3_Set()               (LATESET = (1<<3))
+#define BD3_Clear()             (LATECLR = (1<<3))
+#define BD3_Toggle()            (LATEINV= (1<<3))
+#define BD3_OutputEnable()      (TRISECLR = (1<<3))
+#define BD3_InputEnable()       (TRISESET = (1<<3))
+#define BD3_Get()               ((PORTE >> 3) & 0x1)
+#define BD3_PIN                  GPIO_PIN_RE3
+
+/*** Macros for BD4 pin ***/
+#define BD4_Set()               (LATESET = (1<<4))
+#define BD4_Clear()             (LATECLR = (1<<4))
+#define BD4_Toggle()            (LATEINV= (1<<4))
+#define BD4_OutputEnable()      (TRISECLR = (1<<4))
+#define BD4_InputEnable()       (TRISESET = (1<<4))
+#define BD4_Get()               ((PORTE >> 4) & 0x1)
+#define BD4_PIN                  GPIO_PIN_RE4
 
 
 // *****************************************************************************

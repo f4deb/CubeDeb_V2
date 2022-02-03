@@ -933,14 +933,14 @@ Text Label 7525 2625 2    50   ~ 0
 SDA2
 Wire Wire Line
 	7350 2625 7650 2625
-Wire Bus Line
-	7250 1725 7250 2100
-Wire Bus Line
-	8475 1625 8475 1975
 $Sheet
 S 8125 5525 500  700 
 U 61C2E239
 F0 "POWER" 50
 F1 "Power.sch" 50
 $EndSheet
+Wire Bus Line
+	7250 1725 7250 2100
+Wire Bus Line
+	8475 1625 8475 1975
 $EndSCHEMATC

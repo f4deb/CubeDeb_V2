@@ -10,6 +10,8 @@
 
 #include "../common/common.h"
 
+#include "../common/ascii/7seg.h"
+
 //#include "../common/IO/buffer/buffer.h"
 #include "../common/IO/printWriter/printWriter.h"
 //#include "../common/IO/outputStream/outputStream.h"
@@ -35,6 +37,7 @@
 #include "../drivers/SAA1064T/SAA1064T.h"
 #include "../drivers/WS2812b/WS2812b.h"
 #include "../drivers/HCSR04/HC-SR04.h"
+#include "../drivers/TM1638/TM1638.h"
 
 #include "../common/7seg/7segments.h"
 #include "../common/7seg/7segmentsOutputStream.h"
@@ -116,6 +119,9 @@ void initMainCube (void) {
 
 //INPUT CAPTURE 1 Enable    
     ICAP1_Enable();
+    
+//INPUT CAPTURE 2 Enable    
+    ICAP2_Enable();
 
 //OUPTUT COMPARE 3 Enable    
     OCMP3_Enable();
@@ -157,6 +163,127 @@ void initMainCube (void) {
     // Print the Name and the Version on DebugPort
     appendString(screen7SegCpu,getBoardVersion());   
 }
+
+
+uint32_t frequencyCounter (void){
+                        
+ uint32_t capturedValue[20];
+ volatile uint8_t captureIndex = 0;
+
+
+    int i;
+    uint32_t freq = 0;
+    uint32_t freqMoyenne = 0; 
+    int maxCapture = 16;
+    int j = 0;
+    
+
+    while (j<100){
+        for (i=0;i<maxCapture;i++){
+                int count = 0;
+
+            while(!ICAP2_CaptureStatusGet()){   
+                appendStringAndDec(debugOutputStream,"Count : ", count);
+
+                count++;  
+                if (count > 100){
+                    return 0;
+                }
+            }
+
+            capturedValue[captureIndex++] = ICAP2_CaptureBufferRead();
+            capturedValue[captureIndex++] = TMR4;
+            if ( captureIndex > maxCapture){
+                uint32_t capturedValueIndex = 0;
+
+                if (capturedValue[capturedValueIndex+6]>capturedValue[capturedValueIndex]){
+                    freq = (capturedValue[capturedValueIndex+6]-capturedValue[capturedValueIndex]);
+                }
+                else {
+                    freq = (capturedValue[capturedValueIndex]-capturedValue[capturedValueIndex+6]);
+                }
+            captureIndex = 0;
+            }
+        }            
+        freqMoyenne = freq + freqMoyenne;
+        j++;    
+    }
+    
+    freq = freqMoyenne;
+    
+    
+    
+    freq = 10000000000/((freq/3)/16);
+
+    return freq;
+}
+
+
+void strToTM1638AnnodeCommon (char str[]){
+
+    int i = 0;
+    int j = 0;
+    int seg = 1;
+    int mask = 1;
+    char car = 0x00;
+    char tab[16] = {0};
+    
+    // Configure TM1638
+    sendCommandTM1638(0x40); // auto increment
+    sendCommandTM1638(0xC0); // adresse 00
+    
+    for (i=0;i<8;i++){
+        car = ascii7Seg[str[i]];
+
+        char car1 = car;
+        
+        
+        for (j=0;j<8;j++){
+
+            
+            car = car1 & seg;
+            seg = seg<<1;
+            
+            
+            if (car > 0){
+                tab[j*2] = (tab[j*2] | mask);
+            }
+            else {
+                tab[j*2] = (tab[j*2] & (0xFF-mask));
+            }            
+
+
+        }
+        
+        mask = mask << 1;
+        seg = 1;
+      
+        car = 0;
+    }
+    
+    sendDataTM1638(tab[0]); //A
+    sendDataTM1638(0); //A
+    sendDataTM1638(tab[2]); //A
+    sendDataTM1638(0); //A
+    sendDataTM1638(tab[4]); //A
+    sendDataTM1638(0); //A
+    sendDataTM1638(tab[6]); //A
+    sendDataTM1638(0); //A
+    sendDataTM1638(tab[8]); //A
+    sendDataTM1638(0); //A
+    sendDataTM1638(tab[10]); //A
+    sendDataTM1638(0); //A
+    sendDataTM1638(tab[12]); //A
+    sendDataTM1638(0); //A
+    sendDataTM1638(tab[14]); //A
+    sendDataTM1638(0); //A
+
+
+    
+    sendCommandTM1638(0x89); // Activate and controle the intensity 
+
+}
+
 
 // ***************************************************************************************** //
 // ***************************************************************************************** //
@@ -241,24 +368,31 @@ void mainCube (void){
         appendStringAndDecf(debugOutputStream,"Tension 3V3 : ", input_voltage);  
         append(debugOutputStream,LF); 
         
-        /*        adc_count = ADCHS_ChannelResultGet(ADCHS_CH7);
-        input_voltage = (float)adc_count * ADC_VREF / ADC_MAX_COUNT;
-        appendHex4(debugOutputStream,adc_count);
-        append(debugOutputStream,LF); 
-        
-                adc_count = ADCHS_ChannelResultGet(ADCHS_CH8);
-        input_voltage = (float)adc_count * ADC_VREF / ADC_MAX_COUNT;
-        appendHex4(debugOutputStream,adc_count);
-        append(debugOutputStream,LF); 
-        
-                adc_count = ADCHS_ChannelResultGet(ADCHS_CH10);
-        input_voltage = (float)adc_count * ADC_VREF / ADC_MAX_COUNT;
-        appendHex4(debugOutputStream,adc_count);
-        append(debugOutputStream,LF); */
 
-                append(debugOutputStream,LF); 
-                        append(debugOutputStream,LF); 
+        
+        
 
+
+    append(debugOutputStream,LF); 
+    appendStringAndDecLN(debugOutputStream,"Frequency(Hz) : ",frequencyCounter());
+
+
+    append(debugOutputStream,LF); 
+    append(debugOutputStream,LF); 
+    
+    int dataTM1638;
+    int dataT;
+
+//////////////////////////////////////
+
+        
+        
+        strToTM1638AnnodeCommon("STEPHANE");
+        
+ 
+      
+                 
+                        
         switch (timingSync) {
             case 0:; 
                 appendDot(screen7SegCpu,4);
@@ -268,7 +402,7 @@ void mainCube (void){
                 appendString(debugOutputStream, readSensorValueAsString(tempSensorCpuStream));
                 appendString(debugOutputStream, "deg");
                 append(debugOutputStream,LF); 
-               
+              
                 break;            
                 
             case 1 :;
@@ -309,7 +443,7 @@ void mainCube (void){
                 appendCRLF(debugOutputStream);                         
         }    
         timingSync++;
-        if (timingSync >7 ) {
+        if (timingSync >2 ) {
             timingSync = 0;
         }    
         TMR1_InterruptEnable();
