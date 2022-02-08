@@ -78,7 +78,7 @@ static Clock* clockCPUStream;
 
 //--------------- 7 Segments Stream
 static OutputStream* screen7SegCpu;
-//static OutputStream* screen7SegExt1;
+static OutputStream* screen7SegExt1;
 
 //-------------- RGB STREAM
 static RGB* rgbStream;
@@ -146,6 +146,9 @@ void initMainCube (void) {
     
     // initialise afficheur driver et flux pour afficheur 7 Segments de la carte CPU
     screen7SegCpu = initSAA1064T(get7SegOutpuStream(SAA1064_PRINT_7SEG_CPU), SAA1064_ADDR_0);  
+
+    // initialise afficheur driver et flux pour afficheur 7 Segments carte fille
+    screen7SegExt1 = initSAA1064T(get7SegOutpuStream(SAA1064_PRINT_7SEG_CPU), SAA1064_ADDR_0);  
     
     // initialise le flux pour l'affichage des leds RGB
     rgbStream = initRGBWS2812b(getRGBStream(0),6,0);
@@ -302,7 +305,7 @@ void mainCube (void){
     clockParam->month = 0x01;
     clockParam->year = 0x22;
     
-    //setClock(clockCPUStream,clockParam);
+    setClock(clockCPUStream,clockParam);
     
     //printClock(debugOutputStream,getClockStream(CLOCK_CPU));
     //appendStringAndDec(debugOutputStream,"Distance en mm :",mesure_time(distanceStream)); 
@@ -406,7 +409,7 @@ void mainCube (void){
                 break;            
                 
             case 1 :;
-                   
+                appendString(screen7SegCpu,"test"); 
                 break;
                 
             case 2: 

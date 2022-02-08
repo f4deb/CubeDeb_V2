@@ -4,12 +4,20 @@
 #include <stdbool.h>
 #include <definitions.h>                // SYS function prototypes
 
-#include "../../common/IO/outputStream/outputStream.h"
+#include "../IO/outputStream/outputStream.h"
+#include "../IO/display/displayStream.h"
+
 
 #define SAA1064_PRINT_7SEG_SIZE 7
 #define SAA1064_PRINT_7SEG_CPU 0
 #define SAA1064_PRINT_7SEG_EXT SAA1064_PRINT_7SEG_SIZE
 
+
+
+
+DisplayStream* getDisplayStream(uint8_t index);
+
+DisplayStream* initDisplayStream7Seg (DisplayStream* displayStream, uint8_t index);
 
 OutputStream* get7SegOutpuStream(int index);
 

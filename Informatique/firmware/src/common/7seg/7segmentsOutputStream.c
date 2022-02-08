@@ -5,7 +5,6 @@
 #include <string.h>
 #include <definitions.h>
 
-
 #include "7segmentsOutputStream.h"
 
 #include "../../common/7seg/7segments.h"
@@ -14,7 +13,76 @@
 #include "../../common/I2C/I2CConfig.h"
 
 
-static OutputStream seg7OutputStream[100] ;
+
+static OutputStream seg7OutputStream[100];
+
+
+static DisplayStream displayStream1; 
+
+
+
+
+
+/********************************************
+ *              DISPLAY                     * 
+ ********************************************/
+
+DisplayStream* getDisplayStream(uint8_t index){
+    return &displayStream1;
+}
+
+/**
+ *@private
+ */
+void _openDisplayStream(DisplayStream* displayStream, int param1) {
+}
+
+/**
+ *@private
+ */
+void _closeDisplayStream(DisplayStream* displayStream) {
+    
+}
+
+/**
+ *@private
+ */
+void _SetPowerMode(DisplayStream* displayStream, unsigned char c) {
+    
+}
+
+/**
+ *@private
+ */
+void _SetPosXDisplayStream(DisplayStream* displayStream, int posX) {
+
+}
+
+/**
+ *@private
+ */
+void _flushDisplayStream(DisplayStream* displayStream) {
+    //
+}
+
+DisplayStream* initDisplayStream7Seg(DisplayStream* displayStream,uint8_t address) {
+    displayStream->address = address;
+    displayStream->openDisplayStream = _openDisplayStream;
+    displayStream->closeDisplayStream = _closeDisplayStream;
+    displayStream->SetPowerMode= 0;
+    displayStream->SetPosX = _SetPosXDisplayStream;
+    displayStream->flush = _flushDisplayStream;
+    displayStream->data = 0; //no dot
+ 
+ 
+    return (getDisplayStream (address));
+}
+
+
+
+/********************************************
+ *              7 Segments                  *
+ ********************************************/
 
 OutputStream* get7SegOutpuStream(int index){
     return &seg7OutputStream[index];
@@ -24,7 +92,6 @@ OutputStream* get7SegOutpuStream(int index){
  *@private
  */
 void _openOutputStream7Seg(OutputStream* outputStream, int param1) {
-    print7Seg("    }",0x00,outputStream->address);
 }
 
 /**
@@ -66,7 +133,11 @@ OutputStream* init7SegOutputStream(OutputStream* outputStream,uint8_t address) {
     outputStream->writeString = _write7SegStreamString;
     outputStream->flush = _flush7Seg;
     outputStream->data = 0; //no dot
+
+
+
     
-    _openOutputStream7Seg(outputStream, 0);
+    _openOutputStream7Seg(outputStream, 0);  
+   
     return (get7SegOutpuStream (SAA1064_PRINT_7SEG_CPU));
 }
