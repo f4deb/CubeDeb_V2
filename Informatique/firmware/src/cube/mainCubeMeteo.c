@@ -15,6 +15,8 @@
 //#include "../common/IO/buffer/buffer.h"
 #include "../common/IO/printWriter/printWriter.h"
 //#include "../common/IO/outputStream/outputStream.h"
+#include "../common/IO/display/display.h"
+
 
 #include "../common/led/led.h"
 #include "../common/I2C/I2CConfig.h"
@@ -79,6 +81,8 @@ static Clock* clockCPUStream;
 //--------------- 7 Segments Stream
 static OutputStream* screen7SegCpu;
 static OutputStream* screen7SegExt1;
+
+static Display* display7SegCPU;
 
 //-------------- RGB STREAM
 static RGB* rgbStream;
@@ -149,6 +153,10 @@ void initMainCube (void) {
 
     // initialise afficheur driver et flux pour afficheur 7 Segments carte fille
     screen7SegExt1 = initSAA1064T(get7SegOutpuStream(SAA1064_PRINT_7SEG_CPU), SAA1064_ADDR_0);  
+    
+    display7SegCPU = initDisplay(getDisplayStream(0),0);
+    
+    setPosX(getDisplayStream(0),1);
     
     // initialise le flux pour l'affichage des leds RGB
     rgbStream = initRGBWS2812b(getRGBStream(0),6,0);
@@ -319,7 +327,7 @@ void mainCube (void){
 ///Timing Synchronisation
         led2GreenToggle();
         
-        uint32_t volt=0;
+
         
         uint32_t adc_count;
         float input_voltage;
@@ -383,8 +391,7 @@ void mainCube (void){
     append(debugOutputStream,LF); 
     append(debugOutputStream,LF); 
     
-    int dataTM1638;
-    int dataT;
+
 
 //////////////////////////////////////
 

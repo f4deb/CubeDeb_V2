@@ -1,6 +1,19 @@
 #ifndef _DISPLAYSTREAM_H
 #define _DISPLAYSTREAM_H
 
+#include <definitions.h>
+
+/**
+ * Universal clock definition.
+ */
+typedef struct {
+    int power;
+    int intensity;
+    int posX;
+    int posY;
+    int scrollRight;
+    int scrollLeft;
+} DisplayData;
 
 
 /**
@@ -11,8 +24,8 @@
  */
 
 // forward declaration
-struct DisplayStream;
-typedef struct DisplayStream DisplayStream;
+struct Display;
+typedef struct Display Display;
 
 
 /**
@@ -20,13 +33,13 @@ typedef struct DisplayStream DisplayStream;
  * @param displayStream the pointer on object (POO simulation)
  * @param param1 a param passed to configure the stream*
  */
-typedef void OpenDisplayStreamFunction(DisplayStream* displayStream, int param1);
+typedef void OpenDisplayFunction(Display* display, int param1);
 
 /**
  * The function which closes the display stream.
  * @param displayStream the pointer on object (POO simulation)
  */
-typedef void CloseDisplayStreamFunction(DisplayStream* displayStream);
+typedef void CloseDisplayFunction(Display* display);
 
 /**
  * Function which is able to write a character.
@@ -35,7 +48,16 @@ typedef void CloseDisplayStreamFunction(DisplayStream* displayStream);
  * @param displayStream the pointer on object (POO simulation)
  * @param c the char to write
  */
-typedef void SetPosXFunction(DisplayStream* displayStream, int posX);
+typedef void SetPosXFunction(Display* display, int posX);
+
+/**
+ * Function which is able to write a character.
+ * Be careful that this operation can be buffered.
+ * Use flush to ensure that data are sent
+ * @param displayStream the pointer on object (POO simulation)
+ * @param c the char to write
+ */
+typedef void SetPosYFunction(Display* display, int posY);
 
 /**
  * Function which is able to write a string.
@@ -44,35 +66,36 @@ typedef void SetPosXFunction(DisplayStream* displayStream, int posX);
  * @param displayStream the pointer on object (POO simulation)
  * @param string the string to write
  */
-typedef void SetPowerModeFunction(DisplayStream* displayStream, const char* string);
+typedef void SetPowerModeFunction(Display* display, bool OnOff);
 
-/**
- * Flush the stream because char written via SetPosXFunction can be buffered.
- * @param displayStream the pointer on object (POO simulation)
- */
-typedef void FlushDisplayFunction(DisplayStream* displayStream);
+
 
 /**
  * Defines the contract for an display stream (SERIAL, I2C ...)
  */
-struct DisplayStream {
+struct Display {
     /** The address of the stream (Ex : address for I2C, serialPortIndex ...). */
-    unsigned char address;
+    uint8_t index;
     /** The function which must be called to open the stream. */
-    OpenDisplayStreamFunction* openDisplayStream;
+    OpenDisplayFunction* openDisplay;
     /** The function which must be called to close the stream. */
-    CloseDisplayStreamFunction* closeDisplayStream;
+    CloseDisplayFunction* closeDisplay;
     /** The function which must be call at the end to write a char into the stream. */
     SetPosXFunction* SetPosX;
+    /** The function which must be call at the end to write a char into the stream. */
+    SetPosYFunction* SetPosY;
     /** The function which must be call at the end to write a string into the stream */
     SetPowerModeFunction* SetPowerMode;
-    /** Flush the stream. */
-    FlushDisplayFunction* flush;
+    /** one option data */
+    DisplayData displayData;
     /** pointer on other object (useful for buffer for example) .*/
     int* object;
-    /** one option data */
-    int data;
 };
+
+
+
+Display* getDisplayStream(int index);
+
 
 /**
  * Initialize an displayStream.
@@ -84,13 +107,14 @@ struct DisplayStream {
  * @param flush function to flush
  * @param object a null type reference linked to the displayStream
  */
-void initDisplayStream(DisplayStream* displayStream,
-        OpenDisplayStreamFunction* openDisplayStream,
-        CloseDisplayStreamFunction* closeDisplayStream,
+Display* initDisplayStream(Display* display,
+        OpenDisplayFunction* openDisplay,
+        CloseDisplayFunction* closeDisplay,
         SetPosXFunction* SetPosX,
+        SetPosYFunction* SetPosY,
         SetPowerModeFunction* SetPowerMode,
-        FlushDisplayFunction* flushDisplay,
-        int* object,
-        int data);
+        uint16_t displayIndex);
 
 #endif
+
+

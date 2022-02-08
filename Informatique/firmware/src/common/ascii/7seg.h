@@ -271,7 +271,7 @@ static uint8_t ascii7[256] = {
 };    
 
 
-static uint8_t ascii7Seg[96] = {
+static uint8_t ascii7Seg[128] = {
     0x3F, /* 0 */
 	0x06, /* 1 */
 	0x5B, /* 2 */
