@@ -33,6 +33,7 @@ void setPosY(DisplayStream* displayStream, uint16_t posY){
 
 uint16_t getPosY(DisplayStream* displayStream){
     return 0;
+    
 }
 
 void initDisplayUtils (DisplayStream* displayStream){
