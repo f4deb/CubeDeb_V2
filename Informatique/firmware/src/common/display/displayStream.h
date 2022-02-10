@@ -7,12 +7,12 @@
  * Universal clock definition.
  */
 typedef struct {
-    int power;
-    int intensity;
-    int posX;
-    int posY;
-    int scrollRight;
-    int scrollLeft;
+    uint8_t power;
+    uint8_t intensity;
+    uint16_t posX;
+    uint16_t posY;
+    uint8_t scrollRight;
+    uint8_t scrollLeft;
 } DisplayData;
 
 
@@ -24,8 +24,8 @@ typedef struct {
  */
 
 // forward declaration
-struct Display;
-typedef struct Display Display;
+struct DisplayStream;
+typedef struct DisplayStream DisplayStream;
 
 
 /**
@@ -33,13 +33,13 @@ typedef struct Display Display;
  * @param displayStream the pointer on object (POO simulation)
  * @param param1 a param passed to configure the stream*
  */
-typedef void OpenDisplayFunction(Display* display, int param1);
+typedef void OpenDisplayStreamFunction(DisplayStream* displayStream, int param1);
 
 /**
  * The function which closes the display stream.
  * @param displayStream the pointer on object (POO simulation)
  */
-typedef void CloseDisplayFunction(Display* display);
+typedef void CloseDisplayStreamFunction(DisplayStream* displayStream);
 
 /**
  * Function which is able to write a character.
@@ -48,7 +48,7 @@ typedef void CloseDisplayFunction(Display* display);
  * @param displayStream the pointer on object (POO simulation)
  * @param c the char to write
  */
-typedef void SetPosXFunction(Display* display, int posX);
+typedef void SetPosXFunction(DisplayStream* displayStream, uint16_t posX);
 
 /**
  * Function which is able to write a character.
@@ -57,7 +57,26 @@ typedef void SetPosXFunction(Display* display, int posX);
  * @param displayStream the pointer on object (POO simulation)
  * @param c the char to write
  */
-typedef void SetPosYFunction(Display* display, int posY);
+typedef uint16_t GetPosXFunction(DisplayStream* displayStream);
+
+
+/**
+ * Function which is able to write a character.
+ * Be careful that this operation can be buffered.
+ * Use flush to ensure that data are sent
+ * @param displayStream the pointer on object (POO simulation)
+ * @param c the char to write
+ */
+typedef void SetPosYFunction(DisplayStream* displayStream, uint16_t posY);
+
+/**
+ * Function which is able to write a character.
+ * Be careful that this operation can be buffered.
+ * Use flush to ensure that data are sent
+ * @param displayStream the pointer on object (POO simulation)
+ * @param c the char to write
+ */
+typedef uint16_t GetPosYFunction(DisplayStream* displayStream);
 
 /**
  * Function which is able to write a string.
@@ -66,24 +85,40 @@ typedef void SetPosYFunction(Display* display, int posY);
  * @param displayStream the pointer on object (POO simulation)
  * @param string the string to write
  */
-typedef void SetPowerModeFunction(Display* display, bool OnOff);
+typedef void SetPowerModeFunction(DisplayStream* displayStream, bool OnOff);
 
 
 
 /**
  * Defines the contract for an display stream (SERIAL, I2C ...)
  */
-struct Display {
+struct DisplayStream {
+    /** The status of power Display : 0/1 ON/OFF */
+    uint8_t power;
+    /** The level of Display intensity */
+    uint8_t intensity;
+    /** The posX */    
+    uint16_t posX;
+    /** The posY */
+    uint16_t posY;
+    /** Speed of the scrolling to right */
+    uint8_t scrollRight;
+    /** Speed of the scrollint to left */
+    uint8_t scrollLeft;    
     /** The address of the stream (Ex : address for I2C, serialPortIndex ...). */
-    uint8_t index;
+    uint8_t displayIndex;
     /** The function which must be called to open the stream. */
-    OpenDisplayFunction* openDisplay;
+    OpenDisplayStreamFunction* openDisplayStream;
     /** The function which must be called to close the stream. */
-    CloseDisplayFunction* closeDisplay;
-    /** The function which must be call at the end to write a char into the stream. */
+    CloseDisplayStreamFunction* closeDisplayStream;
+    /** The function which must be call at the end to write the PosX into the stream. */
     SetPosXFunction* SetPosX;
+    /** The function which must be call at the end to read the PosX into the stream. */
+    GetPosXFunction* GetPosX;
     /** The function which must be call at the end to write a char into the stream. */
     SetPosYFunction* SetPosY;
+    /** The function which must be call at the end to read the PosY into the stream. */
+    GetPosYFunction* GetPosY;    
     /** The function which must be call at the end to write a string into the stream */
     SetPowerModeFunction* SetPowerMode;
     /** one option data */
@@ -91,11 +126,6 @@ struct Display {
     /** pointer on other object (useful for buffer for example) .*/
     int* object;
 };
-
-
-
-Display* getDisplayStream(int index);
-
 
 /**
  * Initialize an displayStream.
@@ -107,13 +137,16 @@ Display* getDisplayStream(int index);
  * @param flush function to flush
  * @param object a null type reference linked to the displayStream
  */
-Display* initDisplayStream(Display* display,
-        OpenDisplayFunction* openDisplay,
-        CloseDisplayFunction* closeDisplay,
+void initDisplayStream(DisplayStream* displayStream,
+        OpenDisplayStreamFunction* openDisplayStream,
+        CloseDisplayStreamFunction* closeDisplayStream,
         SetPosXFunction* SetPosX,
+        GetPosXFunction* GetPosX,
         SetPosYFunction* SetPosY,
+        GetPosYFunction* GetPosY,
         SetPowerModeFunction* SetPowerMode,
-        uint16_t displayIndex);
+        uint16_t displayIndex,
+        DisplayData displayData);
 
 #endif
 

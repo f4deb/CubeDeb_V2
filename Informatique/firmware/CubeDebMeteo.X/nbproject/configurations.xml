@@ -19,6 +19,11 @@
         <logicalFolder name="f3" displayName="delay" projectFiles="true">
           <itemPath>../src/common/delay/delay.h</itemPath>
         </logicalFolder>
+        <logicalFolder name="f15" displayName="display" projectFiles="true">
+          <itemPath>../src/common/display/displayUtils.h</itemPath>
+          <itemPath>../src/common/display/display.h</itemPath>
+          <itemPath>../src/common/display/displayStream.h</itemPath>
+        </logicalFolder>
         <logicalFolder name="f7" displayName="error" projectFiles="true">
           <itemPath>../src/common/error/errorCode.h</itemPath>
         </logicalFolder>
@@ -28,10 +33,6 @@
         <logicalFolder name="f11" displayName="IO" projectFiles="true">
           <logicalFolder name="f1" displayName="buffer" projectFiles="true">
             <itemPath>../src/common/IO/buffer/buffer.h</itemPath>
-          </logicalFolder>
-          <logicalFolder name="f4" displayName="display" projectFiles="true">
-            <itemPath>../src/common/IO/display/displayStream.h</itemPath>
-            <itemPath>../src/common/IO/display/display.h</itemPath>
           </logicalFolder>
           <logicalFolder name="f2" displayName="outputStream" projectFiles="true">
             <itemPath>../src/common/IO/outputStream/outputStream.h</itemPath>
@@ -187,16 +188,17 @@
         <logicalFolder name="f3" displayName="delay" projectFiles="true">
           <itemPath>../src/common/delay/delay.c</itemPath>
         </logicalFolder>
+        <logicalFolder name="f14" displayName="display" projectFiles="true">
+          <itemPath>../src/common/display/displayUtils.c</itemPath>
+          <itemPath>../src/common/display/display.c</itemPath>
+          <itemPath>../src/common/display/displayStream.c</itemPath>
+        </logicalFolder>
         <logicalFolder name="f6" displayName="error" projectFiles="true">
           <itemPath>../src/common/error/error.c</itemPath>
         </logicalFolder>
         <logicalFolder name="f9" displayName="IO" projectFiles="true">
           <logicalFolder name="f1" displayName="buffer" projectFiles="true">
             <itemPath>../src/common/IO/buffer/buffer.c</itemPath>
-          </logicalFolder>
-          <logicalFolder name="f4" displayName="display" projectFiles="true">
-            <itemPath>../src/common/IO/display/displayStream.c</itemPath>
-            <itemPath>../src/common/IO/display/display.c</itemPath>
           </logicalFolder>
           <logicalFolder name="f2" displayName="outputStream" projectFiles="true">
             <itemPath>../src/common/IO/outputStream/outputStream.c</itemPath>

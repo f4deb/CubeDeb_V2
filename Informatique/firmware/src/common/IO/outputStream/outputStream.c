@@ -7,8 +7,6 @@
 #include "../../common/system/system.h"
 #include "../../common/uart5/uart5.h"
 
-#include "outputStream.h"
-
 void initOutputStream(OutputStream* outputStream,
         OpenOutputStreamFunction* openOutputStream,
         CloseOutputStreamFunction* closeOutputStream,
