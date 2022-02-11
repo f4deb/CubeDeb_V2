@@ -1,7 +1,7 @@
 #include "TM1638.h"
 
 #include "../../common/IO/outputStream/outputStream.h"
-//#include "../../common/7seg/7segmentsOutputStream.h"
+#include "../../common/7seg/7segmentsOutputStream.h"
 
 
 
@@ -58,13 +58,15 @@ void sendCommandTM1638 (int dataTM1638) {
 }    
 
 void TM1638writeDIGIT (uint16_t I2C_ADDRESS, uint8_t *data){
-    while(I2C1_Write( I2C_ADDRESS , data, 6 )){
+    /*while(I2C1_Write( I2C_ADDRESS , data, 6 )){
                 // error handling
     }    
-    while ( I2C1_IsBusy());
+    while ( I2C1_IsBusy());*/
+    strToTM1638AnnodeCommon("HELLO ME");
+
 
 }
 
-OutputStream* initTM1638(OutputStream* outputStream, uint16_t I2C_ADDRESS) {
-    return (init7SegOutputStream(outputStream, I2C_ADDRESS));
+OutputStream* initTM1638(OutputStream* outputStream, uint16_t I2C_ADDRESS, uint16_t streamName, enum DisplayType type) {
+    return (init7SegOutputStream(outputStream, I2C_ADDRESS, streamName, type));
 }

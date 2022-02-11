@@ -14,14 +14,6 @@
 #include "../../common/serial/serial.h"
 
 
-/*OutputStream* getScreen_7Seg_CPU (void){
-    return get7SegOutpuStream(SAA1064_PRINT_7SEG_CPU);
-}
-
-OutputStream* getScreen_7Seg_EXT (void){
-    return get7SegOutpuStream(SAA1064_PRINT_7SEG_EXT);
-}*/
-
 void initCubeCommon(void) {
 
     // initialise afficheur driver et flux pour afficheur 7 Segments de la carte CPU

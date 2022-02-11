@@ -19,11 +19,11 @@ DisplayStream* getDisplayStream(uint16_t displayIndex){
 
 
 void setPosX(DisplayStream* displayStream, uint16_t posX){
-    //_SetPosX(display, posX);
+    displayStream->posX =posX;
 }
 
 uint16_t getPosX(DisplayStream* displayStream){
-    return 0;
+    return displayStream->posX;
 }
 
 
@@ -36,16 +36,17 @@ uint16_t getPosY(DisplayStream* displayStream){
     
 }
 
-void initDisplayUtils (DisplayStream* displayStream){
+void initDisplayUtils (DisplayStream* displayStream, enum DisplayType displayType){
+    displayStream->displayType = displayType;
     displayStream->SetPosX = setPosX;
     displayStream->GetPosX = getPosX;
     displayStream->SetPosY = setPosY;
     displayStream->GetPosY = getPosY;
 }
 
-DisplayStream*  initDisplayStreamUtils(DisplayStream* displayStream, uint16_t displayIndex) {
+DisplayStream*  initDisplayStreamUtils(DisplayStream* displayStream, uint16_t displayIndex,enum DisplayType displayType) {
     
-    initDisplayUtils(displayStream);
+    initDisplayUtils(displayStream, displayType);
     
     
     return getDisplayStream(displayIndex);

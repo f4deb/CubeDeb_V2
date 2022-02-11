@@ -46,8 +46,20 @@ void _write7SegStreamChar(OutputStream* outputStream, unsigned char c) {
  *@private
  */
 void _write7SegStreamString(OutputStream* outputStream, const char* string) {
-    char dot = outputStream->data;
-    print7Seg(string,dot,outputStream->address);
+    uint8_t type = outputStream->address;
+
+    switch (type) {
+        case (SAA1064_ADDR_0):;
+            char dot = outputStream->data;
+            print7Seg(string,dot,outputStream->address);
+            break;
+        case (TM1638_0):;
+            strToTM1638AnnodeCommon(string);
+
+            break;   
+    }
+    
+
 }
 
 /**
@@ -57,7 +69,7 @@ void _flush7Seg(OutputStream* outputStream) {
     //
 }
 
-OutputStream* init7SegOutputStream(OutputStream* outputStream,uint8_t address) {
+OutputStream* init7SegOutputStream(OutputStream* outputStream,uint8_t address, uint16_t streamName, enum DisplayType type) {
     outputStream->address = address;
     outputStream->openOutputStream = _openOutputStream7Seg;
     outputStream->closeOutputStream = _closeOutputStream7Seg;
@@ -71,5 +83,5 @@ OutputStream* init7SegOutputStream(OutputStream* outputStream,uint8_t address) {
     
     _openOutputStream7Seg(outputStream, 0);  
    
-    return (get7SegOutpuStream (SAA1064_PRINT_7SEG_CPU));
+    return (get7SegOutpuStream (streamName));
 }

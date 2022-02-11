@@ -6,7 +6,7 @@
 DisplayStream* getDisplayStream(uint16_t displayIndex);
 
 
-DisplayStream* initDisplayStreamUtils(DisplayStream* displayStream, uint16_t displayIndex);
+DisplayStream* initDisplayStreamUtils(DisplayStream* displayStream, uint16_t displayIndex, enum DisplayType displayType);
 
 
 #endif 

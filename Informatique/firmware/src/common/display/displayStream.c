@@ -8,6 +8,7 @@
 
 
 void  initDisplayStream(DisplayStream* displayStream,
+        enum DisplayType displayType,
         OpenDisplayStreamFunction* openDisplayStream,
         CloseDisplayStreamFunction* closeDisplayStream,
         SetPosXFunction* SetPosX,
@@ -16,7 +17,8 @@ void  initDisplayStream(DisplayStream* displayStream,
         GetPosYFunction* GetPosY,
         SetPowerModeFunction* SetPowerMode,
         uint16_t displayIndex,
-        DisplayData displayData) {    
+        DisplayData displayData) {   
+    displayStream->displayType = displayType;
     displayStream->openDisplayStream = openDisplayStream;
     displayStream->closeDisplayStream = closeDisplayStream;
     displayStream->SetPosX = SetPosX;

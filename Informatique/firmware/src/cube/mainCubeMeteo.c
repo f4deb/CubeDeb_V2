@@ -81,9 +81,12 @@ static Clock* clockCPUStream;
 
 //--------------- 7 Segments Stream
 static OutputStream* screen7SegCpu;
-static OutputStream* screen7SegExt1;
-
 static DisplayStream* display7SegCPU;
+
+
+static OutputStream* screen7SegExt1;
+static DisplayStream* display7SegExt1;
+
 
 //-------------- RGB STREAM
 static RGB* rgbStream;
@@ -150,14 +153,12 @@ void initMainCube (void) {
     debugOutputStream = initSerialOutputStream(getSerialOutputStream(SERIAL_PORT_5),SERIAL_PORT_5);
     
     // initialise afficheur driver et flux pour afficheur 7 Segments de la carte CPU
-    screen7SegCpu = initSAA1064T(get7SegOutpuStream(SAA1064_PRINT_7SEG_CPU), SAA1064_ADDR_0);  
-
+    screen7SegCpu = initSAA1064T(get7SegOutpuStream(SEVEN_SEGMENT_DISPLAY_CPU), SAA1064_ADDR_0, SEVEN_SEGMENT_DISPLAY_CPU, TYPE_SAA1064T);  
+    display7SegCPU = initDisplayStreamUtils(getDisplayStream(0),0,TYPE_SAA1064T);
+    
     // initialise afficheur driver et flux pour afficheur 7 Segments carte fille
-    screen7SegExt1 = initSAA1064T(get7SegOutpuStream(SAA1064_PRINT_7SEG_CPU), SAA1064_ADDR_0);  
-    
-    display7SegCPU = initDisplayStreamUtils(getDisplayStream(0),0);
-    
-//    setPosX(getDisplayStream(0),1);
+    screen7SegExt1 = initTM1638(get7SegOutpuStream(SEVEN_SEGMENT_DISPLAY_EXT1), TM1638_0, SEVEN_SEGMENT_DISPLAY_EXT1, TYPE_TM1638);  
+    display7SegExt1 = initDisplayStreamUtils(getDisplayStream(1),1,TYPE_TM1638);
     
     // initialise le flux pour l'affichage des leds RGB
     rgbStream = initRGBWS2812b(getRGBStream(0),6,0);
@@ -195,8 +196,8 @@ uint32_t frequencyCounter (void){
                 int count = 0;
 
             while(!ICAP2_CaptureStatusGet()){   
-                appendStringAndDec(debugOutputStream,"Count : ", count);
-
+//                appendStringAndDec(debugOutputStream,"Count : ", count);
+                // Stop if no input signal
                 count++;  
                 if (count > 100){
                     return 0;
@@ -293,6 +294,8 @@ void strToTM1638AnnodeCommon (char str[]){
 
     
     sendCommandTM1638(0x89); // Activate and controle the intensity 
+    
+
 
 }
 
@@ -307,14 +310,14 @@ void mainCube (void){
      
     ClockData* clockParam = &(clockCPUStream->clockData);
     clockParam->second = 0x41;
-    clockParam->minute = 0x22;
-    clockParam->hour = 0x21;
-    clockParam->day = 0x06;
-    clockParam->dayofweek = 0x01;
-    clockParam->month = 0x01;
+    clockParam->minute = 0x46;
+    clockParam->hour = 0x23;
+    clockParam->day = 0x10;
+    clockParam->dayofweek = 0x04;
+    clockParam->month = 0x02;
     clockParam->year = 0x22;
     
-    setClock(clockCPUStream,clockParam);
+    //setClock(clockCPUStream,clockParam);
     
     //printClock(debugOutputStream,getClockStream(CLOCK_CPU));
     //appendStringAndDec(debugOutputStream,"Distance en mm :",mesure_time(distanceStream)); 
@@ -398,10 +401,11 @@ void mainCube (void){
 
         
         
-        strToTM1638AnnodeCommon("STEPHANE");
+        //strToTM1638AnnodeCommon("STEPHANE");
         
  
-      
+        appendString(screen7SegExt1,"73 F4DEB"); 
+        delayMilliSecs(200);
                  
                         
         switch (timingSync) {
@@ -417,7 +421,7 @@ void mainCube (void){
                 break;            
                 
             case 1 :;
-                appendString(screen7SegCpu,"test"); 
+                appendString(screen7SegExt1,"test"); 
                 break;
                 
             case 2: 
@@ -431,7 +435,7 @@ void mainCube (void){
                 break;
                 
             case 3 :;
-                    
+
                 break;
            
             case 4:;

@@ -4,6 +4,12 @@
 //#include "../ascii/7seg.h"
 #include <definitions.h>                // SYS function prototypes
 
+#define TM1638_0 0x01
+
+enum DisplayType {
+    TYPE_SAA1064T,
+    TYPE_TM1638
+};
 
     
 void MyI2CCallback(uintptr_t context);    

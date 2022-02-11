@@ -2,17 +2,14 @@
 #define _DISPLAYSTREAM_H
 
 #include <definitions.h>
+#include "../7seg/7segments.h"
+
 
 /**
  * Universal clock definition.
  */
 typedef struct {
-    uint8_t power;
-    uint8_t intensity;
-    uint16_t posX;
-    uint16_t posY;
-    uint8_t scrollRight;
-    uint8_t scrollLeft;
+
 } DisplayData;
 
 
@@ -93,6 +90,8 @@ typedef void SetPowerModeFunction(DisplayStream* displayStream, bool OnOff);
  * Defines the contract for an display stream (SERIAL, I2C ...)
  */
 struct DisplayStream {
+    /** The type of the driver */
+    enum DisplayType displayType;
     /** The status of power Display : 0/1 ON/OFF */
     uint8_t power;
     /** The level of Display intensity */
@@ -138,6 +137,7 @@ struct DisplayStream {
  * @param object a null type reference linked to the displayStream
  */
 void initDisplayStream(DisplayStream* displayStream,
+        enum DisplayType displayType,
         OpenDisplayStreamFunction* openDisplayStream,
         CloseDisplayStreamFunction* closeDisplayStream,
         SetPosXFunction* SetPosX,
