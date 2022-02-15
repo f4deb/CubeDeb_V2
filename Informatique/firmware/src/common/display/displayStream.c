@@ -18,7 +18,7 @@ void  initDisplayStream(DisplayStream* displayStream,
         SetIntensityFunction* SetIntensity,       
         SetPowerModeFunction* SetPowerMode,
         uint16_t displayIndex,
-        char charMap[16],
+        char string[16],
         DisplayData displayData) {   
     displayStream->displayType = displayType;
     displayStream->openDisplayStream = openDisplayStream;
@@ -30,7 +30,7 @@ void  initDisplayStream(DisplayStream* displayStream,
     displayStream->SetPowerMode = SetPowerMode;
     displayStream->SetIntensity = SetIntensity;
     displayStream->displayIndex = displayIndex;
-    displayStream->charMap = charMap;
+    displayStream->string = string;
     displayStream->displayData = displayData;
 }
 

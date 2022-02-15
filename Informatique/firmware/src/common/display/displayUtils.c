@@ -18,15 +18,13 @@ DisplayStream* getDisplayStream(uint16_t displayIndex){
 
 void setPosX (OutputStream* outputStream, uint16_t posX){
     DisplayStream* displayStream = &(outputStream->object);
-
     displayStream->posX = posX;
 }
 
 
 uint16_t getPosX(OutputStream* outputStream){
     DisplayStream* displayStream = &(outputStream->object);
-    //return displayStream->posX;
-    return 1;
+    return displayStream->posX;
 }
 
 void setPosY(DisplayStream* displayStream, uint16_t posY){

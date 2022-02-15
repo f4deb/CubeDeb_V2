@@ -345,10 +345,9 @@ void mainCube (void){
                 break;            
                 
             case 1 :;
-                    setIntensity(screen7SegExt1, 0x09);
-            
-                    setPosX(screen7SegExt1, 0x02);
-                    appendDec(screen7SegExt1, 1446);
+                    setIntensity(screen7SegExt1, 0x09);            
+                    setPosX(screen7SegExt1, 0x00);
+                    appendDec(screen7SegExt1, 12550000);
 
 
                 break;
@@ -376,12 +375,7 @@ void mainCube (void){
                 break;
 
             case 5 :;
-                DisplayStream* displayStream = &(screen7SegExt1->object);
-
-        appendStringAndDecUnsignedLN(debugOutputStream,"screen7SegCpu : ",&screen7SegCpu);
-        appendStringAndDecUnsignedLN(debugOutputStream,"screen7SegExt1 : ",&screen7SegExt1);
-   
-       
+ 
 
 
                 break;

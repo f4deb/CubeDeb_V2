@@ -110,7 +110,7 @@ struct DisplayStream {
     /** The address of the stream (Ex : address for I2C, serialPortIndex ...). */
     uint16_t displayIndex;
     /** table of caractere contenant */
-    char* charMap;
+    char* string;
     /** The function which must be called to open the stream. */
     OpenDisplayStreamFunction* openDisplayStream;
     /** The function which must be called to close the stream. */
@@ -154,7 +154,7 @@ void initDisplayStream(DisplayStream* displayStream,
         SetIntensityFunction* SetIntensity,       
         SetPowerModeFunction* SetPowerMode,
         uint16_t displayIndex,
-        char charMap[16],
+        char string[16],
         DisplayData displayData);
 
 #endif

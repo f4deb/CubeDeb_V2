@@ -96,10 +96,12 @@ void setPosX(OutputStream* outputStream, uint16_t posX){
 void _write7SegStreamCharTM1638(OutputStream* outputStream, unsigned char c) {
     DisplayStream* displayStream = &(outputStream->object);
     
-    char* string = displayStream->charMap;
+    char* string = displayStream->string;
     
     uint16_t posX = displayStream->posX ;
-    string[posX] = 0 ;
+    string[posX] = c ;
+    posX++;
+    displayStream->posX =posX;
     
     strToTM1638AnnodeCommon(string, 0x80, displayStream->intensity);
     
@@ -109,6 +111,7 @@ void _write7SegStreamCharTM1638(OutputStream* outputStream, unsigned char c) {
 
 void _write7SegStreamStringTM1638(OutputStream* outputStream, const char* string) {
     DisplayStream* displayStream = &(outputStream->object);
+    displayStream->string = string;
     strToTM1638AnnodeCommon(string, 0x80, displayStream->intensity);
 
 }
@@ -131,7 +134,15 @@ void init7SegOutputStreamTM1638(OutputStream* outputStream,uint8_t address, uint
       
     displayStream->intensity = 0x0F; 
     displayStream->posX = 0x00;
-    displayStream->charMap = "INITIALI";
+    
+    displayStream->string = "Init";
+    char* str1 = "Init";
+    char* str2 = BOARD_VERSION;
+    strcat (str1,str2);
+
+    displayStream->string = str1;
+    
+    _write7SegStreamStringTM1638(outputStream, displayStream->string);
 }
 
 
