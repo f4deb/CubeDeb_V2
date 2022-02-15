@@ -225,6 +225,12 @@ void appendStringAndDecLN(OutputStream* outputStream, const char* s, long value)
     println(outputStream);
 }
 
+void appendStringAndDecUnsignedLN(OutputStream* outputStream, const char* s, long value) {
+    appendString(outputStream, s);
+    appendDecUnsigned(outputStream, value);
+    println(outputStream);
+}
+
 void appendDec4AsString(OutputStream* stream,uint16_t value){
     char* str = "    ";
     sprintf(str,"%.4d", value); 

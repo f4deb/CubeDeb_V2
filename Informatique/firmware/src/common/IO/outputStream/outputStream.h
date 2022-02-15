@@ -68,7 +68,7 @@ struct OutputStream {
     /** Flush the stream. */
     FlushFunction* flush;
     /** pointer on other object (useful for buffer for example) .*/
-    int* object;
+    long* object;
     /** one option data */
     int data;
 };

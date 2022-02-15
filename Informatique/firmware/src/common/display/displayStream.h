@@ -76,6 +76,15 @@ typedef void SetPosYFunction(DisplayStream* displayStream, uint16_t posY);
 typedef uint16_t GetPosYFunction(DisplayStream* displayStream);
 
 /**
+ * Function which is able to set the inensity of display.
+ * Be careful that this operation can be buffered.
+ * Use flush to ensure that data are sent
+ * @param displayStream the pointer on object (POO simulation)
+ * @param intensity the intensity level to write
+ */
+typedef void SetIntensityFunction (DisplayStream* displayStream, uint16_t intensity);
+
+/**
  * Function which is able to write a string.
  * Be careful that this operation can be buffered.
  * Use flush to ensure that data are sent
@@ -98,14 +107,10 @@ struct DisplayStream {
     uint8_t intensity;
     /** The posX */    
     uint16_t posX;
-    /** The posY */
-    uint16_t posY;
-    /** Speed of the scrolling to right */
-    uint8_t scrollRight;
-    /** Speed of the scrollint to left */
-    uint8_t scrollLeft;    
     /** The address of the stream (Ex : address for I2C, serialPortIndex ...). */
-    uint8_t displayIndex;
+    uint16_t displayIndex;
+    /** table of caractere contenant */
+    char* charMap;
     /** The function which must be called to open the stream. */
     OpenDisplayStreamFunction* openDisplayStream;
     /** The function which must be called to close the stream. */
@@ -117,7 +122,9 @@ struct DisplayStream {
     /** The function which must be call at the end to write a char into the stream. */
     SetPosYFunction* SetPosY;
     /** The function which must be call at the end to read the PosY into the stream. */
-    GetPosYFunction* GetPosY;    
+    GetPosYFunction* GetPosY; 
+    /** Set the intensity of the display */
+    SetIntensityFunction* SetIntensity;       
     /** The function which must be call at the end to write a string into the stream */
     SetPowerModeFunction* SetPowerMode;
     /** one option data */
@@ -144,8 +151,10 @@ void initDisplayStream(DisplayStream* displayStream,
         GetPosXFunction* GetPosX,
         SetPosYFunction* SetPosY,
         GetPosYFunction* GetPosY,
+        SetIntensityFunction* SetIntensity,       
         SetPowerModeFunction* SetPowerMode,
         uint16_t displayIndex,
+        char charMap[16],
         DisplayData displayData);
 
 #endif

@@ -9,8 +9,6 @@
 #include "../../common/IO/printWriter/printWriter.h"
 #include "../../common/system/system.h"
 
-
-
 static DisplayStream* displayStream[100];
 
 DisplayStream* getDisplayStream(uint16_t displayIndex){
@@ -18,23 +16,33 @@ DisplayStream* getDisplayStream(uint16_t displayIndex){
 }
 
 
-void setPosX(DisplayStream* displayStream, uint16_t posX){
-    displayStream->posX =posX;
+void setPosX (OutputStream* outputStream, uint16_t posX){
+    DisplayStream* displayStream = &(outputStream->object);
+
+    displayStream->posX = posX;
 }
 
-uint16_t getPosX(DisplayStream* displayStream){
-    return displayStream->posX;
-}
 
+uint16_t getPosX(OutputStream* outputStream){
+    DisplayStream* displayStream = &(outputStream->object);
+    //return displayStream->posX;
+    return 1;
+}
 
 void setPosY(DisplayStream* displayStream, uint16_t posY){
     
 }
 
 uint16_t getPosY(DisplayStream* displayStream){
-    return 0;
+    return 1;
     
 }
+void setIntensity (OutputStream* outputStream, uint8_t intensity){
+    DisplayStream* displayStream = &(outputStream->object);
+
+    displayStream->intensity = intensity;
+}
+
 
 void initDisplayUtils (DisplayStream* displayStream, enum DisplayType displayType){
     displayStream->displayType = displayType;
@@ -42,6 +50,7 @@ void initDisplayUtils (DisplayStream* displayStream, enum DisplayType displayTyp
     displayStream->GetPosX = getPosX;
     displayStream->SetPosY = setPosY;
     displayStream->GetPosY = getPosY;
+    displayStream->SetIntensity = setIntensity;
 }
 
 DisplayStream*  initDisplayStreamUtils(DisplayStream* displayStream, uint16_t displayIndex,enum DisplayType displayType) {

@@ -1,3 +1,6 @@
+#include "7segmentsOutputStream.h"
+
+#include "../../../src/cube/mainCubeMeteo.h"
 /**
  * Common function for driver 7Segments, which are not specific to a particular device.
  */
@@ -5,15 +8,23 @@
 #include <string.h>
 #include <definitions.h>
 
-#include "7segmentsOutputStream.h"
+#include "../display/displayStream.h"
+#include "../display/displayUtils.h"
 
+#include "../common.h"
 #include "../../common/7seg/7segments.h"
+
+
+
+#include "../../drivers/TM1638/TM1638.h"
 
 #include "../../common/IO/outputStream/outputStream.h"
 #include "../../common/I2C/I2CConfig.h"
 
 
-static OutputStream seg7OutputStream[100] ;
+static OutputStream seg7OutputStream[200] ;
+static DisplayStream* display7SegExt1;
+
 
 OutputStream* get7SegOutpuStream(int index){
     return &seg7OutputStream[index];
@@ -46,19 +57,9 @@ void _write7SegStreamChar(OutputStream* outputStream, unsigned char c) {
  *@private
  */
 void _write7SegStreamString(OutputStream* outputStream, const char* string) {
-    uint8_t type = outputStream->address;
 
-    switch (type) {
-        case (SAA1064_ADDR_0):;
-            char dot = outputStream->data;
-            print7Seg(string,dot,outputStream->address);
-            break;
-        case (TM1638_0):;
-            strToTM1638AnnodeCommon(string);
-
-            break;   
-    }
-    
+    char dot = outputStream->data;
+    print7Seg(string,dot,outputStream->address);
 
 }
 
@@ -69,7 +70,9 @@ void _flush7Seg(OutputStream* outputStream) {
     //
 }
 
-OutputStream* init7SegOutputStream(OutputStream* outputStream,uint8_t address, uint16_t streamName, enum DisplayType type) {
+
+void init7SegOutputStreamSAA1064T(OutputStream* outputStream,uint8_t address, uint16_t streamName, enum DisplayType displayType){
+
     outputStream->address = address;
     outputStream->openOutputStream = _openOutputStream7Seg;
     outputStream->closeOutputStream = _closeOutputStream7Seg;
@@ -77,9 +80,73 @@ OutputStream* init7SegOutputStream(OutputStream* outputStream,uint8_t address, u
     outputStream->writeString = _write7SegStreamString;
     outputStream->flush = _flush7Seg;
     outputStream->data = 0; //no dot
+}
+
+/*uint16_t getPosX(OutputStream* outputStream){
+    DisplayStream* displayStream = &(outputStream->object);
+    return displayStream->posX;
+}
+
+void setPosX(OutputStream* outputStream, uint16_t posX){
+    DisplayStream* displayStream = &(outputStream->object);
+    displayStream->posX = posX;
+}
+
+ */ 
+void _write7SegStreamCharTM1638(OutputStream* outputStream, unsigned char c) {
+    DisplayStream* displayStream = &(outputStream->object);
+    
+    char* string = displayStream->charMap;
+    
+    uint16_t posX = displayStream->posX ;
+    string[posX] = 0 ;
+    
+    strToTM1638AnnodeCommon(string, 0x80, displayStream->intensity);
+    
+    
+    
+}
+
+void _write7SegStreamStringTM1638(OutputStream* outputStream, const char* string) {
+    DisplayStream* displayStream = &(outputStream->object);
+    strToTM1638AnnodeCommon(string, 0x80, displayStream->intensity);
+
+}
 
 
+void init7SegOutputStreamTM1638(OutputStream* outputStream,uint8_t address, uint16_t streamName, enum DisplayType displayType, DisplayStream* display7SegExt1){
+    
+    
+    
+    outputStream->address = address;
+    outputStream->openOutputStream = _openOutputStream7Seg;
+    outputStream->closeOutputStream = _closeOutputStream7Seg;
+    outputStream->writeChar = _write7SegStreamCharTM1638;
+    outputStream->writeString = _write7SegStreamStringTM1638;
+    outputStream->flush = _flush7Seg;
+    outputStream->data = 0; //no dot
+    outputStream->object = display7SegExt1 ;
+    
+    DisplayStream* displayStream = &(outputStream->object);
+      
+    displayStream->intensity = 0x0F; 
+    displayStream->posX = 0x00;
+    displayStream->charMap = "INITIALI";
+}
 
+
+OutputStream* init7SegOutputStream(OutputStream* outputStream,uint8_t address, uint16_t streamName, enum DisplayType displayType) {
+    
+    if (displayType == TYPE_SAA1064T){
+        init7SegOutputStreamSAA1064T(outputStream,address,streamName,displayType);        
+    }
+    if (displayType == TYPE_TM1638 ){
+        
+        display7SegExt1 = initDisplayStreamUtils(getDisplayStream(0),0,TYPE_TM1638);
+        
+        init7SegOutputStreamTM1638(outputStream,address,streamName,displayType, display7SegExt1); 
+        
+    }
     
     _openOutputStream7Seg(outputStream, 0);  
    

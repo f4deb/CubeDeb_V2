@@ -225,6 +225,8 @@ void appendStringAndDec(OutputStream* outputStream, const char* s, long value);
 
 void appendStringAndDecLN(OutputStream* outputStream, const char* s, long value);
 
+void appendStringAndDecUnsignedLN(OutputStream* outputStream, const char* s, long value);
+
 
 // -> HEXA VALUES
 

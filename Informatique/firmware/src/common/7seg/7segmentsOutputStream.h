@@ -23,6 +23,6 @@ OutputStream* get7SegOutpuStream(int index);
  * init the outputStream for the 7segments.
  * @param outputStream the pointer to the outputStream which must be initialized
  */
-OutputStream* init7SegOutputStream(OutputStream* outputStream, uint8_t address, uint16_t streamName, enum DisplayType type);
+OutputStream* init7SegOutputStream(OutputStream* outputStream, uint8_t address, uint16_t streamName, enum DisplayType displayType);
 
 #endif

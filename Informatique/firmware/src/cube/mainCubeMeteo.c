@@ -17,6 +17,7 @@
 //#include "../common/IO/outputStream/outputStream.h"
 
 #include "../common/display/displayUtils.h"
+#include "../common/display/display.h"
 
 
 #include "../common/led/led.h"
@@ -85,7 +86,8 @@ static DisplayStream* display7SegCPU;
 
 
 static OutputStream* screen7SegExt1;
-static DisplayStream* display7SegExt1;
+//static DisplayStream* display7SegExt1;
+
 
 
 //-------------- RGB STREAM
@@ -158,7 +160,7 @@ void initMainCube (void) {
     
     // initialise afficheur driver et flux pour afficheur 7 Segments carte fille
     screen7SegExt1 = initTM1638(get7SegOutpuStream(SEVEN_SEGMENT_DISPLAY_EXT1), TM1638_0, SEVEN_SEGMENT_DISPLAY_EXT1, TYPE_TM1638);  
-    display7SegExt1 = initDisplayStreamUtils(getDisplayStream(1),1,TYPE_TM1638);
+    //display7SegExt1 = initDisplayStreamUtils(getDisplayStream(1),1,TYPE_TM1638);
     
     // initialise le flux pour l'affichage des leds RGB
     rgbStream = initRGBWS2812b(getRGBStream(0),6,0);
@@ -232,108 +234,8 @@ uint32_t frequencyCounter (void){
 }
 
 
-void strToTM1638AnnodeCommon (char str[]){
-
-    int i = 0;
-    int j = 0;
-    int seg = 1;
-    int mask = 1;
-    char car = 0x00;
-    char tab[16] = {0};
-    
-    // Configure TM1638
-    sendCommandTM1638(0x40); // auto increment
-    sendCommandTM1638(0xC0); // adresse 00
-    
-    for (i=0;i<8;i++){
-        car = ascii7Seg[str[i]];
-
-        char car1 = car;
-        
-        
-        for (j=0;j<8;j++){
-
-            
-            car = car1 & seg;
-            seg = seg<<1;
-            
-            
-            if (car > 0){
-                tab[j*2] = (tab[j*2] | mask);
-            }
-            else {
-                tab[j*2] = (tab[j*2] & (0xFF-mask));
-            }            
-
-
-        }
-        
-        mask = mask << 1;
-        seg = 1;
-      
-        car = 0;
-    }
-    
-    sendDataTM1638(tab[0]); //A
-    sendDataTM1638(0); //A
-    sendDataTM1638(tab[2]); //A
-    sendDataTM1638(0); //A
-    sendDataTM1638(tab[4]); //A
-    sendDataTM1638(0); //A
-    sendDataTM1638(tab[6]); //A
-    sendDataTM1638(0); //A
-    sendDataTM1638(tab[8]); //A
-    sendDataTM1638(0); //A
-    sendDataTM1638(tab[10]); //A
-    sendDataTM1638(0); //A
-    sendDataTM1638(tab[12]); //A
-    sendDataTM1638(0); //A
-    sendDataTM1638(tab[14]); //A
-    sendDataTM1638(0); //A
-
-
-    
-    sendCommandTM1638(0x89); // Activate and controle the intensity 
-    
-
-
-}
-
-
-// ***************************************************************************************** //
-// ***************************************************************************************** //
-// *************************************   MAIN CUBE   ************************************* //
-// ***************************************************************************************** //
-// ***************************************************************************************** //
-
-void mainCube (void){
-     
-    ClockData* clockParam = &(clockCPUStream->clockData);
-    clockParam->second = 0x41;
-    clockParam->minute = 0x46;
-    clockParam->hour = 0x23;
-    clockParam->day = 0x10;
-    clockParam->dayofweek = 0x04;
-    clockParam->month = 0x02;
-    clockParam->year = 0x22;
-    
-    //setClock(clockCPUStream,clockParam);
-    
-    //printClock(debugOutputStream,getClockStream(CLOCK_CPU));
-    //appendStringAndDec(debugOutputStream,"Distance en mm :",mesure_time(distanceStream)); 
-    //appendLF(debugOutputStream);
-
-    if (getIsTmr1Expired() == true) {
-
-        setIsTmr1Expired(false);
-        TMR1_InterruptDisable();
-        
-///Timing Synchronisation
-        led2GreenToggle();
-        
-
-        
-        uint32_t adc_count;
+void printFrequency(void){
+    uint32_t adc_count;
         float input_voltage;
         
         #define ADC_VREF                (2.048f)
@@ -388,26 +290,48 @@ void mainCube (void){
         
 
 
-    append(debugOutputStream,LF); 
-    appendStringAndDecLN(debugOutputStream,"Frequency(Hz) : ",frequencyCounter());
+        append(debugOutputStream,LF); 
+        appendStringAndDecLN(debugOutputStream,"Frequency(Hz) : ",frequencyCounter());
+        append(debugOutputStream,LF); 
+        append(debugOutputStream,LF); 
+        
+        appendDec(debugOutputStream, 1446);
 
+}
 
-    append(debugOutputStream,LF); 
-    append(debugOutputStream,LF); 
+// ***************************************************************************************** //
+// ***************************************************************************************** //
+// *************************************   MAIN CUBE   ************************************* //
+// ***************************************************************************************** //
+// ***************************************************************************************** //
+
+void mainCube (void){
+     
+    ClockData* clockParam = &(clockCPUStream->clockData);
+    clockParam->second = 0x41;
+    clockParam->minute = 0x46;
+    clockParam->hour = 0x23;
+    clockParam->day = 0x10;
+    clockParam->dayofweek = 0x04;
+    clockParam->month = 0x02;
+    clockParam->year = 0x22;
     
+    //setClock(clockCPUStream,clockParam);
+    
+    //printClock(debugOutputStream,getClockStream(CLOCK_CPU));
+    //appendStringAndDec(debugOutputStream,"Distance en mm :",mesure_time(distanceStream)); 
+    //appendLF(debugOutputStream);
 
+    if (getIsTmr1Expired() == true) {
 
+        setIsTmr1Expired(false);
+        TMR1_InterruptDisable();
+        
+///Timing Synchronisation
+        led2GreenToggle();
+        
 //////////////////////////////////////
-
-        
-        
-        //strToTM1638AnnodeCommon("STEPHANE");
-        
- 
-        appendString(screen7SegExt1,"73 F4DEB"); 
-        delayMilliSecs(200);
-                 
-                        
+                     
         switch (timingSync) {
             case 0:; 
                 appendDot(screen7SegCpu,4);
@@ -421,7 +345,12 @@ void mainCube (void){
                 break;            
                 
             case 1 :;
-                appendString(screen7SegExt1,"test"); 
+                    setIntensity(screen7SegExt1, 0x09);
+            
+                    setPosX(screen7SegExt1, 0x02);
+                    appendDec(screen7SegExt1, 1446);
+
+
                 break;
                 
             case 2: 
@@ -435,15 +364,26 @@ void mainCube (void){
                 break;
                 
             case 3 :;
+                    setIntensity(screen7SegExt1, 0x09);
+        appendString(screen7SegExt1,"73 F6AEF"); 
 
                 break;
+
            
             case 4:;
-                
+                                        setIntensity(screen7SegExt1, 0x0B);
+        appendString(screen7SegExt1,"73 ON8BAK"); 
                 break;
 
             case 5 :;
-                
+                DisplayStream* displayStream = &(screen7SegExt1->object);
+
+        appendStringAndDecUnsignedLN(debugOutputStream,"screen7SegCpu : ",&screen7SegCpu);
+        appendStringAndDecUnsignedLN(debugOutputStream,"screen7SegExt1 : ",&screen7SegExt1);
+   
+       
+
+
                 break;
             
             case 6:;
@@ -458,7 +398,7 @@ void mainCube (void){
                 appendCRLF(debugOutputStream);                         
         }    
         timingSync++;
-        if (timingSync >2 ) {
+        if (timingSync >5 ) {
             timingSync = 0;
         }    
         TMR1_InterruptEnable();
