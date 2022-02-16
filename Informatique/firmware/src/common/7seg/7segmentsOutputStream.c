@@ -82,17 +82,27 @@ void init7SegOutputStreamSAA1064T(OutputStream* outputStream,uint8_t address, ui
     outputStream->data = 0; //no dot
 }
 
-/*uint16_t getPosX(OutputStream* outputStream){
-    DisplayStream* displayStream = &(outputStream->object);
-    return displayStream->posX;
+/**
+ *@private
+ */
+void _openOutputStreamTM1638(OutputStream* outputStream, int param1) {
+     DisplayStream* displayStream = &(outputStream->object);
+    displayStream->power = ON;
+    displayStream->intensity = 0x07; 
+    displayStream->posX = 0x00;
+    
+
+
+    displayStream->string = "Init";
+    char* str1 = "Init";
+    char* str2 = BOARD_VERSION;
+    strcat (str1,str2);
+    displayStream->string = str1;
+    
+    _write7SegStreamStringTM1638(outputStream, displayStream->string);
 }
 
-void setPosX(OutputStream* outputStream, uint16_t posX){
-    DisplayStream* displayStream = &(outputStream->object);
-    displayStream->posX = posX;
-}
 
- */ 
 void _write7SegStreamCharTM1638(OutputStream* outputStream, unsigned char c) {
     DisplayStream* displayStream = &(outputStream->object);
     
@@ -103,7 +113,7 @@ void _write7SegStreamCharTM1638(OutputStream* outputStream, unsigned char c) {
     posX++;
     displayStream->posX =posX;
     
-    strToTM1638AnnodeCommon(string, 0x80, displayStream->intensity);
+    strToTM1638AnnodeCommon(string, displayStream->power, displayStream->intensity);
     
     
     
@@ -112,7 +122,7 @@ void _write7SegStreamCharTM1638(OutputStream* outputStream, unsigned char c) {
 void _write7SegStreamStringTM1638(OutputStream* outputStream, const char* string) {
     DisplayStream* displayStream = &(outputStream->object);
     displayStream->string = string;
-    strToTM1638AnnodeCommon(string, 0x80, displayStream->intensity);
+    strToTM1638AnnodeCommon(string, displayStream->power, displayStream->intensity);
 
 }
 
@@ -122,27 +132,17 @@ void init7SegOutputStreamTM1638(OutputStream* outputStream,uint8_t address, uint
     
     
     outputStream->address = address;
-    outputStream->openOutputStream = _openOutputStream7Seg;
+    outputStream->openOutputStream = _openOutputStreamTM1638;
     outputStream->closeOutputStream = _closeOutputStream7Seg;
     outputStream->writeChar = _write7SegStreamCharTM1638;
     outputStream->writeString = _write7SegStreamStringTM1638;
     outputStream->flush = _flush7Seg;
     outputStream->data = 0; //no dot
-    outputStream->object = display7SegExt1 ;
+    //outputStream->object = display7SegExt1 ;
     
-    DisplayStream* displayStream = &(outputStream->object);
-      
-    displayStream->intensity = 0x0F; 
-    displayStream->posX = 0x00;
+    _openOutputStreamTM1638(outputStream,0);
     
-    displayStream->string = "Init";
-    char* str1 = "Init";
-    char* str2 = BOARD_VERSION;
-    strcat (str1,str2);
-
-    displayStream->string = str1;
-    
-    _write7SegStreamStringTM1638(outputStream, displayStream->string);
+   
 }
 
 

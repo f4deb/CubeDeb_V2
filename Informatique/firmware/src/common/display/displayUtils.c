@@ -15,6 +15,10 @@ DisplayStream* getDisplayStream(uint16_t displayIndex){
     return (DisplayStream*)&displayStream[displayIndex];
 }
 
+void setPower (OutputStream* outputStream, uint16_t power){
+    DisplayStream* displayStream = &(outputStream->object);
+    displayStream->power = power;
+}
 
 void setPosX (OutputStream* outputStream, uint16_t posX){
     DisplayStream* displayStream = &(outputStream->object);

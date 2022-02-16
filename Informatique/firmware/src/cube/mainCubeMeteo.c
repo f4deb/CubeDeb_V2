@@ -358,23 +358,26 @@ void mainCube (void){
                 
             case 3:;
                 
-                setIntensity(screen7SegExt1, 0x01);
+                setIntensity(screen7SegExt1, 0x00);
                 appendString(screen7SegExt1,"73 FAEF"); 
                 break;
          
             case 4:;
+                setPower(screen7SegExt1,ON);
                 setIntensity(screen7SegExt1, 0x02);
                 appendString(screen7SegExt1,"73 ON8BAK"); 
                 break;
 
             case 5:;
-                setIntensity(screen7SegExt1, 0x03);            
+//                            setPower(screen7SegExt1, OFF);
+
+                setIntensity(screen7SegExt1, 0x04);            
                 setPosX(screen7SegExt1, 0x00);
                 appendDec(screen7SegExt1, 14553750);
                 break;
             
             case 6:;
-                setIntensity(screen7SegExt1, 0x04);            
+                setIntensity(screen7SegExt1, 0x07);            
                 setPosX(screen7SegExt1, 0x00);
                 appendDec(screen7SegExt1, 12550000);
                 break;

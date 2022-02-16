@@ -99,7 +99,7 @@ void strToTM1638AnnodeCommon (char* str,int onOff, int intensity){
         sendDataTM1638(0); //A
     }
 
-    int value  = 0x80 | (0x08 + intensity);
+    int value  = 0x80 | ((onOff<<3) + intensity);
     sendCommandTM1638(value); // Activate and controle the intensity  
 
 }
