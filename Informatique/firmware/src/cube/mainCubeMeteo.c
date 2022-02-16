@@ -343,14 +343,12 @@ void mainCube (void){
                 break;            
                 
             case 1 :;
-                    setIntensity(screen7SegExt1, 0x09);            
-                    setPosX(screen7SegExt1, 0x00);
-                    appendDec(screen7SegExt1, 12550000);
+
 
 
                 break;
                 
-            case 2: 
+            case 2:;
                 appendDot(screen7SegCpu,4);
                 appendString(screen7SegCpu, printTimeTo7Seg(getClockStream(CLOCK_CPU)));
                 append(debugOutputStream,LF); 
@@ -358,9 +356,9 @@ void mainCube (void){
                 append(debugOutputStream,LF);  
                 break;
                 
-            case 3 :;
+            case 3:;
                 setIntensity(screen7SegExt1, 0x09);
-                appendString(screen7SegExt1,"73 F6AEF"); 
+                appendString(screen7SegExt1,"73 FAEF"); 
                 break;
          
             case 4:;
@@ -368,21 +366,28 @@ void mainCube (void){
                 appendString(screen7SegExt1,"73 ON8BAK"); 
                 break;
 
-            case 5 :;
+            case 5:;
+                setIntensity(screen7SegExt1, 0x09);            
+                setPosX(screen7SegExt1, 0x00);
+                appendDec(screen7SegExt1, 14553750);
                 break;
             
             case 6:;
+                                setIntensity(screen7SegExt1, 0x09);            
+                    setPosX(screen7SegExt1, 0x00);
+                    appendDec(screen7SegExt1, 12550000);
                 break;
                 
-            case 7:   ;
+            case 7:;
                 break;
             
-            default : 
+            default:; 
                 //appendDec(debugOutputStream, timingSync);
-                appendCRLF(debugOutputStream);                         
+                appendCRLF(debugOutputStream);       
+                break;
         }    
         timingSync++;
-        if (timingSync >5 ) {
+        if (timingSync > 5) {
             timingSync = 0;
         }    
         TMR1_InterruptEnable();
