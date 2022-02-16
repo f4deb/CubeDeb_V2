@@ -357,25 +357,26 @@ void mainCube (void){
                 break;
                 
             case 3:;
-                setIntensity(screen7SegExt1, 0x09);
+                
+                setIntensity(screen7SegExt1, 0x01);
                 appendString(screen7SegExt1,"73 FAEF"); 
                 break;
          
             case 4:;
-                setIntensity(screen7SegExt1, 0x0B);
+                setIntensity(screen7SegExt1, 0x02);
                 appendString(screen7SegExt1,"73 ON8BAK"); 
                 break;
 
             case 5:;
-                setIntensity(screen7SegExt1, 0x09);            
+                setIntensity(screen7SegExt1, 0x03);            
                 setPosX(screen7SegExt1, 0x00);
                 appendDec(screen7SegExt1, 14553750);
                 break;
             
             case 6:;
-                                setIntensity(screen7SegExt1, 0x09);            
-                    setPosX(screen7SegExt1, 0x00);
-                    appendDec(screen7SegExt1, 12550000);
+                setIntensity(screen7SegExt1, 0x04);            
+                setPosX(screen7SegExt1, 0x00);
+                appendDec(screen7SegExt1, 12550000);
                 break;
                 
             case 7:;
@@ -387,7 +388,7 @@ void mainCube (void){
                 break;
         }    
         timingSync++;
-        if (timingSync > 5) {
+        if (timingSync > 6) {
             timingSync = 0;
         }    
         TMR1_InterruptEnable();
