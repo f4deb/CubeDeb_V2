@@ -1,6 +1,10 @@
 #ifndef _COMMON_H    /* Guard against multiple inclusion */
 #define _COMMON_H
 
+#define BOARD_NAME "Meteo Cube "
+#define BOARD_VERSION "V206"
+
+
 //// Special Characters Definition
 
 /** Define the ASCII table STX value. */

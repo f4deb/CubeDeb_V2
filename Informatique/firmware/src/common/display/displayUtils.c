@@ -3,7 +3,7 @@
 #include "displayStream.h"
 #include <string.h>
 
-#include "display.h"
+//#include "display.h"
 
 #include "../../common/IO/buffer/buffer.h"
 #include "../../common/IO/printWriter/printWriter.h"
@@ -27,13 +27,14 @@ uint16_t getPosX(OutputStream* outputStream){
     return displayStream->posX;
 }
 
-void setPosY(DisplayStream* displayStream, uint16_t posY){
-    
+void setPosY(OutputStream* outputStream, uint16_t posY){
+    DisplayStream* displayStream = &(outputStream->object);
+    displayStream->posY = posY;
 }
 
-uint16_t getPosY(DisplayStream* displayStream){
-    return 1;
-    
+uint16_t getPosY(OutputStream* outputStream){
+    DisplayStream* displayStream = &(outputStream->object);
+    return displayStream->posY;  
 }
 void setIntensity (OutputStream* outputStream, uint8_t intensity){
     DisplayStream* displayStream = &(outputStream->object);
@@ -44,11 +45,6 @@ void setIntensity (OutputStream* outputStream, uint8_t intensity){
 
 void initDisplayUtils (DisplayStream* displayStream, enum DisplayType displayType){
     displayStream->displayType = displayType;
-    displayStream->SetPosX = setPosX;
-    displayStream->GetPosX = getPosX;
-    displayStream->SetPosY = setPosY;
-    displayStream->GetPosY = getPosY;
-    displayStream->SetIntensity = setIntensity;
 }
 
 DisplayStream*  initDisplayStreamUtils(DisplayStream* displayStream, uint16_t displayIndex,enum DisplayType displayType) {

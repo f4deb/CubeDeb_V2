@@ -6,6 +6,20 @@
 
 DisplayStream* getDisplayStream(uint16_t displayIndex);
 
+void setPosX (OutputStream* outputStream, uint16_t posX);
+
+uint16_t getPosX(OutputStream* outputStream);
+
+void setPosY(OutputStream* outputStream, uint16_t posY);
+
+uint16_t getPosY(OutputStream* outputStream);
+
+void setIntensity (OutputStream* outputStream, uint8_t intensity);
+
+
+
+DisplayStream* getDisplayStream(uint16_t displayIndex);
+
 DisplayStream* initDisplayStreamUtils(DisplayStream* displayStream, uint16_t displayIndex, enum DisplayType displayType);
 
 

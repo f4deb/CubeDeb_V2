@@ -17,8 +17,6 @@
 //#include "../common/IO/outputStream/outputStream.h"
 
 #include "../common/display/displayUtils.h"
-#include "../common/display/display.h"
-
 
 #include "../common/led/led.h"
 #include "../common/I2C/I2CConfig.h"
@@ -355,36 +353,28 @@ void mainCube (void){
             case 2: 
                 appendDot(screen7SegCpu,4);
                 appendString(screen7SegCpu, printTimeTo7Seg(getClockStream(CLOCK_CPU)));
-                
-
                 append(debugOutputStream,LF); 
                 printClock(debugOutputStream,getClockStream(CLOCK_CPU));
                 append(debugOutputStream,LF);  
                 break;
                 
             case 3 :;
-                    setIntensity(screen7SegExt1, 0x09);
-        appendString(screen7SegExt1,"73 F6AEF"); 
-
+                setIntensity(screen7SegExt1, 0x09);
+                appendString(screen7SegExt1,"73 F6AEF"); 
                 break;
-
-           
+         
             case 4:;
-                                        setIntensity(screen7SegExt1, 0x0B);
-        appendString(screen7SegExt1,"73 ON8BAK"); 
+                setIntensity(screen7SegExt1, 0x0B);
+                appendString(screen7SegExt1,"73 ON8BAK"); 
                 break;
 
             case 5 :;
- 
-
-
                 break;
             
             case 6:;
                 break;
                 
             case 7:   ;
-
                 break;
             
             default : 

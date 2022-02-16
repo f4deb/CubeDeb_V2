@@ -4,9 +4,6 @@
 #include <stddef.h>                     // Defines NULL
 #include <stdint.h>
 
-#define BOARD_NAME "Meteo Cube "
-#define BOARD_VERSION "V206"
-
 void initMainCube (void);
 
 void mainCube (void);

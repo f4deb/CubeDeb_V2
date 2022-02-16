@@ -59,7 +59,7 @@ void sendCommandTM1638 (int dataTM1638) {
     }
 }    
 
-void strToTM1638AnnodeCommon (char str[],int onOff, int intensity){
+void strToTM1638AnnodeCommon (char* str,int onOff, int intensity){
 
     int i = 0;
     int j = 0;

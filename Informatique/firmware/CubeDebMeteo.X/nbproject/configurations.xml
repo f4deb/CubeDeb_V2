@@ -21,7 +21,6 @@
         </logicalFolder>
         <logicalFolder name="f15" displayName="display" projectFiles="true">
           <itemPath>../src/common/display/displayUtils.h</itemPath>
-          <itemPath>../src/common/display/display.h</itemPath>
           <itemPath>../src/common/display/displayStream.h</itemPath>
         </logicalFolder>
         <logicalFolder name="f7" displayName="error" projectFiles="true">
@@ -190,7 +189,6 @@
         </logicalFolder>
         <logicalFolder name="f14" displayName="display" projectFiles="true">
           <itemPath>../src/common/display/displayUtils.c</itemPath>
-          <itemPath>../src/common/display/display.c</itemPath>
           <itemPath>../src/common/display/displayStream.c</itemPath>
         </logicalFolder>
         <logicalFolder name="f6" displayName="error" projectFiles="true">

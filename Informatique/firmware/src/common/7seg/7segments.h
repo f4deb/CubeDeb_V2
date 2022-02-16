@@ -11,6 +11,11 @@ enum DisplayType {
     TYPE_TM1638
 };
 
+enum OnOff {
+    OFF,
+    ON           
+};
+
     
 void MyI2CCallback(uintptr_t context);    
 

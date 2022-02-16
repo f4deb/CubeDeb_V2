@@ -9,7 +9,7 @@ void sendDataTM1638 (int dataTM1638) ;
 
 void sendCommandTM1638 (int dataTM1638) ;
 
-void strToTM1638AnnodeCommon (char str[],int onOff, int intensity);
+void strToTM1638AnnodeCommon (char* str,int onOff, int intensity);
 
 OutputStream* initTM1638(OutputStream* outputStream, uint16_t I2C_ADDRESS, uint16_t streamName, enum DisplayType type);
 

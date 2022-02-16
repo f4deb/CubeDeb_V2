@@ -21,7 +21,7 @@ void initOutputStream(OutputStream* outputStream,
     outputStream->writeChar = writeChar;
     outputStream->writeString = writeString;
     outputStream->flush = flush;
-    outputStream->object = object;
+    //outputStream->object = object;
     outputStream->data = data;
 }
 

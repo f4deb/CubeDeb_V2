@@ -21,13 +21,13 @@
 #include "../../common/IO/outputStream/outputStream.h"
 #include "../../common/I2C/I2CConfig.h"
 
-
-static OutputStream seg7OutputStream[200] ;
+//Todo  * or not *
+static OutputStream* seg7OutputStream[200] ;
 static DisplayStream* display7SegExt1;
 
 
 OutputStream* get7SegOutpuStream(int index){
-    return &seg7OutputStream[index];
+    return seg7OutputStream[index];
 }
 
 /**
