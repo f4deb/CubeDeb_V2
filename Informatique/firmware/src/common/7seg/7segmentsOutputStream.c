@@ -27,7 +27,7 @@ static DisplayStream* display7SegExt1;
 
 
 OutputStream* get7SegOutpuStream(int index){
-    return seg7OutputStream[index];
+    return &seg7OutputStream[index];
 }
 
 /**
