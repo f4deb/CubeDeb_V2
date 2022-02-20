@@ -4,6 +4,19 @@
 #define BOARD_NAME "Meteo Cube "
 #define BOARD_VERSION "V206"
 
+enum DisplayType {
+    TYPE_SAA1064T,
+    TYPE_TM1638
+};
+
+enum OnOff {
+    OFF,
+    ON           
+};
+
+enum FrequencyCounterType {
+    TYPE_FREQUENCY_COUNTER_LOCAL
+};
 
 //// Special Characters Definition
 

@@ -50,6 +50,9 @@
 #include "../common/sensor/temperature/temperature.h"
 #include "../common/sensor/distance/distance.h"
 
+#include "../common/sensor/frequencyCounter/freqencyCounterStream.h"
+#include "../common/sensor/frequencyCounter/frequencyCounterUtils.h"
+
 
 
 
@@ -86,6 +89,8 @@ static DisplayStream* display7SegCPU;
 static OutputStream* screen7SegExt1;
 //static DisplayStream* display7SegExt1;
 
+
+static FrequencyCounterStream* frequencyCounterCPU;
 
 
 //-------------- RGB STREAM
@@ -154,6 +159,7 @@ void initMainCube (void) {
     
     // initialise afficheur driver et flux pour afficheur 7 Segments de la carte CPU
     screen7SegCpu = initSAA1064T(get7SegOutpuStream(SEVEN_SEGMENT_DISPLAY_CPU), SAA1064_ADDR_0, SEVEN_SEGMENT_DISPLAY_CPU, TYPE_SAA1064T);  
+    //todo  verify if nessecary
     display7SegCPU = initDisplayStreamUtils(getDisplayStream(0),0,TYPE_SAA1064T);
     
     // initialise afficheur driver et flux pour afficheur 7 Segments carte fille
@@ -165,6 +171,8 @@ void initMainCube (void) {
     
     // initialise HCSR04 driver et flux pour mesure de distance
     distanceStream = initDistanceHCSR04(getDistanceStream(0),0);
+    
+    frequencyCounterCPU = initFrequencyCounterStreamUtils(getFrequencyCounterStream(0),0,TYPE_FREQUENCY_COUNTER_LOCAL);
        
     // Set to 0 the Timing Synchronisation
     timingSync = 0;
@@ -178,58 +186,7 @@ void initMainCube (void) {
 }
 
 
-uint32_t frequencyCounter (void){
-                        
- uint32_t capturedValue[20];
- volatile uint8_t captureIndex = 0;
 
-
-    int i;
-    uint32_t freq = 0;
-    uint32_t freqMoyenne = 0; 
-    int maxCapture = 16;
-    int j = 0;
-    
-
-    while (j<100){
-        for (i=0;i<maxCapture;i++){
-                int count = 0;
-
-            while(!ICAP2_CaptureStatusGet()){   
-//                appendStringAndDec(debugOutputStream,"Count : ", count);
-                // Stop if no input signal
-                count++;  
-                if (count > 100){
-                    return 0;
-                }
-            }
-
-            capturedValue[captureIndex++] = ICAP2_CaptureBufferRead();
-            capturedValue[captureIndex++] = TMR4;
-            if ( captureIndex > maxCapture){
-                uint32_t capturedValueIndex = 0;
-
-                if (capturedValue[capturedValueIndex+6]>capturedValue[capturedValueIndex]){
-                    freq = (capturedValue[capturedValueIndex+6]-capturedValue[capturedValueIndex]);
-                }
-                else {
-                    freq = (capturedValue[capturedValueIndex]-capturedValue[capturedValueIndex+6]);
-                }
-            captureIndex = 0;
-            }
-        }            
-        freqMoyenne = freq + freqMoyenne;
-        j++;    
-    }
-    
-    freq = freqMoyenne;
-    
-    
-    
-    freq = 10000000000/((freq/3)/16);
-
-    return freq;
-}
 
 
 void printFrequency(void){
@@ -285,16 +242,6 @@ void printFrequency(void){
         
 
         
-        
-
-
-        append(debugOutputStream,LF); 
-        appendStringAndDecLN(debugOutputStream,"Frequency(Hz) : ",frequencyCounter());
-        append(debugOutputStream,LF); 
-        append(debugOutputStream,LF); 
-        
-        appendDec(debugOutputStream, 1446);
-
 }
 
 // ***************************************************************************************** //
@@ -343,9 +290,7 @@ void mainCube (void){
                 break;            
                 
             case 1 :;
-
-
-
+                printFrequency();
                 break;
                 
             case 2:;
@@ -383,6 +328,10 @@ void mainCube (void){
                 break;
                 
             case 7:;
+                append(debugOutputStream,LF); 
+                appendStringAndDecLN(debugOutputStream,"Frequency(Hz) : ",frequencyCounter());
+                append(debugOutputStream,LF); 
+                append(debugOutputStream,LF); 
                 break;
             
             default:; 
@@ -391,7 +340,7 @@ void mainCube (void){
                 break;
         }    
         timingSync++;
-        if (timingSync > 6) {
+        if (timingSync > 7) {
             timingSync = 0;
         }    
         TMR1_InterruptEnable();

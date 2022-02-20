@@ -52,6 +52,11 @@
             <itemPath>../src/common/sensor/distance/distance.h</itemPath>
             <itemPath>../src/common/sensor/distance/distanceStream.h</itemPath>
           </logicalFolder>
+          <logicalFolder name="f3" displayName="frequencyCounter" projectFiles="true">
+            <itemPath>../src/common/sensor/frequencyCounter/freqencyCounterStream.h</itemPath>
+            <itemPath>../src/common/sensor/frequencyCounter/frequencyCounterUtils.h</itemPath>
+            <itemPath>../src/common/sensor/frequencyCounter/frequencyCounter.h</itemPath>
+          </logicalFolder>
           <logicalFolder name="f1" displayName="temperature" projectFiles="true">
             <itemPath>../src/common/sensor/temperature/temperatureStream.h</itemPath>
             <itemPath>../src/common/sensor/temperature/temperature.h</itemPath>
@@ -216,6 +221,11 @@
           <logicalFolder name="f2" displayName="distance" projectFiles="true">
             <itemPath>../src/common/sensor/distance/distance.c</itemPath>
             <itemPath>../src/common/sensor/distance/distanceStream.c</itemPath>
+          </logicalFolder>
+          <logicalFolder name="f3" displayName="frequencyCounter" projectFiles="true">
+            <itemPath>../src/common/sensor/frequencyCounter/frequencyCounterStream.c</itemPath>
+            <itemPath>../src/common/sensor/frequencyCounter/frequencyCounterUtils.c</itemPath>
+            <itemPath>../src/common/sensor/frequencyCounter/frequencyCounter.c</itemPath>
           </logicalFolder>
           <logicalFolder name="f1" displayName="temperature" projectFiles="true">
             <itemPath>../src/common/sensor/temperature/temperatureStream.c</itemPath>

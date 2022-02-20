@@ -14,6 +14,8 @@ void setPosY(OutputStream* outputStream, uint16_t posY);
 
 uint16_t getPosY(OutputStream* outputStream);
 
+void setPower (OutputStream* outputStream, uint16_t power);
+
 void setIntensity (OutputStream* outputStream, uint8_t intensity);
 
 

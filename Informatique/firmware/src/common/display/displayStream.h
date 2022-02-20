@@ -2,6 +2,7 @@
 #define _DISPLAYSTREAM_H
 
 #include <definitions.h>
+#include "../common.h"
 #include "../7seg/7segments.h"
 
 /**

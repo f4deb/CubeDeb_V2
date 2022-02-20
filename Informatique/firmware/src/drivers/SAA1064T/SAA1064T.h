@@ -2,6 +2,7 @@
 #define _SAA1064T_H
 
 #include <definitions.h>                // SYS function prototypes
+#include "../../common/common.h"
 #include "../../common/7seg/7segments.h"
 #include "../../common/IO/outputStream/outputStream.h"
 

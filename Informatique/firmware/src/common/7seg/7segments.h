@@ -6,15 +6,7 @@
 
 #define TM1638_0 0x01
 
-enum DisplayType {
-    TYPE_SAA1064T,
-    TYPE_TM1638
-};
 
-enum OnOff {
-    OFF,
-    ON           
-};
 
     
 void MyI2CCallback(uintptr_t context);    
