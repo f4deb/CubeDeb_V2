@@ -1,13 +1,24 @@
 #ifndef _TEMPERATURE_STREAM_H    /* Guard against multiple inclusion */
 #define _TEMPERATURE_STREAM_H
 
+#define TEMP_SENSOR_STREAM_SIZE 5
+#define TEMP_SENSOR_CPU 0
+#define TEMP_SENSOR_EXT1 TEMP_SENSOR_STREAM_SIZE
+#define TEMP_SENSOR_EXT2 TEMP_SENSOR_STREAM_SIZE*2
+#define TEMP_SENSOR_EXT3 TEMP_SENSOR_STREAM_SIZE*3
+#define TEMP_SENSOR_EXT4 TEMP_SENSOR_STREAM_SIZE*4
+#define TEMP_SENSOR_EXT5 TEMP_SENSOR_STREAM_SIZE*5
+#define TEMP_SENSOR_EXT6 TEMP_SENSOR_STREAM_SIZE*6
+#define TEMP_SENSOR_EXT7 TEMP_SENSOR_STREAM_SIZE*7
+
+
 #include <definitions.h>
 
 // forward declaration
 struct Temperature;
 typedef struct Temperature Temperature;
 
-int* getTemperatureStream(int index);
+Temperature* getTemperatureStream(int index);
 
 
 /**
@@ -20,7 +31,7 @@ typedef uint32_t TemperatureReadSensorValueFunction(Temperature* temperature);
  * Set the temperature to know if we are above the value.
  * @param temperatureSensorAlert the new limit for the temperature
  */
-typedef void TemperatureWriteAlertLimitFunction(Temperature* temperature, int temperatureSensorAlert);
+typedef void TemperatureWriteAlertLimitFunction(Temperature* temperature, uint8_t* temperatureSensorAlert);
 
 /**
  * Temperature sensor wrapping.
@@ -32,8 +43,14 @@ struct Temperature {
     TemperatureWriteAlertLimitFunction* writeAlertLimit;
     /** The address of I2C */
     int address;
+    /** The temperature value */
+    uint32_t value;
+    /** the index sensor*/
+    uint16_t sensorIndex;
 
 };
+
+uint32_t getTemperatureSensor (Temperature* temperature);
 
 /**
  * Initialize the temperature object wrapper.
@@ -41,8 +58,9 @@ struct Temperature {
  * @param readSensorValue the pointer on the callback function to read the value of the temperature (in celcius degree).
  * @param writeAlertLimit the pointer on the callback function to write the alert limit of the temperature sensor (in celcius degree).
  */
-void initTemperatureStream(Temperature* temperature,
+Temperature* initTemperatureStream(Temperature* temperature,
     TemperatureReadSensorValueFunction* readSensorValue,
     TemperatureWriteAlertLimitFunction* writeAlertLimit,
-    uint16_t I2C_ADDRESS);
+    uint16_t I2C_ADDRESS,
+    uint16_t sensorIndex);
 #endif

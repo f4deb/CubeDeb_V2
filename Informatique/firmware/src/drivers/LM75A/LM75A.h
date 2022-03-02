@@ -6,12 +6,6 @@
 
 #include <definitions.h>
 
-uint32_t _LM75A_readSensorValue(uint16_t I2C_ADDRESS);
-
-
-void initTemperatureLM75A(Temperature* temperature, uint16_t I2C_ADDRESS);
-
-
-
+Temperature* initTemperatureLM75A(Temperature* temperature, uint16_t sensorIndex, uint16_t I2C_ADDRESS);
 
 #endif

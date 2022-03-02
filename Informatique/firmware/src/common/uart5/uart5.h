@@ -1,15 +1,13 @@
 #ifndef _UART5_H   
 #define _UART5_H
 
-#include "definitions.h"
+#include <definitions.h>
 
-#define RX_BUFFER_SIZE                  13
+#define RX_BUFFER_SIZE      20
 
 #define UART5_BUFFER_SIZE   13
 
-void APP_WriteCallbackUart5(uintptr_t context);
 
-void APP_ReadCallbackUart5(uintptr_t context);
 
 char* getTxBuffer  (void);
 
@@ -25,8 +23,16 @@ bool getReadStatusUart5 (void);
 
 void setReadStatusUart5 (bool status);
 
-void initUart5 (char* messageStart, int size);
+bool getTxThresholdEventReceived (void);
 
-void writeUart5 (char* message, int size);
+void setTxThresholdEventReceived (bool status);
+
+void writeUart5 (uint8_t* message, int size);
+
+
+void usartReadEventHandler(UART_EVENT event, uintptr_t context );
+
+void usartWriteEventHandler(UART_EVENT event, uintptr_t context );
+
 
 #endif

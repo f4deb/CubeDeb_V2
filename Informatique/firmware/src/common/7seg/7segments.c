@@ -1,5 +1,6 @@
 #include "7segments.h"
 #include "drivers/SAA1064T/SAA1064T.h"
+#include "../ascii/7seg.h"
 
 static uint8_t data[] = " ";
 
@@ -8,7 +9,7 @@ void MyI2CCallback(uintptr_t context){
             // that this functioin executes in the context of the I2C interrupt.
     }
 
-void print7Seg (char *str,char dot, uint16_t I2C_ADDRESS){
+void print7Seg (const char *str,char dot, uint16_t I2C_ADDRESS){
     uint8_t dotMask = 0b00000010;
     uint8_t caractere;
     data[0] = 00;

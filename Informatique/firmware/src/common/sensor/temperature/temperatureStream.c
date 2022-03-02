@@ -7,21 +7,31 @@
 //#include "../../../common/error/error.h"
 
 
-static int temperatureSensor[24];
+static Temperature temperatureSensor[24];
 
-int* getTemperatureStream(int index){
-    return &temperatureSensor[index];
+Temperature* getTemperatureStream(int index){
+    return  &temperatureSensor[index];
 }
 
-void initTemperatureStream(Temperature* temperature,
+
+uint32_t getTemperatureSensor (Temperature* temperature){
+    temperature->readSensorValue(temperature);
+    uint32_t temp = temperature->value;
+    return temp;
+}
+
+Temperature* initTemperatureStream(Temperature* temperature,
         TemperatureReadSensorValueFunction* readSensorValue,
         TemperatureWriteAlertLimitFunction* writeAlertLimit,
-        uint16_t I2C_ADDRESS) {
+        uint16_t I2C_ADDRESS,
+        uint16_t sensorIndex) {
     if (temperature == NULL) {
         //writeError(TEMPERATURE_NULL);
-        return;
+        return 0;
     }
     temperature->readSensorValue = readSensorValue;
     temperature->writeAlertLimit = writeAlertLimit;
     temperature->address = I2C_ADDRESS;
+    temperature->sensorIndex = sensorIndex;
+    return getTemperatureStream(sensorIndex);
 }

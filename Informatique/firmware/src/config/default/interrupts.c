@@ -61,6 +61,7 @@
 
 
 void TIMER_1_InterruptHandler( void );
+void TIMER_5_InterruptHandler( void );
 void I2C1_BUS_InterruptHandler( void );
 void I2C1_MASTER_InterruptHandler( void );
 void UART2_FAULT_InterruptHandler( void );
@@ -76,6 +77,11 @@ void UART5_TX_InterruptHandler( void );
 void __ISR(_TIMER_1_VECTOR, ipl1SRS) TIMER_1_Handler (void)
 {
     TIMER_1_InterruptHandler();
+}
+
+void __ISR(_TIMER_5_VECTOR, ipl1SRS) TIMER_5_Handler (void)
+{
+    TIMER_5_InterruptHandler();
 }
 
 void __ISR(_I2C1_BUS_VECTOR, ipl1SRS) I2C1_BUS_Handler (void)

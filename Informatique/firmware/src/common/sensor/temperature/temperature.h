@@ -7,7 +7,7 @@
 
 #include "../../cube/cubeCommon.h"
 
-
+char* readSensorValueAsStringFor7Seg (Temperature* temperature);
 
 char* readSensorValueAsString (Temperature* temperature);
 

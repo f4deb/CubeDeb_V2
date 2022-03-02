@@ -1,16 +1,54 @@
 #ifndef _COMMON_H    /* Guard against multiple inclusion */
 #define _COMMON_H
 
-#define TEMP_SENSOR_STREAM_SIZE 3
-#define TEMP_SENSOR_CPU 0
-#define TEMP_SENSOR_EXT1 TEMP_SENSOR_STREAM_SIZE
-#define TEMP_SENSOR_EXT2 TEMP_SENSOR_STREAM_SIZE*2
-#define TEMP_SENSOR_EXT3 TEMP_SENSOR_STREAM_SIZE*3
-#define TEMP_SENSOR_EXT4 TEMP_SENSOR_STREAM_SIZE*4
-#define TEMP_SENSOR_EXT5 TEMP_SENSOR_STREAM_SIZE*5
-#define TEMP_SENSOR_EXT6 TEMP_SENSOR_STREAM_SIZE*6
-#define TEMP_SENSOR_EXT7 TEMP_SENSOR_STREAM_SIZE*7
+#define BOARD_NAME "Meteo Cube "
+#define BOARD_VERSION "V207"
 
+enum DisplayType {
+    TYPE_SAA1064T,
+    TYPE_TM1638
+};
+
+enum OnOff {
+    OFF,
+    ON           
+};
+
+enum FrequencyCounterType {
+    TYPE_FREQUENCY_COUNTER_LOCAL
+};
+
+//// Special Characters Definition
+
+/** Define the ASCII table STX value. */
+#define ASCII_STX '\2'
+
+/** Define the ASCII table ETX value. */
+#define ASCII_ETX '\3'
+
+/** Define the ASCII table ASCII ACK value. */
+#define ASCII_ACK '\6'
+
+/** Line Feed : \n". */
+#define LF 10
+
+/** Carriage return : \r". */
+#define CARRIAGE_RETURN 13
+
+/** Clear Screnn. */
+#define CLS 12
+
+/** Define or not if we add LF and CR */
+#define USE_CR         true
+
+//// Classical values
+
+#define DECIMAL_SEPARATOR '.'
+
+#define ACK 'a'
+
+#define IN_AS_STRING "IN"
+#define OUT_AS_STRING "OUT"
 
 
 #endif 

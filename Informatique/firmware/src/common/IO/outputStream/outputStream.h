@@ -1,9 +1,7 @@
 #ifndef _OUTPUTSTREAM_H
 #define _OUTPUTSTREAM_H
 
-#define DEBUG_OUTPUTSTREAM_NAME_SIZE 10
 
-#define DEBUG_OUTPUTSTREAM   "UART5"
 
 /**
  * Encapsulates a Stream to output data
@@ -70,7 +68,9 @@ struct OutputStream {
     /** Flush the stream. */
     FlushFunction* flush;
     /** pointer on other object (useful for buffer for example) .*/
-    int* object;
+    long* object;
+    /** one option data */
+    int data;
 };
 
 /**
@@ -89,20 +89,7 @@ void initOutputStream(OutputStream* outputStream,
         WriteCharFunction* writeChar,
         WriteStringFunction* writeString,
         FlushFunction* flush,
-        int* object);
-
-
-
-
-
-
-
-char* getDebugOutputStream  (void);
-
-void initDebugOutputStream (char* debug); 
-
-void writeOutputStream (char* outputStream, char* string);
-
-void appendStream(char* outputStream, char* string);
+        int* object,
+        int data);
 
 #endif

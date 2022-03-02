@@ -12,8 +12,16 @@
         <logicalFolder name="f2" displayName="ascii" projectFiles="true">
           <itemPath>../src/common/ascii/7seg.h</itemPath>
         </logicalFolder>
+        <logicalFolder name="f13" displayName="clock" projectFiles="true">
+          <itemPath>../src/common/clock/clock.h</itemPath>
+          <itemPath>../src/common/clock/clockStream.h</itemPath>
+        </logicalFolder>
         <logicalFolder name="f3" displayName="delay" projectFiles="true">
           <itemPath>../src/common/delay/delay.h</itemPath>
+        </logicalFolder>
+        <logicalFolder name="f15" displayName="display" projectFiles="true">
+          <itemPath>../src/common/display/displayUtils.h</itemPath>
+          <itemPath>../src/common/display/displayStream.h</itemPath>
         </logicalFolder>
         <logicalFolder name="f7" displayName="error" projectFiles="true">
           <itemPath>../src/common/error/errorCode.h</itemPath>
@@ -35,11 +43,28 @@
         <logicalFolder name="f5" displayName="led" projectFiles="true">
           <itemPath>../src/common/led/led.h</itemPath>
         </logicalFolder>
+        <logicalFolder name="f14" displayName="RGB" projectFiles="true">
+          <itemPath>../src/common/RGB/RGB.h</itemPath>
+          <itemPath>../src/common/RGB/RGBStream.h</itemPath>
+        </logicalFolder>
         <logicalFolder name="f10" displayName="sensor" projectFiles="true">
+          <logicalFolder name="f2" displayName="distance" projectFiles="true">
+            <itemPath>../src/common/sensor/distance/distance.h</itemPath>
+            <itemPath>../src/common/sensor/distance/distanceStream.h</itemPath>
+          </logicalFolder>
+          <logicalFolder name="f3" displayName="frequencyCounter" projectFiles="true">
+            <itemPath>../src/common/sensor/frequencyCounter/freqencyCounterStream.h</itemPath>
+            <itemPath>../src/common/sensor/frequencyCounter/frequencyCounterUtils.h</itemPath>
+            <itemPath>../src/common/sensor/frequencyCounter/frequencyCounter.h</itemPath>
+          </logicalFolder>
           <logicalFolder name="f1" displayName="temperature" projectFiles="true">
             <itemPath>../src/common/sensor/temperature/temperatureStream.h</itemPath>
             <itemPath>../src/common/sensor/temperature/temperature.h</itemPath>
           </logicalFolder>
+        </logicalFolder>
+        <logicalFolder name="f12" displayName="serial" projectFiles="true">
+          <itemPath>../src/common/serial/serialoutputStream.h</itemPath>
+          <itemPath>../src/common/serial/serial.h</itemPath>
         </logicalFolder>
         <logicalFolder name="f6" displayName="system" projectFiles="true">
           <itemPath>../src/common/system/system.h</itemPath>
@@ -55,6 +80,10 @@
       <logicalFolder name="f1" displayName="config" projectFiles="true">
         <logicalFolder name="f1" displayName="default" projectFiles="true">
           <logicalFolder name="f1" displayName="peripheral" projectFiles="true">
+            <logicalFolder name="f12" displayName="adchs" projectFiles="true">
+              <itemPath>../src/config/default/peripheral/adchs/plib_adchs.h</itemPath>
+              <itemPath>../src/config/default/peripheral/adchs/plib_adchs_common.h</itemPath>
+            </logicalFolder>
             <logicalFolder name="f5" displayName="cache" projectFiles="true">
               <itemPath>../src/config/default/peripheral/cache/plib_cache.h</itemPath>
               <itemPath>../src/config/default/peripheral/cache/plib_cache_pic32mz.h</itemPath>
@@ -77,9 +106,19 @@
                 <itemPath>../src/config/default/peripheral/i2c/master/plib_i2c_master_common.h</itemPath>
               </logicalFolder>
             </logicalFolder>
+            <logicalFolder name="f10" displayName="icap" projectFiles="true">
+              <itemPath>../src/config/default/peripheral/icap/plib_icap_common.h</itemPath>
+              <itemPath>../src/config/default/peripheral/icap/plib_icap1.h</itemPath>
+              <itemPath>../src/config/default/peripheral/icap/plib_icap2.h</itemPath>
+            </logicalFolder>
+            <logicalFolder name="f11" displayName="ocmp" projectFiles="true">
+              <itemPath>../src/config/default/peripheral/ocmp/plib_ocmp_common.h</itemPath>
+              <itemPath>../src/config/default/peripheral/ocmp/plib_ocmp3.h</itemPath>
+            </logicalFolder>
             <logicalFolder name="f8" displayName="tmr" projectFiles="true">
               <itemPath>../src/config/default/peripheral/tmr/plib_tmr_common.h</itemPath>
               <itemPath>../src/config/default/peripheral/tmr/plib_tmr2.h</itemPath>
+              <itemPath>../src/config/default/peripheral/tmr/plib_tmr4.h</itemPath>
             </logicalFolder>
             <logicalFolder name="f6" displayName="tmr1" projectFiles="true">
               <itemPath>../src/config/default/peripheral/tmr1/plib_tmr1_common.h</itemPath>
@@ -105,11 +144,23 @@
       <logicalFolder name="f3" displayName="device" projectFiles="true">
       </logicalFolder>
       <logicalFolder name="f4" displayName="drivers" projectFiles="true">
+        <logicalFolder name="f4" displayName="HCSR04" projectFiles="true">
+          <itemPath>../src/drivers/HCSR04/HC-SR04.h</itemPath>
+        </logicalFolder>
         <logicalFolder name="f1" displayName="LM75A" projectFiles="true">
           <itemPath>../src/drivers/LM75A/LM75A.h</itemPath>
         </logicalFolder>
+        <logicalFolder name="f3" displayName="PCF8563" projectFiles="true">
+          <itemPath>../src/drivers/PCF8563/PCF8563.h</itemPath>
+        </logicalFolder>
         <logicalFolder name="f2" displayName="SAA1064T" projectFiles="true">
           <itemPath>../src/drivers/SAA1064T/SAA1064T.h</itemPath>
+        </logicalFolder>
+        <logicalFolder name="f6" displayName="TM1638" projectFiles="true">
+          <itemPath>../src/drivers/TM1638/TM1638.h</itemPath>
+        </logicalFolder>
+        <logicalFolder name="f5" displayName="WS2812b" projectFiles="true">
+          <itemPath>../src/drivers/WS2812b/WS2812b.h</itemPath>
         </logicalFolder>
       </logicalFolder>
       <logicalFolder name="f2" displayName="main" projectFiles="true">
@@ -134,8 +185,16 @@
         </logicalFolder>
         <logicalFolder name="f2" displayName="ascii" projectFiles="true">
         </logicalFolder>
+        <logicalFolder name="f12" displayName="clock" projectFiles="true">
+          <itemPath>../src/common/clock/clock.c</itemPath>
+          <itemPath>../src/common/clock/clockStream.c</itemPath>
+        </logicalFolder>
         <logicalFolder name="f3" displayName="delay" projectFiles="true">
           <itemPath>../src/common/delay/delay.c</itemPath>
+        </logicalFolder>
+        <logicalFolder name="f14" displayName="display" projectFiles="true">
+          <itemPath>../src/common/display/displayUtils.c</itemPath>
+          <itemPath>../src/common/display/displayStream.c</itemPath>
         </logicalFolder>
         <logicalFolder name="f6" displayName="error" projectFiles="true">
           <itemPath>../src/common/error/error.c</itemPath>
@@ -154,11 +213,28 @@
         <logicalFolder name="f4" displayName="led" projectFiles="true">
           <itemPath>../src/common/led/led.c</itemPath>
         </logicalFolder>
+        <logicalFolder name="f13" displayName="RGB" projectFiles="true">
+          <itemPath>../src/common/RGB/RGB.c</itemPath>
+          <itemPath>../src/common/RGB/RGBStream.c</itemPath>
+        </logicalFolder>
         <logicalFolder name="f10" displayName="sensor" projectFiles="true">
+          <logicalFolder name="f2" displayName="distance" projectFiles="true">
+            <itemPath>../src/common/sensor/distance/distance.c</itemPath>
+            <itemPath>../src/common/sensor/distance/distanceStream.c</itemPath>
+          </logicalFolder>
+          <logicalFolder name="f3" displayName="frequencyCounter" projectFiles="true">
+            <itemPath>../src/common/sensor/frequencyCounter/frequencyCounterStream.c</itemPath>
+            <itemPath>../src/common/sensor/frequencyCounter/frequencyCounterUtils.c</itemPath>
+            <itemPath>../src/common/sensor/frequencyCounter/frequencyCounter.c</itemPath>
+          </logicalFolder>
           <logicalFolder name="f1" displayName="temperature" projectFiles="true">
             <itemPath>../src/common/sensor/temperature/temperatureStream.c</itemPath>
             <itemPath>../src/common/sensor/temperature/temperature.c</itemPath>
           </logicalFolder>
+        </logicalFolder>
+        <logicalFolder name="f11" displayName="serial" projectFiles="true">
+          <itemPath>../src/common/serial/serialOutpuStream.c</itemPath>
+          <itemPath>../src/common/serial/serial.c</itemPath>
         </logicalFolder>
         <logicalFolder name="f5" displayName="system" projectFiles="true">
           <itemPath>../src/common/system/system.c</itemPath>
@@ -173,6 +249,9 @@
       <logicalFolder name="f1" displayName="config" projectFiles="true">
         <logicalFolder name="f1" displayName="default" projectFiles="true">
           <logicalFolder name="f2" displayName="peripheral" projectFiles="true">
+            <logicalFolder name="f12" displayName="adchs" projectFiles="true">
+              <itemPath>../src/config/default/peripheral/adchs/plib_adchs.c</itemPath>
+            </logicalFolder>
             <logicalFolder name="f5" displayName="cache" projectFiles="true">
               <itemPath>../src/config/default/peripheral/cache/plib_cache_local.h</itemPath>
               <itemPath>../src/config/default/peripheral/cache/plib_cache.c</itemPath>
@@ -195,8 +274,16 @@
                 <itemPath>../src/config/default/peripheral/i2c/master/plib_i2c1_master.c</itemPath>
               </logicalFolder>
             </logicalFolder>
+            <logicalFolder name="f10" displayName="icap" projectFiles="true">
+              <itemPath>../src/config/default/peripheral/icap/plib_icap1.c</itemPath>
+              <itemPath>../src/config/default/peripheral/icap/plib_icap2.c</itemPath>
+            </logicalFolder>
+            <logicalFolder name="f11" displayName="ocmp" projectFiles="true">
+              <itemPath>../src/config/default/peripheral/ocmp/plib_ocmp3.c</itemPath>
+            </logicalFolder>
             <logicalFolder name="f8" displayName="tmr" projectFiles="true">
               <itemPath>../src/config/default/peripheral/tmr/plib_tmr2.c</itemPath>
+              <itemPath>../src/config/default/peripheral/tmr/plib_tmr4.c</itemPath>
             </logicalFolder>
             <logicalFolder name="f6" displayName="tmr1" projectFiles="true">
               <itemPath>../src/config/default/peripheral/tmr1/plib_tmr1.c</itemPath>
@@ -219,11 +306,23 @@
         <itemPath>../src/cube/cubeCommon.c</itemPath>
       </logicalFolder>
       <logicalFolder name="f4" displayName="drivers" projectFiles="true">
+        <logicalFolder name="f5" displayName="HCSR04" projectFiles="true">
+          <itemPath>../src/drivers/HCSR04/HC-SR04.c</itemPath>
+        </logicalFolder>
         <logicalFolder name="f3" displayName="LM75A" projectFiles="true">
           <itemPath>../src/drivers/LM75A/LM75A.c</itemPath>
         </logicalFolder>
+        <logicalFolder name="f1" displayName="PCF8563" projectFiles="true">
+          <itemPath>../src/drivers/PCF8563/PCF8563.c</itemPath>
+        </logicalFolder>
         <logicalFolder name="f2" displayName="SAA1064T" projectFiles="true">
           <itemPath>../src/drivers/SAA1064T/SAA1064T.c</itemPath>
+        </logicalFolder>
+        <logicalFolder name="f6" displayName="TM1638" projectFiles="true">
+          <itemPath>../src/drivers/TM1638/TM1638.c</itemPath>
+        </logicalFolder>
+        <logicalFolder name="f4" displayName="WS2812b" projectFiles="true">
+          <itemPath>../src/drivers/WS2812b/WS2812b.c</itemPath>
         </logicalFolder>
       </logicalFolder>
       <logicalFolder name="f3" displayName="main" projectFiles="true">
@@ -235,15 +334,22 @@
                    displayName="Important Files"
                    projectFiles="false">
       <logicalFolder name="f1" displayName="default.mhc" projectFiles="true">
+        <itemPath>../src/config/default/default.mhc/adchs.yml</itemPath>
         <itemPath>../src/config/default/default.mhc/core.yml</itemPath>
         <itemPath>../src/config/default/default.mhc/core_timer.yml</itemPath>
         <itemPath>../src/config/default/default.mhc/dfp.yml</itemPath>
         <itemPath>../src/config/default/default.mhc/GraphSettings.yml</itemPath>
         <itemPath>../src/config/default/default.mhc/i2c1.yml</itemPath>
+        <itemPath>../src/config/default/default.mhc/icap1.yml</itemPath>
+        <itemPath>../src/config/default/default.mhc/icap2.yml</itemPath>
+        <itemPath>../src/config/default/default.mhc/ocmp3.yml</itemPath>
         <itemPath>../src/config/default/default.mhc/project.yml</itemPath>
         <itemPath>../src/config/default/default.mhc/settings.yml</itemPath>
         <itemPath>../src/config/default/default.mhc/tmr1.yml</itemPath>
         <itemPath>../src/config/default/default.mhc/tmr2.yml</itemPath>
+        <itemPath>../src/config/default/default.mhc/tmr3.yml</itemPath>
+        <itemPath>../src/config/default/default.mhc/tmr4.yml</itemPath>
+        <itemPath>../src/config/default/default.mhc/tmr5.yml</itemPath>
         <itemPath>../src/config/default/default.mhc/uart2.yml</itemPath>
         <itemPath>../src/config/default/default.mhc/uart5.yml</itemPath>
       </logicalFolder>

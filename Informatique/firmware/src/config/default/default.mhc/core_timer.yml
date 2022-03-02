@@ -47,4 +47,4 @@ children:
       - type: User
         attributes: {value: 'false'}
 - type: ElementPosition
-  attributes: {x: '405', y: '215', id: core_timer}
+  attributes: {x: '12', y: '90', id: core_timer}

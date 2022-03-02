@@ -47,7 +47,23 @@
 // *****************************************************************************
 // *****************************************************************************
 
-UART_OBJECT uart5Obj;
+UART_RING_BUFFER_OBJECT uart5Obj;
+
+#define UART5_READ_BUFFER_SIZE      128
+#define UART5_READ_BUFFER_SIZE_9BIT (128 >> 1)
+#define UART5_RX_INT_DISABLE()      IEC5CLR = _IEC5_U5RXIE_MASK;
+#define UART5_RX_INT_ENABLE()       IEC5SET = _IEC5_U5RXIE_MASK;
+
+static uint8_t UART5_ReadBuffer[UART5_READ_BUFFER_SIZE];
+
+#define UART5_WRITE_BUFFER_SIZE     128
+#define UART5_WRITE_BUFFER_SIZE_9BIT       (128 >> 1)
+#define UART5_TX_INT_DISABLE()      IEC5CLR = _IEC5_U5TXIE_MASK;
+#define UART5_TX_INT_ENABLE()       IEC5SET = _IEC5_U5TXIE_MASK;
+
+static uint8_t UART5_WriteBuffer[UART5_WRITE_BUFFER_SIZE];
+
+#define UART5_IS_9BIT_MODE_ENABLED()    ( U5MODE & (_U5MODE_PDSEL0_MASK | _U5MODE_PDSEL1_MASK)) == (_U5MODE_PDSEL0_MASK | _U5MODE_PDSEL1_MASK) ? true:false
 
 void static UART5_ErrorClear( void )
 {
@@ -76,6 +92,7 @@ void static UART5_ErrorClear( void )
         /* Clear up the receive interrupt flag so that RX interrupt is not
          * triggered for error bytes */
         IFS5CLR = _IFS5_U5RXIF_MASK;
+
     }
 
     // Ignore the warning
@@ -87,7 +104,6 @@ void UART5_Initialize( void )
     /* Set up UxMODE bits */
     /* STSEL  = 0 */
     /* PDSEL = 0 */
-    /* UEN = 0 */
 
     U5MODE = 0x8;
 
@@ -105,20 +121,42 @@ void UART5_Initialize( void )
     IEC5CLR = _IEC5_U5TXIE_MASK;
 
     /* Initialize instance object */
-    uart5Obj.rxBuffer = NULL;
-    uart5Obj.rxSize = 0;
-    uart5Obj.rxProcessedSize = 0;
-    uart5Obj.rxBusyStatus = false;
-    uart5Obj.rxCallback = NULL;
-    uart5Obj.txBuffer = NULL;
-    uart5Obj.txSize = 0;
-    uart5Obj.txProcessedSize = 0;
-    uart5Obj.txBusyStatus = false;
-    uart5Obj.txCallback = NULL;
+    uart5Obj.rdCallback = NULL;
+    uart5Obj.rdInIndex = 0;
+    uart5Obj.rdOutIndex = 0;
+    uart5Obj.isRdNotificationEnabled = false;
+    uart5Obj.isRdNotifyPersistently = false;
+    uart5Obj.rdThreshold = 0;
+
+    uart5Obj.wrCallback = NULL;
+    uart5Obj.wrInIndex = 0;
+    uart5Obj.wrOutIndex = 0;
+    uart5Obj.isWrNotificationEnabled = false;
+    uart5Obj.isWrNotifyPersistently = false;
+    uart5Obj.wrThreshold = 0;
+
     uart5Obj.errors = UART_ERROR_NONE;
+
+    if (UART5_IS_9BIT_MODE_ENABLED())
+    {
+        uart5Obj.rdBufferSize = UART5_READ_BUFFER_SIZE_9BIT;
+        uart5Obj.wrBufferSize = UART5_WRITE_BUFFER_SIZE_9BIT;
+    }
+    else
+    {
+        uart5Obj.rdBufferSize = UART5_READ_BUFFER_SIZE;
+        uart5Obj.wrBufferSize = UART5_WRITE_BUFFER_SIZE;
+    }
+
 
     /* Turn ON UART5 */
     U5MODESET = _U5MODE_ON_MASK;
+
+    /* Enable UART5_FAULT Interrupt */
+    IEC5SET = _IEC5_U5EIE_MASK;
+
+    /* Enable UART5_RX Interrupt */
+    IEC5SET = _IEC5_U5RXIE_MASK;
 }
 
 bool UART5_SerialSetup( UART_SERIAL_SETUP *setup, uint32_t srcClkFreq )
@@ -129,12 +167,6 @@ bool UART5_SerialSetup( UART_SERIAL_SETUP *setup, uint32_t srcClkFreq )
     int32_t brgValLow = 0;
     uint32_t brgVal = 0;
     uint32_t uartMode;
-
-    if((uart5Obj.rxBusyStatus == true) || (uart5Obj.txBusyStatus == true))
-    {
-        /* Transaction is in progress, so return without updating settings */
-        return status;
-    }
 
     if (setup != NULL)
     {
@@ -200,10 +232,418 @@ bool UART5_SerialSetup( UART_SERIAL_SETUP *setup, uint32_t srcClkFreq )
         /* Configure UART5 Baud Rate */
         U5BRG = brgVal;
 
+        if (UART5_IS_9BIT_MODE_ENABLED())
+        {
+            uart5Obj.rdBufferSize = UART5_READ_BUFFER_SIZE_9BIT;
+            uart5Obj.wrBufferSize = UART5_WRITE_BUFFER_SIZE_9BIT;
+        }
+        else
+        {
+            uart5Obj.rdBufferSize = UART5_READ_BUFFER_SIZE;
+            uart5Obj.wrBufferSize = UART5_WRITE_BUFFER_SIZE;
+        }
+
         status = true;
     }
 
     return status;
+}
+
+/* This routine is only called from ISR. Hence do not disable/enable USART interrupts. */
+static inline bool UART5_RxPushByte(uint16_t rdByte)
+{
+    uint32_t tempInIndex;
+    bool isSuccess = false;
+
+    tempInIndex = uart5Obj.rdInIndex + 1;
+
+    if (tempInIndex >= uart5Obj.rdBufferSize)
+    {
+        tempInIndex = 0;
+    }
+
+    if (tempInIndex == uart5Obj.rdOutIndex)
+    {
+        /* Queue is full - Report it to the application. Application gets a chance to free up space by reading data out from the RX ring buffer */
+        if(uart5Obj.rdCallback != NULL)
+        {
+            uart5Obj.rdCallback(UART_EVENT_READ_BUFFER_FULL, uart5Obj.rdContext);
+
+            /* Read the indices again in case application has freed up space in RX ring buffer */
+            tempInIndex = uart5Obj.rdInIndex + 1;
+
+            if (tempInIndex >= uart5Obj.rdBufferSize)
+            {
+                tempInIndex = 0;
+            }
+        }
+    }
+
+    /* Attempt to push the data into the ring buffer */
+    if (tempInIndex != uart5Obj.rdOutIndex)
+    {
+        if (UART5_IS_9BIT_MODE_ENABLED())
+        {
+            ((uint16_t*)&UART5_ReadBuffer)[uart5Obj.rdInIndex] = rdByte;
+        }
+        else
+        {
+            UART5_ReadBuffer[uart5Obj.rdInIndex] = (uint8_t)rdByte;
+        }
+
+        uart5Obj.rdInIndex = tempInIndex;
+
+        isSuccess = true;
+    }
+    else
+    {
+        /* Queue is full. Data will be lost. */
+    }
+
+    return isSuccess;
+}
+
+/* This routine is only called from ISR. Hence do not disable/enable USART interrupts. */
+static void UART5_ReadNotificationSend(void)
+{
+    uint32_t nUnreadBytesAvailable;
+
+    if (uart5Obj.isRdNotificationEnabled == true)
+    {
+        nUnreadBytesAvailable = UART5_ReadCountGet();
+
+        if(uart5Obj.rdCallback != NULL)
+        {
+            if (uart5Obj.isRdNotifyPersistently == true)
+            {
+                if (nUnreadBytesAvailable >= uart5Obj.rdThreshold)
+                {
+                    uart5Obj.rdCallback(UART_EVENT_READ_THRESHOLD_REACHED, uart5Obj.rdContext);
+                }
+            }
+            else
+            {
+                if (nUnreadBytesAvailable == uart5Obj.rdThreshold)
+                {
+                    uart5Obj.rdCallback(UART_EVENT_READ_THRESHOLD_REACHED, uart5Obj.rdContext);
+                }
+            }
+        }
+    }
+}
+
+size_t UART5_Read(uint8_t* pRdBuffer, const size_t size)
+{
+    size_t nBytesRead = 0;
+    uint32_t rdOutIndex = 0;
+    uint32_t rdInIndex = 0;
+
+    /* Take a snapshot of indices to avoid creation of critical section */
+    rdOutIndex = uart5Obj.rdOutIndex;
+    rdInIndex = uart5Obj.rdInIndex;
+
+    while (nBytesRead < size)
+    {
+        if (rdOutIndex != rdInIndex)
+        {
+            if (UART5_IS_9BIT_MODE_ENABLED())
+            {
+                ((uint16_t*)pRdBuffer)[nBytesRead++] = ((uint16_t*)&UART5_ReadBuffer)[rdOutIndex++];
+            }
+            else
+            {
+                pRdBuffer[nBytesRead++] = UART5_ReadBuffer[rdOutIndex++];
+            }
+
+            if (rdOutIndex >= uart5Obj.rdBufferSize)
+            {
+                rdOutIndex = 0;
+            }
+        }
+        else
+        {
+            /* No more data available in the RX buffer */
+            break;
+        }
+    }
+
+    uart5Obj.rdOutIndex = rdOutIndex;
+
+    return nBytesRead;
+}
+
+size_t UART5_ReadCountGet(void)
+{
+    size_t nUnreadBytesAvailable;
+    uint32_t rdInIndex;
+    uint32_t rdOutIndex;
+
+    /* Take a snapshot of indices to avoid processing in critical section */
+    rdInIndex = uart5Obj.rdInIndex;
+    rdOutIndex = uart5Obj.rdOutIndex;
+
+    if ( rdInIndex >=  rdOutIndex)
+    {
+        nUnreadBytesAvailable =  rdInIndex -  rdOutIndex;
+    }
+    else
+    {
+        nUnreadBytesAvailable =  (uart5Obj.rdBufferSize -  rdOutIndex) + rdInIndex;
+    }
+
+    return nUnreadBytesAvailable;
+}
+
+size_t UART5_ReadFreeBufferCountGet(void)
+{
+    return (uart5Obj.rdBufferSize - 1) - UART5_ReadCountGet();
+}
+
+size_t UART5_ReadBufferSizeGet(void)
+{
+    return (uart5Obj.rdBufferSize - 1);
+}
+
+bool UART5_ReadNotificationEnable(bool isEnabled, bool isPersistent)
+{
+    bool previousStatus = uart5Obj.isRdNotificationEnabled;
+
+    uart5Obj.isRdNotificationEnabled = isEnabled;
+
+    uart5Obj.isRdNotifyPersistently = isPersistent;
+
+    return previousStatus;
+}
+
+void UART5_ReadThresholdSet(uint32_t nBytesThreshold)
+{
+    if (nBytesThreshold > 0)
+    {
+        uart5Obj.rdThreshold = nBytesThreshold;
+    }
+}
+
+void UART5_ReadCallbackRegister( UART_RING_BUFFER_CALLBACK callback, uintptr_t context)
+{
+    uart5Obj.rdCallback = callback;
+
+    uart5Obj.rdContext = context;
+}
+
+/* This routine is only called from ISR. Hence do not disable/enable USART interrupts. */
+static bool UART5_TxPullByte(uint16_t* pWrByte)
+{
+    bool isSuccess = false;
+    uint32_t wrOutIndex = uart5Obj.wrOutIndex;
+    uint32_t wrInIndex = uart5Obj.wrInIndex;
+
+    if (wrOutIndex != wrInIndex)
+    {
+        if (UART5_IS_9BIT_MODE_ENABLED())
+        {
+            *pWrByte = ((uint16_t*)&UART5_WriteBuffer)[wrOutIndex++];
+        }
+        else
+        {
+            *pWrByte = UART5_WriteBuffer[wrOutIndex++];
+        }
+
+        if (wrOutIndex >= uart5Obj.wrBufferSize)
+        {
+            wrOutIndex = 0;
+        }
+
+        uart5Obj.wrOutIndex = wrOutIndex;
+
+        isSuccess = true;
+    }
+
+    return isSuccess;
+}
+
+static inline bool UART5_TxPushByte(uint16_t wrByte)
+{
+    uint32_t tempInIndex;
+    bool isSuccess = false;
+
+    uint32_t wrOutIndex = uart5Obj.wrOutIndex;
+    uint32_t wrInIndex = uart5Obj.wrInIndex;
+
+    tempInIndex = wrInIndex + 1;
+
+    if (tempInIndex >= uart5Obj.wrBufferSize)
+    {
+        tempInIndex = 0;
+    }
+    if (tempInIndex != wrOutIndex)
+    {
+        if (UART5_IS_9BIT_MODE_ENABLED())
+        {
+            ((uint16_t*)&UART5_WriteBuffer)[wrInIndex] = wrByte;
+        }
+        else
+        {
+            UART5_WriteBuffer[wrInIndex] = (uint8_t)wrByte;
+        }
+
+        uart5Obj.wrInIndex = tempInIndex;
+
+        isSuccess = true;
+    }
+    else
+    {
+        /* Queue is full. Report Error. */
+    }
+
+    return isSuccess;
+}
+
+/* This routine is only called from ISR. Hence do not disable/enable USART interrupts. */
+static void UART5_WriteNotificationSend(void)
+{
+    uint32_t nFreeWrBufferCount;
+
+    if (uart5Obj.isWrNotificationEnabled == true)
+    {
+        nFreeWrBufferCount = UART5_WriteFreeBufferCountGet();
+
+        if(uart5Obj.wrCallback != NULL)
+        {
+            if (uart5Obj.isWrNotifyPersistently == true)
+            {
+                if (nFreeWrBufferCount >= uart5Obj.wrThreshold)
+                {
+                    uart5Obj.wrCallback(UART_EVENT_WRITE_THRESHOLD_REACHED, uart5Obj.wrContext);
+                }
+            }
+            else
+            {
+                if (nFreeWrBufferCount == uart5Obj.wrThreshold)
+                {
+                    uart5Obj.wrCallback(UART_EVENT_WRITE_THRESHOLD_REACHED, uart5Obj.wrContext);
+                }
+            }
+        }
+    }
+}
+
+static size_t UART5_WritePendingBytesGet(void)
+{
+    size_t nPendingTxBytes;
+
+    /* Take a snapshot of indices to avoid processing in critical section */
+
+    uint32_t wrOutIndex = uart5Obj.wrOutIndex;
+    uint32_t wrInIndex = uart5Obj.wrInIndex;
+
+    if ( wrInIndex >=  wrOutIndex)
+    {
+        nPendingTxBytes =  wrInIndex - wrOutIndex;
+    }
+    else
+    {
+        nPendingTxBytes =  (uart5Obj.wrBufferSize -  wrOutIndex) + wrInIndex;
+    }
+
+    return nPendingTxBytes;
+}
+
+size_t UART5_WriteCountGet(void)
+{
+    size_t nPendingTxBytes;
+
+    nPendingTxBytes = UART5_WritePendingBytesGet();
+
+    return nPendingTxBytes;
+}
+
+size_t UART5_Write(uint8_t* pWrBuffer, const size_t size )
+{
+    size_t nBytesWritten  = 0;
+
+    while (nBytesWritten < size)
+    {
+        if (UART5_IS_9BIT_MODE_ENABLED())
+        {
+            if (UART5_TxPushByte(((uint16_t*)pWrBuffer)[nBytesWritten]) == true)
+            {
+                nBytesWritten++;
+            }
+            else
+            {
+                /* Queue is full, exit the loop */
+                break;
+            }
+        }
+        else
+        {
+            if (UART5_TxPushByte(pWrBuffer[nBytesWritten]) == true)
+            {
+                nBytesWritten++;
+            }
+            else
+            {
+                /* Queue is full, exit the loop */
+                break;
+            }
+        }
+
+    }
+
+    /* Check if any data is pending for transmission */
+    if (UART5_WritePendingBytesGet() > 0)
+    {
+        /* Enable TX interrupt as data is pending for transmission */
+        UART5_TX_INT_ENABLE();
+    }
+
+    return nBytesWritten;
+}
+
+size_t UART5_WriteFreeBufferCountGet(void)
+{
+    return (uart5Obj.wrBufferSize - 1) - UART5_WriteCountGet();
+}
+
+size_t UART5_WriteBufferSizeGet(void)
+{
+    return (uart5Obj.wrBufferSize - 1);
+}
+
+bool UART5_WriteNotificationEnable(bool isEnabled, bool isPersistent)
+{
+    bool previousStatus = uart5Obj.isWrNotificationEnabled;
+
+    uart5Obj.isWrNotificationEnabled = isEnabled;
+
+    uart5Obj.isWrNotifyPersistently = isPersistent;
+
+    return previousStatus;
+}
+
+void UART5_WriteThresholdSet(uint32_t nBytesThreshold)
+{
+    if (nBytesThreshold > 0)
+    {
+        uart5Obj.wrThreshold = nBytesThreshold;
+    }
+}
+
+void UART5_WriteCallbackRegister( UART_RING_BUFFER_CALLBACK callback, uintptr_t context)
+{
+    uart5Obj.wrCallback = callback;
+
+    uart5Obj.wrContext = context;
+}
+
+UART_ERROR UART5_ErrorGet( void )
+{
+    UART_ERROR errors = uart5Obj.errors;
+
+    uart5Obj.errors = UART_ERROR_NONE;
+
+    /* All errors are cleared, but send the previous error state */
+    return errors;
 }
 
 bool UART5_AutoBaudQuery( void )
@@ -225,248 +665,81 @@ void UART5_AutoBaudSet( bool enable )
        direction of control is not allowed in this function.                      */
 }
 
-bool UART5_Read(void* buffer, const size_t size )
-{
-    bool status = false;
-    uint8_t* lBuffer = (uint8_t* )buffer;
-
-    if(lBuffer != NULL)
-    {
-        /* Check if receive request is in progress */
-        if(uart5Obj.rxBusyStatus == false)
-        {
-            /* Clear error flags and flush out error data that may have been received when no active request was pending */
-            UART5_ErrorClear();
-
-            uart5Obj.rxBuffer = lBuffer;
-            uart5Obj.rxSize = size;
-            uart5Obj.rxProcessedSize = 0;
-            uart5Obj.rxBusyStatus = true;
-            uart5Obj.errors = UART_ERROR_NONE;
-
-            status = true;
-
-            /* Enable UART5_FAULT Interrupt */
-            IEC5SET = _IEC5_U5EIE_MASK;
-
-            /* Enable UART5_RX Interrupt */
-            IEC5SET = _IEC5_U5RXIE_MASK;
-        }
-    }
-
-    return status;
-}
-
-bool UART5_Write( void* buffer, const size_t size )
-{
-    bool status = false;
-    uint8_t* lBuffer = (uint8_t*)buffer;
-
-    if(lBuffer != NULL)
-    {
-        /* Check if transmit request is in progress */
-        if(uart5Obj.txBusyStatus == false)
-        {
-            uart5Obj.txBuffer = lBuffer;
-            uart5Obj.txSize = size;
-            uart5Obj.txProcessedSize = 0;
-            uart5Obj.txBusyStatus = true;
-            status = true;
-
-            /* Initiate the transfer by writing as many bytes as we can */
-            while((!(U5STA & _U5STA_UTXBF_MASK)) && (uart5Obj.txSize > uart5Obj.txProcessedSize) )
-            {
-                if (( U5MODE & (_U5MODE_PDSEL0_MASK | _U5MODE_PDSEL1_MASK)) == (_U5MODE_PDSEL0_MASK | _U5MODE_PDSEL1_MASK))
-                {
-                    /* 9-bit mode */
-                    U5TXREG = ((uint16_t*)uart5Obj.txBuffer)[uart5Obj.txProcessedSize++];
-                }
-                else
-                {
-                    /* 8-bit mode */
-                    U5TXREG = uart5Obj.txBuffer[uart5Obj.txProcessedSize++];
-                }
-            }
-
-            IEC5SET = _IEC5_U5TXIE_MASK;
-        }
-    }
-
-    return status;
-}
-
-UART_ERROR UART5_ErrorGet( void )
-{
-    UART_ERROR errors = uart5Obj.errors;
-
-    uart5Obj.errors = UART_ERROR_NONE;
-
-    /* All errors are cleared, but send the previous error state */
-    return errors;
-}
-
-void UART5_ReadCallbackRegister( UART_CALLBACK callback, uintptr_t context )
-{
-    uart5Obj.rxCallback = callback;
-
-    uart5Obj.rxContext = context;
-}
-
-bool UART5_ReadIsBusy( void )
-{
-    return uart5Obj.rxBusyStatus;
-}
-
-size_t UART5_ReadCountGet( void )
-{
-    return uart5Obj.rxProcessedSize;
-}
-
-bool UART5_ReadAbort(void)
-{
-    if (uart5Obj.rxBusyStatus == true)
-    {
-        /* Disable the fault interrupt */
-        IEC5CLR = _IEC5_U5EIE_MASK;
-
-        /* Disable the receive interrupt */
-        IEC5CLR = _IEC5_U5RXIE_MASK;
-
-        uart5Obj.rxBusyStatus = false;
-
-        /* If required application should read the num bytes processed prior to calling the read abort API */
-        uart5Obj.rxSize = uart5Obj.rxProcessedSize = 0;
-    }
-
-    return true;
-}
-
-void UART5_WriteCallbackRegister( UART_CALLBACK callback, uintptr_t context )
-{
-    uart5Obj.txCallback = callback;
-
-    uart5Obj.txContext = context;
-}
-
-bool UART5_WriteIsBusy( void )
-{
-    return uart5Obj.txBusyStatus;
-}
-
-size_t UART5_WriteCountGet( void )
-{
-    return uart5Obj.txProcessedSize;
-}
-
 void UART5_FAULT_InterruptHandler (void)
 {
     /* Save the error to be reported later */
     uart5Obj.errors = (UART_ERROR)(U5STA & (_U5STA_OERR_MASK | _U5STA_FERR_MASK | _U5STA_PERR_MASK));
 
-    /* Disable the fault interrupt */
-    IEC5CLR = _IEC5_U5EIE_MASK;
-
-    /* Disable the receive interrupt */
-    IEC5CLR = _IEC5_U5RXIE_MASK;
-
-    /* Clear rx status */
-    uart5Obj.rxBusyStatus = false;
-
     UART5_ErrorClear();
 
-    /* Client must call UARTx_ErrorGet() function to get the errors */
-    if( uart5Obj.rxCallback != NULL )
+    /* Client must call UARTx_ErrorGet() function to clear the errors */
+    if( uart5Obj.rdCallback != NULL )
     {
-        uart5Obj.rxCallback(uart5Obj.rxContext);
+        uart5Obj.rdCallback(UART_EVENT_READ_ERROR, uart5Obj.rdContext);
     }
 }
 
 void UART5_RX_InterruptHandler (void)
 {
-    if(uart5Obj.rxBusyStatus == true)
+    /* Keep reading until there is a character availabe in the RX FIFO */
+    while((U5STA & _U5STA_URXDA_MASK) == _U5STA_URXDA_MASK)
     {
-        while((_U5STA_URXDA_MASK == (U5STA & _U5STA_URXDA_MASK)) && (uart5Obj.rxSize > uart5Obj.rxProcessedSize) )
+        if (UART5_RxPushByte( (uint16_t )(U5RXREG) ) == true)
         {
-            if (( U5MODE & (_U5MODE_PDSEL0_MASK | _U5MODE_PDSEL1_MASK)) == (_U5MODE_PDSEL0_MASK | _U5MODE_PDSEL1_MASK))
-            {
-                /* 9-bit mode */
-                ((uint16_t*)uart5Obj.rxBuffer)[uart5Obj.rxProcessedSize++] = (uint16_t )(U5RXREG);
-            }
-            else
-            {
-                /* 8-bit mode */
-                uart5Obj.rxBuffer[uart5Obj.rxProcessedSize++] = (uint8_t )(U5RXREG);
-            }
+            UART5_ReadNotificationSend();
         }
-
-        /* Clear UART5 RX Interrupt flag */
-        IFS5CLR = _IFS5_U5RXIF_MASK;
-
-        /* Check if the buffer is done */
-        if(uart5Obj.rxProcessedSize >= uart5Obj.rxSize)
+        else
         {
-            uart5Obj.rxBusyStatus = false;
-
-            /* Disable the fault interrupt */
-            IEC5CLR = _IEC5_U5EIE_MASK;
-
-            /* Disable the receive interrupt */
-            IEC5CLR = _IEC5_U5RXIE_MASK;
-
-
-            if(uart5Obj.rxCallback != NULL)
-            {
-                uart5Obj.rxCallback(uart5Obj.rxContext);
-            }
+            /* UART RX buffer is full */
         }
     }
-    else
-    {
-        // Nothing to process
-        ;
-    }
+
+    /* Clear UART5 RX Interrupt flag */
+    IFS5CLR = _IFS5_U5RXIF_MASK;
 }
 
 void UART5_TX_InterruptHandler (void)
 {
-    if(uart5Obj.txBusyStatus == true)
+    uint16_t wrByte;
+
+    /* Check if any data is pending for transmission */
+    if (UART5_WritePendingBytesGet() > 0)
     {
-        while((!(U5STA & _U5STA_UTXBF_MASK)) && (uart5Obj.txSize > uart5Obj.txProcessedSize) )
+        /* Keep writing to the TX FIFO as long as there is space */
+        while(!(U5STA & _U5STA_UTXBF_MASK))
         {
-            if (( U5MODE & (_U5MODE_PDSEL0_MASK | _U5MODE_PDSEL1_MASK)) == (_U5MODE_PDSEL0_MASK | _U5MODE_PDSEL1_MASK))
+            if (UART5_TxPullByte(&wrByte) == true)
             {
-                /* 9-bit mode */
-                U5TXREG = ((uint16_t*)uart5Obj.txBuffer)[uart5Obj.txProcessedSize++];
+                if (UART5_IS_9BIT_MODE_ENABLED())
+                {
+                    U5TXREG = wrByte;
+                }
+                else
+                {
+                    U5TXREG = (uint8_t)wrByte;
+                }
+
+                /* Send notification */
+                UART5_WriteNotificationSend();
             }
             else
             {
-                /* 8-bit mode */
-                U5TXREG = uart5Obj.txBuffer[uart5Obj.txProcessedSize++];
+                /* Nothing to transmit. Disable the data register empty interrupt. */
+                UART5_TX_INT_DISABLE();
+                break;
             }
         }
 
         /* Clear UART5TX Interrupt flag */
         IFS5CLR = _IFS5_U5TXIF_MASK;
-
-        /* Check if the buffer is done */
-        if(uart5Obj.txProcessedSize >= uart5Obj.txSize)
-        {
-            uart5Obj.txBusyStatus = false;
-
-            /* Disable the transmit interrupt, to avoid calling ISR continuously */
-            IEC5CLR = _IEC5_U5TXIE_MASK;
-
-            if(uart5Obj.txCallback != NULL)
-            {
-                uart5Obj.txCallback(uart5Obj.txContext);
-            }
-        }
     }
     else
     {
-        // Nothing to process
-        ;
+        /* Nothing to transmit. Disable the data register empty interrupt. */
+        UART5_TX_INT_DISABLE();
+
+        /* Clear UART5TX Interrupt flag */
+        IFS5CLR = _IFS5_U5TXIF_MASK;
     }
 }
-
 

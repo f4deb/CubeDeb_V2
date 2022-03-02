@@ -9,13 +9,15 @@
 #include "../common/sensor/temperature/temperatureStream.h"
 
 #include "../drivers/LM75A/LM75A.h"
+#include "../drivers/SAA1064T/SAA1064T.h"
 
-
+#include "../../common/serial/serial.h"
 
 
 void initCubeCommon(void) {
-    init7SegOutputStream(get7SegOutpuStream(), SAA1064_ADDR);
-    initTemperatureLM75A(getTemperatureStream(TEMP_SENSOR_CPU), LM75_ADDRESS_0);
-    initTemperatureLM75A(getTemperatureStream(TEMP_SENSOR_EXT1), LM75_ADDRESS_1);
+
+    // initialise afficheur driver et flux pour afficheur 7 Segments de la carte CPU
+   // initSAA1064T(getScreen_7Seg_CPU(), SAA1064_ADDR);  
+    
 
 }
