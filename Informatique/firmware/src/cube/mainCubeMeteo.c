@@ -254,11 +254,11 @@ void mainCube (void){
      
     ClockData* clockParam = &(clockCPUStream->clockData);
     clockParam->second = 0x41;
-    clockParam->minute = 0x46;
-    clockParam->hour = 0x23;
-    clockParam->day = 0x10;
+    clockParam->minute = 0x35;
+    clockParam->hour = 0x22;
+    clockParam->day = 0x28;
     clockParam->dayofweek = 0x04;
-    clockParam->month = 0x02;
+    clockParam->month = 0x07;
     clockParam->year = 0x22;
     
     //setClock(clockCPUStream,clockParam);
@@ -314,7 +314,7 @@ void mainCube (void){
             case 4:;
                 setPower(screen7SegExt1,ON);
                 setIntensity(screen7SegExt1, 0x02);
-                appendString(screen7SegExt1,"73 ON8BAK"); 
+                appendString(screen7SegExt1,"F4DEB   "); 
                 break;
 
             case 5:;
@@ -340,11 +340,12 @@ void mainCube (void){
             
             default:; 
                 //appendDec(debugOutputStream, timingSync);
-                appendCRLF(debugOutputStream);       
+                appendCRLF(debugOutputStream);     
+                timingSync = 0;
                 break;
         }    
         timingSync++;
-        if (timingSync > 7) {
+        if (timingSync > 4) {
             timingSync = 0;
         }    
         TMR1_InterruptEnable();

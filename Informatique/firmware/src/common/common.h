@@ -2,7 +2,7 @@
 #define _COMMON_H
 
 #define BOARD_NAME "Meteo Cube "
-#define BOARD_VERSION "V207"
+#define BOARD_VERSION "V208"
 
 enum DisplayType {
     TYPE_SAA1064T,
