@@ -138,7 +138,7 @@ void initMainCube (void) {
 
 //OUPTUT COMPARE 3 Enable    
     OCMP3_Enable();
-    OC3RS = 1000;//10µs      resolution => 1 = 10ns
+    OC3RS = 3000000;//      resolution => 1 = 10ns
 
     // I2C1 initialisation interruption
     I2C1_CallbackRegister(MyI2CCallback, NULL);
@@ -302,9 +302,13 @@ void mainCube (void){
                 break;
                 
             case 3:;
-                
-                setIntensity(screen7SegExt1, 0x00);
-                appendString(screen7SegExt1,"73 FAEF"); 
+                appendDot(screen7SegCpu,4);
+                appendString(screen7SegCpu, readSensorValueAsStringFor7Seg(tempSensorExt1Stream));
+                printClock(debugOutputStream,getClockStream(CLOCK_CPU));
+                appendString(debugOutputStream,"Temperature Externe: "); 
+                appendString(debugOutputStream, readSensorValueAsString(tempSensorExt1Stream));
+                appendString(debugOutputStream, "deg");
+                append(debugOutputStream,LF); 
                 break;
          
             case 4:;

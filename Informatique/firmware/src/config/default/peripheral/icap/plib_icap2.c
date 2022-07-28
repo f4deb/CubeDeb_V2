@@ -50,14 +50,14 @@
 void ICAP2_Initialize (void)
 {
     /*Setup IC2CON    */
-    /*ICM     = 5        */
+    /*ICM     = 3        */
     /*ICI     = 0        */
     /*ICTMR = 1*/
     /*C32     = 1        */
     /*FEDGE = 1        */
     /*SIDL     = false    */
 
-    IC2CON = 0x385;
+    IC2CON = 0x383;
 
     CFGCON |= 0x00020000;
 

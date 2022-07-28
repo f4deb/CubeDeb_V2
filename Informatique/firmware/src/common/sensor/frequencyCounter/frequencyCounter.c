@@ -29,7 +29,7 @@ uint32_t frequencyCounter (void){
                 // Stop if no input signal
                 count++;  
                 if (count > 100){
-                    return 0;
+                    return -1;
                 }
             }
 

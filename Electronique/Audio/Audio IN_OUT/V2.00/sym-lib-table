@@ -1,3 +1,4 @@
 (sym_lib_table
-  (lib (name SOUND_DEB-rescue)(type Legacy)(uri /media/f4deb/ROBOT/ELECTRONIQUE/CubeDeb/SOUND_DEB/V0-1/SOUND_DEB-rescue.lib)(options "")(descr ""))
+  (lib (name "SOUND_DEB-rescue")(type "Legacy")(uri "/media/f4deb/ROBOT/ELECTRONIQUE/CubeDeb/SOUND_DEB/V0-1/SOUND_DEB-rescue.lib")(options "")(descr ""))
+  (lib (name "Audio-IN_OUT-rescue")(type "Legacy")(uri "${KIPRJMOD}/Audio IN_OUT-rescue.lib")(options "")(descr ""))
 )

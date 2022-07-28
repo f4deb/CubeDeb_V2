@@ -89,6 +89,10 @@
 #define BD7_Get()               ((PORTE >> 7) & 0x1)
 #define BD7_PIN                  GPIO_PIN_RE7
 
+/*** Macros for INPUT_CAPTURE_1 pin ***/
+#define INPUT_CAPTURE_1_Get()               ((PORTC >> 2) & 0x1)
+#define INPUT_CAPTURE_1_PIN                  GPIO_PIN_RC2
+
 /*** Macros for BRS pin ***/
 #define BRS_Set()               (LATESET = (1<<8))
 #define BRS_Clear()             (LATECLR = (1<<8))
