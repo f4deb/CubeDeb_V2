@@ -256,9 +256,9 @@ void mainCube (void){
     clockParam->second = 0x41;
     clockParam->minute = 0x35;
     clockParam->hour = 0x22;
-    clockParam->day = 0x28;
-    clockParam->dayofweek = 0x04;
-    clockParam->month = 0x07;
+    clockParam->day = 0x26;
+    clockParam->dayofweek = 0x01;
+    clockParam->month = 0x12;
     clockParam->year = 0x22;
     
     //setClock(clockCPUStream,clockParam);

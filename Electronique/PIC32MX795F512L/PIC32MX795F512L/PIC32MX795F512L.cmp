@@ -1,0 +1,931 @@
+Cmp-Mod V01 Created by PcbNew   date = lun. 05 sept. 2022 21:29:32
+
+BeginCmp
+TimeStamp = 37d70a57-174e-489b-a75e-e11b84978f7e
+Path = 
+Reference = D1001;
+ValeurCmp = LED;
+IdModule  = f4deb-mod-library:D_0603_1608Metric;
+EndCmp
+
+BeginCmp
+TimeStamp = 4afe36e6-66ce-4239-8f92-b0321b1d6001
+Path = 
+Reference = C112;
+ValeurCmp = 10µ/10V;
+IdModule  = f4deb-mod-library:CP_EIA-3216-10_Kemet-I;
+EndCmp
+
+BeginCmp
+TimeStamp = 52a796de-8040-48c3-85bf-70d4141fe29f
+Path = 
+Reference = U101;
+ValeurCmp = PIC32MX795F512L;
+IdModule  = f4deb-mod-library:TQFP-100_14x14mm_P0.5mm;
+EndCmp
+
+BeginCmp
+TimeStamp = 54d258ad-d720-479b-a86a-f844d0d8571f
+Path = 
+Reference = R103;
+ValeurCmp = 10k;
+IdModule  = f4deb-mod-library:R_0603_1608Metric;
+EndCmp
+
+BeginCmp
+TimeStamp = 6642addd-753e-445f-a1b7-0e9a33a97c73
+Path = /e9f286ce-dbe2-4d63-b368-c0e515850e8c
+Reference = C112;
+ValeurCmp = 10µ/10V;
+IdModule  = f4deb-mod-library:CP_EIA-3216-10_Kemet-I;
+EndCmp
+
+BeginCmp
+TimeStamp = 6b675aad-761e-4888-90ce-aa758e63d364
+Path = 
+Reference = U101;
+ValeurCmp = PIC32MX795F512L;
+IdModule  = f4deb-mod-library:TQFP-100_14x14mm_P0.5mm;
+EndCmp
+
+BeginCmp
+TimeStamp = 70d8ce7a-61f9-4a66-8381-d96db9e11f2d
+Path = /4a0b197c-8bcd-4c5a-ab09-6bf5e153cff4
+Reference = R105;
+ValeurCmp = 0;
+IdModule  = f4deb-mod-library:R_1206_3216Metric;
+EndCmp
+
+BeginCmp
+TimeStamp = 89f6eaaa-ec51-47b2-8df3-955467846b21
+Path = 
+Reference = R1001;
+ValeurCmp = 330;
+IdModule  = f4deb-mod-library:R_0603_1608Metric;
+EndCmp
+
+BeginCmp
+TimeStamp = 8cdfa169-152c-4bde-9226-85ed211868a9
+Path = /e6b8d94e-df6a-4823-9521-f70a41ff40d0
+Reference = R103;
+ValeurCmp = 10k;
+IdModule  = f4deb-mod-library:R_0603_1608Metric;
+EndCmp
+
+BeginCmp
+TimeStamp = 96ec198c-5d80-4772-8913-0fd5d17d075c
+Path = 
+Reference = R104;
+ValeurCmp = 470;
+IdModule  = f4deb-mod-library:R_0603_1608Metric;
+EndCmp
+
+BeginCmp
+TimeStamp = 9d4e47c6-adcb-4320-889d-c9c18ccdccb2
+Path = /886fcf4e-ae68-43a6-b02b-a96b1dc983ad
+Reference = U101;
+ValeurCmp = PIC32MX795F512L;
+IdModule  = f4deb-mod-library:TQFP-100_14x14mm_P0.5mm;
+EndCmp
+
+BeginCmp
+TimeStamp = a1e02d0e-3eda-469a-b3a6-5a09fe141c10
+Path = /c58795b9-257f-44c9-8096-169ce234eb04
+Reference = R104;
+ValeurCmp = 470;
+IdModule  = f4deb-mod-library:R_0603_1608Metric;
+EndCmp
+
+BeginCmp
+TimeStamp = a9656769-cecd-430b-9894-b8b64cfc818b
+Path = 
+Reference = R104;
+ValeurCmp = 470;
+IdModule  = f4deb-mod-library:R_0603_1608Metric;
+EndCmp
+
+BeginCmp
+TimeStamp = ab6fedbd-3dbb-4120-9b4c-9cf25caf8147
+Path = /d154a518-2a53-4f96-b4c8-1d3eb34d2587
+Reference = R1001;
+ValeurCmp = 330;
+IdModule  = f4deb-mod-library:R_0603_1608Metric;
+EndCmp
+
+BeginCmp
+TimeStamp = aeb96503-f4b6-4a21-930c-d4d6366f4410
+Path = 
+Reference = R104;
+ValeurCmp = 470;
+IdModule  = f4deb-mod-library:R_0603_1608Metric;
+EndCmp
+
+BeginCmp
+TimeStamp = b60ab9de-b3ac-4e5f-aae2-7abd3b6bcc21
+Path = 
+Reference = R105;
+ValeurCmp = 0;
+IdModule  = f4deb-mod-library:R_1206_3216Metric;
+EndCmp
+
+BeginCmp
+TimeStamp = b69891e0-b010-485e-a34c-f9c7f3ba1fa0
+Path = 
+Reference = R103;
+ValeurCmp = 10k;
+IdModule  = f4deb-mod-library:R_0603_1608Metric;
+EndCmp
+
+BeginCmp
+TimeStamp = c012e0ac-dcff-481c-8547-d33ed704c41b
+Path = 
+Reference = R1001;
+ValeurCmp = 330;
+IdModule  = f4deb-mod-library:R_0603_1608Metric;
+EndCmp
+
+BeginCmp
+TimeStamp = c12f1810-f2c6-486c-bdb0-680626e5c392
+Path = 
+Reference = U101;
+ValeurCmp = PIC32MX795F512L;
+IdModule  = f4deb-mod-library:TQFP-100_14x14mm_P0.5mm;
+EndCmp
+
+BeginCmp
+TimeStamp = c69c5704-03b1-4db1-8f6e-45b2a23e2dc2
+Path = 
+Reference = R103;
+ValeurCmp = 10k;
+IdModule  = f4deb-mod-library:R_0603_1608Metric;
+EndCmp
+
+BeginCmp
+TimeStamp = c6a5e86a-0db4-4bd4-93d5-2af635497806
+Path = 
+Reference = R105;
+ValeurCmp = 0;
+IdModule  = f4deb-mod-library:R_1206_3216Metric;
+EndCmp
+
+BeginCmp
+TimeStamp = c7e4aefc-9c75-4408-bb11-67f967ac534a
+Path = 
+Reference = C112;
+ValeurCmp = 10µ/10V;
+IdModule  = f4deb-mod-library:CP_EIA-3216-10_Kemet-I;
+EndCmp
+
+BeginCmp
+TimeStamp = cb54cb63-5be5-4deb-a5af-ecb9c1fc1a26
+Path = 
+Reference = R1001;
+ValeurCmp = 330;
+IdModule  = f4deb-mod-library:R_0603_1608Metric;
+EndCmp
+
+BeginCmp
+TimeStamp = cc073367-cb06-4e83-a341-6c28e9f1ec0c
+Path = 
+Reference = R105;
+ValeurCmp = 0;
+IdModule  = f4deb-mod-library:R_1206_3216Metric;
+EndCmp
+
+BeginCmp
+TimeStamp = d2e7e1d6-0dcf-4579-83c8-e8df75dda456
+Path = /cffdf483-b5ab-4204-aa75-28db04972b09
+Reference = D1001;
+ValeurCmp = LED;
+IdModule  = f4deb-mod-library:D_0603_1608Metric;
+EndCmp
+
+BeginCmp
+TimeStamp = ea25aec6-4c96-4d45-af18-c542f31731cf
+Path = 
+Reference = C112;
+ValeurCmp = 10µ/10V;
+IdModule  = f4deb-mod-library:CP_EIA-3216-10_Kemet-I;
+EndCmp
+
+BeginCmp
+TimeStamp = f540371d-c44b-451c-904a-bed6ee9b2693
+Path = 
+Reference = D1001;
+ValeurCmp = LED;
+IdModule  = f4deb-mod-library:D_0603_1608Metric;
+EndCmp
+
+BeginCmp
+TimeStamp = fd42722d-f6be-4ec4-9936-f95fc07c5066
+Path = 
+Reference = D1001;
+ValeurCmp = LED;
+IdModule  = f4deb-mod-library:D_0603_1608Metric;
+EndCmp
+
+BeginCmp
+TimeStamp = 011de410-4806-406c-9b25-5067d1fd3ab5
+Path = /2f109164-b6ae-4942-95cd-11c82d8e176b
+Reference = R101;
+ValeurCmp = 10M;
+IdModule  = f4deb-mod-library:R_0603_1608Metric;
+EndCmp
+
+BeginCmp
+TimeStamp = 0205e0cd-da1c-4460-930d-89f1429c135a
+Path = /740ce702-245c-4868-a28e-1ecba3ebf135
+Reference = C108;
+ValeurCmp = 100n;
+IdModule  = f4deb-mod-library:C_0603_1608Metric;
+EndCmp
+
+BeginCmp
+TimeStamp = 07981e67-0e74-4c02-ab48-bf63397396ab
+Path = 
+Reference = REF**;
+ValeurCmp = Crystal_SMD_SeikoEpson_MC306-4Pin_8.0x3.2mm_HandSoldering;
+IdModule  = f4deb-mod-library:Crystal_SMD_SeikoEpson_MC306-4Pin_8.0x3.2mm_HandSoldering;
+EndCmp
+
+BeginCmp
+TimeStamp = 0c03b69f-eef9-4e4a-963a-217d84662c06
+Path = /ae9e16c0-65ab-475f-94d9-20732da219a0
+Reference = C102;
+ValeurCmp = 33p;
+IdModule  = f4deb-mod-library:C_0603_1608Metric;
+EndCmp
+
+BeginCmp
+TimeStamp = 0c5f19b6-d313-415a-b7fd-641f3e3d0543
+Path = 
+Reference = R102;
+ValeurCmp = 2k2;
+IdModule  = f4deb-mod-library:R_0603_1608Metric;
+EndCmp
+
+BeginCmp
+TimeStamp = 0d4af3c2-bf32-4407-af38-4e11dd362a10
+Path = 
+Reference = R101;
+ValeurCmp = 10M;
+IdModule  = f4deb-mod-library:R_0603_1608Metric;
+EndCmp
+
+BeginCmp
+TimeStamp = 0f07a00e-14bb-4402-8b6a-5a3572d49b73
+Path = 
+Reference = C101;
+ValeurCmp = 22p;
+IdModule  = f4deb-mod-library:C_0603_1608Metric;
+EndCmp
+
+BeginCmp
+TimeStamp = 10ca928a-31d1-42ce-85dd-7c6bcdd6a46b
+Path = 
+Reference = C108;
+ValeurCmp = 100n;
+IdModule  = f4deb-mod-library:C_0603_1608Metric;
+EndCmp
+
+BeginCmp
+TimeStamp = 118c3ca2-6723-4fe1-b252-dffd3edd3a98
+Path = 
+Reference = C103;
+ValeurCmp = 22p;
+IdModule  = f4deb-mod-library:C_0603_1608Metric;
+EndCmp
+
+BeginCmp
+TimeStamp = 125403b0-bb08-4996-9b43-207c01981950
+Path = 
+Reference = C105;
+ValeurCmp = 10µ;
+IdModule  = f4deb-mod-library:CP_EIA-1608-08_AVX-J;
+EndCmp
+
+BeginCmp
+TimeStamp = 1266721b-6d70-491c-8d80-4ee87ffdf867
+Path = 
+Reference = REF**;
+ValeurCmp = Crystal_SMD_SeikoEpson_FA238V-4Pin_3.2x2.5mm_HandSoldering;
+IdModule  = f4deb-mod-library:Crystal_SMD_SeikoEpson_FA238V-4Pin_3.2x2.5mm_HandSoldering;
+EndCmp
+
+BeginCmp
+TimeStamp = 130b59c8-526b-49aa-9088-a56b54d7966e
+Path = 
+Reference = C102;
+ValeurCmp = 33p;
+IdModule  = f4deb-mod-library:C_0603_1608Metric;
+EndCmp
+
+BeginCmp
+TimeStamp = 1677d9ff-b1ed-40f0-a292-246984038971
+Path = /f8befda8-9b93-4c8e-8d24-dbba78fd0601
+Reference = J103;
+ValeurCmp = Conn_02x13_Odd_Even;
+IdModule  = f4deb-mod-library:PinSocket_2x13_P1.27mm_Vertical_SMD;
+EndCmp
+
+BeginCmp
+TimeStamp = 1885f3c6-ba31-4908-9f71-ea9ceec66928
+Path = 
+Reference = REF**;
+ValeurCmp = Crystal_SMD_SeikoEpson_FA238V-4Pin_3.2x2.5mm_HandSoldering;
+IdModule  = f4deb-mod-library:Crystal_SMD_SeikoEpson_FA238V-4Pin_3.2x2.5mm_HandSoldering;
+EndCmp
+
+BeginCmp
+TimeStamp = 1edcc206-a6d8-4530-9ba3-758fa53bd571
+Path = 
+Reference = J104;
+ValeurCmp = Conn_02x13_Odd_Even;
+IdModule  = f4deb-mod-library:PinSocket_2x13_P1.27mm_Vertical_SMD;
+EndCmp
+
+BeginCmp
+TimeStamp = 1f11197c-cb5c-42de-9f08-adc6000a4607
+Path = 
+Reference = REF**;
+ValeurCmp = Crystal_SMD_2016-4Pin_2.0x1.6mm;
+IdModule  = f4deb-mod-library:Crystal_SMD_2016-4Pin_2.0x1.6mm;
+EndCmp
+
+BeginCmp
+TimeStamp = 21f8ebe5-adee-4d0f-ae20-ea648fe4f4ec
+Path = /96139183-1fc5-4fe6-bf46-e3ffc73ccf1f
+Reference = C111;
+ValeurCmp = 100n;
+IdModule  = f4deb-mod-library:C_0603_1608Metric;
+EndCmp
+
+BeginCmp
+TimeStamp = 2846f34b-f8d4-403c-b0d0-c57c8e12ce49
+Path = 
+Reference = REF**;
+ValeurCmp = Crystal_SMD_2016-4Pin_2.0x1.6mm;
+IdModule  = f4deb-mod-library:Crystal_SMD_2016-4Pin_2.0x1.6mm;
+EndCmp
+
+BeginCmp
+TimeStamp = 29c2974c-db69-42e9-abb5-4825eaa62e4c
+Path = 
+Reference = Y102;
+ValeurCmp = Crystal_Small;
+IdModule  = f4deb-mod-library:Crystal_SMD_SeikoEpson_MC306-4Pin_8.0x3.2mm;
+EndCmp
+
+BeginCmp
+TimeStamp = 2b83a47b-ad00-4520-a284-640f06197b37
+Path = 
+Reference = Y1001;
+ValeurCmp = 8Mhz;
+IdModule  = f4deb-mod-library:Crystal_SMD_Abracon_ABM3C-4Pin_5.0x3.2mm;
+EndCmp
+
+BeginCmp
+TimeStamp = 2b9c5fff-a31b-4965-9dd7-fb832e6a8bed
+Path = /39b84d36-9589-49e9-b757-2ce260adac86
+Reference = J104;
+ValeurCmp = Conn_02x13_Odd_Even;
+IdModule  = f4deb-mod-library:PinSocket_2x13_P1.27mm_Vertical_SMD;
+EndCmp
+
+BeginCmp
+TimeStamp = 2dd2fb9e-cd16-4ea0-9b6a-33e45f27da71
+Path = 
+Reference = J102;
+ValeurCmp = Conn_02x13_Odd_Even;
+IdModule  = f4deb-mod-library:PinSocket_2x13_P1.27mm_Vertical_SMD;
+EndCmp
+
+BeginCmp
+TimeStamp = 2fab1831-2c47-4454-8ae3-d0cbc498caeb
+Path = 
+Reference = C106;
+ValeurCmp = 100n;
+IdModule  = f4deb-mod-library:C_0603_1608Metric;
+EndCmp
+
+BeginCmp
+TimeStamp = 3236f749-022e-4df2-a8f1-e820cd0b7365
+Path = 
+Reference = Y1001;
+ValeurCmp = 8Mhz;
+IdModule  = f4deb-mod-library:Crystal_SMD_Abracon_ABM3C-4Pin_5.0x3.2mm;
+EndCmp
+
+BeginCmp
+TimeStamp = 32d521cb-a0cc-43ef-9557-7c1c024c1ec0
+Path = /5dc4ad31-8020-4330-9de3-4fcd1a08b45a
+Reference = C110;
+ValeurCmp = 100n;
+IdModule  = f4deb-mod-library:C_0603_1608Metric;
+EndCmp
+
+BeginCmp
+TimeStamp = 3818a3ac-4acc-4674-bece-9bfd2389f0aa
+Path = /575886b0-2404-4c75-ba07-da765ff90fde
+Reference = R102;
+ValeurCmp = 2k2;
+IdModule  = f4deb-mod-library:R_0603_1608Metric;
+EndCmp
+
+BeginCmp
+TimeStamp = 38353e1e-c905-4796-94e3-a0cb0d4a1244
+Path = 
+Reference = C101;
+ValeurCmp = 22p;
+IdModule  = f4deb-mod-library:C_0603_1608Metric;
+EndCmp
+
+BeginCmp
+TimeStamp = 3d2dc046-c0c4-42b0-a06f-3adb00561f72
+Path = 
+Reference = J102;
+ValeurCmp = Conn_02x13_Odd_Even;
+IdModule  = f4deb-mod-library:PinSocket_2x13_P1.27mm_Vertical_SMD;
+EndCmp
+
+BeginCmp
+TimeStamp = 3eecab8c-0c67-4aee-a0ec-b03242e265e0
+Path = 
+Reference = C103;
+ValeurCmp = 22p;
+IdModule  = f4deb-mod-library:C_0603_1608Metric;
+EndCmp
+
+BeginCmp
+TimeStamp = 3efea89c-eee1-486b-863c-8efee6090c7e
+Path = 
+Reference = Y1001;
+ValeurCmp = 8Mhz;
+IdModule  = f4deb-mod-library:Crystal_SMD_Abracon_ABM3C-4Pin_5.0x3.2mm;
+EndCmp
+
+BeginCmp
+TimeStamp = 40b87126-1c34-47ae-ae55-ac9084a3d465
+Path = 
+Reference = C109;
+ValeurCmp = 100n;
+IdModule  = f4deb-mod-library:C_0603_1608Metric;
+EndCmp
+
+BeginCmp
+TimeStamp = 421be0a2-fb77-4983-b191-59f0e068b110
+Path = 
+Reference = C109;
+ValeurCmp = 100n;
+IdModule  = f4deb-mod-library:C_0603_1608Metric;
+EndCmp
+
+BeginCmp
+TimeStamp = 439fb484-eefa-46a1-af1a-6141a9bb32d8
+Path = 
+Reference = C107;
+ValeurCmp = 100n;
+IdModule  = f4deb-mod-library:C_0603_1608Metric;
+EndCmp
+
+BeginCmp
+TimeStamp = 47a94268-dae3-4487-ba34-6984292a37e4
+Path = 
+Reference = C105;
+ValeurCmp = 10µ;
+IdModule  = f4deb-mod-library:CP_EIA-1608-08_AVX-J;
+EndCmp
+
+BeginCmp
+TimeStamp = 564b94a2-eeec-4937-9da5-2fde22d6d3a3
+Path = 
+Reference = C107;
+ValeurCmp = 100n;
+IdModule  = f4deb-mod-library:C_0603_1608Metric;
+EndCmp
+
+BeginCmp
+TimeStamp = 6082ebf1-387c-45ac-9fc1-4bc0976726df
+Path = 
+Reference = REF**;
+ValeurCmp = Crystal_SMD_2016-4Pin_2.0x1.6mm;
+IdModule  = f4deb-mod-library:Crystal_SMD_2016-4Pin_2.0x1.6mm;
+EndCmp
+
+BeginCmp
+TimeStamp = 60ec0769-c24b-43d8-928f-db0596372f1f
+Path = 
+Reference = R102;
+ValeurCmp = 2k2;
+IdModule  = f4deb-mod-library:R_0603_1608Metric;
+EndCmp
+
+BeginCmp
+TimeStamp = 646f562c-9430-4c55-99fd-f5fdecf915c7
+Path = 
+Reference = C109;
+ValeurCmp = 100n;
+IdModule  = f4deb-mod-library:C_0603_1608Metric;
+EndCmp
+
+BeginCmp
+TimeStamp = 652cdfda-f9fe-40ce-b268-66090035a1fc
+Path = 
+Reference = J104;
+ValeurCmp = Conn_02x13_Odd_Even;
+IdModule  = f4deb-mod-library:PinSocket_2x13_P1.27mm_Vertical_SMD;
+EndCmp
+
+BeginCmp
+TimeStamp = 6541f8fa-fb1e-467f-9752-334619d1ec95
+Path = 
+Reference = C110;
+ValeurCmp = 100n;
+IdModule  = f4deb-mod-library:C_0603_1608Metric;
+EndCmp
+
+BeginCmp
+TimeStamp = 6594e9ac-bd9e-479f-9e31-ef3dc768d54a
+Path = 
+Reference = R101;
+ValeurCmp = 10M;
+IdModule  = f4deb-mod-library:R_0603_1608Metric;
+EndCmp
+
+BeginCmp
+TimeStamp = 65ebeb8f-b7c6-4211-bbc1-7623a2df8a42
+Path = 
+Reference = C107;
+ValeurCmp = 100n;
+IdModule  = f4deb-mod-library:C_0603_1608Metric;
+EndCmp
+
+BeginCmp
+TimeStamp = 6c277f1c-1916-470f-baad-6bb02a7c19cd
+Path = 
+Reference = C111;
+ValeurCmp = 100n;
+IdModule  = f4deb-mod-library:C_0603_1608Metric;
+EndCmp
+
+BeginCmp
+TimeStamp = 6e3c629a-0328-4f9a-bbca-d782634e1ee1
+Path = 
+Reference = J101;
+ValeurCmp = Conn_02x13_Odd_Even;
+IdModule  = f4deb-mod-library:PinSocket_2x13_P1.27mm_Vertical_SMD;
+EndCmp
+
+BeginCmp
+TimeStamp = 71a03823-4090-4f9f-b4be-bf24f693d775
+Path = 
+Reference = C104;
+ValeurCmp = 33p;
+IdModule  = f4deb-mod-library:C_0603_1608Metric;
+EndCmp
+
+BeginCmp
+TimeStamp = 73ea04e6-b80f-41ee-bf83-a2f9a66b80da
+Path = 
+Reference = C111;
+ValeurCmp = 100n;
+IdModule  = f4deb-mod-library:C_0603_1608Metric;
+EndCmp
+
+BeginCmp
+TimeStamp = 76cde86e-5d5d-4560-bae3-1c6884ea375f
+Path = /e75ae776-dde2-4dd2-b4a3-b0d3625cc1dd
+Reference = C101;
+ValeurCmp = 22p;
+IdModule  = f4deb-mod-library:C_0603_1608Metric;
+EndCmp
+
+BeginCmp
+TimeStamp = 771e7ee9-9b4e-4cca-ae18-4a34eba3fbd1
+Path = 
+Reference = C102;
+ValeurCmp = 33p;
+IdModule  = f4deb-mod-library:C_0603_1608Metric;
+EndCmp
+
+BeginCmp
+TimeStamp = 78c6a7a3-a428-4a1a-b9e7-0d6da7331c27
+Path = 
+Reference = Y102;
+ValeurCmp = Crystal_Small;
+IdModule  = f4deb-mod-library:Crystal_SMD_SeikoEpson_MC306-4Pin_8.0x3.2mm;
+EndCmp
+
+BeginCmp
+TimeStamp = 7efd8587-e5c8-4a2c-81f1-f89fbc8b0c90
+Path = 
+Reference = R102;
+ValeurCmp = 2k2;
+IdModule  = f4deb-mod-library:R_0603_1608Metric;
+EndCmp
+
+BeginCmp
+TimeStamp = 7f43a2c8-22ba-45d1-bb7d-2f7959b879bb
+Path = 
+Reference = J102;
+ValeurCmp = Conn_02x13_Odd_Even;
+IdModule  = f4deb-mod-library:PinSocket_2x13_P1.27mm_Vertical_SMD;
+EndCmp
+
+BeginCmp
+TimeStamp = 80ad87bb-84c3-4e35-ad77-d21bf0b137df
+Path = 
+Reference = C106;
+ValeurCmp = 100n;
+IdModule  = f4deb-mod-library:C_0603_1608Metric;
+EndCmp
+
+BeginCmp
+TimeStamp = 816904c6-5a12-448c-9126-7e6bda376fde
+Path = /ed622a5c-c328-4c87-b0e3-b0b42e0d35c7
+Reference = J101;
+ValeurCmp = Conn_02x13_Odd_Even;
+IdModule  = f4deb-mod-library:PinSocket_2x13_P1.27mm_Vertical_SMD;
+EndCmp
+
+BeginCmp
+TimeStamp = 8541e2fe-79de-49ec-bac4-82f7847aa3b7
+Path = 
+Reference = J104;
+ValeurCmp = Conn_02x13_Odd_Even;
+IdModule  = f4deb-mod-library:PinSocket_2x13_P1.27mm_Vertical_SMD;
+EndCmp
+
+BeginCmp
+TimeStamp = 896a2788-213e-48d0-8bd8-c81f8aaaf900
+Path = 
+Reference = Y102;
+ValeurCmp = Crystal_Small;
+IdModule  = f4deb-mod-library:Crystal_SMD_SeikoEpson_MC306-4Pin_8.0x3.2mm;
+EndCmp
+
+BeginCmp
+TimeStamp = 950c8b06-30d6-49a6-bf1c-ff31cedbc185
+Path = 
+Reference = REF**;
+ValeurCmp = Crystal_SMD_SeikoEpson_MC306-4Pin_8.0x3.2mm_HandSoldering;
+IdModule  = f4deb-mod-library:Crystal_SMD_SeikoEpson_MC306-4Pin_8.0x3.2mm_HandSoldering;
+EndCmp
+
+BeginCmp
+TimeStamp = 9a8ca7ee-4474-414c-ad66-8cfca96fd9a6
+Path = 
+Reference = J101;
+ValeurCmp = Conn_02x13_Odd_Even;
+IdModule  = f4deb-mod-library:PinSocket_2x13_P1.27mm_Vertical_SMD;
+EndCmp
+
+BeginCmp
+TimeStamp = a163224f-3113-48f5-9db6-a784f2165300
+Path = 
+Reference = J103;
+ValeurCmp = Conn_02x13_Odd_Even;
+IdModule  = f4deb-mod-library:PinSocket_2x13_P1.27mm_Vertical_SMD;
+EndCmp
+
+BeginCmp
+TimeStamp = a350b748-ac42-427b-8d98-e7629721318d
+Path = /967f96a9-628e-4206-b5b6-e316a04953f0
+Reference = J102;
+ValeurCmp = Conn_02x13_Odd_Even;
+IdModule  = f4deb-mod-library:PinSocket_2x13_P1.27mm_Vertical_SMD;
+EndCmp
+
+BeginCmp
+TimeStamp = a3ce8f44-46b6-482e-8526-c61342e56d77
+Path = 
+Reference = C110;
+ValeurCmp = 100n;
+IdModule  = f4deb-mod-library:C_0603_1608Metric;
+EndCmp
+
+BeginCmp
+TimeStamp = ad651be5-0ffe-4490-a675-ba730f7070e0
+Path = 
+Reference = REF**;
+ValeurCmp = Crystal_SMD_SeikoEpson_MC306-4Pin_8.0x3.2mm_HandSoldering;
+IdModule  = f4deb-mod-library:Crystal_SMD_SeikoEpson_MC306-4Pin_8.0x3.2mm_HandSoldering;
+EndCmp
+
+BeginCmp
+TimeStamp = b560723c-9712-4724-adee-df89b3272e2d
+Path = 
+Reference = REF**;
+ValeurCmp = Crystal_SMD_2016-4Pin_2.0x1.6mm;
+IdModule  = f4deb-mod-library:Crystal_SMD_2016-4Pin_2.0x1.6mm;
+EndCmp
+
+BeginCmp
+TimeStamp = b712d8e8-5184-4b0b-bff7-40e6a5612271
+Path = /92abce56-04fc-4a17-bd7c-7c926976373a
+Reference = C107;
+ValeurCmp = 100n;
+IdModule  = f4deb-mod-library:C_0603_1608Metric;
+EndCmp
+
+BeginCmp
+TimeStamp = b93046b5-44c1-4d78-947e-39150abdae04
+Path = 
+Reference = REF**;
+ValeurCmp = Crystal_SMD_SeikoEpson_MC306-4Pin_8.0x3.2mm_HandSoldering;
+IdModule  = f4deb-mod-library:Crystal_SMD_SeikoEpson_MC306-4Pin_8.0x3.2mm_HandSoldering;
+EndCmp
+
+BeginCmp
+TimeStamp = baedbeb2-d251-4e7d-9ff8-b842c36b08bd
+Path = /de2f05b2-dfd9-4455-b6ea-361249dfa929
+Reference = C103;
+ValeurCmp = 22p;
+IdModule  = f4deb-mod-library:C_0603_1608Metric;
+EndCmp
+
+BeginCmp
+TimeStamp = bc757619-5a77-49f9-ad06-5555be434e77
+Path = 
+Reference = REF**;
+ValeurCmp = Crystal_SMD_SeikoEpson_FA238V-4Pin_3.2x2.5mm_HandSoldering;
+IdModule  = f4deb-mod-library:Crystal_SMD_SeikoEpson_FA238V-4Pin_3.2x2.5mm_HandSoldering;
+EndCmp
+
+BeginCmp
+TimeStamp = bd8fb72b-301b-4c89-bb3b-07cc6038f8f4
+Path = 
+Reference = J103;
+ValeurCmp = Conn_02x13_Odd_Even;
+IdModule  = f4deb-mod-library:PinSocket_2x13_P1.27mm_Vertical_SMD;
+EndCmp
+
+BeginCmp
+TimeStamp = bfdc8828-a97c-4a21-9ed7-958d216e3259
+Path = 
+Reference = REF**;
+ValeurCmp = Crystal_SMD_SeikoEpson_FA238V-4Pin_3.2x2.5mm_HandSoldering;
+IdModule  = f4deb-mod-library:Crystal_SMD_SeikoEpson_FA238V-4Pin_3.2x2.5mm_HandSoldering;
+EndCmp
+
+BeginCmp
+TimeStamp = bffda713-cd71-4753-9b0f-ccbd869842a8
+Path = 
+Reference = C108;
+ValeurCmp = 100n;
+IdModule  = f4deb-mod-library:C_0603_1608Metric;
+EndCmp
+
+BeginCmp
+TimeStamp = c95af0be-1349-4ac5-8549-2f6061ae7e7c
+Path = 
+Reference = C104;
+ValeurCmp = 33p;
+IdModule  = f4deb-mod-library:C_0603_1608Metric;
+EndCmp
+
+BeginCmp
+TimeStamp = cb2a3282-c6b2-4dd2-9e4d-e0d3569684d5
+Path = 
+Reference = R101;
+ValeurCmp = 10M;
+IdModule  = f4deb-mod-library:R_0603_1608Metric;
+EndCmp
+
+BeginCmp
+TimeStamp = d311ae13-5d7b-46c6-b627-a3514474d62d
+Path = /d0cf9090-5200-4e54-91d0-eb965741df84
+Reference = Y1001;
+ValeurCmp = 8Mhz;
+IdModule  = f4deb-mod-library:Crystal_SMD_Abracon_ABM3C-4Pin_5.0x3.2mm;
+EndCmp
+
+BeginCmp
+TimeStamp = da0f8374-4bff-4871-ac9c-3539e6d901e8
+Path = 
+Reference = C110;
+ValeurCmp = 100n;
+IdModule  = f4deb-mod-library:C_0603_1608Metric;
+EndCmp
+
+BeginCmp
+TimeStamp = db36c531-09f0-4498-b272-cd7981936cb5
+Path = /d450e293-693c-4ca3-8241-e3ffba0e725c
+Reference = C106;
+ValeurCmp = 100n;
+IdModule  = f4deb-mod-library:C_0603_1608Metric;
+EndCmp
+
+BeginCmp
+TimeStamp = dcbd5122-7e16-479e-b37e-c0dd4fb7506c
+Path = /4b616e8e-f384-4e44-afb1-350e905ff687
+Reference = C109;
+ValeurCmp = 100n;
+IdModule  = f4deb-mod-library:C_0603_1608Metric;
+EndCmp
+
+BeginCmp
+TimeStamp = dd55d4a0-a870-4d94-a240-73f900a1fd54
+Path = /63613d25-bdc7-4343-80d6-1eb6a8974760
+Reference = C105;
+ValeurCmp = 10µ;
+IdModule  = f4deb-mod-library:CP_EIA-1608-08_AVX-J;
+EndCmp
+
+BeginCmp
+TimeStamp = e1961147-192c-43f3-81cf-0ff6ab2d1d6e
+Path = 
+Reference = C106;
+ValeurCmp = 100n;
+IdModule  = f4deb-mod-library:C_0603_1608Metric;
+EndCmp
+
+BeginCmp
+TimeStamp = ea07bf51-2762-4df5-9a68-cd8f667fc106
+Path = 
+Reference = C102;
+ValeurCmp = 33p;
+IdModule  = f4deb-mod-library:C_0603_1608Metric;
+EndCmp
+
+BeginCmp
+TimeStamp = eaf03030-6bf9-4a7d-8422-fdb645efb22d
+Path = 
+Reference = C111;
+ValeurCmp = 100n;
+IdModule  = f4deb-mod-library:C_0603_1608Metric;
+EndCmp
+
+BeginCmp
+TimeStamp = ec74e23e-0e6f-4765-a982-c926bb9a3e60
+Path = 
+Reference = J101;
+ValeurCmp = Conn_02x13_Odd_Even;
+IdModule  = f4deb-mod-library:PinSocket_2x13_P1.27mm_Vertical_SMD;
+EndCmp
+
+BeginCmp
+TimeStamp = ef49c8b3-a14d-4ee2-8f78-abd253fc9fd4
+Path = /6f5b2777-1604-4c1d-9e16-d92b521cdf8c
+Reference = C104;
+ValeurCmp = 33p;
+IdModule  = f4deb-mod-library:C_0603_1608Metric;
+EndCmp
+
+BeginCmp
+TimeStamp = efa7b6d0-94dd-4a73-83e8-92147938fe88
+Path = 
+Reference = C104;
+ValeurCmp = 33p;
+IdModule  = f4deb-mod-library:C_0603_1608Metric;
+EndCmp
+
+BeginCmp
+TimeStamp = f16b7e57-b2f5-44ae-a611-21a6f4696f2e
+Path = /8161b0bb-70f9-48f9-8274-2fc362807dc3
+Reference = Y102;
+ValeurCmp = Crystal_Small;
+IdModule  = f4deb-mod-library:Crystal_SMD_SeikoEpson_MC306-4Pin_8.0x3.2mm;
+EndCmp
+
+BeginCmp
+TimeStamp = f3b2506a-2238-468c-a9bd-71fc8ca2e821
+Path = 
+Reference = J103;
+ValeurCmp = Conn_02x13_Odd_Even;
+IdModule  = f4deb-mod-library:PinSocket_2x13_P1.27mm_Vertical_SMD;
+EndCmp
+
+BeginCmp
+TimeStamp = f9e778f7-a3f4-4fc6-bfa0-a2bd29c08870
+Path = 
+Reference = C105;
+ValeurCmp = 10µ;
+IdModule  = f4deb-mod-library:CP_EIA-1608-08_AVX-J;
+EndCmp
+
+BeginCmp
+TimeStamp = fcace4a8-824b-466b-8787-d34b71d73cdf
+Path = 
+Reference = C101;
+ValeurCmp = 22p;
+IdModule  = f4deb-mod-library:C_0603_1608Metric;
+EndCmp
+
+BeginCmp
+TimeStamp = fda14e8d-b032-40e4-bfad-150d79afe242
+Path = 
+Reference = C103;
+ValeurCmp = 22p;
+IdModule  = f4deb-mod-library:C_0603_1608Metric;
+EndCmp
+
+BeginCmp
+TimeStamp = ff2127e4-6936-46dd-9b05-afc42bfe1f6a
+Path = 
+Reference = C108;
+ValeurCmp = 100n;
+IdModule  = f4deb-mod-library:C_0603_1608Metric;
+EndCmp
+
+EndListe

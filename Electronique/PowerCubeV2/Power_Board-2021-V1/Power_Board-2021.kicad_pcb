@@ -1827,7 +1827,7 @@
       (net 2 "GND") (tstamp b6e7e52e-fa7c-4663-b29b-8d72461a55fb))
     (pad "2" thru_hole oval locked (at 5.08 0) (size 2.08 3.6) (drill 1.4) (layers *.Cu *.Mask)
       (net 40 "+VSW") (tstamp af35a153-e4cc-4cb5-9b0a-a247aa9a27b2))
-    (model "${KISYS3DMOD}/Connector_Phoenix_MSTB.3dshapes/PhoenixContact_MSTBA_2,5_2-G-5,08_1x02_P5.08mm_Horizontal.wrl"
+    (model "${KICAD6_3DMODEL_DIR}/Connector_Phoenix_MSTB.3dshapes/PhoenixContact_MSTBA_2,5_2-G-5,08_1x02_P5.08mm_Horizontal.wrl"
       (offset (xyz 0 0 0))
       (scale (xyz 1 1 1))
       (rotate (xyz 0 0 0))
