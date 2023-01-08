@@ -5,7 +5,7 @@ frameworkPath: /home/f4deb/MPLABXProjects/harmony
 processor: PIC32MZ2048EFM100
 projectName: Test_7Seg
 settings:
-  PackageFilter: core;core_apps_pic32mx;usb_apps_multi_controller;bsp;x2c;bootloader_apps_usb;motor_control;csp_apps_pic32mz_ef;gfx;usb;usb_apps_dual_role;usb_apps_host;csp_apps_pic32mx;gfx_apps_pic32mz_ef;usb_apps_device;mc_apps_pic32cm_mc;quick_docs;core_apps_pic32mz_ef;net;csp;bootloader;bootloader_apps_uart;crypto
+  PackageFilter: core;core_apps_pic32mx;usb_apps_multi_controller;bsp;x2c;bootloader_apps_usb;harmony-services;motor_control;csp_apps_pic32mz_ef;gfx;usb;usb_apps_dual_role;usb_apps_host;csp_apps_pic32mx;gfx_apps_pic32mz_ef;usb_apps_device;mc_apps_pic32cm_mc;quick_docs;core_apps_pic32mz_ef;net;csp;bootloader;bootloader_apps_uart;crypto;csp_apps_pic32mz_w1
   FORCE_OPTIMIZATION: 'false'
   GENERATE_BACKUP: 'true'
   TRUSTZONE: 'false'

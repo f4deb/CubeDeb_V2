@@ -1,1 +1,0 @@
-$(MP_EXTRA_AS_PRE)  -c -mprocessor=$(MP_PROCESSOR_OPTION) -DXPRJ_default=$(CND_CONF)  -no-legacy-libc  -Wa,--defsym=__MPLAB_BUILD=1$(MP_EXTRA_AS_POST),--gdwarf-2 /media/f4deb/ROBOT/ELECTRONIQUE/CubDebV2/Informatique/firmware/src/config/default/peripheral/cache/plib_cache_pic32mz.S
