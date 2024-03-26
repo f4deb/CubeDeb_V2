@@ -2544,7 +2544,7 @@
     (pin "8" (uuid ee16771b-aed3-4080-b343-6e728660dc9f))
     (pin "9" (uuid a9b08520-ec44-45e0-b0f2-0f856e397d94))
     (instances
-      (project "CpuCubeV2-00"
+      (project "CpuVubeV3-00-STM32"
         (path "/0311a7ec-9aa9-4a22-9c42-104f90cefcca"
           (reference "J102") (unit 1)
         )
@@ -2608,7 +2608,7 @@
     (pin "8" (uuid c36f8251-808c-4f72-8a4b-d0fe3ef6d78f))
     (pin "9" (uuid 26c54d9e-426a-46a2-8f80-7ac178df51ff))
     (instances
-      (project "CpuCubeV2-00"
+      (project "CpuVubeV3-00-STM32"
         (path "/0311a7ec-9aa9-4a22-9c42-104f90cefcca"
           (reference "J101") (unit 1)
         )
@@ -2633,7 +2633,7 @@
     )
     (pin "1" (uuid 754bf98a-8769-4626-8a48-f7ea25e97916))
     (instances
-      (project "CpuCubeV2-00"
+      (project "CpuVubeV3-00-STM32"
         (path "/0311a7ec-9aa9-4a22-9c42-104f90cefcca"
           (reference "#PWR0114") (unit 1)
         )
@@ -2658,7 +2658,7 @@
     )
     (pin "1" (uuid ec7425db-97df-4e3f-a1d9-7fa3fa52762c))
     (instances
-      (project "CpuCubeV2-00"
+      (project "CpuVubeV3-00-STM32"
         (path "/0311a7ec-9aa9-4a22-9c42-104f90cefcca"
           (reference "#PWR0116") (unit 1)
         )
@@ -2683,7 +2683,7 @@
     )
     (pin "1" (uuid 1f06b6a4-22d3-4d97-9ac5-ac4136235e28))
     (instances
-      (project "CpuCubeV2-00"
+      (project "CpuVubeV3-00-STM32"
         (path "/0311a7ec-9aa9-4a22-9c42-104f90cefcca"
           (reference "#PWR0118") (unit 1)
         )
@@ -2708,7 +2708,7 @@
     )
     (pin "1" (uuid d4cd87e2-b977-4912-8c02-b958c3339182))
     (instances
-      (project "CpuCubeV2-00"
+      (project "CpuVubeV3-00-STM32"
         (path "/0311a7ec-9aa9-4a22-9c42-104f90cefcca"
           (reference "#PWR0120") (unit 1)
         )
@@ -2733,7 +2733,7 @@
     )
     (pin "1" (uuid 874c218a-578e-4a62-a8c1-fe8414dd125f))
     (instances
-      (project "CpuCubeV2-00"
+      (project "CpuVubeV3-00-STM32"
         (path "/0311a7ec-9aa9-4a22-9c42-104f90cefcca"
           (reference "#PWR0122") (unit 1)
         )
@@ -2758,7 +2758,7 @@
     )
     (pin "1" (uuid b270f771-721b-49fe-aa42-63a5cebe1f4d))
     (instances
-      (project "CpuCubeV2-00"
+      (project "CpuVubeV3-00-STM32"
         (path "/0311a7ec-9aa9-4a22-9c42-104f90cefcca"
           (reference "#PWR0109") (unit 1)
         )
@@ -2783,7 +2783,7 @@
     )
     (pin "1" (uuid 2d665c4d-1437-426f-b9cd-c53451fe5b1a))
     (instances
-      (project "CpuCubeV2-00"
+      (project "CpuVubeV3-00-STM32"
         (path "/0311a7ec-9aa9-4a22-9c42-104f90cefcca"
           (reference "#PWR0107") (unit 1)
         )
@@ -2808,7 +2808,7 @@
     )
     (pin "1" (uuid 129eaff2-2269-463c-b45a-6ec00be62569))
     (instances
-      (project "CpuCubeV2-00"
+      (project "CpuVubeV3-00-STM32"
         (path "/0311a7ec-9aa9-4a22-9c42-104f90cefcca"
           (reference "#PWR0105") (unit 1)
         )
@@ -2833,7 +2833,7 @@
     )
     (pin "1" (uuid f1d21065-3e98-4f76-bf00-449e62d84735))
     (instances
-      (project "CpuCubeV2-00"
+      (project "CpuVubeV3-00-STM32"
         (path "/0311a7ec-9aa9-4a22-9c42-104f90cefcca"
           (reference "#PWR0103") (unit 1)
         )
@@ -2858,7 +2858,7 @@
     )
     (pin "1" (uuid 39b32f38-e85c-4148-a7da-5963c53275c0))
     (instances
-      (project "CpuCubeV2-00"
+      (project "CpuVubeV3-00-STM32"
         (path "/0311a7ec-9aa9-4a22-9c42-104f90cefcca"
           (reference "#PWR0101") (unit 1)
         )
@@ -2883,7 +2883,7 @@
     )
     (pin "1" (uuid abea12a4-22aa-493e-b609-93e74c746b7c))
     (instances
-      (project "CpuCubeV2-00"
+      (project "CpuVubeV3-00-STM32"
         (path "/0311a7ec-9aa9-4a22-9c42-104f90cefcca"
           (reference "#PWR0112") (unit 1)
         )
@@ -2908,7 +2908,7 @@
     )
     (pin "1" (uuid 8d859ebf-9390-4cb5-961d-e7beaa0a4ae4))
     (instances
-      (project "CpuCubeV2-00"
+      (project "CpuVubeV3-00-STM32"
         (path "/0311a7ec-9aa9-4a22-9c42-104f90cefcca"
           (reference "#PWR0125") (unit 1)
         )
@@ -2938,7 +2938,7 @@
     (pin "5" (uuid 2a80e520-c5bd-402d-9b26-1a7536775a36))
     (pin "6" (uuid 9bdc1c4a-b5e8-4104-8343-beab0b766ae2))
     (instances
-      (project "CpuCubeV2-00"
+      (project "CpuVubeV3-00-STM32"
         (path "/0311a7ec-9aa9-4a22-9c42-104f90cefcca"
           (reference "J103") (unit 1)
         )
@@ -2963,7 +2963,7 @@
     )
     (pin "1" (uuid f0efb02d-e7cf-4fd7-879b-eb2dd5ed72d8))
     (instances
-      (project "CpuCubeV2-00"
+      (project "CpuVubeV3-00-STM32"
         (path "/0311a7ec-9aa9-4a22-9c42-104f90cefcca"
           (reference "#PWR0111") (unit 1)
         )
@@ -2988,7 +2988,7 @@
     )
     (pin "1" (uuid 439e57fb-3fda-43db-b0fd-ac5b4eacc4c0))
     (instances
-      (project "CpuCubeV2-00"
+      (project "CpuVubeV3-00-STM32"
         (path "/0311a7ec-9aa9-4a22-9c42-104f90cefcca"
           (reference "#PWR0124") (unit 1)
         )
@@ -3017,7 +3017,7 @@
     (pin "4" (uuid 1d9bf0eb-4cb4-4316-98f4-e0581ba1b289))
     (pin "MP" (uuid 68ce505e-d20d-479c-bde0-5d5a306045f2))
     (instances
-      (project "CpuCubeV2-00"
+      (project "CpuVubeV3-00-STM32"
         (path "/0311a7ec-9aa9-4a22-9c42-104f90cefcca"
           (reference "J105") (unit 1)
         )
@@ -3042,7 +3042,7 @@
     )
     (pin "1" (uuid 851a5144-622e-4e9b-84aa-b2177ea53c92))
     (instances
-      (project "CpuCubeV2-00"
+      (project "CpuVubeV3-00-STM32"
         (path "/0311a7ec-9aa9-4a22-9c42-104f90cefcca"
           (reference "#PWR0128") (unit 1)
         )
@@ -3067,7 +3067,7 @@
     )
     (pin "1" (uuid 85ee03d2-f1a1-49f6-9979-78546eb28de8))
     (instances
-      (project "CpuCubeV2-00"
+      (project "CpuVubeV3-00-STM32"
         (path "/0311a7ec-9aa9-4a22-9c42-104f90cefcca"
           (reference "#PWR0130") (unit 1)
         )
@@ -3092,7 +3092,7 @@
     )
     (pin "1" (uuid 18e3600f-2088-4659-97d0-c83b17047ead))
     (instances
-      (project "CpuCubeV2-00"
+      (project "CpuVubeV3-00-STM32"
         (path "/0311a7ec-9aa9-4a22-9c42-104f90cefcca"
           (reference "#PWR0131") (unit 1)
         )
@@ -3117,7 +3117,7 @@
     )
     (pin "1" (uuid 63889b5b-319a-4ec7-9d88-38746b1ff624))
     (instances
-      (project "CpuCubeV2-00"
+      (project "CpuVubeV3-00-STM32"
         (path "/0311a7ec-9aa9-4a22-9c42-104f90cefcca"
           (reference "#PWR0129") (unit 1)
         )
@@ -3142,7 +3142,7 @@
     )
     (pin "1" (uuid 149f0dc4-9b74-4a1a-a37b-7eb355956a7a))
     (instances
-      (project "CpuCubeV2-00"
+      (project "CpuVubeV3-00-STM32"
         (path "/0311a7ec-9aa9-4a22-9c42-104f90cefcca"
           (reference "#PWR0133") (unit 1)
         )
@@ -3167,7 +3167,7 @@
     )
     (pin "1" (uuid 92eb945d-261b-4129-876b-6425a392ebe4))
     (instances
-      (project "CpuCubeV2-00"
+      (project "CpuVubeV3-00-STM32"
         (path "/0311a7ec-9aa9-4a22-9c42-104f90cefcca"
           (reference "#PWR0136") (unit 1)
         )
@@ -3197,7 +3197,7 @@
     (pin "5" (uuid 0487eaf1-aed4-43c8-b413-58a751ee6704))
     (pin "6" (uuid 6eb1781a-4418-45eb-995f-e2c7b4183f51))
     (instances
-      (project "CpuCubeV2-00"
+      (project "CpuVubeV3-00-STM32"
         (path "/0311a7ec-9aa9-4a22-9c42-104f90cefcca"
           (reference "J104") (unit 1)
         )
@@ -3223,7 +3223,7 @@
     (pin "1" (uuid 76e79a62-3d9e-4b48-8edc-44dbee8f7c72))
     (pin "2" (uuid b4832bec-cee0-4007-85c7-ba416296063e))
     (instances
-      (project "CpuCubeV2-00"
+      (project "CpuVubeV3-00-STM32"
         (path "/0311a7ec-9aa9-4a22-9c42-104f90cefcca"
           (reference "SW101") (unit 1)
         )
@@ -3248,7 +3248,7 @@
     )
     (pin "1" (uuid 7ab6fae9-56c8-4516-b817-e0c8cea9f716))
     (instances
-      (project "CpuCubeV2-00"
+      (project "CpuVubeV3-00-STM32"
         (path "/0311a7ec-9aa9-4a22-9c42-104f90cefcca"
           (reference "#PWR0135") (unit 1)
         )
@@ -3273,7 +3273,7 @@
     )
     (pin "1" (uuid 72c37b71-e5ea-462b-ac39-1f2cc9e4d966))
     (instances
-      (project "CpuCubeV2-00"
+      (project "CpuVubeV3-00-STM32"
         (path "/0311a7ec-9aa9-4a22-9c42-104f90cefcca"
           (reference "#PWR0113") (unit 1)
         )
@@ -3300,7 +3300,7 @@
     (pin "2" (uuid d686423e-d0d7-45ab-8407-168b27b7c67d))
     (pin "3" (uuid cc0bcf18-1292-4e74-bc2c-01d91cdf6c5f))
     (instances
-      (project "CpuCubeV2-00"
+      (project "CpuVubeV3-00-STM32"
         (path "/0311a7ec-9aa9-4a22-9c42-104f90cefcca"
           (reference "D101") (unit 1)
         )
@@ -3327,7 +3327,7 @@
     (pin "2" (uuid 2c2df9d2-92f1-4098-bc8b-826d4ed888e9))
     (pin "3" (uuid 08379be7-4c07-4054-9464-dde520de4283))
     (instances
-      (project "CpuCubeV2-00"
+      (project "CpuVubeV3-00-STM32"
         (path "/0311a7ec-9aa9-4a22-9c42-104f90cefcca"
           (reference "D102") (unit 1)
         )
@@ -3352,7 +3352,7 @@
     )
     (pin "1" (uuid 785018e4-6d9c-4006-b6ed-ddbb040b9ced))
     (instances
-      (project "CpuCubeV2-00"
+      (project "CpuVubeV3-00-STM32"
         (path "/0311a7ec-9aa9-4a22-9c42-104f90cefcca"
           (reference "#PWR0121") (unit 1)
         )
@@ -3377,7 +3377,7 @@
     )
     (pin "1" (uuid 80071e26-dcf4-4f41-bffe-339754a8cb53))
     (instances
-      (project "CpuCubeV2-00"
+      (project "CpuVubeV3-00-STM32"
         (path "/0311a7ec-9aa9-4a22-9c42-104f90cefcca"
           (reference "#PWR0139") (unit 1)
         )
@@ -3403,7 +3403,7 @@
     (pin "1" (uuid 965b32f2-c22d-4339-bdea-fe5914c58b20))
     (pin "2" (uuid f4f9b17e-c081-4504-a241-90896652ed2f))
     (instances
-      (project "CpuCubeV2-00"
+      (project "CpuVubeV3-00-STM32"
         (path "/0311a7ec-9aa9-4a22-9c42-104f90cefcca"
           (reference "R104") (unit 1)
         )
@@ -3428,7 +3428,7 @@
     )
     (pin "1" (uuid dcf236db-4e5b-4eab-9458-7087f2af617a))
     (instances
-      (project "CpuCubeV2-00"
+      (project "CpuVubeV3-00-STM32"
         (path "/0311a7ec-9aa9-4a22-9c42-104f90cefcca"
           (reference "#PWR0134") (unit 1)
         )
@@ -3453,7 +3453,7 @@
     )
     (pin "1" (uuid cb58f156-0f5d-4f56-a39b-93240aa6fd02))
     (instances
-      (project "CpuCubeV2-00"
+      (project "CpuVubeV3-00-STM32"
         (path "/0311a7ec-9aa9-4a22-9c42-104f90cefcca"
           (reference "#PWR0119") (unit 1)
         )
@@ -3478,7 +3478,7 @@
     )
     (pin "1" (uuid 1cd57279-9c98-4ca2-982e-30dc04c748d1))
     (instances
-      (project "CpuCubeV2-00"
+      (project "CpuVubeV3-00-STM32"
         (path "/0311a7ec-9aa9-4a22-9c42-104f90cefcca"
           (reference "#PWR0106") (unit 1)
         )
@@ -3503,7 +3503,7 @@
     )
     (pin "1" (uuid a53b94cc-1011-43f8-a03a-c5a3ebe3ac68))
     (instances
-      (project "CpuCubeV2-00"
+      (project "CpuVubeV3-00-STM32"
         (path "/0311a7ec-9aa9-4a22-9c42-104f90cefcca"
           (reference "#PWR0110") (unit 1)
         )
@@ -3529,7 +3529,7 @@
     (pin "1" (uuid 2e2f58dd-8589-473f-8dda-f145c5f78d50))
     (pin "2" (uuid 9bfe5a1a-efb7-4add-bd0e-1311deed3797))
     (instances
-      (project "CpuCubeV2-00"
+      (project "CpuVubeV3-00-STM32"
         (path "/0311a7ec-9aa9-4a22-9c42-104f90cefcca"
           (reference "R101") (unit 1)
         )
@@ -3554,7 +3554,7 @@
     )
     (pin "1" (uuid 0c389b47-baa9-47a0-84a8-57460d5476d6))
     (instances
-      (project "CpuCubeV2-00"
+      (project "CpuVubeV3-00-STM32"
         (path "/0311a7ec-9aa9-4a22-9c42-104f90cefcca"
           (reference "#PWR0115") (unit 1)
         )
@@ -3580,7 +3580,7 @@
     (pin "1" (uuid 0fbf92a4-b1be-4fb6-8a0e-89e53eebb30a))
     (pin "2" (uuid 963bcc35-eb7d-4bfa-98ba-debb0d3e7730))
     (instances
-      (project "CpuCubeV2-00"
+      (project "CpuVubeV3-00-STM32"
         (path "/0311a7ec-9aa9-4a22-9c42-104f90cefcca"
           (reference "R103") (unit 1)
         )
@@ -3605,7 +3605,7 @@
     )
     (pin "1" (uuid d26da530-da27-4820-8fe4-64b36f071baa))
     (instances
-      (project "CpuCubeV2-00"
+      (project "CpuVubeV3-00-STM32"
         (path "/0311a7ec-9aa9-4a22-9c42-104f90cefcca"
           (reference "#PWR0108") (unit 1)
         )
@@ -3630,7 +3630,7 @@
     )
     (pin "1" (uuid 54ba382c-759d-487e-9d25-84a84219028d))
     (instances
-      (project "CpuCubeV2-00"
+      (project "CpuVubeV3-00-STM32"
         (path "/0311a7ec-9aa9-4a22-9c42-104f90cefcca"
           (reference "#PWR0102") (unit 1)
         )
@@ -3656,7 +3656,7 @@
     (pin "1" (uuid 2e3bdad1-a035-450b-acd4-adcb32804fd2))
     (pin "2" (uuid 18794b09-3d30-498d-b5a5-d578b59d92d1))
     (instances
-      (project "CpuCubeV2-00"
+      (project "CpuVubeV3-00-STM32"
         (path "/0311a7ec-9aa9-4a22-9c42-104f90cefcca"
           (reference "R102") (unit 1)
         )
@@ -3681,7 +3681,7 @@
     )
     (pin "1" (uuid c485b839-d4d9-4574-9ac4-e2afeddcadd2))
     (instances
-      (project "CpuCubeV2-00"
+      (project "CpuVubeV3-00-STM32"
         (path "/0311a7ec-9aa9-4a22-9c42-104f90cefcca"
           (reference "#PWR0123") (unit 1)
         )
@@ -3706,7 +3706,7 @@
     )
     (pin "1" (uuid ccc8f3de-ec46-465d-91cc-b1db51d6864c))
     (instances
-      (project "CpuCubeV2-00"
+      (project "CpuVubeV3-00-STM32"
         (path "/0311a7ec-9aa9-4a22-9c42-104f90cefcca"
           (reference "#PWR0117") (unit 1)
         )
@@ -3731,7 +3731,7 @@
     )
     (pin "1" (uuid 5217e7f6-964c-4798-a72d-156f05129cd6))
     (instances
-      (project "CpuCubeV2-00"
+      (project "CpuVubeV3-00-STM32"
         (path "/0311a7ec-9aa9-4a22-9c42-104f90cefcca"
           (reference "#PWR0127") (unit 1)
         )
@@ -3756,7 +3756,7 @@
     )
     (pin "1" (uuid b05c1f87-b0b8-44ee-8f8c-106ee94c7453))
     (instances
-      (project "CpuCubeV2-00"
+      (project "CpuVubeV3-00-STM32"
         (path "/0311a7ec-9aa9-4a22-9c42-104f90cefcca"
           (reference "#PWR0126") (unit 1)
         )
@@ -3781,7 +3781,7 @@
     )
     (pin "1" (uuid 2ca8c142-e59c-43f4-9db9-cd3c7e797b84))
     (instances
-      (project "CpuCubeV2-00"
+      (project "CpuVubeV3-00-STM32"
         (path "/0311a7ec-9aa9-4a22-9c42-104f90cefcca"
           (reference "#PWR0132") (unit 1)
         )
@@ -3806,7 +3806,7 @@
     )
     (pin "1" (uuid 69313f8d-04d8-47dc-a773-7e9ba38b247b))
     (instances
-      (project "CpuCubeV2-00"
+      (project "CpuVubeV3-00-STM32"
         (path "/0311a7ec-9aa9-4a22-9c42-104f90cefcca"
           (reference "#PWR0104") (unit 1)
         )
@@ -4073,7 +4073,7 @@
       (uuid 8e4b66b5-f3f7-4bd7-a29a-8afd9eeaaeda)
     )
     (instances
-      (project "CpuCubeV2-00"
+      (project "CpuVubeV3-00-STM32"
         (path "/0311a7ec-9aa9-4a22-9c42-104f90cefcca" (page "2"))
       )
     )
@@ -4102,7 +4102,7 @@
       (uuid d2876e9b-6795-46e8-877a-953cac4c8682)
     )
     (instances
-      (project "CpuCubeV2-00"
+      (project "CpuVubeV3-00-STM32"
         (path "/0311a7ec-9aa9-4a22-9c42-104f90cefcca" (page "3"))
       )
     )
